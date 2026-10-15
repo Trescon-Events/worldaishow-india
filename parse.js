@@ -1,0 +1,1 @@
+﻿const fs = require('fs'); const html = fs.readFileSync('live-agenda.html', 'utf8'); const match = html.match(/8:30 AM/g); console.log('Matches:', match ? match.length : 0); const regex = /<div class="([^"]*8:30 AM[^"]*)">([\s\S]*?)<\/div><\/div>/; const res = html.match(regex); if (res) console.log(res[0].substring(0,1000));

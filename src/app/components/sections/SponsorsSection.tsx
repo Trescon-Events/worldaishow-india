@@ -1,0 +1,148 @@
+"use client";
+
+import { GradientText } from "../Shared";
+
+// Sponsor Row 1 Logos (Path: strategic or gold subfolders)
+const sponsorRow1 = [
+  { path: "/enterprise/images/sponsors/strategic/mdec.webp", alt: "MDEC" },
+  { path: "/enterprise/images/sponsors/strategic/mida.webp", alt: "MIDA" },
+  { path: "/enterprise/images/sponsors/gold/datadog.webp", alt: "Datadog" },
+  { path: "/enterprise/images/sponsors/gold/quantexa.webp", alt: "Quantexa" },
+  { path: "/enterprise/images/sponsors/gold/denodo.webp", alt: "Denodo" },
+];
+
+// Sponsor Row 2 Logos (Path: gold subfolder)
+const sponsorRow2 = [
+  { path: "/enterprise/images/sponsors/gold/Magure.webp", alt: "Magure" },
+  { path: "/enterprise/images/sponsors/gold/Alibaba-cloud.webp", alt: "Alibaba Cloud" },
+  { path: "/enterprise/images/sponsors/gold/ey.webp", alt: "EY" },
+  { path: "/enterprise/images/sponsors/gold/avatai.webp", alt: "Avatai" },
+  { path: "/enterprise/images/sponsors/gold/darwin.webp", alt: "Darwinbox" },
+];
+
+// Strategic & Association Partners Logos (Path: association subfolder)
+const partnerLogos = [
+  "/enterprise/images/sponsors/association/starfindo.webp",
+  "/enterprise/images/sponsors/association/kumpul.webp",
+  "/enterprise/images/sponsors/association/forums.webp",
+  "/enterprise/images/sponsors/association/ddas.webp",
+  "/enterprise/images/sponsors/association/belux.webp",
+  "/enterprise/images/sponsors/association/lafrench.webp",
+];
+
+export function SponsorsSection() {
+  return (
+    <section className="relative py-[100px] pb-0 bg-[#030b19] overflow-hidden max-sm:py-[72px] max-sm:pb-0" id="partners">
+      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+        
+        {/* S9 · Sponsor band */}
+        <div className="text-center mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan/30 bg-cyan/10 text-cyan text-xs font-mono uppercase tracking-[2px]">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+            Partnerships
+          </div>
+        </div>
+
+        {/* Title */}
+        <h2 className="text-center font-[850] text-white leading-[1.06] tracking-[-2px] text-[clamp(36px,4.6vw,56px)] max-w-[920px] mx-auto">
+          Your buyers are redesigning workflows now, <GradientText>not after the pilot</GradientText>
+        </h2>
+
+        <p className="mt-6 max-w-[780px] mx-auto text-center text-muted text-[18px] leading-[1.6] max-sm:text-[16px]">
+          Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Commercial partnerships are structured around 30-minute stage thought leadership, standardized 4, 6, or 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
+        </p>
+
+        <div className="mt-8 flex justify-center">
+          <a
+            href="/enterprise/attend/sponsor"
+            className="inline-flex items-center justify-center gap-2 h-[52px] px-8 rounded-full font-extrabold text-[15px] text-[#06111F] [color:#06111F!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.35)] transition-all duration-200"
+          >
+            Explore sponsorship <span>→</span>
+          </a>
+        </div>
+
+        <p className="mt-14 mb-0 text-center font-mono text-xs uppercase tracking-[2px] text-white/55">
+          Past Series Partners &amp; Sponsors
+        </p>
+
+      </div>
+
+      {/* Two offset scrolling sponsor rows precisely matching screenshot */}
+      <div className="flex flex-col gap-5 mt-6 w-full overflow-hidden">
+        
+        {/* Row 1: MDEC, MIDA, Datadog, Quantexa, Denodo (slides right-to-left) */}
+        <div className="relative w-full overflow-hidden">
+          <div className="logo-marquee-rail flex gap-5 will-change-transform">
+            {[...sponsorRow1, ...sponsorRow1, ...sponsorRow1].map((logo, index) => (
+              <span
+                key={`${logo.alt}-${index}`}
+                className="flex-none grid place-items-center w-[190px] h-[82px] rounded-[12px] bg-white shadow-[0_0_28px_rgba(20,212,255,0.16)] select-none px-4"
+              >
+                <img
+                  src={logo.path}
+                  alt={logo.alt}
+                  className="max-w-[140px] max-h-[50px] object-contain transition-all duration-300"
+                  loading="lazy"
+                  width={140}
+                  height={50}
+                />
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Row 2: Magure, Alibaba-cloud, ey, avatai, darwin (slides left-to-right) */}
+        <div className="relative w-full overflow-hidden">
+          <div className="marquee-partners-reverse flex gap-5 will-change-transform">
+            {[...sponsorRow2, ...sponsorRow2, ...sponsorRow2].map((logo, index) => (
+              <span
+                key={`${logo.alt}-${index}`}
+                className="flex-none grid place-items-center w-[190px] h-[82px] rounded-[12px] bg-white shadow-[0_0_28px_rgba(20,212,255,0.16)] select-none px-4"
+              >
+                <img
+                  src={logo.path}
+                  alt={logo.alt}
+                  className="max-w-[140px] max-h-[50px] object-contain transition-all duration-300"
+                  loading="lazy"
+                  width={140}
+                  height={50}
+                />
+              </span>
+            ))}
+          </div>
+        </div>
+
+      </div>
+
+      {/* Partners single row horizontal infinite marquee slider with hover pause */}
+      <div className="mt-[72px] p-[28px_0_34px] bg-white text-center overflow-hidden">
+        <p className="m-0 mb-[26px] text-[18px] font-bold text-[#151923] uppercase tracking-[1.5px] select-none">
+          Strategic & Media Partners
+        </p>
+        <div className="relative w-full overflow-hidden">
+          <div className="marquee-partners flex items-center gap-[64px]">
+            {/* Double list array for infinite scrolling seamless transition loop */}
+            {[...partnerLogos, ...partnerLogos].map((logo, index) => (
+              <div
+                key={`${logo}-${index}`}
+                className="flex-none w-[140px] h-[52px] flex items-center justify-center select-none"
+              >
+                <img
+                  src={logo}
+                  alt="Partner Logo"
+                  className="max-w-full max-h-full object-contain filter hover:brightness-105 transition-all duration-300"
+                  loading="lazy"
+                  width={140}
+                  height={52}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    </section>
+  );
+}
+
+

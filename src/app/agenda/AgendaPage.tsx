@@ -1,0 +1,862 @@
+"use client";
+
+import type { CSSProperties, PointerEvent, ReactNode } from "react";
+import { useMemo, useState } from "react";
+
+import { FooterSection } from "../components/sections/FooterSection";
+import { Header } from "../components/sections/Header";
+
+import styles from "./AgendaPage.module.css";
+import "./agenda.css";
+import { AgendaSection } from "../components/sections/AgendaSection";
+import { SpeakerCallToStage } from "../speakers/SpeakerCallToStage";
+
+const subNav = ["Overview", "The 2030 Vision", "Agenda", "Themes", "Call for Speakers"];
+
+const formats = [
+  {
+    title: "Plenary Keynotes & Panels",
+    text: "CIOs, CAIOs, CTOs, CDOs, CISOs, and COOs dissecting what changes between AI pilot and production, the AI-ready enterprise stack, and accountable agentic autonomy.",
+    image: "/enterprise/images/agenda/keynotes.webp"
+  },
+  {
+    title: "30-Minute Partner Thought Leadership",
+    text: "Dedicated 30-minute standalone main-stage sessions examining production architectures, enterprise workflow redesign, and verified business outcomes.",
+    image: "/enterprise/images/agenda/panel-discussion.webp"
+  },
+  {
+    title: "The AI ROI Clinic & Closed-Door Roundtables",
+    text: "Facilitated on-stage working sessions delivering a live Scale, Redesign, or Stop verdict alongside curated 15-CXO closed-door executive roundtables.",
+    image: "/enterprise/images/agenda/Fireside.webp"
+  }
+];
+
+const gateway = [
+  ["Stage 1: Problem & Baseline", "Introduce an enterprise use case and examine the verified pre-AI operational baseline before automation was introduced.", "/enterprise/images/agenda/strong.webp"],
+  ["Stage 2: Evidence & Full Cost", "Audit cycle times, error rates, hidden integration overheads, human escalation volume, and exception handling.", "/enterprise/images/agenda/Asean-con.webp"],
+  ["Stage 3: The Boardroom Verdict", "The room and panel decide live on stage: Does the deployment Scale, Redesign, or Stop?", "/enterprise/images/agenda/Govt.webp"],
+  ["Edition 1: The Enterprise Edition (Mumbai)", "20–21 April 2027 · 2 Full Days. The official launch of the World AI Show Series in India, convening 200–300 qualified CXOs.", "/enterprise/images/agenda/Enterprise.webp"],
+  ["Regional Chapters (Q2–Q3)", "Continuing the executive dialogue across India's priority technology and enterprise corridors throughout Q2 and Q3.", "/enterprise/images/agenda/Growing-dig.webp"],
+  ["Series Finale (Q4)", "Culminating in the 2027 World AI Show India Series Finale in Q4, uniting the country's complete enterprise AI leadership.", "/enterprise/images/agenda/Investment-innovation.webp"]
+];
+
+const focusItems = [
+  ["01 · Enterprise AI Strategy & Business Value", "Use-case scale decisions, executive outcome ownership, and board-level productivity metrics.", "/enterprise/images/agenda/Policy.webp"],
+  ["02 · Pilot to Production & Process Redesign", "Continuous integration, latency, exception handling, and human-in-the-loop workflows.", "/enterprise/images/agenda/AI-infra.webp"],
+  ["03 · Agentic AI, Data Stack & Proportionate Trust", "Agent identity, tool permissions, real-time API fabrics, hybrid-cloud trade-offs, and proportionate risk tiering.", "/enterprise/images/agenda/investment.webp"]
+];
+
+const themes = [
+  ["Enterprise AI Strategy & Business Value", "Pillar / 01", "/enterprise/images/agenda/Enterprise.webp"],
+  ["Pilot to Production & Process Redesign", "Pillar / 02", "/enterprise/images/agenda/AI-infra.webp"],
+  ["Agentic AI & Accountable Autonomy", "Pillar / 03", "/enterprise/images/agenda/Govt.webp"],
+  ["Data Context & The AI-Ready Stack", "Pillar / 04", "/enterprise/images/agenda/strong.webp"],
+  ["Governance, Security & Proportional Trust", "Pillar / 05", "/enterprise/images/agenda/Policy.webp"]
+];
+
+type EnterpriseAgendaSession = {
+  id: number;
+  dayKey: string;
+  dayLabel: string;
+  startTime: string;
+  endTime: string;
+  title: string;
+  typeTitle: string;
+  location: string;
+  description: string;
+  trackId: string;
+  trackTitle: string;
+};
+
+const enterpriseSchedule: EnterpriseAgendaSession[] = [
+  // Day 1 — Tuesday 20 April 2027: Enterprise Execution
+  {
+    id: 101,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "09:30",
+    endTime: "10:00",
+    title: "Registration & Exhibition Networking",
+    typeTitle: "Networking",
+    location: "Exhibition Arena & Registration Concourse · Mumbai",
+    description: "Executive badge collection, morning refreshments, and exhibition floor exploration across 4 sqm, 6 sqm, and 12 sqm partner showcases.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 102,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "10:00",
+    endTime: "10:25",
+    title: "Opening Plenary Keynote: From AI Ambition to Enterprise Execution",
+    typeTitle: "Keynote",
+    location: "Main Plenary Stage · Mumbai",
+    description: "Setting the operational mandate for Edition 1 of the World AI Show Series in India: moving from isolated proofs of concept to governed enterprise execution.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 103,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "10:25",
+    endTime: "11:00",
+    title: "Panel: What Changes Between AI Pilot and Production?",
+    typeTitle: "Panel",
+    location: "Main Plenary Stage · Mumbai",
+    description: "Pillar 02 — Continuous integration, latency, exception handling, and human-in-the-loop workflows when scaling from sandbox to core enterprise operations.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 104,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "11:00",
+    endTime: "11:30",
+    title: "Partner Thought Leadership Session 1 (30 Minutes)",
+    typeTitle: "Partner Session (30 Min)",
+    location: "Main Plenary Stage · Mumbai",
+    description: "30-minute standalone commercial thought leadership session examining enterprise-grade AI architecture and verified production outcomes.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 105,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "11:00",
+    endTime: "12:00",
+    title: "Curated Executive Roundtable 1 (Closed-Door, 15 CXOs)",
+    typeTitle: "Executive Roundtable",
+    location: "VIP Boardroom 1 · Closed-Door",
+    description: "Chatham House Rule peer-to-peer boardroom for 15 pre-qualified CXOs, featuring a 5-minute opening address inside the room.",
+    trackId: "boardroom",
+    trackTitle: "Closed-Door CXO Boardrooms"
+  },
+  {
+    id: 106,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "11:30",
+    endTime: "12:15",
+    title: "Fireside: Productivity is Not Transformation — Redesigning Work",
+    typeTitle: "Fireside",
+    location: "Main Plenary Stage · Mumbai",
+    description: "Pillar 01 & 02 — Why end-to-end workflow redesign and operating-model ownership separate enterprise value creators from incremental productivity pilots.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 107,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "12:15",
+    endTime: "12:45",
+    title: "Partner Thought Leadership Session 2 (30 Minutes)",
+    typeTitle: "Partner Session (30 Min)",
+    location: "Main Plenary Stage · Mumbai",
+    description: "30-minute standalone session showcasing enterprise deployment blueprints and measurable operational impact.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 108,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "12:00",
+    endTime: "13:00",
+    title: "Curated Executive Roundtable 2 (Closed-Door, 15 CXOs)",
+    typeTitle: "Executive Roundtable",
+    location: "VIP Boardroom 2 · Closed-Door",
+    description: "Chatham House Rule peer-to-peer boardroom for 15 pre-qualified CXOs, featuring a 5-minute opening address inside the room.",
+    trackId: "boardroom",
+    trackTitle: "Closed-Door CXO Boardrooms"
+  },
+  {
+    id: 109,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "12:45",
+    endTime: "13:15",
+    title: "Deployment Case Study: One Use Case, One Outcome",
+    typeTitle: "Case Study",
+    location: "Main Plenary Stage · Mumbai",
+    description: "Deep-dive audit of a single production enterprise AI deployment: original baseline, architecture trade-offs, exception handling, and verified ROI.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 110,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "14:15",
+    endTime: "14:45",
+    title: "Partner Thought Leadership Session 3 (30 Minutes)",
+    typeTitle: "Partner Session (30 Min)",
+    location: "Main Plenary Stage · Mumbai",
+    description: "30-minute standalone session focused on modernizing enterprise data context, cloud integration, and production scalability.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 111,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "14:45",
+    endTime: "15:30",
+    title: "Panel: The AI-Ready Enterprise Stack (Data, Cloud, Sovereignty)",
+    typeTitle: "Panel",
+    location: "Main Plenary Stage · Mumbai",
+    description: "Pillar 04 — Real-time enterprise access, API fabrics, hybrid-cloud trade-offs, data sovereignty, and data quality for production AI.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 112,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "15:30",
+    endTime: "16:00",
+    title: "Partner Thought Leadership Session 4 (30 Minutes)",
+    typeTitle: "Partner Session (30 Min)",
+    location: "Main Plenary Stage · Mumbai",
+    description: "30-minute standalone session examining governed autonomy, security guardrails, and enterprise orchestration.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 113,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "16:00",
+    endTime: "16:45",
+    title: "Panel: Agentic AI in the Enterprise — Where Should Autonomy Act?",
+    typeTitle: "Panel",
+    location: "Main Plenary Stage · Mumbai",
+    description: "Pillar 03 — Agent identity, tool permissions, approval gates, auditability, and failure containment when deploying multi-step agents.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 114,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "16:45",
+    endTime: "17:15",
+    title: "Guest Keynote: Building the Intelligent Enterprise",
+    typeTitle: "Keynote",
+    location: "Main Plenary Stage · Mumbai",
+    description: "Executive perspective on aligning boardroom capital allocation, technology architecture, and workforce transformation.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 115,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "17:15",
+    endTime: "17:35",
+    title: "Audience Reset Segment (Clean Comedy / Mentalist)",
+    typeTitle: "Special Feature",
+    location: "Main Plenary Stage · Mumbai",
+    description: "High-energy interactive plenary reset concluding Day 1 prior to evening executive networking.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+
+  // Day 2 — Wednesday 21 April 2027: Strategy to Scale
+  {
+    id: 201,
+    dayKey: "2027-04-21",
+    dayLabel: "Wednesday 21 April 2027: Strategy to Scale",
+    startTime: "09:30",
+    endTime: "10:00",
+    title: "Keynote: The Next Frontier of Enterprise AI",
+    typeTitle: "Keynote",
+    location: "Main Plenary Stage · Mumbai",
+    description: "Opening Day 2 with a strategic synthesis of enterprise AI scale decisions, outcome ownership, and cross-functional governance.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 202,
+    dayKey: "2027-04-21",
+    dayLabel: "Wednesday 21 April 2027: Strategy to Scale",
+    startTime: "10:00",
+    endTime: "10:45",
+    title: "Dialogue: Building a Repeatable AI Delivery Model",
+    typeTitle: "Dialogue",
+    location: "Main Plenary Stage · Mumbai",
+    description: "Establishing reusable platform foundations, risk tiering, and cross-functional delivery squads that turn one-off successes into repeatable execution.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 203,
+    dayKey: "2027-04-21",
+    dayLabel: "Wednesday 21 April 2027: Strategy to Scale",
+    startTime: "10:45",
+    endTime: "11:15",
+    title: "Partner Thought Leadership Session 5 (30 Minutes)",
+    typeTitle: "Partner Session (30 Min)",
+    location: "Main Plenary Stage · Mumbai",
+    description: "30-minute standalone session on enterprise AI security, proportionate trust, and regulatory readiness.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 204,
+    dayKey: "2027-04-21",
+    dayLabel: "Wednesday 21 April 2027: Strategy to Scale",
+    startTime: "11:15",
+    endTime: "12:00",
+    title: "The AI ROI Clinic: What Should the Board Actually Measure?",
+    typeTitle: "Interactive Stage Feature",
+    location: "Main Plenary Stage · Mumbai",
+    description: "A facilitated, on-stage working session interrogating a live enterprise deployment across Stage 1 (Problem & Baseline), Stage 2 (Evidence & Full Cost), and Stage 3 (The Boardroom Verdict: Scale, Redesign, or Stop).",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 205,
+    dayKey: "2027-04-21",
+    dayLabel: "Wednesday 21 April 2027: Strategy to Scale",
+    startTime: "12:00",
+    endTime: "12:30",
+    title: "Partner Thought Leadership Session 6 (30 Minutes)",
+    typeTitle: "Partner Session (30 Min)",
+    location: "Main Plenary Stage · Mumbai",
+    description: "30-minute standalone session examining enterprise operating-model transformation and measurable ROI at scale.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 206,
+    dayKey: "2027-04-21",
+    dayLabel: "Wednesday 21 April 2027: Strategy to Scale",
+    startTime: "12:30",
+    endTime: "13:15",
+    title: "Panel: Redesigning the AI Operating Model — People & Roles",
+    typeTitle: "Panel",
+    location: "Main Plenary Stage · Mumbai",
+    description: "Workforce restructuring, human-AI handoffs, decision rights, and accountability across technology, operations, and risk.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 207,
+    dayKey: "2027-04-21",
+    dayLabel: "Wednesday 21 April 2027: Strategy to Scale",
+    startTime: "13:15",
+    endTime: "13:30",
+    title: "Closing: The Enterprise AI Playbook",
+    typeTitle: "Closing Synthesis",
+    location: "Main Plenary Stage · Mumbai",
+    description: "Distilling the five operational decisions and key takeaways from Mumbai Edition 1 ahead of the World AI Show India regional chapters and Q4 Series Finale.",
+    trackId: "main",
+    trackTitle: "Main Plenary Stage"
+  }
+];
+
+function GradientText({ children }: { children: ReactNode }) {
+  return <span className={styles.gradientText}>{children}</span>;
+}
+
+function ArrowSVG() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-4 h-4 object-contain transition-transform duration-200 group-hover:translate-x-1"
+      aria-hidden="true"
+    >
+      <path
+        d="M3.33334 8H12.6667"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8.66666 4L12.6667 8L8.66666 12"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function setPointerGlow(event: PointerEvent<HTMLElement>) {
+  const rect = event.currentTarget.getBoundingClientRect();
+  event.currentTarget.style.setProperty("--mouse-x", `${event.clientX - rect.left}px`);
+  event.currentTarget.style.setProperty("--mouse-y", `${event.clientY - rect.top}px`);
+}
+
+function IconCard({ title, text, icon, index }: { title: string; text: string; icon: string; index: number }) {
+  return (
+    <article className={styles.iconCard}>
+      <span className={styles.iconBadge}><img src={icon} alt="" loading="lazy" /></span>
+      <span className={styles.cardIndex}>{String(index + 1).padStart(2, "0")}</span>
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </article>
+  );
+}
+
+function AgendaTabs() {
+  const dayTabs = [
+    { key: "2027-04-20", label: "Tuesday 20 April 2027: Enterprise Execution" },
+    { key: "2027-04-21", label: "Wednesday 21 April 2027: Strategy to Scale" }
+  ];
+
+  const [activeDay, setActiveDay] = useState("2027-04-20");
+  const [activeTrack, setActiveTrack] = useState("all");
+  const [activeSessionType, setActiveSessionType] = useState("");
+  const [query, setQuery] = useState("");
+
+  const sessionTypes = useMemo(() => {
+    return Array.from(new Set(enterpriseSchedule.map((s) => s.typeTitle)));
+  }, []);
+
+  const trackTabs = useMemo(() => {
+    const sessionsForDay = enterpriseSchedule.filter((session) => session.dayKey === activeDay);
+    return Array.from(
+      new Map(sessionsForDay.map((session) => [session.trackId, session.trackTitle])).entries()
+    ).map(([id, title]) => ({ id, title }));
+  }, [activeDay]);
+
+  const filteredItems = useMemo(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+    return enterpriseSchedule.filter((session) => {
+      const dayMatches = session.dayKey === activeDay;
+      const trackMatches = activeTrack === "all" || session.trackId === activeTrack;
+      const typeMatches = !activeSessionType || session.typeTitle === activeSessionType;
+      const searchMatches =
+        !normalizedQuery ||
+        session.title.toLowerCase().includes(normalizedQuery) ||
+        session.description.toLowerCase().includes(normalizedQuery) ||
+        session.typeTitle.toLowerCase().includes(normalizedQuery);
+      return dayMatches && trackMatches && typeMatches && searchMatches;
+    });
+  }, [activeDay, activeSessionType, activeTrack, query]);
+
+  function clearFilters() {
+    setActiveTrack("all");
+    setActiveSessionType("");
+    setQuery("");
+  }
+
+  return (
+    <section className={styles.timelineSection} id="agenda">
+      <div className={styles.container}>
+        <div className={styles.timelineIntro}>
+          <h2>Two days, <GradientText>five operational decisions.</GradientText></h2>
+        </div>
+        <div className={styles.dayTabs} role="tablist" aria-label="Agenda days">
+          {dayTabs.map((day, index) => (
+            <button
+              className={activeDay === day.key ? styles.activeDay : ""}
+              key={day.key}
+              onClick={() => {
+                setActiveDay(day.key);
+                setActiveTrack("all");
+              }}
+              onPointerMove={setPointerGlow}
+              type="button"
+            >
+              <span>{day.label}</span>
+              <strong>{index === 0 ? "Day 1 · 20 Apr 2027" : "Day 2 · 21 Apr 2027"}</strong>
+              <small>{index === 0 ? "Enterprise Execution" : "Strategy to Scale"}</small>
+            </button>
+          ))}
+        </div>
+
+        {trackTabs.length > 1 ? (
+          <div className={styles.trackTabs} aria-label="Agenda tracks">
+            <button
+              className={activeTrack === "all" ? styles.activeTrack : ""}
+              onClick={() => setActiveTrack("all")}
+              onPointerMove={setPointerGlow}
+              type="button"
+            >
+              All Tracks
+            </button>
+            {trackTabs.map((track) => (
+              <button
+                className={activeTrack === track.id ? styles.activeTrack : ""}
+                key={track.id}
+                onClick={() => setActiveTrack(track.id)}
+                onPointerMove={setPointerGlow}
+                type="button"
+              >
+                {track.title}
+              </button>
+            ))}
+          </div>
+        ) : null}
+
+        <div className={styles.agendaFilters} aria-label="Agenda filters">
+          <label>
+            <span>Search</span>
+            <input
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Search sessions, topics, or formats"
+              type="search"
+              value={query}
+            />
+          </label>
+
+          <label>
+            <span>Session Type</span>
+            <select onChange={(event) => setActiveSessionType(event.target.value)} value={activeSessionType}>
+              <option value="">All Formats</option>
+              {sessionTypes.map((type) => (
+                <option key={type} value={type}>{type}</option>
+              ))}
+            </select>
+          </label>
+
+          {activeTrack !== "all" || activeSessionType || query ? (
+            <button onClick={clearFilters} type="button">Clear</button>
+          ) : null}
+        </div>
+
+        <div className={styles.timeline}>
+          <div className={styles.timelineHead}>
+            <span>{dayTabs.find((day) => day.key === activeDay)?.label || "2-Day Executive Programme"}</span>
+            <span>Mumbai, India · 2 Full Days</span>
+          </div>
+
+          {filteredItems.length === 0 ? (
+            <p className={styles.loadingState}>No sessions match the selected filters.</p>
+          ) : null}
+
+          {filteredItems.map((session, index) => (
+            <article
+              className={styles.timelineRow}
+              key={session.id}
+              onPointerMove={setPointerGlow}
+              style={{ "--row-index": index } as CSSProperties}
+            >
+              <time>{session.startTime}<span>{session.endTime}</span></time>
+              <span className={styles.sessionType}>{session.typeTitle}</span>
+              <div>
+                <h3>{session.title}</h3>
+                {session.description ? <p>{session.description}</p> : null}
+                {session.location ? <small className={styles.locationText}>{session.location}</small> : null}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function AgendaOverview() {
+  return (
+    <>
+      <section className={`${styles.hero} pt-[200px]`} id="overview">
+        <div className={styles.container}>
+          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
+            Executive Programme
+          </span>
+          <h1>Two days,<br /><GradientText>five operational decisions.</GradientText></h1>
+          <p className={styles.heroPara}>
+            Day 1 focuses on enterprise execution, architectures, and agentic autonomy. Day 2 focuses on repeatable delivery, operating models, governance, and the AI ROI Clinic. The full session timeline will be published following steering committee review.
+          </p>
+        </div>
+      </section>
+
+      <section className={styles.aboutSection}>
+        <div className={styles.split}>
+          <div>
+            <h2>Operational ownership over <GradientText>technology demonstrations.</GradientText></h2>
+            <p>
+              World AI Show: The Enterprise Edition | Mumbai 2027 is a two-day executive conference for 200–300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.
+            </p>
+            <p>
+              As Edition 1 of the World AI Show Series in India, the programme is built around five operational decisions that every cross-functional enterprise buying group must resolve across strategy, production workflow redesign, agentic autonomy, data context, and proportionate trust.
+            </p>
+          </div>
+          <img src="/enterprise/images/agenda/About.webp" alt="Executives networking at World AI Show" loading="lazy" />
+        </div>
+      </section>
+
+      <section className={styles.formatsSection}>
+        <div className={styles.container}>
+          <h2>The formats <GradientText>driving execution.</GradientText></h2>
+          <p>A working executive programme across 2 Full Days — every session structured for production evidence.</p>
+          <div className={styles.formatGrid}>
+            {formats.map((item) => (
+              <article className={styles.formatCard} key={item.title}>
+                <img src={item.image} alt="" loading="lazy" />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.finalCta} id="cta">
+        <div className={styles.ctaBox}>
+          <h2>Be in the room where <GradientText>the operating model gets decided.</GradientText></h2>
+          <p>Apply for a complimentary Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
+          <div className={styles.actions}>
+            <a className={`${styles.button} ${styles.solid} group`} href="/enterprise/attend/delegate">Apply for a Delegate Pass <ArrowSVG /></a>
+            <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
+          </div>
+          <dl>
+            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Full Days</dd></div>
+            <div><dt>Venue</dt><dd>Mumbai, India</dd></div>
+            <div><dt>Series</dt><dd>Edition 1 · India Series Launch</dd></div>
+          </dl>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export function AgendaVision() {
+  return (
+    <>
+      <section
+        className={`${styles.hero} pt-[200px]`}
+        id="the-2030-vision-hero"
+        style={{
+          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.52) 42%, rgba(2, 7, 19, 0.08) 100%), url(/enterprise/images/agenda/Vision-2030-bg.webp) right center / cover no-repeat"
+        }}
+      >
+        <div className={styles.container}>
+          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
+            AI ROI CLINIC &amp; INDIA SERIES TRAJECTORY
+          </span>
+          <h1>The AI ROI Clinic &amp; <br /><GradientText>The India Series Trajectory.</GradientText></h1>
+        </div>
+      </section>
+
+      <section className={styles.visionSection} id="the-2030-vision">
+        <div className={styles.split}>
+          <div className={styles.leftCol}>
+            <img src="/enterprise/images/agenda/driving-malaysia-stage.webp" alt="Executive panel discussion at World AI Show" loading="lazy" />
+          </div>
+          <div className={styles.visionCopy}>
+            <p>
+              <strong>The AI ROI Clinic Framework:</strong> Auditing the pre-AI operational baseline, hidden integration costs, human escalation volume, and service quality to deliver a live Scale, Redesign, or Stop verdict.
+            </p>
+            <p>
+              <strong>The India Series Trajectory:</strong> Edition 1: The Enterprise Edition (Mumbai) → Regional Chapters (Q2–Q3) → Series Finale (Q4).
+            </p>
+            <p>
+              Mumbai serves as the official launch of the World AI Show Series in India, establishing a year-long executive roadmap that connects enterprise operational reality with verified boardroom outcomes.
+            </p>
+            <blockquote>
+              &ldquo;40% of Indian enterprises cite proving ROI as a top barrier, and 28% cite the absence of a mature measurement framework.&rdquo;
+              <cite className={styles.blockquoteCite}>&mdash; DELOITTE INDIA, APRIL 2026</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.gatewaySection}>
+        <div className={styles.container}>
+          <h2>The 3-Stage ROI Clinic &amp; <GradientText>3-Stage India Roadmap.</GradientText></h2>
+          <p>How the conference interrogates live enterprise deployments on stage and connects Mumbai Edition 1 to the national series finale.</p>
+          <div className={styles.cardGrid}>
+            {gateway.map(([title, text, icon], index) => <IconCard icon={icon} index={index} key={title} text={text} title={title} />)}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.accelerateSection}>
+        <div className={styles.container}>
+          <h2>Where AI becomes <GradientText>the operating model</GradientText></h2>
+          <p>World AI Show: The Enterprise Edition brings together CIOs, CAIOs, CTOs, CDOs, CISOs, and COOs to resolve the execution gap across five master content pillars.</p>
+          <div className={styles.accelerateGrid}>
+            <div>
+              {focusItems.map(([title, text, icon]) => (
+                <article className={styles.focusItem} key={title}>
+                  <span><img src={icon} alt="" loading="lazy" /></span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+            <img src="/enterprise/images/agenda/driving-malaysia-speakers.webp" alt="Speakers on stage at World AI Show" loading="lazy" />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export function AgendaLiveTimeline() {
+  return (
+    <>
+      <section className={`${styles.hero} pt-[200px]`} id="agenda-timeline-hero">
+        <div className={styles.container}>
+          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
+            2-Day Executive Programme · 20–21 April 2027
+          </span>
+          <h1><GradientText>MUMBAI 2027 AGENDA</GradientText></h1>
+          <p className={styles.heroPara}>
+            Day 1 (Tuesday 20 April 2027: Enterprise Execution) and Day 2 (Wednesday 21 April 2027: Strategy to Scale).
+          </p>
+        </div>
+      </section>
+      <AgendaTabs />
+      <section className={styles.finalCta} id="cta">
+        <div className={styles.ctaBox}>
+          <h2>Be in the room where <GradientText>the operating model gets decided.</GradientText></h2>
+          <p>Apply for a complimentary Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
+          <div className={styles.actions}>
+            <a className={`${styles.button} ${styles.solid} group`} href="/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
+            <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>
+          </div>
+          <dl>
+            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Full Days</dd></div>
+            <div><dt>Venue</dt><dd>Mumbai, India</dd></div>
+            <div><dt>Series</dt><dd>Edition 1 · India Series Launch</dd></div>
+          </dl>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export function AgendaThemes() {
+  return (
+    <>
+      <section
+        className={`${styles.hero} pt-[200px]`}
+        id="agenda-themes-hero"
+        style={{
+          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.48) 42%, rgba(2, 7, 19, 0.05) 100%), url(/enterprise/images/agenda/Themes-bg.webp) right center / cover no-repeat"
+        }}
+      >
+        <div className={styles.container}>
+          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
+            The 5 Master Content Pillars
+          </span>
+          <h1>Five decisions. <br /><GradientText>Two days.</GradientText></h1>
+          <p className={styles.heroPara}>
+            Workforce restructuring, operating-model change, and verified ROI run across all five content pillars.
+          </p>
+        </div>
+      </section>
+      <AgendaSection
+        title={<>Five decisions. <GradientText>Two days.</GradientText></>}
+        subtitle="Curated Agenda"
+        description="Workforce restructuring, operating-model change, and verified ROI run across all five."
+      />
+      <section className="relative pb-[104px] bg-[#051224]/70 max-sm:pb-[72px]">
+        <div className={styles.container}>
+          <div className={styles.brochureCta}>
+            <div>
+              <h3>Get the commercial partnership prospectus.</h3>
+              <p>Full 2-day session architecture, 30-minute stage sessions, standardized 4, 6, and 12 sqm booth specifications, and closed-door CXO boardrooms.</p>
+            </div>
+            <a
+              className={`${styles.button} ${styles.solid} group`}
+              href="/enterprise/sponsorship-enquiry"
+              style={{ minWidth: "220px" }}
+            >
+              Enquire about sponsorship
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 object-contain transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" style={{ marginLeft: "8px" }}>
+                <path d="M3.33334 8H12.6667" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M8.66666 4L12.6667 8L8.66666 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section className={styles.finalCta} id="cta">
+        <div className={styles.ctaBox}>
+          <h2>Be in the room where <GradientText>the operating model gets decided.</GradientText></h2>
+          <p>Apply for a complimentary Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
+          <div className={styles.actions}>
+            <a className={`${styles.button} ${styles.solid} group`} href="/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
+            <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>
+          </div>
+          <dl>
+            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Full Days</dd></div>
+            <div><dt>Venue</dt><dd>Mumbai, India</dd></div>
+            <div><dt>Series</dt><dd>Edition 1 · India Series Launch</dd></div>
+          </dl>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export function AgendaCallForSpeakers() {
+  return (
+    <>
+      <section
+        className={`${styles.hero} pt-[200px]`}
+        id="agenda-speakers-hero"
+        style={{
+          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.52) 42%, rgba(2, 7, 19, 0.08) 100%), url(/enterprise/images/agenda/Call-speakers-bg.webp) right center / cover no-repeat",
+          alignItems: "center",
+          minHeight: "750px",
+          marginTop: "0",
+          display: "flex"
+        }}
+      >
+        <div className={styles.container}>
+          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
+            Call for Enterprise Speakers
+          </span>
+          <h1 className="text-white font-[850] tracking-[-2px] leading-[1.05] text-[clamp(44px,6.2vw,76px)]">
+            If you have scaled AI <br />
+            in production, <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#00a5a3]">we want you on the stage</span> <br />
+            <span className="text-[#C0F43C]">in Mumbai 2027.</span>
+          </h1>
+          <p className={styles.heroPara}>
+            Seeking CIOs, CAIOs, CTOs, and Transformation Leaders with live production evidence: the original baseline, trade-offs made, exception rates, and verified business outcomes.
+          </p>
+        </div>
+      </section>
+      <SpeakerCallToStage />
+
+      <section className={styles.finalCta} id="cta">
+        <div className={styles.ctaBox}>
+          <h2>Be in the room where <GradientText>the operating model gets decided.</GradientText></h2>
+          <p>Submit your case study for steering committee review or enquire about 30-minute partner thought leadership sessions.</p>
+          <div className={styles.actions}>
+            <a className={`${styles.button} ${styles.solid} group`} href="/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>
+            <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
+          </div>
+          <dl>
+            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Full Days</dd></div>
+            <div><dt>Venue</dt><dd>Mumbai, India</dd></div>
+            <div><dt>Series</dt><dd>Edition 1 · India Series Launch</dd></div>
+          </dl>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export function AgendaPage() {
+  return (
+    <>
+      <main className={`${styles.page} page-agenda`}>
+        <Header activeItem="Agenda" subNavItems={subNav} activeSubNavItem="Overview" />
+        <AgendaOverview />
+      </main>
+      <FooterSection />
+    </>
+  );
+}

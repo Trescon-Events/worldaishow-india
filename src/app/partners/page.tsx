@@ -1,0 +1,26 @@
+import type { Metadata } from "next";
+import { Header } from "../components/sections/Header";
+import { PartnersHero } from "./PartnersHero";
+import { SponsorsGrid } from "./SponsorsGrid";
+import { PartnerShowcase } from "./PartnerShowcase";
+import { FooterSection } from "../components/sections/FooterSection";
+
+export const metadata: Metadata = {
+  title: "Partners & Sponsors | World AI Show: The Enterprise Edition | Mumbai 2027",
+  description:
+    "Explore the Tier-Grouped Partner & Sponsor Showcase for World AI Show: The Enterprise Edition | Mumbai 2027: Lead Partner (12 sqm), Platinum & Gold (6 sqm), Silver & Bronze (4 sqm), CXO Boardroom Partners, and Supporting Alliances.",
+};
+
+const subNav = ["Overview", "Sponsors", "Exhibitors", "Media", "Associations"];
+
+export default function PartnersPage() {
+  return (
+    <main className="page-partners relative min-h-screen bg-gradient-to-b from-[#020814] via-[#031022] to-[#020a18] text-white font-space-grotesk overflow-x-hidden">
+      <Header activeItem="Partner" />
+      <PartnersHero />
+      <SponsorsGrid />
+      <PartnerShowcase />
+      <FooterSection />
+    </main>
+  );
+}
