@@ -18,32 +18,22 @@ export function HeroSection() {
       />
 
       {/* Hero Content */}
-      <div className="container relative z-2 mx-auto px-6 pt-[190px] max-sm:pt-[150px] max-sm:px-4 flex flex-col items-center">
-        {/* Global Series Logo (Matching main worldaishow.com reference) */}
-        <div className="mb-5">
-          <img
-            src="/enterprise/logos/Wais-series-W.svg"
-            alt="World AI Show Global Series by Trescon"
-            className="w-[290px] sm:w-[360px] h-auto mx-auto block drop-shadow-[0_8px_28px_rgba(0,206,255,0.22)]"
-          />
-        </div>
-
-        {/* Main Series Headline: World's Longest Running AI Show Series */}
-        <h1 className="max-w-[960px] mx-auto text-white font-[900] uppercase leading-[1.06] tracking-[-1.5px] text-[clamp(34px,5.2vw,64px)] text-center mb-5">
-          World&apos;s Longest Running <br />
-          <GradientText>AI Show Series</GradientText>
-        </h1>
-
-        {/* "Now in India" Badge */}
+      <div className="container relative z-2 mx-auto px-6 pt-[215px] max-sm:pt-[165px] max-sm:px-4 flex flex-col items-center">
+        {/* Kicker */}
         <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-[#C0F43C]/45 bg-[#040D1F]/85 text-[#C0F43C] text-[13px] font-mono uppercase tracking-[2.4px] font-extrabold shadow-[0_0_24px_rgba(192,244,60,0.18)] mb-4">
           <span className="w-2 h-2 rounded-full bg-[#C0F43C] animate-pulse" />
           Now in India · The Enterprise Edition
         </div>
 
-        {/* Theme Title (Smaller font size as requested) */}
-        <p className="max-w-[780px] mx-auto text-white font-[800] leading-[1.2] tracking-[-0.8px] text-[clamp(22px,2.6vw,32px)] text-center mb-6">
-          Where AI becomes the <GradientText>operating model.</GradientText>
+        {/* Event Lockup Sub-label */}
+        <p className="text-white/85 font-mono text-[13px] uppercase tracking-[2px] font-semibold mb-3">
+          World AI Show: The Enterprise Edition | Mumbai 2027
         </p>
+
+        {/* Hero Title */}
+        <h1 className="max-w-[1030px] mx-auto text-white font-[850] leading-[1.04] tracking-[-2px] text-[clamp(42px,6.8vw,88px)] text-center mb-6">
+          Where AI becomes the <GradientText>operating model.</GradientText>
+        </h1>
 
         <div className="w-full max-w-[780px] border-t border-white/20 opacity-60 mt-1" />
 
