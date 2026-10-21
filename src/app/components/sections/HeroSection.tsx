@@ -31,7 +31,7 @@ export function HeroSection() {
         </p>
 
         {/* Hero Title */}
-        <h1 className="max-w-[1030px] mx-auto text-white font-[850] leading-[1.04] tracking-[-2px] text-[clamp(42px,6.8vw,88px)] text-center mb-6">
+        <h1 className="max-w-[760px] mx-auto text-white font-[850] leading-[1.1] tracking-[-1.2px] text-[clamp(28px,4vw,52px)] text-center mb-6">
           Where AI becomes the <GradientText>operating model.</GradientText>
         </h1>
 
