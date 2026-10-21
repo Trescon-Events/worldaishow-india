@@ -1,5 +1,4 @@
 import { Button, GradientText } from "../Shared";
-import { Interactive3DHeroBackground } from "./Interactive3DHeroBackground";
 
 export function HeroSection() {
   return (
@@ -7,16 +6,6 @@ export function HeroSection() {
       className="hero-bg relative min-h-[760px] -mt-[102px] grid place-items-center overflow-hidden text-center max-[980px]:min-h-[680px] max-sm:-mt-[71px] max-sm:min-h-[700px]"
       id="home"
     >
-      {/* Interactive 3D Hero Background */}
-      <Interactive3DHeroBackground />
-
-      {/* Cyber Grid overlays */}
-      <div className="hero-overlay absolute inset-0 z-1 opacity-40 pointer-events-none" aria-hidden="true" />
-      <div
-        className="hero-grid-pattern absolute bottom-0 left-[-6%] right-[-6%] h-[245px] z-1 opacity-50 blur-[1px] pointer-events-none"
-        aria-hidden="true"
-      />
-
       {/* Hero Content */}
       <div className="container relative z-2 mx-auto px-6 pt-[215px] max-sm:pt-[165px] max-sm:px-4 flex flex-col items-center">
         {/* Kicker */}
