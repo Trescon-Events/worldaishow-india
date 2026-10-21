@@ -8,7 +8,7 @@ import { FooterSection } from "../components/sections/FooterSection";
 export const metadata: Metadata = {
   title: "Speakers Hub | World AI Show: The Enterprise Edition | Mumbai 2027",
   description:
-    "Explore the Enterprise Faculty and past global series speakers for World AI Show: The Enterprise Edition | Mumbai 2027 (35–45 Speakers & Panelists).",
+    "Explore the Enterprise Faculty and past global series speakers for World AI Show: The Enterprise Edition | Mumbai 2027 (45 Speakers & Panelists).",
 };
 
 

@@ -21,7 +21,7 @@ export function PartnersHero() {
           <span>&amp; Sponsors</span>
         </h1>
         <p className="max-w-[680px] mt-6 mb-0 text-white/84 text-[20px] leading-relaxed max-sm:text-base">
-          Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Commercial partnerships at Mumbai 2027 are structured around 30-minute stage thought leadership, standardized 4, 6, or 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
+          Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Commercial partnerships at Mumbai 2027 are structured around 30-minute stage thought leadership, standardized 9 or 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
         </p>
       </div>
     </section>

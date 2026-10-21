@@ -9,14 +9,14 @@ const partnerTiers = [
     deliverables: "30-Min Keynote + 1 Panel + 12 sqm Booth + CXO Boardroom",
   },
   {
-    tier: "Tier 2 · Main Stage & Pod",
-    name: "Platinum & Gold Partners — 6 sqm",
-    deliverables: "30-Min Standalone Session + 6 sqm Standardized Exhibition Booth",
+    tier: "Tier 2 · Main Stage & Standard Space",
+    name: "Platinum & Gold Partners — 9 sqm",
+    deliverables: "30-Min Standalone Session + 9 sqm Standard Exhibition Booth",
   },
   {
     tier: "Tier 3 · Panel & Exhibition",
-    name: "Silver & Bronze Partners — 4 sqm",
-    deliverables: "Silver: 1 Panel Seat + 4 sqm Booth · Bronze: 4 sqm Turnkey Floor Presence",
+    name: "Silver & Bronze Partners — 9 sqm",
+    deliverables: "Silver: 1 Panel Seat + 9 sqm Booth · Bronze: 9 sqm Standard Turnkey Floor Presence",
   },
   {
     tier: "Closed-Door Executive Format",
@@ -25,8 +25,8 @@ const partnerTiers = [
   },
   {
     tier: "Exhibition Arena",
-    name: "Turnkey Exhibitors (4 sqm)",
-    deliverables: "Standardized 4 sqm linear booth in the main networking and showcase arena",
+    name: "Turnkey Exhibitors (9 sqm)",
+    deliverables: "Standardized 9 sqm booth in the main networking and showcase arena",
   },
   {
     tier: "Ecosystem Alliances",
@@ -43,7 +43,6 @@ export function PartnerShowcase() {
       <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] rounded-full bg-purple-500/5 blur-[120px] pointer-events-none" />
 
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
-        
         {/* ── PART 1: SHOWCASING THE FUTURE SECTION ─────────────────── */}
         <div className="grid grid-cols-[1.1fr_0.9fr] max-[980px]:grid-cols-1 gap-12 items-center mb-20">
           {/* Left Column: Heading and Description */}
@@ -53,7 +52,7 @@ export function PartnerShowcase() {
               <span className="text-[#C0F43C]">not after</span> <span className="text-[#00ceff]">the pilot.</span>
             </h2>
             <p className="m-0 text-white/70 text-[16px] leading-relaxed max-w-[580px] font-sans">
-              World AI Show: The Enterprise Edition | Mumbai 2027 convenes 200–300 qualified enterprise CXOs across technology leadership, architecture &amp; data, operations &amp; transformation, and risk, security &amp; compliance.
+              World AI Show: The Enterprise Edition | Mumbai 2027 convenes 300 qualified enterprise CXOs across technology leadership, architecture &amp; data, operations &amp; transformation, and risk, security &amp; compliance.
             </p>
           </div>
 
@@ -103,18 +102,18 @@ export function PartnerShowcase() {
         </div>
 
         {/* ── PART 3: CTA BANNER ── */}
-        <div 
+        <div
           className="group/banner relative p-12 max-sm:p-8 border border-[#c0f43c]/20 rounded-[28px] text-center overflow-hidden transition-all duration-300 hover:border-[#c0f43c]/40"
           style={{
-            background: "linear-gradient(135deg, rgba(192, 244, 60, 0.04) 0%, rgba(4, 10, 24, 0.96) 50%, rgba(0, 206, 255, 0.02) 100%)"
+            background: "linear-gradient(135deg, rgba(192, 244, 60, 0.04) 0%, rgba(4, 10, 24, 0.96) 50%, rgba(0, 206, 255, 0.02) 100%)",
           }}
         >
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#c0f43c]/20 to-transparent pointer-events-none" />
-          
+
           <div className="relative z-10 flex flex-col items-center gap-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-white/10 rounded-full text-[11px] font-mono font-extrabold uppercase tracking-widest text-[#00ceff] bg-white/5">
               <span className="w-2.5 h-2.5 rounded-full bg-[#00ceff] animate-pulse" />
-              5 Content Pillars · 30-Min Stage Sessions · Standardized Booths
+              5 Content Pillars · 30-Min Stage Sessions · 9 &amp; 12 sqm Booths
             </div>
 
             <h3 className="m-0 font-space-grotesk text-white font-[850] text-[clamp(28px,3.5vw,42px)] leading-tight tracking-tight">
@@ -123,7 +122,7 @@ export function PartnerShowcase() {
             </h3>
 
             <p className="m-0 text-white/70 text-[16px] leading-relaxed max-w-[640px] font-sans">
-              Secure your enterprise presence for Mumbai 2027 (20–21 April 2027 · 2 Full Days) across Lead (12 sqm), Platinum/Gold (6 sqm), Silver/Bronze (4 sqm), or standalone CXO Boardrooms.
+              Secure your enterprise presence for Mumbai 2027 (20–21 April 2027 · 2 Days) across Lead (12 sqm), Platinum/Gold/Silver/Bronze (9 sqm standard space), or standalone CXO Boardrooms.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mt-4 w-full max-sm:flex-col max-sm:items-center">
@@ -146,12 +145,9 @@ export function PartnerShowcase() {
                 View Commercial Standards
               </a>
             </div>
-
           </div>
         </div>
-
       </div>
     </section>
   );
 }
-

@@ -25,17 +25,14 @@ const formats = [
     image: "/enterprise/images/agenda/panel-discussion.webp"
   },
   {
-    title: "The AI ROI Clinic & Closed-Door Roundtables",
-    text: "Facilitated on-stage working sessions delivering a live Scale, Redesign, or Stop verdict alongside curated 15-CXO closed-door executive roundtables.",
+    title: "Closed-Door Executive Roundtables",
+    text: "Curated 15-CXO closed-door boardroom discussions operating under the Chatham House Rule alongside live production deployment case studies.",
     image: "/enterprise/images/agenda/Fireside.webp"
   }
 ];
 
 const gateway = [
-  ["Stage 1: Problem & Baseline", "Introduce an enterprise use case and examine the verified pre-AI operational baseline before automation was introduced.", "/enterprise/images/agenda/strong.webp"],
-  ["Stage 2: Evidence & Full Cost", "Audit cycle times, error rates, hidden integration overheads, human escalation volume, and exception handling.", "/enterprise/images/agenda/Asean-con.webp"],
-  ["Stage 3: The Boardroom Verdict", "The room and panel decide live on stage: Does the deployment Scale, Redesign, or Stop?", "/enterprise/images/agenda/Govt.webp"],
-  ["Edition 1: The Enterprise Edition (Mumbai)", "20–21 April 2027 · 2 Full Days. The official launch of the World AI Show Series in India, convening 200–300 qualified CXOs.", "/enterprise/images/agenda/Enterprise.webp"],
+  ["Edition 1: The Enterprise Edition (Mumbai)", "20–21 April 2027 · 2 Days. The official launch of the World AI Show Series in India, convening 300 qualified CXOs.", "/enterprise/images/agenda/Enterprise.webp"],
   ["Regional Chapters (Q2–Q3)", "Continuing the executive dialogue across India's priority technology and enterprise corridors throughout Q2 and Q3.", "/enterprise/images/agenda/Growing-dig.webp"],
   ["Series Finale (Q4)", "Culminating in the 2027 World AI Show India Series Finale in Q4, uniting the country's complete enterprise AI leadership.", "/enterprise/images/agenda/Investment-innovation.webp"]
 ];
@@ -44,14 +41,6 @@ const focusItems = [
   ["01 · Enterprise AI Strategy & Business Value", "Use-case scale decisions, executive outcome ownership, and board-level productivity metrics.", "/enterprise/images/agenda/Policy.webp"],
   ["02 · Pilot to Production & Process Redesign", "Continuous integration, latency, exception handling, and human-in-the-loop workflows.", "/enterprise/images/agenda/AI-infra.webp"],
   ["03 · Agentic AI, Data Stack & Proportionate Trust", "Agent identity, tool permissions, real-time API fabrics, hybrid-cloud trade-offs, and proportionate risk tiering.", "/enterprise/images/agenda/investment.webp"]
-];
-
-const themes = [
-  ["Enterprise AI Strategy & Business Value", "Pillar / 01", "/enterprise/images/agenda/Enterprise.webp"],
-  ["Pilot to Production & Process Redesign", "Pillar / 02", "/enterprise/images/agenda/AI-infra.webp"],
-  ["Agentic AI & Accountable Autonomy", "Pillar / 03", "/enterprise/images/agenda/Govt.webp"],
-  ["Data Context & The AI-Ready Stack", "Pillar / 04", "/enterprise/images/agenda/strong.webp"],
-  ["Governance, Security & Proportional Trust", "Pillar / 05", "/enterprise/images/agenda/Policy.webp"]
 ];
 
 type EnterpriseAgendaSession = {
@@ -79,7 +68,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     title: "Registration & Exhibition Networking",
     typeTitle: "Networking",
     location: "Exhibition Arena & Registration Concourse · Mumbai",
-    description: "Executive badge collection, morning refreshments, and exhibition floor exploration across 4 sqm, 6 sqm, and 12 sqm partner showcases.",
+    description: "Executive badge collection, morning refreshments, and exhibition floor exploration across 9 sqm and 12 sqm partner showcases.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
   },
@@ -126,8 +115,8 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     id: 105,
     dayKey: "2027-04-20",
     dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
-    startTime: "11:00",
-    endTime: "12:00",
+    startTime: "11:30",
+    endTime: "13:00",
     title: "Curated Executive Roundtable 1 (Closed-Door, 15 CXOs)",
     typeTitle: "Executive Roundtable",
     location: "VIP Boardroom 1 · Closed-Door",
@@ -160,19 +149,6 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     description: "30-minute standalone session showcasing enterprise deployment blueprints and measurable operational impact.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
-  },
-  {
-    id: 108,
-    dayKey: "2027-04-20",
-    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
-    startTime: "12:00",
-    endTime: "13:00",
-    title: "Curated Executive Roundtable 2 (Closed-Door, 15 CXOs)",
-    typeTitle: "Executive Roundtable",
-    location: "VIP Boardroom 2 · Closed-Door",
-    description: "Chatham House Rule peer-to-peer boardroom for 15 pre-qualified CXOs, featuring a 5-minute opening address inside the room.",
-    trackId: "boardroom",
-    trackTitle: "Closed-Door CXO Boardrooms"
   },
   {
     id: 109,
@@ -212,6 +188,19 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     description: "Pillar 04 — Real-time enterprise access, API fabrics, hybrid-cloud trade-offs, data sovereignty, and data quality for production AI.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
+  },
+  {
+    id: 108,
+    dayKey: "2027-04-20",
+    dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
+    startTime: "15:30",
+    endTime: "17:00",
+    title: "Curated Executive Roundtable 2 (Closed-Door, 15 CXOs)",
+    typeTitle: "Executive Roundtable",
+    location: "VIP Boardroom 2 · Closed-Door",
+    description: "Chatham House Rule peer-to-peer boardroom for 15 pre-qualified CXOs, featuring a 5-minute opening address inside the room.",
+    trackId: "boardroom",
+    trackTitle: "Closed-Door CXO Boardrooms"
   },
   {
     id: 112,
@@ -312,10 +301,10 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     dayLabel: "Wednesday 21 April 2027: Strategy to Scale",
     startTime: "11:15",
     endTime: "12:00",
-    title: "The AI ROI Clinic: What Should the Board Actually Measure?",
-    typeTitle: "Interactive Stage Feature",
+    title: "Panel: Enterprise AI Value & Productivity — What Should the Board Measure?",
+    typeTitle: "Panel",
     location: "Main Plenary Stage · Mumbai",
-    description: "A facilitated, on-stage working session interrogating a live enterprise deployment across Stage 1 (Problem & Baseline), Stage 2 (Evidence & Full Cost), and Stage 3 (The Boardroom Verdict: Scale, Redesign, or Stop).",
+    description: "Pillar 01 — Evaluating operational baselines, expanded productivity KPIs, integration overheads, and board-level business value.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
   },
@@ -531,7 +520,7 @@ function AgendaTabs() {
         <div className={styles.timeline}>
           <div className={styles.timelineHead}>
             <span>{dayTabs.find((day) => day.key === activeDay)?.label || "2-Day Executive Programme"}</span>
-            <span>Mumbai, India · 2 Full Days</span>
+            <span>Mumbai, India · 2 Days</span>
           </div>
 
           {filteredItems.length === 0 ? (
@@ -570,7 +559,7 @@ export function AgendaOverview() {
           </span>
           <h1>Two days,<br /><GradientText>five operational decisions.</GradientText></h1>
           <p className={styles.heroPara}>
-            Day 1 focuses on enterprise execution, architectures, and agentic autonomy. Day 2 focuses on repeatable delivery, operating models, governance, and the AI ROI Clinic. The full session timeline will be published following steering committee review.
+            Day 1 focuses on enterprise execution, architectures, and agentic autonomy. Day 2 focuses on repeatable delivery, operating models, governance, and measuring enterprise business value. The full session timeline will be published following steering committee review.
           </p>
         </div>
       </section>
@@ -580,7 +569,7 @@ export function AgendaOverview() {
           <div>
             <h2>Operational ownership over <GradientText>technology demonstrations.</GradientText></h2>
             <p>
-              World AI Show: The Enterprise Edition | Mumbai 2027 is a two-day executive conference for 200–300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.
+              World AI Show: The Enterprise Edition | Mumbai 2027 is a two-day executive conference for 300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.
             </p>
             <p>
               As Edition 1 of the World AI Show Series in India, the programme is built around five operational decisions that every cross-functional enterprise buying group must resolve across strategy, production workflow redesign, agentic autonomy, data context, and proportionate trust.
@@ -593,7 +582,7 @@ export function AgendaOverview() {
       <section className={styles.formatsSection}>
         <div className={styles.container}>
           <h2>The formats <GradientText>driving execution.</GradientText></h2>
-          <p>A working executive programme across 2 Full Days — every session structured for production evidence.</p>
+          <p>A working executive programme across 2 Days — every session structured for production evidence.</p>
           <div className={styles.formatGrid}>
             {formats.map((item) => (
               <article className={styles.formatCard} key={item.title}>
@@ -617,7 +606,7 @@ export function AgendaOverview() {
             <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
           </div>
           <dl>
-            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Full Days</dd></div>
+            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Days</dd></div>
             <div><dt>Venue</dt><dd>Mumbai, India</dd></div>
             <div><dt>Series</dt><dd>Edition 1 · India Series Launch</dd></div>
           </dl>
@@ -639,9 +628,9 @@ export function AgendaVision() {
       >
         <div className={styles.container}>
           <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
-            AI ROI CLINIC &amp; INDIA SERIES TRAJECTORY
+            ENTERPRISE VALUE &amp; INDIA SERIES TRAJECTORY
           </span>
-          <h1>The AI ROI Clinic &amp; <br /><GradientText>The India Series Trajectory.</GradientText></h1>
+          <h1>Enterprise AI Value &amp; <br /><GradientText>The India Series Trajectory.</GradientText></h1>
         </div>
       </section>
 
@@ -652,7 +641,7 @@ export function AgendaVision() {
           </div>
           <div className={styles.visionCopy}>
             <p>
-              <strong>The AI ROI Clinic Framework:</strong> Auditing the pre-AI operational baseline, hidden integration costs, human escalation volume, and service quality to deliver a live Scale, Redesign, or Stop verdict.
+              <strong>Measuring Business Value &amp; ROI:</strong> Moving beyond isolated proofs of concept to track expanded operational productivity KPIs, workflow transformation, and verified business outcomes at board level.
             </p>
             <p>
               <strong>The India Series Trajectory:</strong> Edition 1: The Enterprise Edition (Mumbai) → Regional Chapters (Q2–Q3) → Series Finale (Q4).
@@ -661,8 +650,8 @@ export function AgendaVision() {
               Mumbai serves as the official launch of the World AI Show Series in India, establishing a year-long executive roadmap that connects enterprise operational reality with verified boardroom outcomes.
             </p>
             <blockquote>
-              &ldquo;40% of Indian enterprises cite proving ROI as a top barrier, and 28% cite the absence of a mature measurement framework.&rdquo;
-              <cite className={styles.blockquoteCite}>&mdash; DELOITTE INDIA, APRIL 2026</cite>
+              &ldquo;Nearly 97% expect AI to improve productivity; about 73% already track productivity using expanded or comprehensive KPIs.&rdquo;
+              <cite className={styles.blockquoteCite}>&mdash; SOURCE: DELOITTE, STATE OF AI IN THE ENTERPRISE: INDIA INSIGHTS</cite>
             </blockquote>
           </div>
         </div>
@@ -670,8 +659,8 @@ export function AgendaVision() {
 
       <section className={styles.gatewaySection}>
         <div className={styles.container}>
-          <h2>The 3-Stage ROI Clinic &amp; <GradientText>3-Stage India Roadmap.</GradientText></h2>
-          <p>How the conference interrogates live enterprise deployments on stage and connects Mumbai Edition 1 to the national series finale.</p>
+          <h2>The 3-Stage <GradientText>India Series Roadmap.</GradientText></h2>
+          <p>How Edition 1 in Mumbai initiates a nationwide executive dialogue culminating in the Q4 Series Finale.</p>
           <div className={styles.cardGrid}>
             {gateway.map(([title, text, icon], index) => <IconCard icon={icon} index={index} key={title} text={text} title={title} />)}
           </div>
@@ -724,7 +713,7 @@ export function AgendaLiveTimeline() {
             <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>
           </div>
           <dl>
-            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Full Days</dd></div>
+            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Days</dd></div>
             <div><dt>Venue</dt><dd>Mumbai, India</dd></div>
             <div><dt>Series</dt><dd>Edition 1 · India Series Launch</dd></div>
           </dl>
@@ -764,7 +753,7 @@ export function AgendaThemes() {
           <div className={styles.brochureCta}>
             <div>
               <h3>Get the commercial partnership prospectus.</h3>
-              <p>Full 2-day session architecture, 30-minute stage sessions, standardized 4, 6, and 12 sqm booth specifications, and closed-door CXO boardrooms.</p>
+              <p>Full 2-day session architecture, 30-minute stage sessions, standardized 9 sqm and 12 sqm booth specifications, and closed-door CXO boardrooms.</p>
             </div>
             <a
               className={`${styles.button} ${styles.solid} group`}
@@ -789,7 +778,7 @@ export function AgendaThemes() {
             <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>
           </div>
           <dl>
-            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Full Days</dd></div>
+            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Days</dd></div>
             <div><dt>Venue</dt><dd>Mumbai, India</dd></div>
             <div><dt>Series</dt><dd>Edition 1 · India Series Launch</dd></div>
           </dl>
@@ -839,7 +828,7 @@ export function AgendaCallForSpeakers() {
             <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
           </div>
           <dl>
-            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Full Days</dd></div>
+            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Days</dd></div>
             <div><dt>Venue</dt><dd>Mumbai, India</dd></div>
             <div><dt>Series</dt><dd>Edition 1 · India Series Launch</dd></div>
           </dl>

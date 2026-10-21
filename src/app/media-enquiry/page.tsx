@@ -47,7 +47,7 @@ export default function MediaEnquiryPage() {
                 Apply for <span className="text-[#18d4ff]">Media Accreditation</span>
               </h1>
               <p className="m-0 text-white/70 text-[16px] leading-relaxed mb-9">
-                Request press credentials, executive interview room access, and editorial distribution for World AI Show: The Enterprise Edition | Mumbai 2027 (20–21 April 2027 · 2 Full Days).
+                Request press credentials, executive interview room access, and editorial distribution for World AI Show: The Enterprise Edition | Mumbai 2027 (20–21 April 2027 · 2 Days).
               </p>
 
               {/* Hubspot Form Embedded Container */}

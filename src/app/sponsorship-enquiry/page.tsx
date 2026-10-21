@@ -47,7 +47,7 @@ export default function SponsorshipEnquiryPage() {
                 Secure Your Enterprise Presence for <span className="text-[#18d4ff]">Mumbai 2027</span>
               </h1>
               <p className="m-0 text-white/70 text-[16px] leading-relaxed mb-9">
-                Enquire about Lead (12 sqm), Platinum &amp; Gold (6 sqm), Silver &amp; Bronze (4 sqm), 30-minute standalone stage thought leadership sessions, and closed-door CXO boardrooms at World AI Show: The Enterprise Edition | Mumbai 2027 (20–21 April 2027 · 2 Full Days).
+                Enquire about Lead (12 sqm), Platinum, Gold, Silver &amp; Bronze (9 sqm), 30-minute standalone stage thought leadership sessions, and closed-door CXO boardrooms at World AI Show: The Enterprise Edition | Mumbai 2027 (20–21 April 2027 · 2 Days).
               </p>
 
               {/* Hubspot Form Embedded Container */}

@@ -22,7 +22,7 @@ type CardItem = {
 const valueCards: CardItem[] = [
   {
     title: "Where AI Becomes the Operating Model",
-    text: "A two-day executive conference for 200–300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.",
+    text: "A two-day executive conference for 300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.",
     icon: "/enterprise/images/Attend/enterprise-ai-in-action.svg",
   },
   {
@@ -31,8 +31,8 @@ const valueCards: CardItem[] = [
     icon: "/enterprise/images/Attend/region-ai-decision-makers.svg",
   },
   {
-    title: "The AI ROI Clinic & 5 Content Pillars",
-    text: "Auditing the pre-AI operational baseline, hidden integration costs, human escalation volume, and service quality to deliver a live Scale, Redesign, or Stop verdict.",
+    title: "5 Master Content Pillars & Business Value",
+    text: "Auditing the pre-AI operational baseline, expanded productivity KPIs, integration overheads, and governance frameworks to drive verified enterprise business value.",
     icon: "/enterprise/images/Attend/insights-drive-transformation.svg",
   },
 ];
@@ -40,12 +40,12 @@ const valueCards: CardItem[] = [
 const gatewayCards: CardItem[] = [
   {
     title: "2-Day Plenary Access",
-    text: "Full access across 2 Full Days (20–21 April 2027) of opening keynotes, cross-functional panels, deployment case studies, and fireside dialogues.",
+    text: "Full access across 2 Days (20–21 April 2027) of opening keynotes, cross-functional panels, deployment case studies, and fireside dialogues.",
     icon: "/enterprise/images/Attend/gateway/access-to-all-sessions.svg",
   },
   {
-    title: "Voting in The AI ROI Clinic",
-    text: "Participate directly in the facilitated on-stage working session and cast your boardroom verdict: Scale, Redesign, or Stop.",
+    title: "Production Case Studies & ROI Insights",
+    text: "Examine real enterprise deployments on stage — including pre-AI baselines, workflow redesign trade-offs, and verified business outcomes.",
     icon: "/enterprise/images/Attend/gateway/high-value-networking.svg",
   },
   {
@@ -70,7 +70,7 @@ const gatewayCards: CardItem[] = [
   },
   {
     title: "Exhibition Arena Access",
-    text: "Explore standardized 4 sqm, 6 sqm, and 12 sqm enterprise technology showcases demonstrating production-ready platforms.",
+    text: "Explore standardized 9 sqm and 12 sqm enterprise technology showcases demonstrating production-ready platforms.",
     icon: "/enterprise/images/Attend/gateway/exclusive-vip-networking-experiences.svg",
   },
   {
@@ -88,22 +88,22 @@ const sponsorBenefits: CardItem[] = [
   },
   {
     title: "Platinum Partner",
-    text: "30-Min Standalone Session + 6 sqm Booth. High-impact main-stage thought leadership paired with a standardized 6 sqm exhibition pod.",
+    text: "30-Min Standalone Session + 9 sqm Booth. High-impact main-stage thought leadership paired with a standardized 9 sqm exhibition space.",
     icon: "/enterprise/images/Attend/sponsor/speaking-opportunities.webp",
   },
   {
     title: "Gold Partner",
-    text: "30-Min Standalone Session + 6 sqm Booth. Dedicated 30-minute stage session and 6 sqm exhibition footprint.",
+    text: "30-Min Standalone Session + 9 sqm Booth. Dedicated 30-minute stage session and 9 sqm standard exhibition footprint.",
     icon: "/enterprise/images/Attend/sponsor/product-showcase-floor.webp",
   },
   {
     title: "Silver Partner",
-    text: "1 Panel Seat + 4 sqm Booth. Executive panel participation across the five content pillars plus a 4 sqm booth.",
+    text: "1 Panel Seat + 9 sqm Booth. Executive panel participation across the five content pillars plus a 9 sqm standard booth.",
     icon: "/enterprise/images/Attend/sponsor/qualified-lead-generation.webp",
   },
   {
     title: "Bronze Partner",
-    text: "4 sqm Turnkey Floor Presence. Standardized 4 sqm exhibition booth in the main networking and showcase arena.",
+    text: "9 sqm Standard Turnkey Floor Presence. Standardized 9 sqm exhibition space in the main networking and showcase arena.",
     icon: "/enterprise/images/Attend/sponsor/exclusive-sponsorship-branding.webp",
   },
   {
@@ -126,7 +126,7 @@ const sponsorBenefits: CardItem[] = [
 const mediaBenefits: CardItem[] = [
   {
     title: "Press Credentials & Plenary Access",
-    text: "Full media accreditation across both days of main-stage keynotes, panels, deployment case studies, and The AI ROI Clinic.",
+    text: "Full media accreditation across both days of main-stage keynotes, panels, deployment case studies, and fireside dialogues.",
     icon: "/enterprise/images/Attend/media/full-event-access.webp",
   },
   {
@@ -156,12 +156,12 @@ const mediaBenefits: CardItem[] = [
   },
   {
     title: "Exclusive Story Opportunities",
-    text: "Capture real deployment baselines, full cost audits, and boardroom verdicts directly from enterprise operators.",
+    text: "Capture real deployment baselines, productivity KPIs, and operational transformation stories directly from enterprise leaders.",
     icon: "/enterprise/images/Attend/media/exclusive-story-opportunities.webp",
   },
   {
     title: "Executive Networking Access",
-    text: "Connect directly with 200–300 qualified CXOs and 35–45 speakers and panellists in Mumbai.",
+    text: "Connect directly with 300 qualified CXOs and 45 speakers and panellists in Mumbai.",
     icon: "/enterprise/images/Attend/media/networking-access.webp",
   },
 ];
@@ -194,7 +194,7 @@ const associationBenefits: CardItem[] = [
   },
   {
     title: "VIP Networking Access",
-    text: "Connect association leadership with 200–300 qualified enterprise CXOs and technology pioneers in Mumbai.",
+    text: "Connect association leadership with 300 qualified enterprise CXOs and technology pioneers in Mumbai.",
     icon: "/enterprise/images/Attend/partner/networking-access.webp",
   },
   {
@@ -353,7 +353,7 @@ export function AttendCTASection() {
 
         <div className="relative z-10">
           <span className="inline-flex items-center mb-[27px] px-[15px] py-2 border border-white/10 rounded-full text-white/72 text-[12px] tracking-[2px] uppercase select-none before:content-[''] before:w-[7px] before:h-[7px] before:mr-2.5 before:rounded-full before:bg-cyan font-mono">
-            Mumbai · 20–21 April 2027 · 2 Full Days · 200–300 Enterprise Leaders
+            Mumbai · 20–21 April 2027 · 2 Days · 300 Enterprise Leaders
           </span>
           <h2 className="max-w-[760px] mx-auto mb-8 text-[#f7f9ff] font-[850] leading-[1.08] tracking-[-1.8px] text-[clamp(36px,5vw,56px)] max-sm:text-[32px] max-sm:tracking-[-1px]">
             Be in the room where <span className="bg-gradient-to-r from-[#C0F43C] to-[#18d4ff] bg-clip-text text-transparent">the operating model</span> gets decided.
@@ -383,7 +383,7 @@ export function AttendCTASection() {
                 Date
               </span>
               <strong className="text-[17px] font-extrabold text-white tracking-wide font-mono">
-                20–21 April 2027 · 2 Full Days
+                20–21 April 2027 · 2 Days
               </strong>
             </div>
 
@@ -432,7 +432,7 @@ export function AttendOverviewSection() {
             Where AI becomes <GradientText>the operating model.</GradientText>
           </h1>
           <p className="max-w-[730px] mt-[26px] mb-0 text-white/88 text-[20px] leading-normal max-sm:text-[17px]">
-            A two-day executive conference for 200–300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.
+            A two-day executive conference for 300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.
           </p>
           <div className="flex flex-wrap gap-3.5 mt-10 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="/enterprise/attend/delegate" variant="solid">
@@ -472,7 +472,7 @@ export function AttendOverviewSection() {
                 </p>
                 <ul className="space-y-2.5 mb-8 text-white/75 text-[15px] list-none p-0">
                   <li className="flex items-start gap-2.5"><span className="text-[#C0F43C] font-bold">✓</span> Target Audience: CIOs, CAIOs, CTOs, CDOs, CISOs, COOs, Transformation Heads</li>
-                  <li className="flex items-start gap-2.5"><span className="text-[#C0F43C] font-bold">✓</span> Inclusions: 2-day plenary access, voting in the AI ROI Clinic, networking lounges</li>
+                  <li className="flex items-start gap-2.5"><span className="text-[#C0F43C] font-bold">✓</span> Inclusions: 2-day plenary access, executive case studies, networking lounges</li>
                   <li className="flex items-start gap-2.5"><span className="text-[#C0F43C] font-bold">✓</span> Privacy: Mandatory separate unbundled consent checkboxes for name/title and contact details</li>
                 </ul>
               </div>
@@ -497,7 +497,7 @@ export function AttendOverviewSection() {
                 </p>
                 <ul className="space-y-2.5 mb-8 text-white/75 text-[15px] list-none p-0">
                   <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Paid access for technology solution providers, system integrators, and consultancies</li>
-                  <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Strictly controlled availability to preserve the 200–300 qualified enterprise buyer ratio</li>
+                  <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Strictly controlled availability to preserve the 300 qualified enterprise buyer ratio</li>
                   <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Full 2-day access to main plenary sessions, exhibition arena, and networking app</li>
                 </ul>
               </div>
@@ -589,13 +589,13 @@ export function AttendDelegateSection() {
         eyebrow="Qualification & Consent Governance"
         imageAlt="Invited Enterprise CXOs at World AI Show"
         imageSrc="/enterprise/images/Attend/AI-decision-maker.webp"
-        title={<>2-Day Plenary Access &amp; <GradientText>The AI ROI Clinic</GradientText></>}
+        title={<>2-Day Plenary Access &amp; <GradientText>Executive Networking</GradientText></>}
         text={
           <>
             <strong>Target Audience:</strong> CIOs, CAIOs, CTOs, CDOs, CISOs, COOs, Transformation Heads.
             <br />
             <br />
-            <strong>Inclusions:</strong> 2-day plenary access, voting in the AI ROI Clinic, networking lounges.
+            <strong>Inclusions:</strong> 2-day plenary access, executive case studies, and VIP networking lounges.
             <br />
             <br />
             <strong>Privacy &amp; Consent Qualifier:</strong> Mandatory separate unbundled consent checkboxes for name/title and contact details. Delegate contact details are shared only where consented.
@@ -638,7 +638,7 @@ export function AttendSponsorSection() {
             Your buyers are redesigning workflows now, <GradientText>not after the pilot.</GradientText>
           </h1>
           <p className="max-w-[710px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
-            Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Commercial partnerships are structured around 30-minute stage thought leadership, standardized 4, 6, or 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
+            Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Commercial partnerships are structured around 30-minute stage thought leadership, standardized 9 sqm and 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="/enterprise/sponsorship-enquiry">Enquire About Sponsorship</ArrowButton>
@@ -659,13 +659,13 @@ export function AttendSponsorSection() {
           <>
             • <strong>Lead Partner (1 Position):</strong> 30-Min Keynote + 1 Panel + 12 sqm Booth + CXO Boardroom
             <br />
-            • <strong>Platinum Partner:</strong> 30-Min Standalone Session + 6 sqm Booth
+            • <strong>Platinum Partner:</strong> 30-Min Standalone Session + 9 sqm Standard Booth
             <br />
-            • <strong>Gold Partner:</strong> 30-Min Standalone Session + 6 sqm Booth
+            • <strong>Gold Partner:</strong> 30-Min Standalone Session + 9 sqm Standard Booth
             <br />
-            • <strong>Silver Partner:</strong> 1 Panel Seat + 4 sqm Booth
+            • <strong>Silver Partner:</strong> 1 Panel Seat + 9 sqm Standard Booth
             <br />
-            • <strong>Bronze Partner:</strong> 4 sqm Turnkey Floor Presence
+            • <strong>Bronze Partner:</strong> 9 sqm Standard Turnkey Floor Presence
             <br />
             • <strong>CXO Boardroom Partner (Standalone):</strong> 15 Pre-Qualified CXOs, 5-Min Opening Address inside room
           </>
@@ -707,7 +707,7 @@ export function AttendMediaSection() {
             Cover the Launch of the <GradientText>World AI Show Series in India</GradientText>
           </h1>
           <p className="max-w-[710px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
-            Press credentials, executive interview room access, and editorial distribution for Mumbai 2027 (20–21 April 2027 · 2 Full Days).
+            Press credentials, executive interview room access, and editorial distribution for Mumbai 2027 (20–21 April 2027 · 2 Days).
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="/enterprise/media-enquiry">Apply for Media Accreditation</ArrowButton>
@@ -724,7 +724,7 @@ export function AttendMediaSection() {
         title={<>Press Credentials &amp; <GradientText>Executive Interview Access</GradientText></>}
         text={
           <>
-            World AI Show: The Enterprise Edition | Mumbai 2027 convenes 200–300 qualified enterprise CXOs and 35–45 speakers and panellists across 2 Full Days.
+            World AI Show: The Enterprise Edition | Mumbai 2027 convenes 300 qualified enterprise CXOs and 45 speakers and panellists across 2 Days.
             <br />
             <br />
             Accredited journalists, editors, and research analysts receive press credentials, executive interview room access, and editorial distribution opportunities across the World AI Show Series in India.
@@ -785,7 +785,7 @@ export function AttendAssociationSection() {
             World AI Show: The Enterprise Edition welcomes industry councils, trade chambers, and professional AI bodies to join as official supporting alliances for the launch of the World AI Show Series in India.
             <br />
             <br />
-            Connect your enterprise leadership members with 200–300 qualified CXOs, nominate faculty speakers with live production evidence, and collaborate across the full 2027 India Series trajectory.
+            Connect your enterprise leadership members with 300 qualified CXOs, nominate faculty speakers with live production evidence, and collaborate across the full 2027 India Series trajectory.
           </>
         }
       />

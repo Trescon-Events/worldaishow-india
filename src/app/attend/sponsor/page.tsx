@@ -5,7 +5,7 @@ import { AttendSponsorSection } from "../page";
 
 export const metadata: Metadata = {
   title: "Commercial Packages & Booth Standards | Attend | World AI Show: The Enterprise Edition | Mumbai 2027",
-  description: "Explore commercial partnerships for Mumbai 2027: 30-minute standalone stage sessions, standardized 4 sqm, 6 sqm, and 12 sqm booths, and closed-door CXO boardrooms.",
+  description: "Explore commercial partnerships for Mumbai 2027: 30-minute standalone stage sessions, standardized 9 sqm and 12 sqm booths, and closed-door CXO boardrooms.",
 };
 
 const subNav = ["Overview", "Delegate", "Sponsor", "Media Partner", "Association Partner"];

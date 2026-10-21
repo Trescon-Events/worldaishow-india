@@ -6,7 +6,7 @@ import { GradientText } from "../Shared";
 const faqs = [
   {
     q: "What is World AI Show: The Enterprise Edition?",
-    a: "World AI Show: The Enterprise Edition | Mumbai 2027 is a two-day executive conference for 200–300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.",
+    a: "World AI Show: The Enterprise Edition | Mumbai 2027 is a two-day executive conference for 300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.",
   },
   {
     q: "How does this edition connect to the wider World AI Show Series in India?",
@@ -22,19 +22,15 @@ const faqs = [
   },
   {
     q: "What are the speaking durations and standardized booth sizes for sponsors?",
-    a: "Commercial partnerships feature 30-minute standalone stage thought leadership sessions, standardized 4 sqm, 6 sqm, and 12 sqm exhibition spaces, and curated closed-door CXO boardrooms for 15 pre-qualified executives.",
+    a: "Commercial partnerships feature 30-minute standalone stage thought leadership sessions, standardized 9 sqm and 12 sqm exhibition spaces, and curated closed-door CXO boardrooms for 15 pre-qualified executives.",
   },
   {
     q: "Where and when does the event take place?",
-    a: "The conference takes place across 2 Full Days on 20–21 April 2027 in Mumbai, India.",
-  },
-  {
-    q: "What is the AI ROI Clinic?",
-    a: "The AI ROI Clinic is a facilitated, on-stage working session on Day 2 interrogating a live enterprise deployment across three stages: Problem & Baseline, Evidence & Full Cost, and The Boardroom Verdict — where the room and panel decide whether the deployment should Scale, Redesign, or Stop.",
+    a: "The conference takes place across 2 Days on 20–21 April 2027 in Mumbai, India.",
   },
   {
     q: "Who organises the World AI Show Series?",
-    a: "World AI Show: The Enterprise Edition is organised by Trescon, the team behind World AI Show — the world's longest-running AI summit series with 48 global editions completed across 4 continents, convening 42,000+ C-level executives and 2,600+ speakers.",
+    a: "World AI Show: The Enterprise Edition is organised by Trescon, the team behind World AI Show — the world's longest-running AI summit series with 46 global editions completed across 51+ countries, convening 42,000+ C-level executives and 2,600+ speakers.",
   },
 ];
 
@@ -61,7 +57,6 @@ export function FAQSection() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
-        
         {/* Title */}
         <h2 className="text-center font-[850] text-white leading-[1.04] tracking-[-2px] text-[clamp(42px,5.2vw,60px)]">
           Frequently asked <GradientText>questions.</GradientText>
@@ -101,9 +96,7 @@ export function FAQSection() {
             );
           })}
         </div>
-
       </div>
     </section>
   );
 }
-

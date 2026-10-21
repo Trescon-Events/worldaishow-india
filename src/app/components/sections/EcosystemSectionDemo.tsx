@@ -29,7 +29,7 @@ const sourceCitedCards: TelemetryCardData[] = [
     primaryNum: 40,
     secondaryNum: 28,
     label: "India AI adoption vs global benchmark",
-    source: "Deloitte India, April 2026",
+    source: "Deloitte, State of AI in the Enterprise: India Insights (2026)",
     bars: [
       {
         name: "India Enterprise Adoption",
@@ -52,23 +52,23 @@ const sourceCitedCards: TelemetryCardData[] = [
   },
   {
     index: "02",
-    metricType: "single",
-    primaryNum: 83,
-    suffixText: "% Gap",
-    label: "Organizations lacking core process redesign",
-    source: "Deloitte India, April 2026",
+    metricType: "dual",
+    primaryNum: 44,
+    secondaryNum: 17,
+    label: "Process redesign",
+    source: "Deloitte, State of AI in the Enterprise: India Insights (2026)",
     bars: [
       {
-        name: "Point-Tool Retrofitting Only",
-        value: 83,
+        name: "Selected-process redesign",
+        value: 44,
         color: "from-[#18d4ff] via-[#6ce599] to-[#C0F43C]",
         glowColor: "rgba(192, 244, 60, 0.65)",
       },
       {
-        name: "Core Process Redesigned",
+        name: "Fundamental process and business-model reinvention",
         value: 17,
-        color: "from-slate-500 via-slate-400 to-slate-300",
-        glowColor: "rgba(148, 163, 184, 0.45)",
+        color: "from-[#0b84b8] via-[#18d4ff] to-[#7be8ff]",
+        glowColor: "rgba(24, 212, 255, 0.55)",
       },
     ],
     icon: (
@@ -83,17 +83,17 @@ const sourceCitedCards: TelemetryCardData[] = [
     metricType: "dual",
     primaryNum: 74,
     secondaryNum: 21,
-    label: "Agentic ambition vs mature governance",
-    source: "Deloitte Global, January 2026",
+    label: "Agentic AI and governance",
+    source: "Deloitte, State of AI in the Enterprise",
     bars: [
       {
-        name: "Agentic Deployment Ambition",
+        name: "Expect moderate or greater agentic AI use within two years",
         value: 74,
         color: "from-[#0b84b8] via-[#18d4ff] to-[#84edff]",
         glowColor: "rgba(24, 212, 255, 0.65)",
       },
       {
-        name: "Mature Governance Ready",
+        name: "Mature governance for autonomous agents",
         value: 21,
         color: "from-[#9be12b] via-[#C0F43C] to-[#e4ff85]",
         glowColor: "rgba(192, 244, 60, 0.65)",
@@ -374,8 +374,11 @@ export function EcosystemSectionDemo() {
           <GradientText>The battle now is making it work across daily business operations.</GradientText>
         </h2>
 
-        <p className="max-w-[820px] text-white/75 text-[19px] leading-[1.6] mb-14 max-sm:text-[16px]">
-          India&apos;s enterprise adoption rate leads globally at nearly 40% (Deloitte India, 2026), yet 83% of organizations remain trapped in point-tool retrofitting without core process reinvention.
+        <p className="max-w-[840px] text-white/75 text-[19px] leading-[1.6] mb-14 max-sm:text-[16px]">
+          India&apos;s enterprise adoption rate leads at nearly 40%, compared with 28% globally. 44% were redesigning selected processes; 17% reported fundamental reinvention.{" "}
+          <span className="block mt-2 text-white/50 font-mono text-[13px]">
+            Source: Deloitte, State of AI in the Enterprise: India Insights (2026)
+          </span>
         </p>
 
         {/* Component C2 — Animated Source-Cited Telemetry Cards */}

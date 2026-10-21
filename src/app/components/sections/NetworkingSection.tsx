@@ -79,7 +79,7 @@ export function NetworkingSection() {
               <GradientText>buying unit.</GradientText>
             </h2>
             <p className="mt-6 mb-8 text-muted text-[18px] leading-[1.5] max-[980px]:text-center max-sm:text-[16px]">
-              200–300 qualified enterprise technology, data, operations, and risk leaders convening across 2 full days in Mumbai.
+              300 qualified enterprise technology, data, operations, and risk leaders convening across 2 Days in Mumbai.
             </p>
             <div 
               className="group relative mt-6 rounded-[20px] overflow-hidden max-sm:max-w-md max-sm:mx-auto cursor-pointer"

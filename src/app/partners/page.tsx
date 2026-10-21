@@ -8,7 +8,7 @@ import { FooterSection } from "../components/sections/FooterSection";
 export const metadata: Metadata = {
   title: "Partners & Sponsors | World AI Show: The Enterprise Edition | Mumbai 2027",
   description:
-    "Explore the Tier-Grouped Partner & Sponsor Showcase for World AI Show: The Enterprise Edition | Mumbai 2027: Lead Partner (12 sqm), Platinum & Gold (6 sqm), Silver & Bronze (4 sqm), CXO Boardroom Partners, and Supporting Alliances.",
+    "Explore the Tier-Grouped Partner & Sponsor Showcase for World AI Show: The Enterprise Edition | Mumbai 2027: Lead Partner (12 sqm), Platinum, Gold, Silver & Bronze (9 sqm), CXO Boardroom Partners, and Supporting Alliances.",
 };
 
 const subNav = ["Overview", "Sponsors", "Exhibitors", "Media", "Associations"];

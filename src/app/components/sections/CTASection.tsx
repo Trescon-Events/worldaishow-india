@@ -8,20 +8,21 @@ export function CTASection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[450px] bg-[radial-gradient(circle,rgba(24,212,255,0.03),transparent_70%)] pointer-events-none" />
 
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)] space-y-8">
-        
         {/* S11 · Twin closing CTA bands */}
         <div className="grid grid-cols-2 gap-6 max-[980px]:grid-cols-1">
           {/* Band 1: Delegate Pass */}
           <div
             className="relative flex flex-col justify-between p-10 max-sm:p-7 rounded-[28px] backdrop-blur-[24px] overflow-hidden"
             style={{
-              background: "linear-gradient(125.2deg, rgba(192, 244, 60, 0.08) 0%, rgba(0, 206, 255, 0.02) 100%), rgba(4, 14, 33, 0.88)",
-              boxShadow: "0 0 32px 0 rgba(192, 244, 60, 0.14), 0 0 0 1px rgba(192, 244, 60, 0.35), 0 24px 64px 0 rgba(0, 0, 0, 0.5)"
+              background:
+                "linear-gradient(125.2deg, rgba(192, 244, 60, 0.08) 0%, rgba(0, 206, 255, 0.02) 100%), rgba(4, 14, 33, 0.88)",
+              boxShadow:
+                "0 0 32px 0 rgba(192, 244, 60, 0.14), 0 0 0 1px rgba(192, 244, 60, 0.35), 0 24px 64px 0 rgba(0, 0, 0, 0.5)",
             }}
           >
             <div>
               <span className="inline-block font-mono text-[11px] uppercase tracking-[1.6px] text-[#C0F43C] mb-3">
-                Mumbai · 20–21 April 2027 · 2 Full Days · 200–300 Enterprise Leaders
+                Mumbai · 20–21 April 2027 · 2 Days · 300 Enterprise Leaders
               </span>
               <h2 className="m-0 font-[850] text-white leading-[1.12] tracking-[-1px] text-[clamp(26px,3vw,36px)]">
                 Be in the room where the operating model gets decided
@@ -42,13 +43,15 @@ export function CTASection() {
           <div
             className="relative flex flex-col justify-between p-10 max-sm:p-7 rounded-[28px] backdrop-blur-[24px] overflow-hidden"
             style={{
-              background: "linear-gradient(125.2deg, rgba(0, 206, 255, 0.09) 0%, rgba(192, 244, 60, 0.015) 100%), rgba(4, 14, 33, 0.88)",
-              boxShadow: "0 0 32px 0 rgba(24, 212, 255, 0.14), 0 0 0 1px rgba(24, 212, 255, 0.35), 0 24px 64px 0 rgba(0, 0, 0, 0.5)"
+              background:
+                "linear-gradient(125.2deg, rgba(0, 206, 255, 0.09) 0%, rgba(192, 244, 60, 0.015) 100%), rgba(4, 14, 33, 0.88)",
+              boxShadow:
+                "0 0 32px 0 rgba(24, 212, 255, 0.14), 0 0 0 1px rgba(24, 212, 255, 0.35), 0 24px 64px 0 rgba(0, 0, 0, 0.5)",
             }}
           >
             <div>
               <span className="inline-block font-mono text-[11px] uppercase tracking-[1.6px] text-[#18D4FF] mb-3">
-                5 Content Pillars · 30-Min Stage Sessions · Standardized Booths
+                5 Content Pillars · 30-Min Stage Sessions · 9 &amp; 12 sqm Booths
               </span>
               <h2 className="m-0 font-[850] text-white leading-[1.12] tracking-[-1px] text-[clamp(26px,3vw,36px)]">
                 Put your solutions in front of the cross-functional buying unit
@@ -70,7 +73,8 @@ export function CTASection() {
         <div
           className="relative p-12 px-14 max-sm:p-8 rounded-[32px] backdrop-blur-[24px] overflow-hidden border border-white/12"
           style={{
-            background: "linear-gradient(125.2deg, rgba(0, 206, 255, 0.05) 0%, rgba(192, 244, 60, 0.02) 100%), rgba(4, 14, 33, 0.85)",
+            background:
+              "linear-gradient(125.2deg, rgba(0, 206, 255, 0.05) 0%, rgba(192, 244, 60, 0.02) 100%), rgba(4, 14, 33, 0.85)",
           }}
         >
           <div className="relative z-10 flex flex-col items-center text-center">
@@ -80,7 +84,8 @@ export function CTASection() {
             </div>
 
             <h2 className="m-0 font-[850] text-white leading-[1.08] tracking-[-1.5px] text-[clamp(28px,3.8vw,44px)] max-w-[780px]">
-              If you have scaled AI in production, <span className="text-[#18d4ff]">we want you</span> <span className="text-[#C0F43C]">on the stage</span>
+              If you have scaled AI in production, <span className="text-[#18d4ff]">we want you</span>{" "}
+              <span className="text-[#C0F43C]">on the stage</span>
             </h2>
 
             <p className="m-0 mt-5 text-white/75 text-[17px] leading-[1.6] max-w-[720px] max-sm:text-[15px]">
@@ -108,7 +113,7 @@ export function CTASection() {
                   Date
                 </span>
                 <strong className="text-[18px] font-extrabold text-white tracking-wide font-mono">
-                  20–21 April 2027 · 2 Full Days
+                  20–21 April 2027 · 2 Days
                 </strong>
               </div>
 
@@ -132,11 +137,9 @@ export function CTASection() {
                 </strong>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
   );
 }
-

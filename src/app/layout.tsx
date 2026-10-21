@@ -12,14 +12,14 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "World AI Show: The Enterprise Edition | Mumbai 2027",
   description:
-    "The premier cross-functional executive conference addressing the architecture, systems integration, agentic governance, and verifiable ROI of enterprise AI. 20–21 April 2027 · Mumbai, India · 2 Full Days.",
+    "The premier cross-functional executive conference addressing the architecture, systems integration, agentic governance, and verifiable ROI of enterprise AI. 20–21 April 2027 · Mumbai, India · 2 Days.",
   icons: {
     icon: "/enterprise/favicon.png",
   },
   openGraph: {
     title: "World AI Show: The Enterprise Edition | Mumbai 2027",
     description:
-      "Where AI becomes the operating model. Mumbai | 20–21 April 2027 | 2 Full Days. Organised by Trescon.",
+      "Where AI becomes the operating model. Mumbai | 20–21 April 2027 | 2 Days. Organised by Trescon.",
     type: "website",
   },
 };

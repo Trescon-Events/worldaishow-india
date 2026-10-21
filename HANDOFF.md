@@ -1,23 +1,27 @@
 # HANDOFF — World AI Show — Enterprise (Mumbai 2027 edition site)
 
-Last updated: 2026-10-15 (by Antigravity, for Lohith / Madhu's team).
+Last updated: 2026-10-21 (by Antigravity, for Lohith / Madhu's team).
 
 ## Current state
 
 - **Repository:** `https://github.com/Trescon-Events/worldaishow-india.git`
-- **Base path:** `basePath: "/enterprise"` configured in `next.config.ts`. All internal asset paths and links use `/enterprise/...`.
-- **Brand Assets:** Header and footer logos created and wired at `public/logos/wais-27-enterprise_header.svg` (`#18D4FF` / `#FFFFFF`) and `public/logos/wais-27-enterprise_footer.svg` (`#C0F43C` country highlight).
-- **Interactive 3D Hero Background (`src/app/components/sections/HeroCrystalCanvas.tsx`)**: Three.js crystal cluster with glowing blue/cyan wireframe network and interactive cursor tilt integrated into the homepage hero (`HeroSection.tsx`).
-- **Elaborate Mumbai / India Hero Banners**: Custom 16:9 WebP hero banners generated and wired across all subpages (`/attend`, `/attend/delegate`, `/attend/sponsor`, `/attend/media-partner`, `/attend/association-partner`, `/agenda`, `/agenda/agenda`, `/agenda/themes`, `/agenda/the-2030-vision`, `/agenda/call-for-speakers`, `/speakers`, `/partners`, `/exhibition`, `/networking`, `/networking/ai-matchmaking`, `/networking/attendee-app`, `/networking/photo-gallery`).
-- **HubSpot Form Embeds (`src/app/components/HubSpotForm.tsx`)**: All 8 HubSpot forms (`portalId: "2953901"`, `region: "na1"`) wired across `/sponsorship-enquiry`, `/speaker-enquiry`, `/media-enquiry`, `/association-enquiry`, `/attend/sponsor`, `/attend/media-partner`, `/attend/association-partner`, `/agenda/call-for-speakers`, and `/contact` (General Enquiry).
-- **Full Specification & Visual Redesigns**:
-  - **Homepage (S1–S13)**:
-    - Hero (`20–21 April 2027 · Mumbai, India · Edition 1 of the India Series`) & Stat Strip (`200–300`, `2`, `100%`, `50+`).
-    - **The Execution Gap (`EcosystemSectionDemo.tsx`)**: Clean `#020b1c` architectural grid background, animated Deloitte benchmark telemetry cards (`40% vs 28%`, `83% Gap`, `74% vs 21%`) with scroll/hover count-up and shimmer progress bars, Executive Mandate callout banner, and 4 glassmorphic Programme Positioning cards (`01–04`).
-    - **5 Content Pillars & The AI ROI Clinic (`AgendaSection.tsx`)**: Top-aligned active pillar feature card so 3D illustrations remain unobstructed; connected 3-stage AI ROI Clinic pipeline with animated horizontal pulse beam, custom icons, and `SCALE` / `REDESIGN` / `STOP` verdict badges.
-    - **Who Is In The Room & Two-Door Access (`NetworkingSection.tsx`)**: 2-line headline layout, 4 Buying Unit Constituencies, 12 Priority Enterprise Sectors, C-Level & Transformation marquees, and interactive hover-animated Door 01 (`Delegate Pass`) and Door 02 (`Business Pass`) cards.
-    - **Partner & Industry Endorsements (`TestimonialsSection.tsx`)**: Spotlight endorsement card with partner attribution profile card and 4-column interactive partner selector strip (`Microsoft`, `Cloudflare`, `SAP`, `DDN Storage`).
-    - **Credibility & Series Heritage, Twin Closing CTA Bands, Speak at the Conference, and 8-question FAQ** with `FAQPage` JSON-LD schema.
-  - **Speakers Hub (`/speakers`)**: Centered Enterprise Faculty heading, search + role filter pills, and redesigned twin glassmorphic `SpeakersCTASection.tsx`.
-  - **Agenda, Attend, Partners, Exhibition, Networking & Enquiry Suites**: Complete and verified.
-- **Verification**: TypeScript compilation (`npx tsc --noEmit`) verified with 0 errors.
+- **Live Testing URL (GitHub Pages):** `https://trescon-events.github.io/worldaishow-india/`
+- **Base path:** `basePath: "/enterprise"` configured in `next.config.ts`. All internal asset paths and links use `/enterprise/...` (automatically rewritten to `/worldaishow-india/...` inside the GitHub Actions Pages deployment workflow `.github/workflows/deploy.yml`).
+- **Brand Assets:** Header and footer logos wired at `public/logos/wais-27-enterprise_header.svg`, `public/logos/wais-27-enterprise_footer.svg`, and `public/logos/Wais-series-W.svg` (Global Series lockup).
+- **2026-10-21 Website Feedback Updates (`Website changes and feedback.docx`) Applied:**
+  1. **Research & Statistics (`EcosystemSectionDemo.tsx`)**:
+     - Updated "The Execution Gap" lead copy to: *"India’s enterprise adoption rate leads at nearly 40%, compared with 28% globally. 44% were redesigning selected processes; 17% reported fundamental reinvention."* (`Source: Deloitte, State of AI in the Enterprise: India Insights (2026)`).
+     - Updated **Benchmark 02 (Process redesign)** to `Selected-process redesign: 44%` vs `Fundamental process and business-model reinvention: 17%` (`Source: Deloitte, State of AI in the Enterprise: India Insights (2026)`).
+     - Updated **Benchmark 03 (Agentic AI and governance)** to `Expect moderate or greater agentic AI use within two years: 74%` vs `Mature governance for autonomous agents: 21%` (`Source: Deloitte, State of AI in the Enterprise`).
+  2. **Removed AI Workshop / AI ROI Clinic Across Website**:
+     - Removed from homepage (`AgendaSection.tsx`), Agenda Overview (`AgendaPage.tsx`), Themes page (`/agenda/themes`), "The 2030 Vision" page (`/agenda/the-2030-vision`), Delegate Pass & Attend pages (`src/app/attend/page.tsx`), Speakers Call to Stage (`SpeakerCallToStage.tsx`), and Homepage FAQ (`FAQSection.tsx`). Retained general editorial references to measuring business value and ROI.
+  3. **Agenda & Programme Updates (`AgendaPage.tsx`)**:
+     - Updated "The 2030 Vision" page quote to: *"Nearly 97% expect AI to improve productivity; about 73% already track productivity using expanded or comprehensive KPIs."* (`Source: Deloitte, State of AI in the Enterprise: India Insights`).
+     - Updated Executive Roundtable times on the Agenda timeline to **Roundtable 1: `11:30–13:00`** and **Roundtable 2: `15:30–17:00`**.
+  4. **Sponsorship Booth Sizes**:
+     - Updated standardized booth spaces across Sponsor, Partners, Exhibition, Agenda, and FAQ pages to **`9 sqm` standard space** and **`12 sqm` for the Lead package**.
+  5. **User Interface & Reference Alignments (`HeroSection.tsx`, `StatsSection.tsx`, `SponsorsSection.tsx`, `OrganizerSection.tsx`)**:
+     - Updated Hero section to open with the **World AI Show Global Series** logo (`Wais-series-W.svg`) and **"World's Longest Running AI Show Series"**, followed by **"Now in India · The Enterprise Edition"** and a smaller theme line (*"Where AI becomes the operating model."*).
+     - Replaced all stat ranges across the site with specific numbers: **`300`** Qualified CXOs (instead of `200–300`), **`45`** Speakers & Panelists (instead of `35–45`), and **`2 Days`** (instead of `2 Full Days`).
+     - Added **OUR REACH** (`16M+`, `19M+`, `220K+`, `170K+`, `150K+`) and **SERIES HIGHLIGHTS** (`46` Global Editions, `42K+` C-Level Attendees, `2600+` Speakers, `93%` Decision Makers, `51+` Countries Represented, `1650+` Exhibitors, `830+` Media Partners) to `OrganizerSection.tsx`.
+     - Added the **"Governments and Associations Who Have Worked With Us In The Past"** 4×4 logo showcase grid (`public/images/sponsors/governments/*.webp`) to `SponsorsSection.tsx`.

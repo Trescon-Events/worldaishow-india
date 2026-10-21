@@ -137,7 +137,7 @@ export function SpeakersList() {
               If you have scaled AI in production, we want you on the stage
             </h3>
             <p className="text-white/75 text-[15px] leading-relaxed m-0">
-              Mumbai 2027 speaker announcements release in waves following steering committee review. Apply to join the 35–45 enterprise faculty members below, or browse past speakers from the global World AI Show series.
+              Mumbai 2027 speaker announcements release in waves following steering committee review. Apply to join the 45 enterprise faculty members below, or browse past speakers from the global World AI Show series.
             </p>
           </div>
           <a

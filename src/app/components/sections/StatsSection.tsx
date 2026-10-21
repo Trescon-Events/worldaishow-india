@@ -6,13 +6,13 @@ import { GradientText } from "../Shared";
 const statsData = [
   {
     icon: "/enterprise/icons/stats/1.svg",
-    display: "200–300",
+    display: "300",
     label: "Qualified CXOs",
     index: "01",
   },
   {
     icon: "/enterprise/icons/stats/2.svg",
-    display: "35–45",
+    display: "45",
     label: "Speakers & Panelists",
     index: "02",
   },
@@ -24,7 +24,7 @@ const statsData = [
   },
   {
     icon: "/enterprise/icons/stats/3.svg",
-    display: "2 Full Days",
+    display: "2 Days",
     label: "Executive Conference",
     index: "04",
   },

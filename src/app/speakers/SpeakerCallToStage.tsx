@@ -7,11 +7,12 @@ export function SpeakerCallToStage() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-[radial-gradient(circle,rgba(154,108,255,0.06),transparent_60%)] pointer-events-none" />
 
       <div className="relative z-10 w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
-
         {/* Centered section heading */}
         <h2 className="text-center font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(34px,4.5vw,50px)] mb-[56px]">
           Take the Stage at <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#C0F43C]">World AI Show: The Enterprise Edition | Mumbai 2027</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#C0F43C]">
+            World AI Show: The Enterprise Edition | Mumbai 2027
+          </span>
         </h2>
 
         {/* Two-column content */}
@@ -24,7 +25,7 @@ export function SpeakerCallToStage() {
               We are looking for enterprise leaders — CIOs, CAIOs, CTOs, CDOs, CISOs, COOs, and Transformation Leaders — with real deployment evidence: the original baseline, trade-offs made, exception rates, and verified business outcomes.
             </p>
             <p className="m-0 text-white/68 text-[16px] leading-[1.65] mb-8">
-              As Edition 1 of the World AI Show Series in India, Mumbai 2027 prioritises operational ownership over technology demonstrations across five content pillars and The AI ROI Clinic.
+              As Edition 1 of the World AI Show Series in India, Mumbai 2027 prioritises operational ownership and measurable business value over technology demonstrations across five content pillars.
             </p>
 
             {/* Value Highlights */}
@@ -41,7 +42,7 @@ export function SpeakerCallToStage() {
                     className="w-5 h-5 object-contain mt-[3px] select-none flex-shrink-0"
                   />
                   <span>
-                    <strong className="text-white">India Series Launch Authority:</strong> Shape the inaugural Mumbai edition of the World AI Show Series in India, backed by 48 global editions of proven authority.
+                    <strong className="text-white">India Series Launch Authority:</strong> Shape the inaugural Mumbai edition of the World AI Show Series in India, backed by 46 global editions of proven authority.
                   </span>
                 </li>
                 <li className="flex items-start gap-3.5 text-white/80 text-[15px]">
@@ -52,7 +53,7 @@ export function SpeakerCallToStage() {
                     className="w-5 h-5 object-contain mt-[3px] select-none flex-shrink-0"
                   />
                   <span>
-                    <strong className="text-white">200–300 Qualified CXOs in the Room:</strong> Engage directly with the cross-functional enterprise buying unit across technology, data, operations, and risk.
+                    <strong className="text-white">300 Qualified CXOs in the Room:</strong> Engage directly with the cross-functional enterprise buying unit across technology, data, operations, and risk.
                   </span>
                 </li>
                 <li className="flex items-start gap-3.5 text-white/80 text-[15px]">
@@ -90,15 +91,14 @@ export function SpeakerCallToStage() {
             href="/enterprise/speaker-enquiry"
             className="inline-flex items-center justify-center gap-2 px-[32px] py-[16px] rounded-full text-[15px] font-extrabold text-[#06111f] [color:#06111f!important] bg-[#C0F43C] shadow-[0_0_24px_rgba(192,244,60,0.18)] hover:shadow-[0_0_32px_rgba(192,244,60,0.36)] hover:-translate-y-0.5 transition-all duration-200"
           >
-            Apply to speak 
-            <img 
-              src="/enterprise/images/agenda/arrow-top.webp" 
-              alt="Arrow top icon" 
+            Apply to speak
+            <img
+              src="/enterprise/images/agenda/arrow-top.webp"
+              alt="Arrow top icon"
               className="w-4 h-4 object-contain select-none flex-shrink-0"
             />
           </a>
         </div>
-
       </div>
     </section>
   );

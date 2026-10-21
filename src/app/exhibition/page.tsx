@@ -9,7 +9,7 @@ import { GradientText } from "../components/Shared";
 export const metadata: Metadata = {
   title: "Exhibition & 3D Floorplan Hub | World AI Show: The Enterprise Edition | Mumbai 2027",
   description:
-    "Explore the WebGL-rendered interactive 3D floorplan and 360° virtual tour for World AI Show: The Enterprise Edition | Mumbai 2027: 12 sqm Prime Island, 6 sqm Standardized Pods, 4 sqm Linear Booths, and 2 Parallel Closed-Door Boardrooms.",
+    "Explore the WebGL-rendered interactive 3D floorplan and 360° virtual tour for World AI Show: The Enterprise Edition | Mumbai 2027: 12 sqm Prime Island, 9 sqm Standard Booths, and 2 Parallel Closed-Door Boardrooms.",
 };
 
 const footprints = [
@@ -19,19 +19,19 @@ const footprints = [
     desc: "Exclusive 1-position Lead Partner island showcase paired with a 30-Min Keynote, 1 Panel Seat, and a CXO Boardroom.",
   },
   {
-    size: "6 sqm",
-    title: "6 sqm Standardized Pods (Platinum / Gold)",
-    desc: "Standardized 6 sqm executive demonstration pods paired with a 30-Minute Standalone Stage Thought Leadership Session.",
+    size: "9 sqm",
+    title: "9 sqm Standard Booth (Platinum / Gold)",
+    desc: "Standardized 9 sqm executive demonstration space paired with a 30-Minute Standalone Stage Thought Leadership Session.",
   },
   {
-    size: "4 sqm",
-    title: "4 sqm Linear Booths (Silver / Bronze / Exhibitor)",
-    desc: "Turnkey 4 sqm exhibition presence designed for live enterprise architecture demonstrations and buyer engagement.",
+    size: "9 sqm",
+    title: "9 sqm Standard Booth (Silver / Bronze / Exhibitor)",
+    desc: "Turnkey 9 sqm standard exhibition space designed for live enterprise architecture demonstrations and buyer engagement.",
   },
   {
     size: "Boardrooms",
     title: "2 Parallel Closed-Door Boardrooms (Day 1)",
-    desc: "Chatham House Rule executive boardrooms hosting 15 pre-qualified CXOs per room with a 5-minute partner opening address.",
+    desc: "Chatham House Rule executive boardrooms hosting 15 pre-qualified CXOs per room (11:30–13:00 and 15:30–17:00).",
   },
 ];
 

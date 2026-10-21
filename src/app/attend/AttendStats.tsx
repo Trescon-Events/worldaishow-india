@@ -1,66 +1,11 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
-
-interface CounterProps {
-  end: number;
-  suffix?: string;
-  duration?: number;
-}
-
-function Counter({ end, suffix = "", duration = 1500 }: CounterProps) {
-  const [count, setCount] = useState(0);
-  const [hasStarted, setHasStarted] = useState(false);
-  const elementRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHasStarted(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!hasStarted) return;
-
-    let startTimestamp: number | null = null;
-    const step = (timestamp: number) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      setCount(Math.floor(progress * end));
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
-    };
-    window.requestAnimationFrame(step);
-  }, [hasStarted, end, duration]);
-
-  return (
-    <span ref={elementRef}>
-      {count}
-      {suffix}
-    </span>
-  );
-}
-
 const statsData = [
-  { display: "200–300", label: "Qualified CXOs" },
-  { display: "35–45", label: "Speakers & Panelists" },
+  { display: "300", label: "Qualified CXOs" },
+  { display: "45", label: "Speakers & Panelists" },
   { display: "5", label: "Content Pillars" },
-  { display: "2 Full Days", label: "Executive Conference" },
-  { display: "48", label: "Global Series Editions" },
+  { display: "2 Days", label: "Executive Conference" },
+  { display: "46", label: "Global Series Editions" },
 ];
 
 export function AttendStats() {
@@ -80,4 +25,3 @@ export function AttendStats() {
     </div>
   );
 }
-

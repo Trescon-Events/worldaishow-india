@@ -30,11 +30,30 @@ const partnerLogos = [
   "/enterprise/images/sponsors/association/lafrench.webp",
 ];
 
+// Governments & Associations Who Have Worked With Us In The Past (matching worldaishow.com)
+const governmentLogos = [
+  { path: "/enterprise/images/sponsors/governments/meit.webp", alt: "Ministry of Electronics and Information Technology, Government of India" },
+  { path: "/enterprise/images/sponsors/governments/mrt-govt-of-india.webp", alt: "Ministry of Road Transport & Highways, Government of India" },
+  { path: "/enterprise/images/sponsors/governments/niti-aayog.webp", alt: "NITI Aayog" },
+  { path: "/enterprise/images/sponsors/governments/NeGD.webp", alt: "National e-Governance Division (NeGD)" },
+  { path: "/enterprise/images/sponsors/governments/digital-india.webp", alt: "Digital India" },
+  { path: "/enterprise/images/sponsors/governments/govt-maharashtra.webp", alt: "Government of Maharashtra" },
+  { path: "/enterprise/images/sponsors/governments/govt-andhra-pradesh.webp", alt: "Government of Andhra Pradesh" },
+  { path: "/enterprise/images/sponsors/governments/dubai-police.webp", alt: "Dubai Police" },
+  { path: "/enterprise/images/sponsors/governments/difc.webp", alt: "DIFC" },
+  { path: "/enterprise/images/sponsors/governments/dubai-economy.webp", alt: "Dubai Economy" },
+  { path: "/enterprise/images/sponsors/governments/supreme-council.webp", alt: "Supreme Council of Energy" },
+  { path: "/enterprise/images/sponsors/governments/ministry-of-finance.webp", alt: "Ministry of Finance" },
+  { path: "/enterprise/images/sponsors/governments/petroleum-development-oman.webp", alt: "Petroleum Development Oman" },
+  { path: "/enterprise/images/sponsors/governments/oman-chmaber-of-commerce.webp", alt: "Oman Chamber of Commerce and Industry" },
+  { path: "/enterprise/images/sponsors/governments/oman-banks-association.webp", alt: "Oman Banks Association" },
+  { path: "/enterprise/images/sponsors/governments/qfc.webp", alt: "Qatar Financial Centre" },
+];
+
 export function SponsorsSection() {
   return (
     <section className="relative py-[100px] pb-0 bg-[#030b19] overflow-hidden max-sm:py-[72px] max-sm:pb-0" id="partners">
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
-        
         {/* S9 · Sponsor band */}
         <div className="text-center mb-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan/30 bg-cyan/10 text-cyan text-xs font-mono uppercase tracking-[2px]">
@@ -49,7 +68,7 @@ export function SponsorsSection() {
         </h2>
 
         <p className="mt-6 max-w-[780px] mx-auto text-center text-muted text-[18px] leading-[1.6] max-sm:text-[16px]">
-          Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Commercial partnerships are structured around 30-minute stage thought leadership, standardized 4, 6, or 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
+          Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Commercial partnerships are structured around 30-minute stage thought leadership, standardized 9 sqm and 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
         </p>
 
         <div className="mt-8 flex justify-center">
@@ -64,12 +83,10 @@ export function SponsorsSection() {
         <p className="mt-14 mb-0 text-center font-mono text-xs uppercase tracking-[2px] text-white/55">
           Past Series Partners &amp; Sponsors
         </p>
-
       </div>
 
-      {/* Two offset scrolling sponsor rows precisely matching screenshot */}
+      {/* Two offset scrolling sponsor rows */}
       <div className="flex flex-col gap-5 mt-6 w-full overflow-hidden">
-        
         {/* Row 1: MDEC, MIDA, Datadog, Quantexa, Denodo (slides right-to-left) */}
         <div className="relative w-full overflow-hidden">
           <div className="logo-marquee-rail flex gap-5 will-change-transform">
@@ -111,17 +128,42 @@ export function SponsorsSection() {
             ))}
           </div>
         </div>
+      </div>
 
+      {/* Governments and Associations Who Have Worked With Us In The Past (4x4 Grid from worldaishow.com) */}
+      <div className="mt-20 py-16 bg-white text-center">
+        <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+          <h3 className="m-0 mb-10 text-[#151923] font-[850] text-[clamp(22px,2.8vw,32px)] leading-[1.2] tracking-[-0.5px] uppercase max-w-[820px] mx-auto">
+            Governments and Associations Who Have Worked With Us In The Past
+          </h3>
+
+          <div className="grid grid-cols-4 border border-slate-200 rounded-[16px] overflow-hidden max-md:grid-cols-2">
+            {governmentLogos.map((logo) => (
+              <div
+                key={logo.alt}
+                className="flex items-center justify-center h-[126px] p-5 border-r border-b border-slate-200 bg-white hover:bg-slate-50 transition-colors duration-200"
+              >
+                <img
+                  src={logo.path}
+                  alt={logo.alt}
+                  className="max-w-[165px] max-h-[82px] object-contain"
+                  loading="lazy"
+                  width={165}
+                  height={82}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Partners single row horizontal infinite marquee slider with hover pause */}
-      <div className="mt-[72px] p-[28px_0_34px] bg-white text-center overflow-hidden">
+      <div className="p-[28px_0_34px] bg-slate-50 border-t border-slate-200 text-center overflow-hidden">
         <p className="m-0 mb-[26px] text-[18px] font-bold text-[#151923] uppercase tracking-[1.5px] select-none">
-          Strategic & Media Partners
+          Strategic &amp; Media Partners
         </p>
         <div className="relative w-full overflow-hidden">
           <div className="marquee-partners flex items-center gap-[64px]">
-            {/* Double list array for infinite scrolling seamless transition loop */}
             {[...partnerLogos, ...partnerLogos].map((logo, index) => (
               <div
                 key={`${logo}-${index}`}
@@ -140,9 +182,6 @@ export function SponsorsSection() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }
-
-

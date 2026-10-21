@@ -296,10 +296,10 @@ function PartnerCTA() {
         Partnership Opportunities · Mumbai 2027
       </span>
       <h3 className="m-0 text-white font-[850] text-[clamp(24px,3.2vw,36px)] leading-tight tracking-tight mb-4">
-        Ready to Reach <GradientText>200–300 Qualified Enterprise CXOs?</GradientText>
+        Ready to Reach <GradientText>300 Qualified Enterprise CXOs?</GradientText>
       </h3>
       <p className="mt-0 mb-8 text-white/62 text-[16px] leading-relaxed max-w-[620px] mx-auto">
-        Contact our partnership team to explore 30-minute standalone stage sessions, standardized 4 sqm, 6 sqm, and 12 sqm exhibition spaces, and closed-door CXO boardrooms for World AI Show: The Enterprise Edition | Mumbai 2027.
+        Contact our partnership team to explore 30-minute standalone stage sessions, standardized 9 sqm and 12 sqm exhibition spaces, and closed-door CXO boardrooms for World AI Show: The Enterprise Edition | Mumbai 2027.
       </p>
       <div className="flex justify-center gap-4 flex-wrap max-sm:flex-col max-sm:items-center">
         <a

@@ -110,7 +110,7 @@ export default function NetworkingPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#C0F43C]">By Design.</span>
             </h1>
             <p className="m-0 mt-6 text-white/75 text-[18px] leading-relaxed max-sm:text-[15px]">
-              200–300 qualified enterprise CXOs across 2 Full Days in Mumbai (20–21 April 2027). Algorithmic pre-scheduled 20-minute 1-on-1 meetings, closed-door 15-CXO roundtables, and a personalized 2-day agenda builder.
+              300 qualified enterprise CXOs across 2 Days in Mumbai (20–21 April 2027). Algorithmic pre-scheduled 20-minute 1-on-1 meetings, closed-door 15-CXO roundtables, and a personalized 2-day agenda builder.
             </p>
 
             {/* Quick links buttons */}
@@ -138,7 +138,7 @@ export default function NetworkingPage() {
           <div className="grid grid-cols-3 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1 text-center divide-x divide-white/10">
             <div className="flex flex-col">
               <span className="text-[40px] font-[900] text-[#C0F43C] tracking-tight">
-                200–300
+                300
               </span>
               <span className="text-[12.5px] text-white/50 uppercase tracking-widest font-mono font-bold mt-1.5">Qualified CXOs</span>
             </div>
@@ -169,7 +169,7 @@ export default function NetworkingPage() {
               Engineered for the <GradientText>Complete Buying Unit</GradientText>
             </h2>
             <p className="m-0 mt-5 text-white/60 text-[16px] leading-relaxed max-sm:text-[14px]">
-              Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Our networking suite connects CIOs, CAIOs, CTOs, CDOs, CISOs, and COOs with peers and vetted solution providers across 2 Full Days.
+              Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Our networking suite connects CIOs, CAIOs, CTOs, CDOs, CISOs, and COOs with peers and vetted solution providers across 2 Days.
             </p>
           </div>
 
@@ -212,7 +212,7 @@ export default function NetworkingPage() {
         </div>
       </section>
 
-      {/* ── Section 3: 200–300 Qualified CXOs. One Room. ── */}
+      {/* ── Section 3: 300 Qualified CXOs. One Room. ── */}
       <section className="relative py-24 bg-[#020814]">
         <div className="w-[min(1114px,calc(100%-48px))] mx-auto">
 
@@ -224,7 +224,7 @@ export default function NetworkingPage() {
                 Who Is In The Room
               </span>
               <h2 className="font-[850] text-white leading-[1.1] tracking-[-2px] text-[clamp(36px,4.5vw,52px)] m-0 mb-8">
-                200–300 Qualified CXOs.<br />
+                300 Qualified CXOs.<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#C0F43C]">The Buying Unit.</span>
               </h2>
 
@@ -296,7 +296,7 @@ export default function NetworkingPage() {
             Be in the room where <GradientText>the operating model gets decided.</GradientText>
           </h2>
           <p className="m-0 mt-4 text-white/58 text-[15px] leading-relaxed max-w-[580px] mx-auto">
-            Apply for a complimentary Delegate Pass (by invitation and qualification) or enquire about commercial sponsorship for Mumbai 2027 (20–21 April 2027 · 2 Full Days).
+            Apply for a complimentary Delegate Pass (by invitation and qualification) or enquire about commercial sponsorship for Mumbai 2027 (20–21 April 2027 · 2 Days).
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
