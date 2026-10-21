@@ -31,9 +31,14 @@ export function HeroSection() {
         </p>
 
         {/* Hero Title */}
-        <h1 className="max-w-[760px] mx-auto text-white font-[850] leading-[1.1] tracking-[-1.2px] text-[clamp(28px,4vw,52px)] text-center mb-6">
+        <h1 className="max-w-[760px] mx-auto text-white font-[850] leading-[1.1] tracking-[-1.2px] text-[clamp(28px,4vw,52px)] text-center mb-5">
           Where AI becomes the <GradientText>operating model.</GradientText>
         </h1>
+
+        {/* Standfirst */}
+        <p className="max-w-[780px] mx-auto text-white/80 text-[18px] leading-[1.6] text-center mb-6 max-sm:text-[15px]">
+          The premier cross-functional executive conference addressing the architecture, systems integration, agentic governance, and verifiable ROI of enterprise AI.
+        </p>
 
         <div className="w-full max-w-[780px] border-t border-white/20 opacity-60 mt-1" />
 
