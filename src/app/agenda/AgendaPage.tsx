@@ -669,12 +669,6 @@ export function AgendaVision() {
         </div>
       </section>
 
-      <AgendaSection
-        title={<>Five decisions. <GradientText>Two days.</GradientText></>}
-        subtitle="Curated Agenda"
-        description="Workforce restructuring, operating-model change, and verified ROI run across all five."
-      />
-
       <section className={styles.accelerateSection}>
         <div className={styles.container}>
           <h2>Where AI becomes <GradientText>the operating model</GradientText></h2>
