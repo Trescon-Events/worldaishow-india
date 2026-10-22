@@ -143,11 +143,11 @@ function StatCard({ stat }: { stat: (typeof statsData)[0] }) {
     <article
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative min-h-[194px] p-6 border-0 border-t border-[#293442]/55 rounded-[15px] bg-gradient-to-br from-[#00ceff]/20 to-[#c0f43c]/9 shadow-[0_20px_60px_rgba(0,0,0,0.22),inset_0_0_28px_rgba(65,220,255,0.06)] backdrop-blur-md group hover:-translate-y-1 transition-all duration-300 border-t-[#293442] overflow-hidden"
+      className="relative min-h-[194px] p-6 border-0 border-t border-[#293442]/55 rounded-[15px] bg-gradient-to-br from-[#00ceff]/20 to-[#c0f43c]/9 shadow-[0_20px_60px_rgba(0,0,0,0.22),inset_0_0_28px_rgba(65,220,255,0.06)] backdrop-blur-md group hover:-translate-y-1 transition-all duration-300 border-t-[#293442] overflow-hidden flex flex-col items-center justify-center text-center"
     >
       <HoverParticles isHovered={isHovered} />
 
-      <div className="relative z-10 grid place-items-center w-10 h-10 rounded-full bg-black/26 text-cyan shadow-[inset_0_0_12px_rgba(24,212,255,0.1)] group-hover:scale-105 transition-transform duration-200">
+      <div className="relative z-10 grid place-items-center w-10 h-10 mx-auto rounded-full bg-black/26 text-cyan shadow-[inset_0_0_12px_rgba(24,212,255,0.1)] group-hover:scale-105 transition-transform duration-200">
         <img
           src={stat.icon}
           alt=""
@@ -158,15 +158,15 @@ function StatCard({ stat }: { stat: (typeof statsData)[0] }) {
         />
       </div>
 
-      <span className="absolute top-[37px] right-[23px] text-white/54 font-mono text-[11px] tracking-wider select-none z-10">
+      <span className="absolute top-[18px] right-[20px] text-white/45 font-mono text-[11px] tracking-wider select-none z-10">
         {stat.index}
       </span>
 
-      <strong className="block mt-[26px] text-[#C0F43C] font-[850] text-[34px] leading-none tracking-tight relative z-10">
+      <strong className="block mt-[22px] text-[#C0F43C] font-[850] text-[34px] leading-none tracking-tight relative z-10 text-center">
         {stat.display}
       </strong>
 
-      <p className="mt-3 text-white/80 font-mono text-[13px] uppercase tracking-[1px] leading-relaxed font-semibold relative z-10">
+      <p className="mt-3 text-white/80 font-mono text-[13px] uppercase tracking-[1px] leading-relaxed font-semibold relative z-10 text-center">
         {stat.label}
       </p>
     </article>
