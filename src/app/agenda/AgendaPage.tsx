@@ -38,9 +38,11 @@ const gateway = [
 ];
 
 const focusItems = [
-  ["01 · Enterprise AI Strategy & Business Value", "Use-case scale decisions, executive outcome ownership, and board-level productivity metrics.", "/enterprise/images/agenda/Policy.webp"],
-  ["02 · Pilot to Production & Process Redesign", "Continuous integration, latency, exception handling, and human-in-the-loop workflows.", "/enterprise/images/agenda/AI-infra.webp"],
-  ["03 · Agentic AI, Data Stack & Proportionate Trust", "Agent identity, tool permissions, real-time API fabrics, hybrid-cloud trade-offs, and proportionate risk tiering.", "/enterprise/images/agenda/investment.webp"]
+  ["Pillar 1: Enterprise AI Strategy & Business Value", "Use-case scale decisions, executive outcome ownership, and board-level productivity metrics.", "/enterprise/images/agenda/Policy.webp"],
+  ["Pillar 2: Pilot to Production & Workflow Redesign", "Continuous integration, latency, exception handling, and human-in-the-loop workflows.", "/enterprise/images/agenda/AI-infra.webp"],
+  ["Pillar 3: Agentic AI & Accountable Autonomy", "Agent identity, tool permissions, approval gates, auditability, and failure containment.", "/enterprise/images/agenda/investment.webp"],
+  ["Pillar 4: Data & Architecture (The AI-Ready Stack)", "Data quality and context retrieval, real-time enterprise access, API fabrics, hybrid/multi-cloud workload placement, interoperability, and data sovereignty.", "/enterprise/images/agenda/Global.webp"],
+  ["Pillar 5: Governance, Security & Proportionate Trust", "Proportionate risk tiering, synthetic media safeguards, and compliance guidelines.", "/enterprise/images/agenda/strong.webp"]
 ];
 
 type EnterpriseAgendaSession = {
@@ -666,6 +668,12 @@ export function AgendaVision() {
           </div>
         </div>
       </section>
+
+      <AgendaSection
+        title={<>Five decisions. <GradientText>Two days.</GradientText></>}
+        subtitle="Curated Agenda"
+        description="Workforce restructuring, operating-model change, and verified ROI run across all five."
+      />
 
       <section className={styles.accelerateSection}>
         <div className={styles.container}>

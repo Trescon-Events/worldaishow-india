@@ -26,10 +26,10 @@ const themeItems = [
     image: "/enterprise/images/theme/Theme-03.webp",
   },
   {
-    label: "Data context and the AI-ready stack",
-    heading: "Data Context & The AI-Ready Stack",
+    label: "Data & architecture (The AI-ready stack)",
+    heading: "Data & Architecture (The AI-Ready Stack)",
     description:
-      "Real-time enterprise access, API fabrics, hybrid-cloud trade-offs, and data quality.",
+      "Data quality and context retrieval, real-time enterprise access, API fabrics, hybrid/multi-cloud workload placement, interoperability, and data sovereignty.",
     image: "/enterprise/images/theme/Theme-01.webp",
   },
   {
