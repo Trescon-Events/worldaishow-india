@@ -426,7 +426,7 @@ export function HeroSection() {
         {/* Hero Title */}
         <h1 className="max-w-[1020px] mx-auto text-white font-[850] leading-[1.08] xl:leading-[72px] tracking-[-1.8px] text-[clamp(34px,4.8vw,68px)] xl:text-[68px] text-center mb-6">
           <span className="block">Where AI becomes the</span>
-          <GradientText className="block">operating model.</GradientText>
+          <span className="block"><GradientText>operating model.</GradientText></span>
         </h1>
 
         {/* Standfirst (20px, 33px line-height, 0 tracking, 400 weight, #CBD5E1) */}
