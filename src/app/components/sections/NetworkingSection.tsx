@@ -66,48 +66,28 @@ export function NetworkingSection() {
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
         
         {/* S7 · Who is in the room */}
-        <div className="grid grid-cols-[0.78fr_1fr] gap-9 items-center max-[980px]:grid-cols-1 max-[980px]:gap-12">
-          
-          {/* Headline Column */}
-          <div>
+        <div className="flex flex-col items-center text-center">
+          <div className="max-w-[780px] mb-12">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan/30 bg-cyan/10 text-cyan text-xs font-mono uppercase tracking-[2px] mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
               Who Is In The Room
             </div>
-            <h2 className="text-left font-[850] text-white leading-[1.08] tracking-[-1.5px] text-[clamp(26px,3.1vw,38px)] max-[980px]:text-center">
-              <span className="sm:whitespace-nowrap">The complete enterprise</span> <br />
-              <GradientText>buying unit.</GradientText>
+            <h2 className="font-[850] text-white leading-[1.06] tracking-[-1.8px] text-[clamp(34px,4.4vw,52px)] m-0">
+              The complete enterprise <GradientText>buying unit.</GradientText>
             </h2>
-            <p className="mt-6 mb-8 text-muted text-[18px] leading-[1.5] max-[980px]:text-center max-sm:text-[16px]">
+            <p className="mt-5 mb-0 text-muted text-[18px] leading-[1.55] max-sm:text-[16px]">
               300 qualified enterprise technology, data, operations, and risk leaders convening across 2 Days in Mumbai.
             </p>
-            <div 
-              className="group relative mt-6 rounded-[20px] overflow-hidden border border-white/15 shadow-[0_18px_45px_rgba(0,0,0,0.45)] max-sm:max-w-md max-sm:mx-auto"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <video
-                className="w-full h-[260px] object-cover block"
-                autoPlay
-                muted
-                loop
-                playsInline
-                poster="/enterprise/images/networking/meet-leaders.webp"
-              >
-                <source src="/enterprise/videos/wais-mumbai-hero-banner.webm" type="video/webm" />
-                <source src="/enterprise/videos/wais-malaysia-hero-banner.mp4" type="video/mp4" />
-              </video>
-            </div>
           </div>
 
-          {/* 4 Buying Unit Constituencies Grid */}
-          <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
+          {/* 4 Buying Unit Constituencies Grid in 1 Row */}
+          <div className="w-full grid grid-cols-4 gap-5 max-[980px]:grid-cols-2 max-sm:grid-cols-1 text-left">
             {buyingUnitConstituencies.map((item) => (
               <article
                 key={item.title}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                className="group flex flex-col justify-between min-h-[190px] p-6 rounded-[14px] border border-line bg-gradient-to-br from-[#00ceff]/8 to-[#c0f43c]/4 shadow-[inset_0_0_28px_rgba(65,220,255,0.06),0_20px_60px_rgba(0,0,0,0.22)] hover:-translate-y-0.5 hover:border-green/60 hover:shadow-[inset_0_0_28px_rgba(192,244,60,0.08),0_20px_60px_rgba(0,0,0,0.3)] transition-all duration-300"
+                className="group flex flex-col justify-between min-h-[210px] p-6 rounded-[14px] border border-line bg-gradient-to-br from-[#00ceff]/8 to-[#c0f43c]/4 shadow-[inset_0_0_28px_rgba(65,220,255,0.06),0_20px_60px_rgba(0,0,0,0.22)] hover:-translate-y-0.5 hover:border-green/60 hover:shadow-[inset_0_0_28px_rgba(192,244,60,0.08),0_20px_60px_rgba(0,0,0,0.3)] transition-all duration-300"
               >
                 <div>
                   <span className="inline-block font-mono text-[11px] uppercase tracking-[1.8px] text-cyan mb-3">
