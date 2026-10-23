@@ -2,22 +2,28 @@
 
 import { GradientText } from "../Shared";
 
-// Sponsor Row 1 Logos (Path: strategic or gold subfolders)
+// Sponsor Row 1 Logos (Past World AI Show India Sponsors)
 const sponsorRow1 = [
-  { path: "/enterprise/images/sponsors/strategic/mdec.webp", alt: "MDEC" },
-  { path: "/enterprise/images/sponsors/strategic/mida.webp", alt: "MIDA" },
-  { path: "/enterprise/images/sponsors/gold/datadog.webp", alt: "Datadog" },
-  { path: "/enterprise/images/sponsors/gold/quantexa.webp", alt: "Quantexa" },
-  { path: "/enterprise/images/sponsors/gold/denodo.webp", alt: "Denodo" },
+  { path: "/enterprise/images/sponsors/india-past/google-cloud.webp", alt: "Google Cloud" },
+  { path: "/enterprise/images/sponsors/india-past/Dell-Technologies-Intel.webp", alt: "Dell Technologies & Intel" },
+  { path: "/enterprise/images/sponsors/india-past/hewlett-packard.webp", alt: "Hewlett Packard Enterprise" },
+  { path: "/enterprise/images/sponsors/india-past/hcl.webp", alt: "HCLTech" },
+  { path: "/enterprise/images/sponsors/india-past/happiest-minds.webp", alt: "Happiest Minds" },
+  { path: "/enterprise/images/sponsors/india-past/kpmg.webp", alt: "KPMG" },
+  { path: "/enterprise/images/sponsors/india-past/sap.webp", alt: "SAP" },
+  { path: "/enterprise/images/sponsors/india-past/oracle.webp", alt: "Oracle" },
 ];
 
-// Sponsor Row 2 Logos (Path: gold subfolder)
+// Sponsor Row 2 Logos (Past World AI Show India Sponsors)
 const sponsorRow2 = [
-  { path: "/enterprise/images/sponsors/gold/Magure.webp", alt: "Magure" },
-  { path: "/enterprise/images/sponsors/gold/Alibaba-cloud.webp", alt: "Alibaba Cloud" },
-  { path: "/enterprise/images/sponsors/gold/ey.webp", alt: "EY" },
-  { path: "/enterprise/images/sponsors/gold/avatai.webp", alt: "Avatai" },
-  { path: "/enterprise/images/sponsors/gold/darwin.webp", alt: "Darwinbox" },
+  { path: "/enterprise/images/sponsors/india-past/cisco.webp", alt: "Cisco" },
+  { path: "/enterprise/images/sponsors/india-past/Snowflake.webp", alt: "Snowflake" },
+  { path: "/enterprise/images/sponsors/india-past/ui-path.webp", alt: "UiPath" },
+  { path: "/enterprise/images/sponsors/india-past/automation-anywhere.webp", alt: "Automation Anywhere" },
+  { path: "/enterprise/images/sponsors/india-past/eclerx.webp", alt: "eClerx" },
+  { path: "/enterprise/images/sponsors/india-past/Searce.webp", alt: "Searce" },
+  { path: "/enterprise/images/sponsors/india-past/vernacular-ai.webp", alt: "Vernacular.ai" },
+  { path: "/enterprise/images/sponsors/india-past/Denodo.webp", alt: "Denodo" },
 ];
 
 // Strategic & Association Partners Logos (Path: association subfolder)

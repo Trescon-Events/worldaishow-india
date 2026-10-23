@@ -11,7 +11,7 @@ export function SpeakerCallToStage() {
         <h2 className="text-center font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(34px,4.5vw,50px)] mb-[56px]">
           Take the Stage at <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#C0F43C]">
-            World AI Show: The Enterprise Edition | Mumbai 2027
+            World AI Show: The Enterprise Edition
           </span>
         </h2>
 

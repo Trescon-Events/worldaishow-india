@@ -59,7 +59,7 @@ const seniorRoles = [
 ];
 
 export function NetworkingSection() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [, setIsHovered] = useState(false);
 
   return (
     <section className="relative py-[104px] bg-[#020C21] overflow-hidden max-sm:py-[72px]" id="networking">
@@ -82,24 +82,21 @@ export function NetworkingSection() {
               300 qualified enterprise technology, data, operations, and risk leaders convening across 2 Days in Mumbai.
             </p>
             <div 
-              className="group relative mt-6 rounded-[20px] overflow-hidden max-sm:max-w-md max-sm:mx-auto cursor-pointer"
+              className="group relative mt-6 rounded-[20px] overflow-hidden border border-white/15 shadow-[0_18px_45px_rgba(0,0,0,0.45)] max-sm:max-w-md max-sm:mx-auto"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              {/* Duotone Color Overlay */}
-              <div 
-                className={`absolute inset-0 z-10 pointer-events-none mix-blend-color transition-colors duration-500 ease-out ${
-                  isHovered ? "bg-[#C0F43C]/35" : "bg-[#00ceff]/20"
-                }`} 
-              />
-              <img
-                className="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                src="/enterprise/images/networking/meet-leaders.webp"
-                alt="Candid executive peer-to-peer roundtable discussions from prior World AI Show editions"
-                loading="lazy"
-                width={450}
-                height={300}
-              />
+              <video
+                className="w-full h-[260px] object-cover block"
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster="/enterprise/images/networking/meet-leaders.webp"
+              >
+                <source src="/enterprise/videos/wais-mumbai-hero-banner.webm" type="video/webm" />
+                <source src="/enterprise/videos/wais-malaysia-hero-banner.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
 
@@ -160,43 +157,46 @@ export function NetworkingSection() {
           </div>
         </div>
 
-        {/* Roles slider marquee 1: C-Level */}
-        <section className="mt-[58px] text-center" aria-labelledby="c-level-title">
-          <h3 id="c-level-title" className="m-0 mb-4 text-white text-[24px] font-extrabold leading-none">
-            C-level Executives
-          </h3>
-          <div className="w-[100vw] ml-[calc((100vw-100%)/-2)] overflow-hidden" aria-label="C-level Executives carousel">
-            <div className="move-left flex w-max gap-7 px-7 pb-1.5 will-change-transform">
-              {[...cLevelRoles, ...cLevelRoles, ...cLevelRoles].map((role, index) => (
-                <span
-                  key={`${role}-${index}`}
-                  className="flex-none min-w-[250px] p-[15px_24px] rounded-[9px] text-[#06111f] [color:#06111f!important] bg-[#C0F43C] text-center font-extrabold text-[14px]"
-                >
-                  {role}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Roles slider marquees hidden for now per feedback */}
+        {false && (
+          <>
+            <section className="mt-[58px] text-center" aria-labelledby="c-level-title">
+              <h3 id="c-level-title" className="m-0 mb-4 text-white text-[24px] font-extrabold leading-none">
+                C-level Executives
+              </h3>
+              <div className="w-[100vw] ml-[calc((100vw-100%)/-2)] overflow-hidden" aria-label="C-level Executives carousel">
+                <div className="move-left flex w-max gap-7 px-7 pb-1.5 will-change-transform">
+                  {[...cLevelRoles, ...cLevelRoles, ...cLevelRoles].map((role, index) => (
+                    <span
+                      key={`${role}-${index}`}
+                      className="flex-none min-w-[250px] p-[15px_24px] rounded-[9px] text-[#06111f] [color:#06111f!important] bg-[#C0F43C] text-center font-extrabold text-[14px]"
+                    >
+                      {role}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </section>
 
-        {/* Roles slider marquee 2: Senior Executives */}
-        <section className="mt-8 text-center" aria-labelledby="senior-title">
-          <h3 id="senior-title" className="m-0 mb-4 text-white text-[24px] font-extrabold leading-none">
-            Enterprise Transformation &amp; Risk Leaders
-          </h3>
-          <div className="w-[100vw] ml-[calc((100vw-100%)/-2)] overflow-hidden" aria-label="Senior Executives carousel">
-            <div className="move-right flex w-max gap-7 px-7 pb-1.5 will-change-transform">
-              {[...seniorRoles, ...seniorRoles, ...seniorRoles].map((role, index) => (
-                <span
-                  key={`${role}-${index}`}
-                  className="flex-none min-w-[250px] p-[15px_24px] rounded-[9px] text-[#06111f] [color:#06111f!important] bg-cyan text-center font-extrabold text-[14px]"
-                >
-                  {role}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
+            <section className="mt-8 text-center" aria-labelledby="senior-title">
+              <h3 id="senior-title" className="m-0 mb-4 text-white text-[24px] font-extrabold leading-none">
+                Enterprise Transformation &amp; Risk Leaders
+              </h3>
+              <div className="w-[100vw] ml-[calc((100vw-100%)/-2)] overflow-hidden" aria-label="Senior Executives carousel">
+                <div className="move-right flex w-max gap-7 px-7 pb-1.5 will-change-transform">
+                  {[...seniorRoles, ...seniorRoles, ...seniorRoles].map((role, index) => (
+                    <span
+                      key={`${role}-${index}`}
+                      className="flex-none min-w-[250px] p-[15px_24px] rounded-[9px] text-[#06111f] [color:#06111f!important] bg-cyan text-center font-extrabold text-[14px]"
+                    >
+                      {role}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </section>
+          </>
+        )}
 
         {/* S8 · How to attend — two doors */}
         <div className="mt-20 pt-16 border-t border-white/10">
@@ -285,4 +285,3 @@ export function NetworkingSection() {
     </section>
   );
 }
-

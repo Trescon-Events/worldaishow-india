@@ -14,14 +14,13 @@ export function PartnersHero() {
     >
       <div className="relative z-10 w-[min(1114px,calc(100%-48px))] mx-auto">
         <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
-          Partners &amp; Sponsors · Mumbai 2027
+          Partners &amp; Sponsors
         </span>
-        <h1 className="m-0 text-white font-[850] leading-[1.05] tracking-[-2px] text-[clamp(48px,5.8vw,78px)]">
-          <GradientText>PARTNERS</GradientText> <br />
-          <span>&amp; Sponsors</span>
+        <h1 className="m-0 text-white font-[850] leading-[1.06] tracking-[-2px] text-[clamp(44px,5.5vw,74px)] max-w-[760px]">
+          <GradientText>Partner</GradientText> at World AI Show
         </h1>
         <p className="max-w-[680px] mt-6 mb-0 text-white/84 text-[20px] leading-relaxed max-sm:text-base">
-          Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Commercial partnerships at Mumbai 2027 are structured around 30-minute stage thought leadership, standardized 9 or 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
+          Commercial partnerships are structured around 30-minute stage thought leadership, standardized 9 or 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
         </p>
       </div>
     </section>

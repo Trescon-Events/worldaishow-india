@@ -9,35 +9,35 @@ const themeItems = [
     heading: "Enterprise AI Strategy & Business Value",
     description:
       "Use-case scale decisions, executive outcome ownership, board-level productivity metrics.",
-    image: "/enterprise/images/theme/Theme-01.webp",
+    image: "/enterprise/images/agenda/keynotes.webp",
   },
   {
     label: "Pilot to production and workflow redesign",
     heading: "Pilot to Production & Process Redesign",
     description:
       "Continuous integration, latency, exception handling, and human-in-the-loop workflows.",
-    image: "/enterprise/images/theme/Theme-02.webp",
+    image: "/enterprise/images/agenda/panel-discussion.webp",
   },
   {
     label: "Agentic AI and accountable autonomy",
     heading: "Agentic AI & Accountable Autonomy",
     description:
       "Agent identity, tool permissions, approval gates, auditability, and failure containment.",
-    image: "/enterprise/images/theme/Theme-03.webp",
+    image: "/enterprise/images/agenda/driving-malaysia-stage.webp",
   },
   {
     label: "Data & architecture (The AI-ready stack)",
     heading: "Data & Architecture (The AI-Ready Stack)",
     description:
       "Data quality and context retrieval, real-time enterprise access, API fabrics, hybrid/multi-cloud workload placement, interoperability, and data sovereignty.",
-    image: "/enterprise/images/theme/Theme-01.webp",
+    image: "/enterprise/images/agenda/driving-malaysia-speakers.webp",
   },
   {
     label: "Governance, security and proportionate trust",
     heading: "Governance, Security & Proportional Trust",
     description:
       "Proportionate risk tiering, synthetic media safeguards, and compliance guidelines.",
-    image: "/enterprise/images/theme/Theme-04.webp",
+    image: "/enterprise/images/agenda/Fireside.webp",
   },
 ];
 
@@ -89,7 +89,7 @@ function ThemeIcon({ index }: { index: number }) {
 export function AgendaSection({
   title = (
     <>
-      Five decisions. <GradientText>Two days.</GradientText>
+      Five Talking Points. <GradientText>Two Days.</GradientText>
     </>
   ),
   subtitle = "Curated Agenda",
@@ -181,23 +181,17 @@ export function AgendaSection({
             })}
           </div>
 
-          {/* Right Focus Feature Card */}
+          {/* Right Focus Feature Card (Real photo, no text overlay) */}
           <aside
             key={activeIndex}
-            style={{ backgroundImage: `url(${activeTheme.image})` }}
-            className="focus-reveal flex flex-col justify-start p-8 min-h-[420px] rounded-[22px] overflow-hidden bg-cover bg-bottom shadow-[0_0_34px_rgba(192,244,60,0.14),inset_0_0_28px_rgba(0,206,255,0.06)] relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#040b1b]/90 before:via-[#040b1b]/35 before:to-transparent before:z-0 border border-[#b9f82d]/20"
+            className="focus-reveal relative min-h-[420px] rounded-[22px] overflow-hidden shadow-[0_0_34px_rgba(192,244,60,0.14),inset_0_0_28px_rgba(0,206,255,0.06)] border border-[#b9f82d]/25 bg-[#040b1b]"
           >
-            <div className="relative z-1 flex flex-col">
-              <span className="text-[#C0F43C] font-mono text-[11px] uppercase tracking-[1.8px] font-extrabold mb-2">
-                Pillar / {String(activeIndex + 1).padStart(2, "0")}
-              </span>
-              <h3 className="text-white font-[850] text-[32px] leading-[1.13] mb-3 max-w-[470px]">
-                {activeTheme.heading}
-              </h3>
-              <p className="m-0 text-white/80 text-[16px] leading-relaxed max-w-[450px]">
-                {activeTheme.description}
-              </p>
-            </div>
+            <img
+              src={activeTheme.image}
+              alt={activeTheme.heading}
+              className="w-full h-full object-cover object-center block"
+              loading="lazy"
+            />
           </aside>
         </div>
       </div>

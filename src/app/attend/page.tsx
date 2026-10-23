@@ -432,7 +432,7 @@ export function AttendOverviewSection() {
             Where AI becomes <GradientText>the operating model.</GradientText>
           </h1>
           <p className="max-w-[730px] mt-[26px] mb-0 text-white/88 text-[20px] leading-normal max-sm:text-[17px]">
-            A two-day executive conference for 300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.
+            This is a two-day executive conference featuring 300+ CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.
           </p>
           <div className="flex flex-wrap gap-3.5 mt-10 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="/enterprise/attend/delegate" variant="solid">
@@ -442,6 +442,16 @@ export function AttendOverviewSection() {
               Enquire about sponsorship
             </ArrowButton>
           </div>
+        </div>
+      </section>
+
+      {/* Stats Section (Moved directly under the hero) */}
+      <section className="py-[86px] pt-[74px] bg-gradient-to-b from-[#020c21] to-[#031127] text-center max-sm:py-[62px]">
+        <div className="w-[min(1120px,calc(100%-48px))] mx-auto">
+          <h2 className="max-w-[820px] mx-auto text-white font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(40px,5vw,60px)] max-sm:text-[38px] max-sm:tracking-[-1px]">
+            The <GradientText>Scale</GradientText>
+          </h2>
+          <AttendStats />
         </div>
       </section>
 
@@ -514,32 +524,25 @@ export function AttendOverviewSection() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-[86px] pt-[74px] bg-gradient-to-b from-[#020c21] to-[#031127] text-center max-sm:py-[62px]">
-        <div className="w-[min(1120px,calc(100%-48px))] mx-auto">
-          <h2 className="max-w-[820px] mx-auto text-white font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(40px,5vw,60px)] max-sm:text-[38px] max-sm:tracking-[-1px]">
-            The Scale of <GradientText>Mumbai 2027</GradientText>
-          </h2>
-          <AttendStats />
-        </div>
-      </section>
-
       {/* Video & Value Section */}
       <section className="py-[86px] bg-gradient-to-b from-[#031127] to-[#020b1c] text-center max-sm:py-[62px]">
         <div className="w-[min(1120px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-28px,1120px)]">
           <h2 className="max-w-[820px] mx-auto text-white font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(40px,5vw,60px)] max-sm:text-[38px] max-sm:tracking-[-1px]">
-            The Launch of the <GradientText>World AI Show Series in India.</GradientText>
+            Look Back at the Previous Edition of <GradientText>World AI Show.</GradientText>
           </h2>
           <div className="relative w-[min(700px,100%)] aspect-video mx-auto my-[58px] border-[3px] border-[#8559ff]/58 rounded-[13px] overflow-hidden shadow-[0_0_24px_rgba(151,108,255,0.35)]">
             <iframe
-              src="https://www.youtube.com/embed/J0PpCayNV-U?rel=0&modestbranding=1"
-              title="World AI Show Global Series - Showreel"
+              src="https://www.youtube.com/embed/CQlysabnvmM?rel=0&modestbranding=1"
+              title="World AI Show 2026 Aftermovie"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className="absolute inset-0 w-full h-full border-0"
               loading="lazy"
             />
           </div>
+          <h3 className="max-w-[820px] mx-auto mt-16 mb-10 text-white font-[850] leading-[1.08] tracking-[-1.5px] text-[clamp(32px,4vw,46px)] max-sm:text-[30px]">
+            The Key Focus Areas of <GradientText>This Event</GradientText>
+          </h3>
           <div className="grid grid-cols-3 gap-4 mb-9 max-[980px]:grid-cols-[repeat(3,310px)] max-sm:grid-cols-1">
             {valueCards.map((card, index) => (
               <NumberedCard item={card} index={index} key={card.title} />
@@ -547,9 +550,6 @@ export function AttendOverviewSection() {
           </div>
         </div>
       </section>
-
-      {/* Bottom CTA Card */}
-      <AttendCTASection />
     </>
   );
 }
@@ -611,9 +611,6 @@ export function AttendDelegateSection() {
           <BenefitGrid items={gatewayCards} />
         </div>
       </section>
-
-      {/* Bottom CTA Card */}
-      <AttendCTASection />
     </>
   );
 }
@@ -680,9 +677,6 @@ export function AttendSponsorSection() {
           <BenefitGrid items={sponsorBenefits} />
         </div>
       </section>
-
-      {/* Bottom CTA Card */}
-      <AttendCTASection />
     </>
   );
 }
@@ -737,9 +731,6 @@ export function AttendMediaSection() {
           <BenefitGrid items={mediaBenefits} />
         </div>
       </section>
-
-      {/* Bottom CTA Card */}
-      <AttendCTASection />
     </>
   );
 }
@@ -795,9 +786,6 @@ export function AttendAssociationSection() {
           <BenefitGrid items={associationBenefits} />
         </div>
       </section>
-
-      {/* Bottom CTA Card */}
-      <AttendCTASection />
     </>
   );
 }

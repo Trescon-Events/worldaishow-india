@@ -75,7 +75,7 @@ export function PartnerShowcase() {
         <div className="mb-20">
           <div className="text-center mb-10">
             <span className="inline-block font-mono text-[11px] uppercase tracking-[2px] text-cyan mb-2">
-              Mumbai 2027 Commercial Architecture
+              Commercial Architecture
             </span>
             <h3 className="text-white font-[850] text-[clamp(26px,3.4vw,38px)] m-0">
               Tier-Grouped Partnership <GradientText>&amp; Booth Structure</GradientText>
@@ -131,12 +131,6 @@ export function PartnerShowcase() {
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[14px] font-extrabold text-[#06111F] [color:#06111F!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.35)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
                 Enquire about sponsorship <span className="font-mono">→</span>
-              </a>
-              <a
-                href="/enterprise/exhibition"
-                className="inline-flex items-center justify-center px-7 py-3.5 border border-white/20 rounded-full text-[14px] font-extrabold text-white bg-white/5 hover:bg-white/10 hover:border-white/35 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
-              >
-                Explore 3D Floorplan
               </a>
               <a
                 href="/enterprise/attend/sponsor"

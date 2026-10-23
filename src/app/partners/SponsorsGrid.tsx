@@ -1,149 +1,74 @@
 "use client";
 
-import archivedSponsors from "../../data/konfhub-archive/entity-1-sponsors.json";
-import archivedPartners from "../../data/konfhub-archive/entity-2-partners.json";
-import archivedExhibitors from "../../data/konfhub-archive/entity-3-exhibitors.json";
 import { useEffect, useState } from "react";
 import { GradientText } from "../components/Shared";
-import dynamic from "next/dynamic";
+import archivedPartners from "../../data/konfhub-archive/entity-2-partners.json";
 
-const ModelViewer = dynamic(() => import("../components/sections/ModelViewer"), { ssr: false });
-
-/* ── Types ──────────────────────────────────────────────────── */
-type SponsorItem = {
-  id?: number;
+type SponsorLogo = {
   name: string;
   logo: string;
-  website?: string;
-  category?: string;
-  description?: string;
-  location?: string;
-  booth?: string;
 };
 
-type ApiResponse = {
-  sponsors: Record<string, SponsorItem[]>;
-  partners: Record<string, SponsorItem[]>;
-  rawSponsors: SponsorItem[];
-  rawPartners: SponsorItem[];
-  error?: string;
-};
-
-/* ── Category display order & label mapping ─────────────────── */
-const CATEGORY_ORDER = [
-  "Lead Sponsor",
-  "Lead Sponsors",
-  "Platinum Sponsor",
-  "Platinum Sponsors",
-  "Gold Sponsor",
-  "Gold Sponsors",
-  "CXO Boardroom Partner",
-  "CXO Boardroom",
-  "Bronze Sponsor",
-  "Bronze Sponsors",
-  "Exhibitors",
-  "Coffee cart",
-  "Coffee Cart Sponsor",
-  "Title Sponsor",
-  "Diamond Sponsor",
-  "Silver Sponsor",
-  "Silver Sponsors",
-  "Ticketing Partner",
-  "Technology Partner",
-  "Technology Partners",
-  "Strategic Partner",
-  "Strategic Partners",
-  "Association Partner",
-  "Association Partners",
-  "Media Partner",
-  "Media Partners",
-  "Supporting Partner",
-  "Supporting Partners",
-  "Community Partner",
-  "Community Partners",
-  "Sponsors",
-  "Partners",
+/* ── Past Sponsors from World AI Show, India ─────────────────── */
+const INDIA_PAST_SPONSORS: SponsorLogo[] = [
+  { name: "Google Cloud", logo: "/enterprise/images/sponsors/india-past/google-cloud.webp" },
+  { name: "Dell Technologies & Intel", logo: "/enterprise/images/sponsors/india-past/Dell-Technologies-Intel.webp" },
+  { name: "Hewlett Packard Enterprise", logo: "/enterprise/images/sponsors/india-past/hewlett-packard.webp" },
+  { name: "HCLTech", logo: "/enterprise/images/sponsors/india-past/hcl.webp" },
+  { name: "Happiest Minds", logo: "/enterprise/images/sponsors/india-past/happiest-minds.webp" },
+  { name: "KPMG", logo: "/enterprise/images/sponsors/india-past/kpmg.webp" },
+  { name: "SAP", logo: "/enterprise/images/sponsors/india-past/sap.webp" },
+  { name: "Oracle", logo: "/enterprise/images/sponsors/india-past/oracle.webp" },
+  { name: "Cisco", logo: "/enterprise/images/sponsors/india-past/cisco.webp" },
+  { name: "Snowflake", logo: "/enterprise/images/sponsors/india-past/Snowflake.webp" },
+  { name: "UiPath", logo: "/enterprise/images/sponsors/india-past/ui-path.webp" },
+  { name: "Automation Anywhere", logo: "/enterprise/images/sponsors/india-past/automation-anywhere.webp" },
+  { name: "AutomationEdge", logo: "/enterprise/images/sponsors/india-past/automation-edge.webp" },
+  { name: "eClerx", logo: "/enterprise/images/sponsors/india-past/eclerx.webp" },
+  { name: "Searce", logo: "/enterprise/images/sponsors/india-past/Searce.webp" },
+  { name: "Soroco", logo: "/enterprise/images/sponsors/india-past/Soroco-Logo.webp" },
+  { name: "Vernacular.ai", logo: "/enterprise/images/sponsors/india-past/vernacular-ai.webp" },
+  { name: "AspireNxt", logo: "/enterprise/images/sponsors/india-past/AspireNxt.webp" },
+  { name: "Data Semantics", logo: "/enterprise/images/sponsors/india-past/data-semantics.webp" },
+  { name: "Dataiku", logo: "/enterprise/images/sponsors/india-past/DataIku.webp" },
+  { name: "Denodo", logo: "/enterprise/images/sponsors/india-past/Denodo.webp" },
+  { name: "DDN Storage", logo: "/enterprise/images/sponsors/india-past/ddn.webp" },
+  { name: "ManageEngine", logo: "/enterprise/images/sponsors/india-past/manage-engine.webp" },
+  { name: "VMware", logo: "/enterprise/images/sponsors/india-past/vmware.webp" },
+  { name: "Check Point", logo: "/enterprise/images/sponsors/india-past/check-point.webp" },
+  { name: "Darktrace", logo: "/enterprise/images/sponsors/india-past/darktrace.webp" },
+  { name: "SAS", logo: "/enterprise/images/sponsors/india-past/sas.webp" },
+  { name: "Genesys", logo: "/enterprise/images/sponsors/india-past/Genesys-Logo.webp" },
+  { name: "Avaya", logo: "/enterprise/images/sponsors/india-past/avaya.webp" },
+  { name: "Alteryx", logo: "/enterprise/images/sponsors/india-past/Alteryx.webp" },
+  { name: "AntWorks", logo: "/enterprise/images/sponsors/india-past/Antworks.webp" },
+  { name: "Amazon & Trianz", logo: "/enterprise/images/sponsors/india-past/amazon-trianz.webp" },
+  { name: "Thales", logo: "/enterprise/images/sponsors/india-past/thales.webp" },
+  { name: "Trend Micro", logo: "/enterprise/images/sponsors/india-past/trend-micro.webp" },
+  { name: "SonicWall", logo: "/enterprise/images/sponsors/india-past/sonicwall.webp" },
+  { name: "Xerox", logo: "/enterprise/images/sponsors/india-past/xerox.webp" },
 ];
 
-const CATEGORY_HEX: Record<string, { color: string; rgb: string }> = {
-  "Lead Sponsor":          { color: "#ffd700", rgb: "255,215,0" },
-  "Title Sponsor":         { color: "#ffd700", rgb: "255,215,0" },
-  "Platinum Sponsor":      { color: "#C0F43C", rgb: "192,244,60" },
-  "Platinum Sponsors":     { color: "#C0F43C", rgb: "192,244,60" },
-  "Diamond Sponsor":       { color: "#00ceff", rgb: "0,206,255" },
-  "Gold Sponsor":          { color: "#9a6cff", rgb: "154,108,255" },
-  "Gold Sponsors":         { color: "#9a6cff", rgb: "154,108,255" },
-  "Silver Sponsor":        { color: "#00ceff", rgb: "0,206,255" },
-  "Silver Sponsors":       { color: "#00ceff", rgb: "0,206,255" },
-  "Bronze Sponsor":        { color: "#cd7f32", rgb: "205,127,50" },
-  "Exhibitors":            { color: "#00a5a3", rgb: "0,165,163" },
-  "CXO Boardroom Partner": { color: "#00ceff", rgb: "0,206,255" },
-  "Ticketing Partner":     { color: "#9a6cff", rgb: "154,108,255" },
-  "Technology Partner":    { color: "#00ceff", rgb: "0,206,255" },
-  "Technology Partners":   { color: "#00ceff", rgb: "0,206,255" },
-  "Strategic Partner":     { color: "#00ceff", rgb: "0,206,255" },
-  "Strategic Partners":    { color: "#00ceff", rgb: "0,206,255" },
-  "Association Partner":   { color: "#18d4ff", rgb: "24,212,255" },
-  "Association Partners":  { color: "#18d4ff", rgb: "24,212,255" },
-  "Media Partner":         { color: "#00ceff", rgb: "0,206,255" },
-  "Media Partners":        { color: "#00ceff", rgb: "0,206,255" },
-  "Supporting Partner":    { color: "#9a6cff", rgb: "154,108,255" },
-  "Supporting Partners":   { color: "#9a6cff", rgb: "154,108,255" },
-  "Global Innovation Partner":  { color: "#00ceff", rgb: "0,206,255" },
-  "Global Innovation Partners": { color: "#00ceff", rgb: "0,206,255" },
-  "Community Partner":     { color: "#C0F43C", rgb: "192,244,60" },
-  "Community Partners":    { color: "#C0F43C", rgb: "192,244,60" },
-  "Coffee cart":           { color: "#cd7f32", rgb: "205,127,50" },
-  "Coffee Cart Sponsor":   { color: "#cd7f32", rgb: "205,127,50" },
-  default:                 { color: "#9a6cff", rgb: "154,108,255" },
-};
+const INDIA_GOVERNMENT_ASSOCIATIONS: SponsorLogo[] = [
+  { name: "Ministry of Electronics & IT (MeitY)", logo: "/enterprise/images/sponsors/governments/meit.webp" },
+  { name: "NITI Aayog", logo: "/enterprise/images/sponsors/governments/niti-aayog.webp" },
+  { name: "Digital India", logo: "/enterprise/images/sponsors/governments/digital-india.webp" },
+  { name: "National e-Governance Division (NeGD)", logo: "/enterprise/images/sponsors/governments/NeGD.webp" },
+  { name: "Ministry of Road Transport & Highways", logo: "/enterprise/images/sponsors/governments/mrt-govt-of-india.webp" },
+  { name: "Government of Maharashtra", logo: "/enterprise/images/sponsors/governments/govt-maharashtra.webp" },
+  { name: "Government of Andhra Pradesh", logo: "/enterprise/images/sponsors/governments/govt-andhra-pradesh.webp" },
+  { name: "Controller of Certifying Authorities (CCA)", logo: "/enterprise/images/sponsors/governments/CCA.webp" },
+];
 
-function getCategoryColor(cat: string) {
-  return CATEGORY_HEX[cat] ?? CATEGORY_HEX.default;
-}
-
-const LOCAL_LOGO_OVERLAYS: Record<string, string> = {};
-
-/* ── Single sponsor card ────────────────────────────────────── */
-function SponsorCard({
-  item,
-  isLarge = false,
-  catColor,
-  onClick,
-}: {
-  item: SponsorItem;
-  isLarge?: boolean;
-  catColor: { color: string; rgb: string };
-  onClick: () => void;
-}) {
-  const logoSrc = LOCAL_LOGO_OVERLAYS[item.name] || item.logo;
-
+function LogoCard({ item }: { item: SponsorLogo }) {
   return (
-    <div
-      onClick={onClick}
-      className={`group relative overflow-hidden flex flex-col items-center justify-center border rounded-[20px] bg-[#04080f]/40 hover:-translate-y-1.5 transition-all duration-300 select-none w-full cursor-pointer aspect-[1.6/1] ${isLarge ? "p-4" : "p-2.5"}`}
-      style={{
-        borderColor: `rgba(${catColor.rgb}, 0.16)`,
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = `rgba(${catColor.rgb}, 0.55)`;
-        e.currentTarget.style.boxShadow = `0 12px 30px rgba(${catColor.rgb}, 0.16)`;
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = `rgba(${catColor.rgb}, 0.16)`;
-        e.currentTarget.style.boxShadow = "none";
-      }}
-    >
-      {/* Shine effect */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.015] to-transparent pointer-events-none" />
-
-      {/* White Logo Container Box matching Indonesia sponsors design */}
-      <div className={`w-full h-full flex items-center justify-center bg-white rounded-[14px] shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)] group-hover:scale-[1.025] transition-all duration-300 ${isLarge ? "p-4" : "p-2"}`}>
+    <div className="group relative overflow-hidden flex flex-col items-center justify-center border border-[#18d4ff]/20 rounded-[18px] bg-[#04080f]/55 p-3 hover:-translate-y-1.5 hover:border-[#C0F43C]/60 hover:shadow-[0_12px_30px_rgba(192,244,60,0.14)] transition-all duration-300 select-none w-full aspect-[1.75/1]">
+      <div className="w-full h-full flex items-center justify-center bg-white rounded-[12px] p-4 shadow-[inset_0_2px_4px_rgba(0,0,0,0.03)] group-hover:scale-[1.02] transition-all duration-300">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={logoSrc}
+          src={item.logo}
           alt={item.name}
-          className="object-contain w-full h-full"
+          className="object-contain max-w-full max-h-full"
           loading="lazy"
         />
       </div>
@@ -151,776 +76,113 @@ function SponsorCard({
   );
 }
 
-/* ── Loading skeleton ───────────────────────────────────────── */
-function LoadingSkeleton() {
-  return (
-    <div className="mb-16">
-      <div className="h-8 w-48 bg-white/5 rounded-lg mb-6 animate-pulse" />
-      <div className="grid grid-cols-4 gap-5 max-[980px]:grid-cols-3 max-sm:grid-cols-2">
-        {Array.from({ length: 8 }).map((_, i) => (
-          <div key={i} className="h-[140px] rounded-[16px] bg-white/[0.04] animate-pulse" />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/* ── Category section ───────────────────────────────────────── */
-function CategorySection({
-  category,
-  items,
-  onCardClick,
-}: {
-  category: string;
-  items: SponsorItem[];
-  onCardClick: (item: SponsorItem) => void;
-}) {
-  const isLarge = category === "Lead Sponsor" || category === "Title Sponsor" || category === "Platinum Sponsor" || category.includes("Gold");
-  const catColor = getCategoryColor(category);
-
-  // Sub-description for each sponsor category to make it feel extremely detailed and premium
-  const categoryDescriptions: Record<string, string> = {
-    "Lead Sponsor": "The primary driving force behind World AI Show — Enterprise (Mumbai 2027), showcasing vanguard thought leadership and enterprise AI transformation.",
-    "Title Sponsor": "The premier summit partner guiding the core strategic conversations, keynotes, and executive panels shaping India's enterprise AI landscape.",
-    "Platinum Sponsor": "Leading cloud hyperscalers, systems integrators, and technology giants delivering the core infrastructure and platforms powering enterprise AI scale.",
-    "Diamond Sponsor": "Elite enterprise solution providers demonstrating cutting-edge algorithms, hardware accelerators, and security trust frameworks.",
-    "Gold Sponsor": "Core summit sponsors showcasing innovative practical applications, business intelligence integration, and automation tools.",
-    "Gold Sponsors": "Core summit sponsors showcasing innovative practical applications, business intelligence integration, and automation tools.",
-    "Silver Sponsor": "Emerging tech pioneers and specialist services presenting scalable solutions for enterprise AI development and workflow optimization.",
-    "CXO Boardroom Partner": "Enabling high-level conversations and executive engagement, connecting the brand with senior decision-makers shaping the future of AI and digital transformation.",
-    "CXO Boardroom": "Enabling high-level conversations and executive engagement, connecting the brand with senior decision-makers shaping the future of AI and digital transformation.",
-    "Bronze Sponsor": "Building meaningful brand visibility and industry connections with a growing community of technology leaders, innovators and business decision-makers.",
-    "Bronze Sponsors": "Building meaningful brand visibility and industry connections with a growing community of technology leaders, innovators and business decision-makers.",
-    "Coffee Sponsor": "Creating a memorable brand touchpoint through an informal networking experience, putting the brand at the centre of conversations and connections.",
-    "Coffee Cart Sponsor": "Creating a memorable brand touchpoint through an informal networking experience, putting the brand at the centre of conversations and connections.",
-    "Coffee cart": "Creating a memorable brand touchpoint through an informal networking experience, putting the brand at the centre of conversations and connections.",
-    "Exhibitors": "Innovative technology platforms and startups showcasing active live demonstrations and products on the exhibition floor.",
-    "Strategic Partner": "Key governing authorities and industry bodies working in close collaboration to accelerate India's enterprise AI architecture.",
-    "Strategic Partners": "Key governing authorities and industry bodies working in close collaboration to accelerate India's enterprise AI architecture.",
-    "Technology Partner": "Hyperscale cloud, compute, and hardware partners powering the technological foundation of the summit.",
-    "Technology Partners": "Hyperscale cloud, compute, and hardware partners powering the technological foundation of the summit.",
-    "Association Partner": "Industry chambers, GCC councils, and academic institutions driving ecosystem connectivity and research.",
-    "Association Partners": "Industry chambers, GCC councils, and academic institutions driving ecosystem connectivity and research.",
-    "Media Partner": "Official broadcasting, publishing, and media agencies covering India's premier enterprise AI gathering.",
-    "Media Partners": "Official broadcasting, publishing, and media agencies covering India's premier enterprise AI gathering.",
-    default: "Valued partners and ecosystem collaborators accelerating digital transformation and AI execution across Indian enterprise."
-  };
-
-  const desc = categoryDescriptions[category] ?? categoryDescriptions.default;
-
-  return (
-    <div 
-      className="group relative overflow-hidden border rounded-[24px] p-12 max-[1024px]:p-8 max-sm:p-6 transition-all duration-300 hover:border-white/20 mb-8"
-      style={{
-        borderColor: `rgba(${catColor.rgb}, 0.16)`,
-        background: `linear-gradient(135deg, rgba(${catColor.rgb}, 0.03) 0%, rgba(4, 8, 15, 0.94) 40%, rgba(${catColor.rgb}, 0.01) 100%)`
-      }}
-    >
-      {/* Background Soft Glow Spotlight */}
-      <div 
-        className="absolute top-0 left-0 w-[300px] h-[300px] rounded-full blur-[100px] pointer-events-none opacity-40 transition-opacity duration-500 group-hover:opacity-60"
-        style={{
-          background: `radial-gradient(circle, rgba(${catColor.rgb}, 0.12) 0%, transparent 70%)`
-        }}
-      />
-
-      {/* Grid container: 260px 1fr on large screens, single column on tablet/mobile */}
-      <div className="relative z-10 grid grid-cols-[260px_1fr] max-[1024px]:grid-cols-[200px_1fr] max-[768px]:grid-cols-1 gap-10 items-center">
-        
-        {/* Left Column: Label, Category title, and Description */}
-        <div className="flex flex-col gap-4 max-[768px]:text-center max-[768px]:items-center">
-          {/* Pill Badge */}
-          <div 
-            className="inline-flex items-center gap-2 px-4 py-1.5 border rounded-full text-[11px] font-mono font-extrabold uppercase tracking-widest w-fit"
-            style={{
-              color: catColor.color,
-              borderColor: `rgba(${catColor.rgb}, 0.35)`,
-              background: `rgba(${catColor.rgb}, 0.06)`,
-            }}
-          >
-            <span 
-              className="w-2.5 h-2.5 rounded-full animate-pulse" 
-              style={{ background: catColor.color }}
-            />
-            {category}
-          </div>
-
-          <h3 className="m-0 font-space-grotesk text-white font-[850] text-[26px] leading-tight tracking-tight max-sm:text-[22px]">
-            {category}
-          </h3>
-
-          <p className="m-0 font-sans text-white/52 text-[14px] leading-relaxed max-[768px]:max-w-[480px]">
-            {desc}
-          </p>
-        </div>
-
-        {/* Right Column: Grid of Sponsor Cards */}
-        <div className={(() => {
-          const cat = category.toLowerCase();
-          if (
-            cat.includes("lead") ||
-            cat.includes("title") ||
-            cat.includes("platinum") ||
-            cat.includes("diamond") ||
-            cat.includes("gold") ||
-            cat === "sponsors"
-          ) {
-            return "grid grid-cols-2 gap-6 max-[1024px]:grid-cols-2 max-sm:grid-cols-1 w-full";
-          }
-          if (cat.includes("media")) {
-            return "grid grid-cols-4 gap-4 max-[1200px]:grid-cols-4 max-[1024px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1 w-full";
-          }
-          return "grid grid-cols-3 gap-5 max-[1200px]:grid-cols-3 max-[1024px]:grid-cols-2 max-sm:grid-cols-1 w-full";
-        })()}>
-          {items.map((item, i) => (
-            <SponsorCard
-              key={item.id ?? `${category}-${i}`}
-              item={item}
-              isLarge={isLarge}
-              catColor={catColor}
-              onClick={() => onCardClick(item)}
-            />
-          ))}
-        </div>
-
-      </div>
-    </div>
-  );
-}
-
-/* ── CTA section ────────────────────────────────────────────── */
-function PartnerCTA() {
-  return (
-    <div className="mt-8 p-10 border border-[#c0f43c]/25 rounded-[24px] bg-gradient-to-br from-[#020b1c] to-[#041226] shadow-[0_0_60px_rgba(192,244,60,0.04)] text-center max-sm:p-6">
-      <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#c0f43c]/30 rounded-full text-[#c0f43c] font-mono text-[12px] uppercase tracking-[2px] bg-[#c0f43c]/5">
-        Partnership Opportunities · Mumbai 2027
-      </span>
-      <h3 className="m-0 text-white font-[850] text-[clamp(24px,3.2vw,36px)] leading-tight tracking-tight mb-4">
-        Ready to Reach <GradientText>300 Qualified Enterprise CXOs?</GradientText>
-      </h3>
-      <p className="mt-0 mb-8 text-white/62 text-[16px] leading-relaxed max-w-[620px] mx-auto">
-        Contact our partnership team to explore 30-minute standalone stage sessions, standardized 9 sqm and 12 sqm exhibition spaces, and closed-door CXO boardrooms for World AI Show: The Enterprise Edition | Mumbai 2027.
-      </p>
-      <div className="flex justify-center gap-4 flex-wrap max-sm:flex-col max-sm:items-center">
-        <a
-          href="/enterprise/sponsorship-enquiry"
-          className="inline-flex items-center gap-2 px-7 py-[15px] rounded-full text-[15px] font-extrabold text-[#06111f] [color:#06111f!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.3)] hover:-translate-y-0.5 transition-all duration-200"
-        >
-          Enquire about sponsorship <span className="font-mono">→</span>
-        </a>
-        <a
-          href="/enterprise/association-enquiry"
-          className="inline-flex items-center gap-2 px-7 py-[15px] rounded-full text-[15px] font-extrabold text-white border border-[#4eb9ff]/70 bg-[#030a18]/30 shadow-[inset_0_0_20px_rgba(46,172,255,0.06)] hover:-translate-y-0.5 hover:border-[#4eb9ff] hover:shadow-[0_0_22px_rgba(78,185,255,0.18)] transition-all duration-200"
-        >
-          Partner with the Series <span className="font-mono">→</span>
-        </a>
-      </div>
-    </div>
-  );
-}
-
-/* ── Split section for supporting, innovation, association, and media ── */
-function PartnerSplitSection({
-  title,
-  desc,
-  dotColor,
-  dotRgb,
-  items,
-  onCardClick,
-  gridCols,
-}: {
-  title: string;
-  desc: string;
-  dotColor: string;
-  dotRgb: string;
-  items: SponsorItem[];
-  onCardClick: (item: SponsorItem) => void;
-  gridCols?: number;
-}) {
-  return (
-    <div className="flex flex-col gap-6">
-      {/* Section Header */}
-      <div className="flex flex-col gap-2">
-        <h3 className="m-0 text-white font-[850] text-[22px] flex items-center gap-2.5">
-          <span 
-            className="w-2.5 h-2.5 rounded-full" 
-            style={{ 
-              backgroundColor: dotColor,
-              boxShadow: `0 0 10px ${dotColor}`
-            }}
-          />
-          {title}
-        </h3>
-        <p className="m-0 text-white/50 text-[14px] leading-relaxed">
-          {desc}
-        </p>
-      </div>
-
-      {/* Grid or Available placeholder */}
-      {items.length > 0 ? (
-        <div className={`grid gap-5 w-full max-sm:grid-cols-1 ${
-          gridCols === 4 
-            ? "grid-cols-4 max-[1200px]:grid-cols-3 max-[980px]:grid-cols-2" 
-            : "grid-cols-3 max-[1200px]:grid-cols-2"
-        }`}>
-          {items.map((item, i) => (
-            <SponsorCard
-              key={item.id ?? `${title}-${i}`}
-              item={item}
-              catColor={{ color: dotColor, rgb: dotRgb }}
-              onClick={() => onCardClick(item)}
-            />
-          ))}
-        </div>
-      ) : (
-        <a 
-          href="/enterprise/sponsorship-enquiry"
-          className="flex flex-col gap-1.5 p-6 border border-dashed rounded-[20px] transition-all duration-300 hover:bg-white/[0.02]"
-          style={{
-            borderColor: `rgba(${dotRgb}, 0.25)`,
-            background: `rgba(${dotRgb}, 0.02)`
-          }}
-        >
-          <div className="flex items-center gap-2">
-            <span 
-              className="w-2 h-2 rounded-full animate-pulse" 
-              style={{ backgroundColor: dotColor }}
-            />
-            <span className="text-[14px] font-extrabold" style={{ color: dotColor }}>
-              Slots Available
-            </span>
-          </div>
-          <p className="m-0 text-white/40 text-[12px] leading-relaxed">
-            Secure this strategic partnership slot and align your brand with regional leaders.
-          </p>
-          <span className="text-[12px] font-bold text-white/70 hover:underline mt-2 flex items-center gap-1.5">
-            Enquire Now <span className="font-mono">→</span>
-          </span>
-        </a>
-      )}
-    </div>
-  );
-}
-
-/* ── Main component ─────────────────────────────────────────── */
 export function SponsorsGrid() {
-  const [data, setData] = useState<ApiResponse | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [selectedSponsor, setSelectedSponsor] = useState<SponsorItem | null>(null);
-  const [activeTab, setActiveTab] = useState<"sponsors-exhibitors" | "associations-media" | "floor-plan">("sponsors-exhibitors");
+  const [activeTab, setActiveTab] = useState<"sponsors-exhibitors" | "associations-media">("sponsors-exhibitors");
+  const [mediaPartners, setMediaPartners] = useState<SponsorLogo[]>([]);
 
   useEffect(() => {
-    // Check hash on mount to switch tabs automatically
-    if (typeof window !== "undefined") {
-      const handleHashChange = () => {
-        if (window.location.hash === "#floor-plan") {
-          setActiveTab("floor-plan");
-          // Optionally scroll to it so the user sees it
-          const el = document.getElementById("sponsors-section");
-          if (el) el.scrollIntoView({ behavior: "smooth" });
-        }
-      };
+    const rawPartners: any = archivedPartners;
+    const extractedMedia: SponsorLogo[] = [];
 
-      // Run once on mount
-      handleHashChange();
-
-      window.addEventListener("hashchange", handleHashChange);
-      return () => window.removeEventListener("hashchange", handleHashChange);
-    }
-  }, []);
-
-  useEffect(() => {
-    // Frozen 2026 KonfHub data (KonfHub event no longer live).
-    const staticRes = (data: unknown) => Promise.resolve({ ok: true, json: () => Promise.resolve(data) });
-
-    Promise.all([
-      staticRes(archivedSponsors),
-      staticRes(archivedPartners),
-      staticRes(archivedExhibitors)
-    ])
-      .then(async ([sponsorsRes, partnersRes, exhibitorsRes]) => {
-        let rawSponsors: any = { categorized: [], uncategorized: [] };
-        let rawPartners: any = { categorized: [], uncategorized: [] };
-        let rawExhibitors: any = { categorized: [], uncategorized: [] };
-
-        if (sponsorsRes.ok) rawSponsors = await sponsorsRes.json();
-        if (partnersRes.ok) rawPartners = await partnersRes.json();
-        if (exhibitorsRes.ok) rawExhibitors = await exhibitorsRes.json();
-
-        const sponsorsByCategory: Record<string, SponsorItem[]> = {};
-        const partnersByCategory: Record<string, SponsorItem[]> = {};
-
-        const cleanCategoryName = (catName: string) => {
-          const trimmed = catName.trim();
-          const prefix = "World AI Show";
-          if (trimmed.startsWith(prefix)) {
-            return trimmed.substring(prefix.length).replace(/^\s*\|\|\s*/, "").trim();
-          }
-          return trimmed;
-        };
-
-        const mapEntities = (entities: any[], cleanName: string, categoryMap: Record<string, SponsorItem[]>) => {
-          if (entities.length > 0) {
-            if (!categoryMap[cleanName]) categoryMap[cleanName] = [];
-            
-            for (const e of entities) {
-              const name = (e.entity_name || "").trim();
-              if (!name) continue;
-              
-              // Check if a sponsor with this name already exists in this category
-              const exists = categoryMap[cleanName].some(
-                existing => existing.name.toLowerCase() === name.toLowerCase()
-              );
-
-              if (!exists) {
-                categoryMap[cleanName].push({
-                  id: e.id,
-                  name: e.entity_name || "",
-                  logo: e.image_url || "",
-                  website: e.website_url || "#",
-                  category: cleanName,
-                  description: e.description || "",
-                  location: e.location || "",
-                  booth: e.booth_number || "",
-                });
-              }
+    if (Array.isArray(rawPartners?.categorized)) {
+      for (const cat of rawPartners.categorized) {
+        const rawName = (cat.category_name || "").toLowerCase();
+        if (rawName.includes("media") && Array.isArray(cat.entity)) {
+          for (const e of cat.entity) {
+            if (e.entity_name && e.image_url) {
+              extractedMedia.push({
+                name: e.entity_name,
+                logo: e.image_url,
+              });
             }
           }
-        };
-
-        // Process Sponsors (Entity 1)
-        if (Array.isArray(rawSponsors?.categorized)) {
-          for (const cat of rawSponsors.categorized) {
-            const rawName = cat.category_name || "Sponsors";
-            mapEntities(Array.isArray(cat.entity) ? cat.entity : [], cleanCategoryName(rawName), sponsorsByCategory);
-          }
         }
-        if (Array.isArray(rawSponsors?.uncategorized)) {
-          mapEntities(rawSponsors.uncategorized, "Sponsors", sponsorsByCategory);
-        }
-
-        // Process Partners (Entity 2)
-        if (Array.isArray(rawPartners?.categorized)) {
-          for (const cat of rawPartners.categorized) {
-            const rawName = cat.category_name || "Partners";
-            mapEntities(Array.isArray(cat.entity) ? cat.entity : [], cleanCategoryName(rawName), partnersByCategory);
-          }
-        }
-        if (Array.isArray(rawPartners?.uncategorized)) {
-          mapEntities(rawPartners.uncategorized, "Partners", partnersByCategory);
-        }
-
-        // Process Exhibitors (Entity 3) -> Add to Sponsors Map so they appear in Tab 1
-        if (Array.isArray(rawExhibitors?.categorized)) {
-          for (const cat of rawExhibitors.categorized) {
-            const rawName = cat.category_name || "Exhibitors";
-            mapEntities(Array.isArray(cat.entity) ? cat.entity : [], cleanCategoryName(rawName), sponsorsByCategory);
-          }
-        }
-        if (Array.isArray(rawExhibitors?.uncategorized)) {
-          mapEntities(rawExhibitors.uncategorized, "Exhibitors", sponsorsByCategory);
-        }
-
-        setData({
-          sponsors: sponsorsByCategory,
-          partners: partnersByCategory,
-          rawSponsors: [],
-          rawPartners: []
-        });
-      })
-      .catch(() => setError("Failed to load sponsor data"))
-      .finally(() => setLoading(false));
+      }
+    }
+    setMediaPartners(extractedMedia);
   }, []);
-
-  /* merge sponsors + partners into one flat category map */
-  const allCategories: Record<string, SponsorItem[]> = {};
-
-  if (data) {
-    // Sponsors
-    for (const [cat, items] of Object.entries(data.sponsors ?? {})) {
-      const mapped: SponsorItem[] = items.map((s: any) => ({
-        id: s.id,
-        name: s.name ?? "",
-        logo: s.logo ?? "",
-        website: s.website ?? "#",
-        category: cat,
-        description: s.description ?? "",
-        location: s.location ?? "",
-        booth: s.booth ?? "",
-      }));
-      if (!allCategories[cat]) allCategories[cat] = [];
-      allCategories[cat].push(...mapped);
-    }
-    // Partners
-    for (const [cat, items] of Object.entries(data.partners ?? {})) {
-      const mapped: SponsorItem[] = items.map((p: any) => ({
-        id: p.id,
-        name: p.name ?? "",
-        logo: p.logo ?? "",
-        website: p.website ?? "#",
-        category: cat,
-        description: p.description ?? "",
-        location: p.location ?? "",
-        booth: p.booth ?? "",
-      }));
-      if (!allCategories[cat]) allCategories[cat] = [];
-      allCategories[cat].push(...mapped);
-    }
-  }
-
-  const hasAnyData = Object.keys(allCategories).length > 0;
-
-  // Sort categories by preferred order
-  const sortedCategories = Object.keys(allCategories).sort((a, b) => {
-    const ai = CATEGORY_ORDER.indexOf(a);
-    const bi = CATEGORY_ORDER.indexOf(b);
-    if (ai === -1 && bi === -1) return a.localeCompare(b);
-    if (ai === -1) return 1;
-    if (bi === -1) return -1;
-    return ai - bi;
-  });
-
-  // Filter second tab categories out from the first tab
-  const getSlug = (cat: string) => cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-
-  const supportingKeys = ["supporting-partner", "supporting-partners"];
-  const innovationKeys = ["global-innovation-partner", "global-innovation-partners"];
-  const associationKeys = ["association-partner", "association-partners"];
-  const mediaKeys = ["media-partner", "media-partners"];
-  const ticketingKeys = ["ticketing-partner", "ticketing-partners"];
-
-  const mainCategories = sortedCategories.filter(cat => {
-    const slug = getSlug(cat);
-    return !supportingKeys.includes(slug) &&
-           !innovationKeys.includes(slug) &&
-           !associationKeys.includes(slug) &&
-           !mediaKeys.includes(slug) &&
-           !ticketingKeys.includes(slug);
-  });
-
-  const supportingItems: SponsorItem[] = [];
-  const innovationItems: SponsorItem[] = [];
-  const associationItems: SponsorItem[] = [];
-  const mediaItems: SponsorItem[] = [];
-  const ticketingItems: SponsorItem[] = [];
-
-  sortedCategories.forEach(cat => {
-    const slug = getSlug(cat);
-    const items = allCategories[cat] || [];
-    if (supportingKeys.includes(slug)) {
-      supportingItems.push(...items);
-    } else if (innovationKeys.includes(slug)) {
-      innovationItems.push(...items);
-    } else if (associationKeys.includes(slug)) {
-      associationItems.push(...items);
-    } else if (mediaKeys.includes(slug)) {
-      mediaItems.push(...items);
-    } else if (ticketingKeys.includes(slug)) {
-      ticketingItems.push(...items);
-    }
-  });
 
   return (
     <section className="relative py-[92px] bg-[#020b1c]" id="sponsors">
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
-
         {/* Section intro */}
         <div className="text-center mb-12">
           <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
-            Past Ecosystem
+            Past Ecosystem · World AI Show India
           </span>
           <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(36px,4.5vw,54px)] max-w-[800px] mx-auto">
             Past Sponsors &amp; <GradientText>Partners</GradientText>
           </h2>
-
-          {!loading && !hasAnyData && !error && (
-            <p className="mt-4 max-w-[600px] mx-auto text-white/55 text-[16px] leading-relaxed">
-              Sponsor announcements coming soon. Contact us to secure your spot at World AI Show — Enterprise (Mumbai 2027).
-            </p>
-          )}
         </div>
 
-        {/* Secondary Navigation Tab Bar (Finance2045 / Indonesia style) */}
-        {!loading && hasAnyData && (
-          <div className="flex justify-center mb-16 max-sm:mb-10">
-            <div className="flex flex-wrap justify-center p-1 gap-1 sm:gap-0 bg-[#050c1d]/90 border border-white/10 rounded-full max-sm:rounded-[24px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] max-w-full">
-              <button
-                onClick={() => setActiveTab("sponsors-exhibitors")}
-                className={`flex-none px-8 py-3 max-sm:px-4 max-sm:py-2.5 rounded-full text-sm max-sm:text-xs font-extrabold transition-all duration-300 ${
-                  activeTab === "sponsors-exhibitors"
-                    ? "bg-[#C0F43C] text-black shadow-[0_0_20px_rgba(192,244,60,0.2)]"
-                    : "text-white/60 hover:text-white"
-                }`}
-              >
-                Past Sponsors &amp; Exhibitors
-              </button>
-              <button
-                onClick={() => setActiveTab("associations-media")}
-                className={`flex-none px-8 py-3 max-sm:px-4 max-sm:py-2.5 rounded-full text-sm max-sm:text-xs font-extrabold transition-all duration-300 ${
-                  activeTab === "associations-media"
-                    ? "bg-[#C0F43C] text-black shadow-[0_0_20px_rgba(192,244,60,0.2)]"
-                    : "text-white/60 hover:text-white"
-                }`}
-              >
-                Past Association &amp; Media Partners
-              </button>
-              <button
-                onClick={() => setActiveTab("floor-plan")}
-                className={`flex-none px-8 py-3 max-sm:px-4 max-sm:py-2.5 rounded-full text-sm max-sm:text-xs font-extrabold transition-all duration-300 relative overflow-hidden group flex items-center justify-center gap-2 border ${
-                  activeTab === "floor-plan"
-                    ? "bg-[#C0F43C] text-black border-transparent shadow-[0_0_20px_rgba(192,244,60,0.2)] animate-tab-active-pulse"
-                    : "text-white/60 hover:text-white border-white/10 hover:border-white/20 animate-tab-inactive-pulse animate-tab-auto-shine"
-                }`}
-              >
-                <svg
-                  className={`w-4 h-4 transition-transform duration-700 ${
-                    activeTab === "floor-plan"
-                      ? "animate-[spin_8s_linear_infinite] text-black"
-                      : "text-[#C0F43C] group-hover:rotate-180"
-                  }`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                </svg>
-                Enter 3D Experience
-              </button>
-            </div>
+        {/* Secondary Navigation Tab Bar (2 tabs — 3D Experience removed per feedback) */}
+        <div className="flex justify-center mb-14 max-sm:mb-10">
+          <div className="flex flex-wrap justify-center p-1 gap-1 sm:gap-0 bg-[#050c1d]/90 border border-white/10 rounded-full max-sm:rounded-[24px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] max-w-full">
+            <button
+              type="button"
+              onClick={() => setActiveTab("sponsors-exhibitors")}
+              className={`flex-none px-8 py-3 max-sm:px-4 max-sm:py-2.5 rounded-full text-sm max-sm:text-xs font-extrabold transition-all duration-300 cursor-pointer ${
+                activeTab === "sponsors-exhibitors"
+                  ? "bg-[#C0F43C] text-black shadow-[0_0_20px_rgba(192,244,60,0.2)]"
+                  : "text-white/60 hover:text-white"
+              }`}
+            >
+              Past Sponsors &amp; Exhibitors
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab("associations-media")}
+              className={`flex-none px-8 py-3 max-sm:px-4 max-sm:py-2.5 rounded-full text-sm max-sm:text-xs font-extrabold transition-all duration-300 cursor-pointer ${
+                activeTab === "associations-media"
+                  ? "bg-[#C0F43C] text-black shadow-[0_0_20px_rgba(192,244,60,0.2)]"
+                  : "text-white/60 hover:text-white"
+              }`}
+            >
+              Past Government, Association &amp; Media Partners
+            </button>
           </div>
-        )}
+        </div>
 
-        {/* Loading state */}
-        {loading && (
-          <div>
-            <LoadingSkeleton />
-            <LoadingSkeleton />
-          </div>
-        )}
-
-        {/* Error state */}
-        {!loading && error && (
-          <div className="text-center py-16">
-            <p className="text-white/40 text-[15px]">
-              Sponsor data temporarily unavailable. Please check back shortly.
-            </p>
-          </div>
-        )}
-
-        {/* Tab 1: Sponsors & Exhibitors Panel */}
-        {!loading && hasAnyData && activeTab === "sponsors-exhibitors" && (
-          <div className="flex flex-col gap-2">
-            {mainCategories.map((cat) => (
-              <CategorySection 
-                key={cat} 
-                category={cat} 
-                items={allCategories[cat]} 
-                onCardClick={(item) => setSelectedSponsor(item)}
-              />
+        {/* Tab 1: Past Sponsors from World AI Show, India */}
+        {activeTab === "sponsors-exhibitors" && (
+          <div className="grid grid-cols-4 gap-5 max-[980px]:grid-cols-3 max-sm:grid-cols-2">
+            {INDIA_PAST_SPONSORS.map((item) => (
+              <LogoCard key={item.name} item={item} />
             ))}
           </div>
         )}
 
-        {/* Tab 2: Association & Media Partners Panel (Indonesia style split sections) */}
-        {!loading && hasAnyData && activeTab === "associations-media" && (
-          <div className="grid grid-cols-1 gap-16 mt-4">
-
-            {/* Supporting Partners */}
-            {supportingItems.length > 0 && (
-              <PartnerSplitSection
-                title="Supporting Partners"
-                desc="Key industry bodies and organizational partners providing essential backing to the World AI Show ecosystem."
-                dotColor="#9a6cff"
-                dotRgb="154, 108, 255"
-                items={supportingItems}
-                onCardClick={(item) => setSelectedSponsor(item)}
-              />
-            )}
-
-            {/* Global Innovation Partners */}
-            {innovationItems.length > 0 && (
-              <PartnerSplitSection
-                title="Global Innovation Partners"
-                desc="International organizations fostering cross-border technological collaboration and AI advancement."
-                dotColor="#00ceff"
-                dotRgb="0, 206, 255"
-                items={innovationItems}
-                onCardClick={(item) => setSelectedSponsor(item)}
-              />
-            )}
-
-            {/* Association Partners */}
-            {associationItems.length > 0 && (
-              <PartnerSplitSection
-                title="Association Partners"
-                desc="Industry chambers, startup accelerators, and academic institutions driving ecosystem connectivity and research."
-                dotColor="#18d4ff"
-                dotRgb="24, 212, 255"
-                items={associationItems}
-                onCardClick={(item) => setSelectedSponsor(item)}
-              />
-            )}
-
-            {/* Ticketing Partner */}
-            {ticketingItems.length > 0 && (
-              <PartnerSplitSection
-                title="Ticketing Partner"
-                desc="Official ticketing and registration platform powering seamless attendee experiences at World AI Show."
-                dotColor="#9a6cff"
-                dotRgb="154, 108, 255"
-                items={ticketingItems}
-                onCardClick={(item) => setSelectedSponsor(item)}
-              />
-            )}
-
-            {/* Media Partners */}
-            {mediaItems.length > 0 && (
-              <PartnerSplitSection
-                title="Media Partners"
-                desc="Leading global and domestic tech outlets, digital broadcasts, and publications amplifying show highlights, insights, and market briefings."
-                dotColor="#00ceff"
-                dotRgb="0, 206, 255"
-                items={mediaItems}
-                onCardClick={(item) => setSelectedSponsor(item)}
-                gridCols={4}
-              />
-            )}
-
-          </div>
-        )}
-
-        {/* Tab 3: Floor Plan (3D Viewer) */}
-        {!loading && hasAnyData && activeTab === "floor-plan" && (
-          <div className="w-full aspect-video min-h-[500px] max-h-[750px] relative mt-8">
-            <ModelViewer modelUrl="https://pub-70eeb092c44c45ee83f856cfdd1a0fd9.r2.dev/models/floorplan-draco.glb" />
-          </div>
-        )}
-
-        {/* Call to Action at bottom */}
-        {!loading && hasAnyData && <PartnerCTA />}
-      </div>
-
-      {/* SVG Filter to remove solid white backgrounds dynamically from sponsor logo images */}
-      <svg width="0" height="0" className="absolute pointer-events-none" style={{ visibility: "hidden" }}>
-        <defs>
-          <filter id="remove-white-bg" colorInterpolationFilters="sRGB">
-            <feColorMatrix
-              type="matrix"
-              values="1 0 0 0 0
-                      0 1 0 0 0
-                      0 0 1 0 0
-                      -1 -1 -1 0 2.9"
-            />
-          </filter>
-        </defs>
-      </svg>
-
-      {/* Sponsor Profile Modal Popup (Indonesia Style) */}
-      {selectedSponsor && (
-        <div 
-          className="fixed inset-0 z-[1000] flex items-center justify-center p-6 bg-black/80 backdrop-blur-md transition-all duration-300 animate-fadeIn"
-          onClick={() => setSelectedSponsor(null)}
-        >
-          <div 
-            className="relative bg-[#070e24] border border-white/10 rounded-[28px] overflow-hidden w-full max-w-[520px] p-10 max-sm:p-6 flex flex-col gap-6 shadow-[0_32px_80px_rgba(0,0,0,0.6)] animate-slideUp"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Modal top colored bar */}
-            <div 
-              className="absolute top-0 left-0 right-0 h-[4px]" 
-              style={{ background: getCategoryColor(selectedSponsor.category || "").color }}
-            />
-
-            {/* Close button */}
-            <button 
-              className="absolute top-5 right-5 bg-white/5 hover:bg-white/10 text-white/60 hover:text-white w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer"
-              onClick={() => setSelectedSponsor(null)}
-              aria-label="Close modal"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M18 6L6 18M6 6l12 12" strokeWidth="2.2" strokeLinecap="round"/>
-              </svg>
-            </button>
-
-            {/* Logo wrap with white background inside modal to highlight the logo perfectly */}
-            <div className="bg-white rounded-[16px] p-5 max-w-[220px] h-[90px] flex items-center justify-center self-start shadow-md mt-2">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img 
-                src={LOCAL_LOGO_OVERLAYS[selectedSponsor.name] || selectedSponsor.logo} 
-                alt={selectedSponsor.name} 
-                className="max-h-[64px] max-w-[180px] object-contain" 
-              />
+        {/* Tab 2: Past Government, Association & Media Partners */}
+        {activeTab === "associations-media" && (
+          <div className="space-y-14">
+            <div>
+              <h3 className="m-0 mb-6 text-white font-[850] text-[22px] flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#C0F43C] shadow-[0_0_10px_#C0F43C]" />
+                Government &amp; Institutional Partners (India)
+              </h3>
+              <div className="grid grid-cols-4 gap-5 max-[980px]:grid-cols-3 max-sm:grid-cols-2">
+                {INDIA_GOVERNMENT_ASSOCIATIONS.map((item) => (
+                  <LogoCard key={item.name} item={item} />
+                ))}
+              </div>
             </div>
 
-            {/* Category tier pill */}
-            <div 
-              className="inline-flex items-center gap-2 px-4 py-1.5 border rounded-full text-[11px] font-mono font-extrabold uppercase tracking-widest w-fit"
-              style={{
-                color: getCategoryColor(selectedSponsor.category || "").color,
-                borderColor: `rgba(${getCategoryColor(selectedSponsor.category || "").rgb}, 0.35)`,
-                background: `rgba(${getCategoryColor(selectedSponsor.category || "").rgb}, 0.07)`,
-              }}
-            >
-              <span 
-                className="w-2 h-2 rounded-full animate-pulse" 
-                style={{ background: getCategoryColor(selectedSponsor.category || "").color }}
-              />
-              {selectedSponsor.category}
-            </div>
-
-            {/* Name */}
-            <h3 className="m-0 font-space-grotesk text-white font-extrabold text-[26px] tracking-tight">
-              {selectedSponsor.name}
-            </h3>
-
-            {/* Meta (Booth / Stall & Location) */}
-            {(selectedSponsor.booth || selectedSponsor.location) && (
-              <div className="flex flex-wrap gap-2.5">
-                {selectedSponsor.booth && (
-                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-white/50 border border-white/10 px-3.5 py-1.5 rounded-full bg-white/5">
-                    Stall: {selectedSponsor.booth}
-                  </span>
-                )}
-                {selectedSponsor.location && (
-                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-white/50 border border-white/10 px-3.5 py-1.5 rounded-full bg-white/5">
-                    Location: {selectedSponsor.location}
-                  </span>
-                )}
+            {mediaPartners.length > 0 && (
+              <div>
+                <h3 className="m-0 mb-6 text-white font-[850] text-[22px] flex items-center gap-2.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#18d4ff] shadow-[0_0_10px_#18d4ff]" />
+                  Media Partners
+                </h3>
+                <div className="grid grid-cols-4 gap-5 max-[980px]:grid-cols-3 max-sm:grid-cols-2">
+                  {mediaPartners.map((item, idx) => (
+                    <LogoCard key={`${item.name}-${idx}`} item={item} />
+                  ))}
+                </div>
               </div>
             )}
-
-            {/* Description */}
-            {selectedSponsor.description ? (
-              <div 
-                className="m-0 font-inter text-[14.5px] leading-relaxed text-white/70 space-y-3"
-                dangerouslySetInnerHTML={{ __html: selectedSponsor.description }}
-              />
-            ) : (
-              <p className="m-0 font-inter text-[13.5px] leading-relaxed text-white/40 italic">
-                No description available. Click below to explore their official website.
-              </p>
-            )}
-
-            {/* Action buttons */}
-            {selectedSponsor.website && selectedSponsor.website !== "#" && (
-              <a 
-                href={selectedSponsor.website} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[13.5px] font-extrabold text-[#060b24] hover:shadow-[0_0_24px_rgba(255,255,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 w-fit cursor-pointer"
-                style={{ background: getCategoryColor(selectedSponsor.category || "").color }}
-              >
-                Visit Website
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-            )}
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </section>
   );
 }

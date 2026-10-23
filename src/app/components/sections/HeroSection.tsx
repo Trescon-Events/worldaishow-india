@@ -211,15 +211,9 @@ export function HeroSection() {
 
       {/* Hero Content */}
       <div className="container relative z-10 mx-auto px-6 pt-[220px] lg:pt-[240px] pb-16 max-sm:pt-[175px] max-sm:pb-12 max-sm:px-4 flex flex-col items-center">
-        {/* Kicker */}
-        <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-[#C0F43C]/45 bg-[#040D1F]/85 text-[#C0F43C] text-[13px] font-mono uppercase tracking-[2.4px] font-extrabold shadow-[0_0_24px_rgba(192,244,60,0.18)] mb-4">
-          <span className="w-2 h-2 rounded-full bg-[#C0F43C] animate-pulse" />
-          Now in India · The Enterprise Edition
-        </div>
-
         {/* Event Lockup Sub-label */}
         <p className="text-white/85 font-mono text-[13px] uppercase tracking-[2px] font-semibold mb-4">
-          World AI Show: The Enterprise Edition | Mumbai 2027
+          World AI Show: The Enterprise Edition | Mumbai
         </p>
 
         {/* Hero Title (82px, 85px line-height, -2px tracking, 850 weight) */}
@@ -271,9 +265,6 @@ export function HeroSection() {
         <div className="flex justify-center flex-wrap gap-3.5 mt-9 max-sm:flex-col max-sm:items-center max-sm:gap-3.5 max-sm:w-full max-sm:max-w-[320px]">
           <Button href="/enterprise/sponsorship-enquiry/" showArrow={true}>
             Enquire Now (Sponsorship &amp; Passes)
-          </Button>
-          <Button href="/enterprise/agenda/the-2030-vision/" variant="outline" showArrow={true}>
-            Explore The India Series
           </Button>
           <Button href="/enterprise/attend/sponsor/" variant="outline" showArrow={true}>
             Download Prospectus

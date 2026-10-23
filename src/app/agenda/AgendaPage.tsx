@@ -9,6 +9,7 @@ import { Header } from "../components/sections/Header";
 import styles from "./AgendaPage.module.css";
 import "./agenda.css";
 import { AgendaSection } from "../components/sections/AgendaSection";
+import { SpeakersSection } from "../components/sections/SpeakersSection";
 import { SpeakerCallToStage } from "../speakers/SpeakerCallToStage";
 
 const subNav = ["Overview", "The 2030 Vision", "Agenda", "Themes", "Call for Speakers"];
@@ -560,9 +561,6 @@ export function AgendaOverview() {
             Executive Programme
           </span>
           <h1>Two days,<br /><GradientText>five operational decisions.</GradientText></h1>
-          <p className={styles.heroPara}>
-            Day 1 focuses on enterprise execution, architectures, and agentic autonomy. Day 2 focuses on repeatable delivery, operating models, governance, and measuring enterprise business value. The full session timeline will be published following steering committee review.
-          </p>
         </div>
       </section>
 
@@ -585,6 +583,27 @@ export function AgendaOverview() {
         <div className={styles.container}>
           <h2>The formats <GradientText>driving execution.</GradientText></h2>
           <p>A working executive programme across 2 Days — every session structured for production evidence.</p>
+
+          {/* 2-Column Day 1 & Day 2 Focus Table */}
+          <div className="grid grid-cols-2 max-md:grid-cols-1 border border-[#18d4ff]/30 rounded-[18px] overflow-hidden bg-[#050d20]/85 shadow-[0_18px_45px_rgba(0,0,0,0.35),inset_0_0_24px_rgba(24,212,255,0.05)] mb-12 text-left">
+            <div className="p-7 border-r border-[#18d4ff]/25 max-md:border-r-0 max-md:border-b">
+              <span className="inline-block font-mono text-[11px] uppercase tracking-[1.8px] text-[#C0F43C] font-bold mb-2">
+                Day 01 · Enterprise Execution
+              </span>
+              <p className="!m-0 !text-white/90 !text-[17px] leading-relaxed font-medium">
+                Day 1 focuses on enterprise execution, architectures, and agentic autonomy.
+              </p>
+            </div>
+            <div className="p-7">
+              <span className="inline-block font-mono text-[11px] uppercase tracking-[1.8px] text-[#18d4ff] font-bold mb-2">
+                Day 02 · Strategy to Scale
+              </span>
+              <p className="!m-0 !text-white/90 !text-[17px] leading-relaxed font-medium">
+                Day 2 focuses on repeatable delivery, operating models, governance, and measuring enterprise business value.
+              </p>
+            </div>
+          </div>
+
           <div className={styles.formatGrid}>
             {formats.map((item) => (
               <article className={styles.formatCard} key={item.title}>
@@ -669,24 +688,11 @@ export function AgendaVision() {
         </div>
       </section>
 
-      <section className={styles.accelerateSection}>
-        <div className={styles.container}>
-          <h2>Where AI becomes <GradientText>the operating model</GradientText></h2>
-          <p>World AI Show: The Enterprise Edition brings together CIOs, CAIOs, CTOs, CDOs, CISOs, and COOs to resolve the execution gap across five master content pillars.</p>
-          <div className={styles.accelerateGrid}>
-            <div>
-              {focusItems.map(([title, text, icon]) => (
-                <article className={styles.focusItem} key={title}>
-                  <span><img src={icon} alt="" loading="lazy" /></span>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </article>
-              ))}
-            </div>
-            <img src="/enterprise/images/agenda/driving-malaysia-speakers.webp" alt="Speakers on stage at World AI Show" loading="lazy" />
-          </div>
-        </div>
-      </section>
+      <AgendaSection
+        title={<>Five Talking Points. <GradientText>Two Days.</GradientText></>}
+        subtitle="Curated Agenda"
+        description="Workforce restructuring, operating-model change, and verified ROI run across all five."
+      />
     </>
   );
 }
@@ -739,14 +745,14 @@ export function AgendaThemes() {
           <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
             The 5 Master Content Pillars
           </span>
-          <h1>Five decisions. <br /><GradientText>Two days.</GradientText></h1>
+          <h1>Five Talking Points. <br /><GradientText>Two Days.</GradientText></h1>
           <p className={styles.heroPara}>
             Workforce restructuring, operating-model change, and verified ROI run across all five content pillars.
           </p>
         </div>
       </section>
       <AgendaSection
-        title={<>Five decisions. <GradientText>Two days.</GradientText></>}
+        title={<>Five Talking Points. <GradientText>Two Days.</GradientText></>}
         subtitle="Curated Agenda"
         description="Workforce restructuring, operating-model change, and verified ROI run across all five."
       />
@@ -808,34 +814,21 @@ export function AgendaCallForSpeakers() {
           <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
             Call for Enterprise Speakers
           </span>
-          <h1 className="text-white font-[850] tracking-[-2px] leading-[1.05] text-[clamp(44px,6.2vw,76px)]">
-            If you have scaled AI <br />
-            in production, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#00a5a3]">we want you on the stage</span> <br />
-            <span className="text-[#C0F43C]">in Mumbai 2027.</span>
+          <h1 className="text-white font-[850] tracking-[-2px] leading-[1.06] text-[clamp(44px,6vw,72px)] max-w-[860px]">
+            If You Have Scaled AI in Production,{" "}
+            <GradientText>Join us on the Stage</GradientText>
           </h1>
-          <p className={styles.heroPara}>
-            Seeking CIOs, CAIOs, CTOs, and Transformation Leaders with live production evidence: the original baseline, trade-offs made, exception rates, and verified business outcomes.
-          </p>
         </div>
       </section>
       <SpeakerCallToStage />
-
-      <section className={styles.finalCta} id="cta">
-        <div className={styles.ctaBox}>
-          <h2>Be in the room where <GradientText>the operating model gets decided.</GradientText></h2>
-          <p>Submit your case study for steering committee review or enquire about 30-minute partner thought leadership sessions.</p>
-          <div className={styles.actions}>
-            <a className={`${styles.button} ${styles.solid} group`} href="/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>
-            <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
-          </div>
-          <dl>
-            <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Days</dd></div>
-            <div><dt>Venue</dt><dd>Mumbai, India</dd></div>
-            <div><dt>Series</dt><dd>Edition 1 · India Series Launch</dd></div>
-          </dl>
-        </div>
-      </section>
+      <SpeakersSection
+        heading={
+          <>
+            Join Our Growing Alumni of{" "}
+            <GradientText>Enterprise Speakers at World AI Show</GradientText>
+          </>
+        }
+      />
     </>
   );
 }
