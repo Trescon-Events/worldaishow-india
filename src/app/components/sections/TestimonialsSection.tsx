@@ -51,45 +51,6 @@ const testimonials: TestimonialItem[] = [
   },
 ];
 
-function BrandEmblem({ name, isGreen }: { name: string; isGreen: boolean }) {
-  const colorClass = isGreen ? "text-[#C0F43C]" : "text-[#18d4ff]";
-  if (name === "Microsoft") {
-    return (
-      <svg className={`w-6 h-6 ${colorClass}`} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <rect x="3" y="3" width="8.2" height="8.2" rx="1.2" />
-        <rect x="12.8" y="3" width="8.2" height="8.2" rx="1.2" opacity="0.8" />
-        <rect x="3" y="12.8" width="8.2" height="8.2" rx="1.2" opacity="0.65" />
-        <rect x="12.8" y="12.8" width="8.2" height="8.2" rx="1.2" opacity="0.9" />
-      </svg>
-    );
-  }
-  if (name === "Cloudflare") {
-    return (
-      <svg className={`w-6 h-6 ${colorClass}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M17.5 19H7a5 5 0 0 1-.5-9.97A6.5 6.5 0 0 1 19.3 11a4 4 0 0 1-1.8 8Z" />
-        <path d="M12 11v5" />
-        <path d="m9.5 13.5 2.5-2.5 2.5 2.5" />
-      </svg>
-    );
-  }
-  if (name === "SAP") {
-    return (
-      <svg className={`w-6 h-6 ${colorClass}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
-        <line x1="12" y1="22" x2="12" y2="15.5" />
-        <polyline points="22 8.5 12 15.5 2 8.5" />
-      </svg>
-    );
-  }
-  return (
-    <svg className={`w-6 h-6 ${colorClass}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <ellipse cx="12" cy="5" rx="9" ry="3" />
-      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-      <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
-    </svg>
-  );
-}
-
 export function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -252,16 +213,7 @@ export function TestimonialsSection() {
                 isGreen ? "border-[#C0F43C]/25" : "border-[#18d4ff]/25"
               }`}
             >
-              <div className="flex items-center justify-between gap-3 mb-5 pb-4 border-b border-white/[0.08]">
-                <div
-                  className={`grid place-items-center w-12 h-12 rounded-[14px] border ${
-                    isGreen
-                      ? "border-[#C0F43C]/30 bg-[#C0F43C]/10"
-                      : "border-[#18d4ff]/30 bg-[#18d4ff]/10"
-                  }`}
-                >
-                  <BrandEmblem name={active.name} isGreen={isGreen} />
-                </div>
+              <div className="flex items-center justify-start gap-3 mb-5 pb-4 border-b border-white/[0.08]">
                 <span className="font-mono text-[10px] uppercase tracking-[1.8px] text-white/40 px-2.5 py-1 rounded-md border border-white/[0.07] bg-white/[0.02]">
                   Verified Partner
                 </span>
