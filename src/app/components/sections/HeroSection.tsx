@@ -212,12 +212,12 @@ export function HeroSection() {
       {/* Hero Content */}
       <div className="container relative z-10 mx-auto px-6 pt-[220px] lg:pt-[240px] pb-16 max-sm:pt-[175px] max-sm:pb-12 max-sm:px-4 flex flex-col items-center">
         {/* Event Lockup Sub-label */}
-        <p className="text-white/85 font-mono text-[13px] uppercase tracking-[2px] font-semibold mb-4">
+        <p className="text-white/95 font-mono text-[15px] sm:text-[18px] lg:text-[20px] uppercase tracking-[2.5px] font-bold mb-5">
           World AI Show: The Enterprise Edition | Mumbai
         </p>
 
-        {/* Hero Title (82px, 85px line-height, -2px tracking, 850 weight) */}
-        <h1 className="max-w-[1120px] mx-auto text-white font-[850] leading-[1.04] xl:leading-[85px] tracking-[-2px] text-[clamp(38px,5.8vw,82px)] xl:text-[82px] text-center mb-6">
+        {/* Hero Title */}
+        <h1 className="max-w-[1020px] mx-auto text-white font-[850] leading-[1.08] xl:leading-[72px] tracking-[-1.8px] text-[clamp(34px,4.8vw,68px)] xl:text-[68px] text-center mb-6">
           Where AI becomes the <GradientText>operating model.</GradientText>
         </h1>
 
