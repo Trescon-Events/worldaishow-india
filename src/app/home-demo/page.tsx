@@ -8,7 +8,6 @@ import { SpeakersSection } from "../components/sections/SpeakersSection";
 import { NetworkingSection } from "../components/sections/NetworkingSection";
 import { TestimonialsSection } from "../components/sections/TestimonialsSection";
 import { SponsorsSection } from "../components/sections/SponsorsSection";
-import { CTASection } from "../components/sections/CTASection";
 import { OrganizerSection } from "../components/sections/OrganizerSection";
 import { FooterSection } from "../components/sections/FooterSection";
 
@@ -25,7 +24,6 @@ export default function HomeDemo() {
       <NetworkingSection />
       <TestimonialsSection />
       <SponsorsSection />
-      <CTASection />
       <OrganizerSection />
       <FooterSection />
     </main>
