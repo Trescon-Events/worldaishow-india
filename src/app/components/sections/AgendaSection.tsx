@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode, useState } from "react";
+import { type ReactNode } from "react";
 import { GradientText } from "../Shared";
 
 const themeItems = [
@@ -99,9 +99,6 @@ export function AgendaSection({
   subtitle?: ReactNode | null;
   description?: ReactNode;
 }) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const activeTheme = themeItems[activeIndex];
-
   return (
     <section className="relative py-[104px] bg-gradient-to-b from-[#020a18]/96 to-[#051224]/70 max-sm:py-[72px]" id="agenda">
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
@@ -124,75 +121,33 @@ export function AgendaSection({
           </p>
         )}
 
-        {/* Agenda Grid Layout (5 Content Pillars — Component C3) */}
-        <div className="grid grid-cols-[1.4fr_1fr] gap-9 max-[980px]:grid-cols-1">
-          {/* Themes Tabs List */}
-          <div className="grid gap-[16px]">
-            {themeItems.map((theme, index) => {
-              const isActive = index === activeIndex;
-              return (
-                <button
-                  key={theme.label}
-                  type="button"
-                  onClick={() => setActiveIndex(index)}
-                  onMouseEnter={() => setActiveIndex(index)}
-                  className={`grid grid-cols-[52px_1fr] gap-6 items-center w-full min-h-[104px] p-[22px_26px] text-white text-left cursor-pointer rounded-[16px] transition-all duration-200 outline-none max-sm:p-5 ${
-                    isActive
-                      ? "border border-[#b9f82d]/42 bg-gradient-to-br from-[#00ceff]/20 to-[#c0f43c]/9 shadow-[0_0_28px_rgba(185,248,45,0.14),inset_0_0_30px_rgba(50,21,100,0.16)] border-t-[#293442]"
-                      : "border border-purple/74 bg-[#040b1b]/72 shadow-[inset_0_0_30px_rgba(50,21,100,0.16)] border-[#855dff]/30 hover:border-purple/80"
-                  }`}
-                >
-                  {/* Icon Circle */}
-                  <span
-                    className={`grid place-items-center w-[52px] h-[52px] border rounded-[18px] transition-all duration-200 ${
-                      isActive
-                        ? "border-[#c0f43c]/20 bg-[#c0f43c]/18 text-green"
-                        : "border-white/8 bg-white/3 text-[#7f8999]"
-                    }`}
-                  >
+        {/* 5 Content Pillar Boxes (No images) */}
+        <div className="grid grid-cols-6 gap-5 max-[980px]:grid-cols-2 max-sm:grid-cols-1">
+          {themeItems.map((theme, index) => (
+            <article
+              key={theme.label}
+              className={`group relative flex flex-col justify-between p-7 rounded-[18px] border border-white/15 bg-gradient-to-br from-[#00ceff]/10 via-[#040c1e]/95 to-[#996cff]/10 shadow-[inset_0_0_28px_rgba(65,220,255,0.05),0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:border-[#C0F43C]/60 hover:shadow-[0_16px_40px_rgba(0,0,0,0.4),0_0_28px_rgba(192,244,60,0.12)] ${
+                index < 3 ? "col-span-2 max-[980px]:col-span-1" : "col-span-3 max-[980px]:col-span-1"
+              }`}
+            >
+              <div>
+                <div className="flex items-center justify-between gap-4 mb-5">
+                  <span className="grid place-items-center w-[48px] h-[48px] border border-cyan/30 rounded-[14px] bg-cyan/10 text-cyan transition-all duration-300 group-hover:border-[#C0F43C]/50 group-hover:bg-[#C0F43C]/18 group-hover:text-[#C0F43C]">
                     <ThemeIcon index={index} />
                   </span>
-
-                  {/* Copy content */}
-                  <span className="grid gap-2 min-w-0 w-full">
-                    <span className="flex items-center gap-4 w-full">
-                      <small className="text-white/62 font-mono text-[11px] uppercase tracking-[1.8px] whitespace-nowrap">
-                        Pillar / {String(index + 1).padStart(2, "0")}
-                      </small>
-                      {isActive && (
-                        <span className="block h-[1px] w-full bg-green opacity-42" />
-                      )}
-                    </span>
-                    <strong
-                      className={`text-[18px] font-bold leading-[1.2] relative ${
-                        isActive ? "text-white" : "text-white/80"
-                      }`}
-                    >
-                      {theme.label}
-                    </strong>
-                    {isActive && (
-                      <span className="text-white/70 text-[14px] leading-relaxed">
-                        {theme.description}
-                      </span>
-                    )}
+                  <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5 text-cyan font-mono text-[11px] font-bold uppercase tracking-[1.8px] transition-colors duration-300 group-hover:border-[#C0F43C]/40 group-hover:bg-[#C0F43C]/15 group-hover:text-[#C0F43C]">
+                    Pillar / {String(index + 1).padStart(2, "0")}
                   </span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Right Focus Feature Card (Real photo, no text overlay) */}
-          <aside
-            key={activeIndex}
-            className="focus-reveal relative min-h-[420px] rounded-[22px] overflow-hidden shadow-[0_0_34px_rgba(192,244,60,0.14),inset_0_0_28px_rgba(0,206,255,0.06)] border border-[#b9f82d]/25 bg-[#040b1b]"
-          >
-            <img
-              src={activeTheme.image}
-              alt={activeTheme.heading}
-              className="w-full h-full object-cover object-center block"
-              loading="lazy"
-            />
-          </aside>
+                </div>
+                <h3 className="m-0 mb-3 text-white font-extrabold text-[20px] leading-[1.25] transition-colors duration-200 group-hover:text-[#C0F43C]">
+                  {theme.label}
+                </h3>
+                <p className="m-0 text-white/70 text-[15px] leading-[1.6]">
+                  {theme.description}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
