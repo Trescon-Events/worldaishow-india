@@ -532,8 +532,8 @@ export function AttendOverviewSection() {
           </h2>
           <div className="relative w-[min(700px,100%)] aspect-video mx-auto my-[58px] border-[3px] border-[#8559ff]/58 rounded-[13px] overflow-hidden shadow-[0_0_24px_rgba(151,108,255,0.35)]">
             <iframe
-              src="https://www.youtube.com/embed/CQlysabnvmM?rel=0&modestbranding=1"
-              title="World AI Show 2026 Aftermovie"
+              src="https://www.youtube.com/embed/rIHUrmsdY2U?rel=0&modestbranding=1"
+              title="World AI Show India Aftermovie"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className="absolute inset-0 w-full h-full border-0"
