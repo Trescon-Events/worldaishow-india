@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode, useEffect, useState } from "react";
+import { type ReactNode } from "react";
 import { GradientText } from "../Shared";
 
 const themeItems = [
@@ -87,9 +87,6 @@ function ThemeIcon({ index }: { index: number }) {
   );
 }
 
-// Triple the items so infinite looping in both directions is seamless
-const extendedItems = [...themeItems, ...themeItems, ...themeItems];
-
 export function AgendaSection({
   title = (
     <>
@@ -103,67 +100,34 @@ export function AgendaSection({
   subtitle?: ReactNode | null;
   description?: ReactNode;
 }) {
-  const total = themeItems.length; // 5
-  const [slideIndex, setSlideIndex] = useState(total); // Start at middle set (index 5)
-  const [isAnimating, setIsAnimating] = useState(true);
-  const [isPaused, setIsPaused] = useState(false);
-  const [cardsPerView, setCardsPerView] = useState(3);
-
-  useEffect(() => {
-    const updateView = () => {
-      if (window.innerWidth < 640) {
-        setCardsPerView(1);
-      } else if (window.innerWidth < 1024) {
-        setCardsPerView(2);
-      } else {
-        setCardsPerView(3);
-      }
-    };
-    updateView();
-    window.addEventListener("resize", updateView);
-    return () => window.removeEventListener("resize", updateView);
-  }, []);
-
-  // Continuous auto-slide loop
-  useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(() => {
-      setIsAnimating(true);
-      setSlideIndex((prev) => prev + 1);
-    }, 3200);
-    return () => clearInterval(timer);
-  }, [isPaused]);
-
-  // Seamless infinite loop reset when reaching cloned boundaries
-  const handleTransitionEnd = () => {
-    if (slideIndex >= total * 2) {
-      setIsAnimating(false);
-      setSlideIndex(slideIndex - total);
-    } else if (slideIndex < total) {
-      setIsAnimating(false);
-      setSlideIndex(slideIndex + total);
-    }
-  };
-
-  const nextSlide = () => {
-    setIsAnimating(true);
-    setSlideIndex((prev) => prev + 1);
-  };
-
-  const prevSlide = () => {
-    setIsAnimating(true);
-    setSlideIndex((prev) => prev - 1);
-  };
-
-  const activeDot = ((slideIndex % total) + total) % total;
+  // Double the items for seamless continuous marquee scrolling
+  const marqueeItems = [...themeItems, ...themeItems];
 
   return (
     <section
       className="relative py-[104px] bg-gradient-to-b from-[#020a18]/96 to-[#051224]/70 max-sm:py-[72px]"
       id="agenda"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
     >
+      <style>{`
+        @keyframes pillarContinuousSlide {
+          0% {
+            transform: translate3d(0, 0, 0);
+          }
+          100% {
+            transform: translate3d(-50%, 0, 0);
+          }
+        }
+        .pillar-marquee-track {
+          display: flex;
+          width: max-content;
+          animation: pillarContinuousSlide 28s linear infinite;
+          will-change: transform;
+        }
+        .pillar-marquee-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
         {/* Eyebrow */}
         {subtitle && (
@@ -186,22 +150,13 @@ export function AgendaSection({
 
         {/* 3-Cards-Per-Row Continuous Looping Slider */}
         <div className="relative overflow-hidden py-3">
-          <div
-            onTransitionEnd={handleTransitionEnd}
-            className={`flex ${
-              isAnimating ? "transition-transform duration-600 ease-out" : ""
-            }`}
-            style={{
-              transform: `translate3d(-${(slideIndex * 100) / cardsPerView}%, 0, 0)`,
-            }}
-          >
-            {extendedItems.map((theme, idx) => {
-              const originalIndex = idx % total;
+          <div className="pillar-marquee-track">
+            {marqueeItems.map((theme, idx) => {
+              const originalIndex = idx % themeItems.length;
               return (
                 <div
                   key={`${theme.label}-${idx}`}
-                  className="shrink-0 px-2.5"
-                  style={{ width: `${100 / cardsPerView}%` }}
+                  className="shrink-0 px-2.5 w-[371px] max-lg:w-[330px] max-sm:w-[300px]"
                 >
                   <article className="group relative flex flex-col justify-between h-full min-h-[275px] p-7 rounded-[18px] border border-white/15 bg-gradient-to-br from-[#00ceff]/10 via-[#040c1e]/95 to-[#996cff]/10 shadow-[inset_0_0_28px_rgba(65,220,255,0.05),0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:border-[#C0F43C]/60 hover:shadow-[0_16px_40px_rgba(0,0,0,0.4),0_0_28px_rgba(192,244,60,0.12)] text-left">
                     <div>
@@ -225,50 +180,6 @@ export function AgendaSection({
               );
             })}
           </div>
-        </div>
-
-        {/* Slider Controls & Indicators */}
-        <div className="flex items-center justify-center gap-4 mt-8">
-          <button
-            type="button"
-            onClick={prevSlide}
-            aria-label="Previous pillar"
-            className="grid place-items-center w-10 h-10 rounded-full border border-white/15 bg-[#051024]/80 text-white/85 cursor-pointer transition-all duration-200 hover:border-cyan/60 hover:bg-cyan/10 hover:text-cyan"
-          >
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="m15 18-6-6 6-6" />
-            </svg>
-          </button>
-
-          <div className="flex items-center gap-2">
-            {themeItems.map((item, idx) => (
-              <button
-                key={item.label}
-                type="button"
-                onClick={() => {
-                  setIsAnimating(true);
-                  setSlideIndex(total + idx);
-                }}
-                aria-label={`Go to pillar ${idx + 1}`}
-                className={`h-2 rounded-full transition-all duration-300 cursor-pointer border-0 ${
-                  activeDot === idx
-                    ? "w-7 bg-[#C0F43C] shadow-[0_0_10px_#C0F43C]"
-                    : "w-2 bg-white/25 hover:bg-white/45"
-                }`}
-              />
-            ))}
-          </div>
-
-          <button
-            type="button"
-            onClick={nextSlide}
-            aria-label="Next pillar"
-            className="grid place-items-center w-10 h-10 rounded-full border border-white/15 bg-[#051024]/80 text-white/85 cursor-pointer transition-all duration-200 hover:border-cyan/60 hover:bg-cyan/10 hover:text-cyan"
-          >
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-          </button>
         </div>
       </div>
     </section>
