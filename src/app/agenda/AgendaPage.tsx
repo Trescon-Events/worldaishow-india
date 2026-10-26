@@ -718,10 +718,7 @@ export function AgendaLiveTimeline() {
           <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
             2-Day Executive Programme · 20–21 April 2027
           </span>
-          <h1><GradientText>MUMBAI 2027 AGENDA</GradientText></h1>
-          <p className={styles.heroPara}>
-            Day 1 (Tuesday 20 April 2027: Enterprise Execution) and Day 2 (Wednesday 21 April 2027: Strategy to Scale).
-          </p>
+          <h1><GradientText>Event Agenda</GradientText></h1>
         </div>
       </section>
       <AgendaTabs />
