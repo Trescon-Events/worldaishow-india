@@ -1,11 +1,60 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+
+function Counter({ end, suffix = "", duration = 1500 }: { end: number; suffix?: string; duration?: number }) {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const elementRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setCount(Math.floor(progress * end));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }, [hasStarted, end, duration]);
+
+  return (
+    <span ref={elementRef}>
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
 const statsData = [
-  { display: "300", label: "Qualified CXOs" },
-  { display: "45", label: "Speakers & Panelists" },
-  { display: "5", label: "Content Pillars" },
-  { display: "2 Days", label: "Executive Conference" },
-  { display: "46", label: "Global Series Editions" },
+  { number: 300, suffix: "", label: "Qualified CXOs" },
+  { number: 45, suffix: "", label: "Speakers & Panelists" },
+  { number: 5, suffix: "", label: "Content Pillars" },
+  { number: 2, suffix: " Days", label: "Executive Conference" },
+  { number: 46, suffix: "", label: "Global Series Editions" },
 ];
 
 export function AttendStats() {
@@ -17,7 +66,7 @@ export function AttendStats() {
           key={stat.label}
         >
           <strong className="block bg-gradient-to-r from-[#18d4ff] to-[#b9f82d] bg-clip-text text-transparent text-[34px] font-[850] leading-none">
-            {stat.display}
+            <Counter end={stat.number} suffix={stat.suffix} />
           </strong>
           <span className="block mt-[18px] text-white/68 text-[15px] leading-snug">{stat.label}</span>
         </article>

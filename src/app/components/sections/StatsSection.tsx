@@ -3,28 +3,85 @@
 import { useEffect, useState, useRef } from "react";
 import { GradientText } from "../Shared";
 
+interface CounterProps {
+  end: number;
+  suffix?: string;
+  duration?: number;
+}
+
+function Counter({ end, suffix = "", duration = 1500 }: CounterProps) {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const elementRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setCount(Math.floor(progress * end));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }, [hasStarted, end, duration]);
+
+  return (
+    <span ref={elementRef}>
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
 const statsData = [
   {
     icon: "/enterprise/icons/stats/1.svg",
-    display: "300",
+    number: 300,
+    suffix: "",
     label: "Qualified CXOs",
     index: "01",
   },
   {
     icon: "/enterprise/icons/stats/2.svg",
-    display: "45",
+    number: 45,
+    suffix: "",
     label: "Speakers & Panelists",
     index: "02",
   },
   {
     icon: "/enterprise/icons/stats/5.svg",
-    display: "5",
+    number: 5,
+    suffix: "",
     label: "Content Pillars",
     index: "03",
   },
   {
     icon: "/enterprise/icons/stats/3.svg",
-    display: "2 Days",
+    number: 2,
+    suffix: " Days",
     label: "Executive Conference",
     index: "04",
   },
@@ -163,7 +220,7 @@ function StatCard({ stat }: { stat: (typeof statsData)[0] }) {
       </span>
 
       <strong className="block mt-[22px] text-[#C0F43C] font-[850] text-[34px] leading-none tracking-tight relative z-10 text-center">
-        {stat.display}
+        <Counter end={stat.number} suffix={stat.suffix} />
       </strong>
 
       <p className="mt-3 text-white/80 font-mono text-[13px] uppercase tracking-[1px] leading-relaxed font-semibold relative z-10 text-center">
