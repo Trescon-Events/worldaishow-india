@@ -70,7 +70,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "10:00",
     title: "Registration & Exhibition Networking",
     typeTitle: "Networking",
-    location: "Exhibition Arena & Registration Concourse · Mumbai",
+    location: "Exhibition Arena & Registration Concourse",
     description: "Executive badge collection, morning refreshments, and exhibition floor exploration.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -83,7 +83,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "10:25",
     title: "Opening Plenary Keynote: From AI Ambition to Enterprise Execution",
     typeTitle: "Keynote",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "Setting the operational mandate for Edition 1 of the World AI Show Series in India: moving from isolated proofs of concept to governed enterprise execution.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -96,7 +96,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "11:00",
     title: "Panel: What Changes Between AI Pilot and Production?",
     typeTitle: "Panel",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "Pillar 02 — Continuous integration, latency, exception handling, and human-in-the-loop workflows when scaling from sandbox to core enterprise operations.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -109,7 +109,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "11:30",
     title: "Partner Thought Leadership Session 1 (30 Minutes)",
     typeTitle: "Partner Session (30 Min)",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "30-minute standalone commercial thought leadership session examining enterprise-grade AI architecture and verified production outcomes.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -135,7 +135,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "12:15",
     title: "Fireside: Productivity is not transformation: redesigning work around AI",
     typeTitle: "Fireside",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "Pillar 01 & 02 — Why end-to-end workflow redesign and operating-model ownership separate enterprise value creators from incremental productivity pilots.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -148,7 +148,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "12:45",
     title: "Partner Thought Leadership Session 2 (30 Minutes)",
     typeTitle: "Partner Session (30 Min)",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "30-minute standalone session showcasing enterprise deployment blueprints and measurable operational impact.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -161,7 +161,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "13:15",
     title: "Deployment Case Study: One Use Case, One Outcome",
     typeTitle: "Case Study",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "Deep-dive audit of a single production enterprise AI deployment: original baseline, architecture trade-offs, exception handling, and verified ROI.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -174,7 +174,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "14:15",
     title: "Lunch & Networking",
     typeTitle: "Networking",
-    location: "Exhibition Arena & Dining Concourse · Mumbai",
+    location: "Exhibition Arena & Dining Concourse",
     description: "Executive lunch and peer-to-peer networking across the exhibition showcase.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -187,7 +187,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "14:45",
     title: "Partner Thought Leadership Session 3 (30 Minutes)",
     typeTitle: "Partner Session (30 Min)",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "30-minute standalone session focused on modernizing enterprise data context, cloud integration, and production scalability.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -200,7 +200,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "15:30",
     title: "Panel: The AI-ready enterprise stack: data, cloud, architecture and Sovereignty",
     typeTitle: "Panel",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "Pillar 04 — Real-time enterprise access, API fabrics, hybrid-cloud trade-offs, data sovereignty, and data quality for production AI.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -226,7 +226,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "16:00",
     title: "Partner Thought Leadership Session 4 (30 Minutes)",
     typeTitle: "Partner Session (30 Min)",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "30-minute standalone session examining governed autonomy, security guardrails, and enterprise orchestration.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -239,7 +239,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "16:45",
     title: "Panel: Agentic AI in the Enterprise — Where Should Autonomy Act?",
     typeTitle: "Panel",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "Pillar 03 — Agent identity, tool permissions, approval gates, auditability, and failure containment when deploying multi-step agents.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -252,7 +252,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "17:15",
     title: "Guest Keynote: Building the Intelligent Enterprise",
     typeTitle: "Keynote",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "Executive perspective on aligning boardroom capital allocation, technology architecture, and workforce transformation.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -265,7 +265,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "17:35",
     title: "Audience Reset Segment",
     typeTitle: "Special Feature",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "High-energy interactive plenary reset concluding Day 1 prior to evening executive networking.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -280,7 +280,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "10:00",
     title: "Keynote: The Next Frontier of Enterprise AI",
     typeTitle: "Keynote",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "Opening Day 2 with a strategic synthesis of enterprise AI scale decisions, outcome ownership, and cross-functional governance.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -293,7 +293,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "10:45",
     title: "Dialogue: Building a Repeatable AI Delivery Model",
     typeTitle: "Dialogue",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "Establishing reusable platform foundations, risk tiering, and cross-functional delivery squads that turn one-off successes into repeatable execution.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -306,7 +306,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "11:15",
     title: "Partner Thought Leadership Session 5 (30 Minutes)",
     typeTitle: "Partner Session (30 Min)",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "30-minute standalone session on enterprise AI security, proportionate trust, and regulatory readiness.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -319,7 +319,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "12:00",
     title: "Interactive AI workshop: What should the board measure?",
     typeTitle: "Interactive Workshop",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "An interactive session working through hypothetical, real-world enterprise AI scenarios to examine baseline performance, realised benefits, total costs and risks. Participants will explore what evidence leaders need to determine whether an AI initiative is ready to scale, requires redesign or should be reconsidered.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -332,7 +332,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "12:30",
     title: "Partner Thought Leadership Session 6 (30 Minutes)",
     typeTitle: "Partner Session (30 Min)",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "30-minute standalone session examining enterprise operating-model transformation and measurable ROI at scale.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -345,7 +345,7 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "13:15",
     title: "Panel: Redesigning the AI Operating Model — People & Roles",
     typeTitle: "Panel",
-    location: "Main Plenary Stage · Mumbai",
+    location: "Main Plenary Stage",
     description: "Workforce restructuring, human-AI handoffs, decision rights, and accountability across technology, operations, and risk.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
@@ -358,8 +358,8 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     endTime: "13:30",
     title: "Closing: The Enterprise AI Playbook",
     typeTitle: "Closing Synthesis",
-    location: "Main Plenary Stage · Mumbai",
-    description: "Distilling the five operational decisions and key takeaways from Mumbai Edition 1 ahead of the World AI Show India regional chapters and Q4 Series Finale.",
+    location: "Main Plenary Stage",
+    description: "Distilling the five operational decisions and key takeaways from Edition 1 ahead of the World AI Show India regional chapters and Q4 Series Finale.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
   }
