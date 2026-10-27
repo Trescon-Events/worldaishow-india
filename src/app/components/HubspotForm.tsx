@@ -97,24 +97,57 @@ export default function HubspotForm({ portalId, formId, region = "na1", classNam
 
   useEffect(() => {
     if ((window.hbspt || isScriptLoaded) && !loadError) {
+      let observer: MutationObserver | null = null;
+
+      const stripBannerImages = (root: Document | HTMLElement | null | undefined) => {
+        if (!root || !("querySelectorAll" in root)) return;
+        root.querySelectorAll(".hs-richtext img, form img, .hs-form img, .hbspt-form img").forEach((img) => {
+          const richTextWrapper = img.closest(".hs-richtext");
+          if (richTextWrapper) {
+            richTextWrapper.remove();
+          } else {
+            img.remove();
+          }
+        });
+      };
+
+      const injectHideStyle = (doc: Document | null | undefined) => {
+        if (!doc || !doc.head || doc.getElementById("hs-hide-banners-style")) return;
+        const style = doc.createElement("style");
+        style.id = "hs-hide-banners-style";
+        style.textContent = `.hs-richtext img, .hs-form img, form img, .hbspt-form img, .hs-richtext:has(img) { display: none !important; }`;
+        doc.head.appendChild(style);
+      };
+
+      const cleanIframes = (container: HTMLElement | null) => {
+        container?.querySelectorAll("iframe").forEach((iframe) => {
+          const cleanIframeDoc = () => {
+            try {
+              const doc = iframe.contentDocument || iframe.contentWindow?.document;
+              if (doc) {
+                injectHideStyle(doc);
+                stripBannerImages(doc);
+              }
+            } catch {
+              // Cross-origin iframe; ignore
+            }
+          };
+          cleanIframeDoc();
+          iframe.addEventListener("load", cleanIframeDoc);
+        });
+      };
+
       const initForm = () => {
         if (window.hbspt) {
           const container = document.getElementById(containerId);
           if (container) {
             container.innerHTML = ""; // Clear out previous instances
-          }
-
-          const stripBannerImages = (root: Document | HTMLElement | null | undefined) => {
-            if (!root || !("querySelectorAll" in root)) return;
-            root.querySelectorAll(".hs-richtext img, form img, .hs-form img").forEach((img) => {
-              const richTextWrapper = img.closest(".hs-richtext");
-              if (richTextWrapper) {
-                richTextWrapper.remove();
-              } else {
-                img.remove();
-              }
+            observer = new MutationObserver(() => {
+              stripBannerImages(container);
+              cleanIframes(container);
             });
-          };
+            observer.observe(container, { childList: true, subtree: true });
+          }
 
           window.hbspt.forms.create({
             portalId: portalId,
@@ -132,23 +165,11 @@ export default function HubspotForm({ portalId, formId, region = "na1", classNam
                 $form instanceof HTMLElement ? $form : $form?.[0] instanceof HTMLElement ? $form[0] : null;
               if (formEl) {
                 stripBannerImages(formEl);
+                injectHideStyle(formEl.ownerDocument);
                 stripBannerImages(formEl.ownerDocument);
               }
 
-              // Also check any HubSpot iframe inside the container
-              formContainer?.querySelectorAll("iframe").forEach((iframe) => {
-                try {
-                  const doc = iframe.contentDocument || iframe.contentWindow?.document;
-                  if (doc) {
-                    stripBannerImages(doc);
-                    const style = doc.createElement("style");
-                    style.textContent = `.hs-richtext img, .hs-form img, form img, .hs-richtext:has(img) { display: none !important; }`;
-                    doc.head?.appendChild(style);
-                  }
-                } catch {
-                  // Cross-origin iframe; ignore
-                }
-              });
+              cleanIframes(formContainer);
             }
           });
         }
@@ -157,7 +178,10 @@ export default function HubspotForm({ portalId, formId, region = "na1", classNam
       const timer = setTimeout(() => {
         initForm();
       }, 50);
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(timer);
+        observer?.disconnect();
+      };
     }
   }, [portalId, formId, region, isScriptLoaded, loadError, containerId]);
 
@@ -227,7 +251,7 @@ export default function HubspotForm({ portalId, formId, region = "na1", classNam
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 className="h-[48px] px-4 rounded-[8px] bg-white/[0.03] border border-white/10 text-white placeholder-white/30 text-[14px] focus:outline-none focus:border-cyan/50 transition-colors"
-                placeholder="+60 12 345 6789"
+                placeholder="+91 98765 43210"
               />
             </div>
             <div className="flex flex-col gap-2">
