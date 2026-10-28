@@ -650,7 +650,20 @@ export function AgendaOverview() {
   );
 }
 
+const visionCards = [
+  {
+    title: "Measuring Business Value & ROI",
+    text: "Moving beyond isolated proofs of concept to track expanded operational productivity KPIs, workflow transformation, and verified business outcomes at board level.",
+  },
+  {
+    title: "The India Series Trajectory",
+    text: "Edition 1: The Enterprise Edition (Mumbai) → Regional Chapters (Q2–Q3) → Series Finale (Q4). Mumbai serves as the official launch of the World AI Show Series in India, establishing a year-long executive roadmap that connects enterprise operational reality with verified boardroom outcomes.",
+  },
+];
+
 export function AgendaVision() {
+  const [hoveredCard, setHoveredCard] = useState<number>(0);
+
   return (
     <>
       <section
@@ -669,26 +682,52 @@ export function AgendaVision() {
       </section>
 
       <section className={styles.visionSection} id="the-2030-vision">
-        <div className={`${styles.split} !items-center`}>
-          <div>
-            <img src="/enterprise/images/agenda/driving-malaysia-stage.webp" alt="Executive panel discussion at World AI Show" loading="lazy" />
-          </div>
-          <div className={`${styles.visionCopy} !max-h-none !overflow-visible`}>
-            <p>
-              <strong>Measuring Business Value &amp; ROI:</strong> Moving beyond isolated proofs of concept to track expanded operational productivity KPIs, workflow transformation, and verified business outcomes at board level.
-            </p>
-            <p>
-              <strong>The India Series Trajectory:</strong> Edition 1: The Enterprise Edition (Mumbai) → Regional Chapters (Q2–Q3) → Series Finale (Q4).
-            </p>
-            <p>
-              Mumbai serves as the official launch of the World AI Show Series in India, establishing a year-long executive roadmap that connects enterprise operational reality with verified boardroom outcomes.
-            </p>
-          </div>
-        </div>
         <div className={styles.container}>
-          <blockquote className="w-full mt-11 mb-0 p-[38px_44px] max-sm:p-[28px_24px] border-[1.5px] border-[#18d4ff]/42 rounded-[20px] bg-gradient-to-br from-[#040b1b]/95 to-[#0a1834]/98 shadow-[0_0_35px_rgba(24,212,255,0.18),inset_0_0_25px_rgba(24,212,255,0.05)] text-[24px] max-sm:text-[19px] font-[750] leading-[1.45] text-[#f7f9ff]">
+          <div className="grid grid-cols-[0.95fr_1.05fr] gap-12 items-stretch max-[980px]:grid-cols-1 mb-10">
+            <div className="relative rounded-[22px] overflow-hidden border border-[#20d5ff]/30 bg-[#040d1d] shadow-[0_0_42px_rgba(0,206,255,0.14)] min-h-[420px]">
+              <img
+                src="/enterprise/images/agenda/India-enterprise-2030Vision.jpg"
+                alt="Executive panel discussion at World AI Show"
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="flex flex-col gap-4 justify-between">
+              {visionCards.map((card, idx) => {
+                const isActive = idx === hoveredCard;
+                return (
+                  <div
+                    key={card.title}
+                    onMouseEnter={() => setHoveredCard(idx)}
+                    className={`text-left p-7 rounded-[18px] border transition-all duration-300 flex-1 flex flex-col justify-center ${
+                      isActive
+                        ? "border-[#C0F43C]/65 bg-gradient-to-br from-[#C0F43C]/10 via-[#06152d] to-[#040d1d] shadow-[0_12px_32px_rgba(192,244,60,0.12)]"
+                        : "border-white/12 bg-[#040d1d]/75 hover:border-[#C0F43C]/65"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between gap-3 mb-3">
+                      <h3 className={`m-0 font-extrabold text-[19px] leading-snug transition-colors duration-300 ${isActive ? "text-[#C0F43C]" : "text-white"}`}>
+                        {card.title}
+                      </h3>
+                      <span className={`font-mono text-xs px-2.5 py-1 rounded-full transition-colors duration-300 ${isActive ? "bg-[#C0F43C] text-[#06111F] font-bold" : "bg-white/10 text-white/60"}`}>
+                        0{idx + 1}
+                      </span>
+                    </div>
+                    <p className="m-0 text-white/75 text-[15.5px] leading-relaxed">
+                      {card.text}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <blockquote className="w-full m-0 p-9 md:px-12 rounded-[22px] border-[1.5px] border-[#18d4ff]/45 bg-gradient-to-br from-[#040b1b]/95 to-[#0a1834]/98 shadow-[0_0_35px_rgba(24,212,255,0.18),inset_0_0_25px_rgba(24,212,255,0.05)] text-[#f7f9ff] text-[clamp(20px,2.4vw,25px)] font-[750] leading-[1.45] text-center">
             &ldquo;Nearly 97% expect AI to improve productivity; about 73% already track productivity using expanded or comprehensive KPIs.&rdquo;
-            <cite className={`${styles.blockquoteCite} not-italic`}>&mdash; SOURCE: DELOITTE, STATE OF AI IN THE ENTERPRISE: INDIA INSIGHTS</cite>
+            <cite className="block mt-4 text-[11px] font-mono font-bold tracking-[2px] uppercase text-white/50 not-italic">
+              &mdash; SOURCE: DELOITTE, STATE OF AI IN THE ENTERPRISE: INDIA INSIGHTS
+            </cite>
           </blockquote>
         </div>
       </section>
