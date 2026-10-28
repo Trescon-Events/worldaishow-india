@@ -635,7 +635,7 @@ export function AttendSponsorSection() {
             Your buyers are redesigning workflows now, <GradientText>not after the pilot.</GradientText>
           </h1>
           <p className="max-w-[710px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
-            Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Commercial partnerships are structured around 30-minute stage thought leadership, standardized 9 sqm and 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
+            Enterprise AI decisions involve up to 39 cross-functional stakeholders (Foundry, 2026). Engage active buying units directly through plenary stage thought leadership, standardized exhibition spaces, and closed-door curated boardrooms.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="/enterprise/sponsorship-enquiry">Enquire About Sponsorship</ArrowButton>
