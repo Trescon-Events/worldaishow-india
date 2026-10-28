@@ -571,10 +571,10 @@ export function AttendDelegateSection() {
             Delegate Pass — Complimentary, By Invitation &amp; Qualification
           </span>
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(44px,5.5vw,68px)] max-sm:text-[38px]">
-            Built for <GradientText>Invited Enterprise CXOs.</GradientText>
+            Built for <GradientText>Enterprise CXOs.</GradientText>
           </h1>
           <p className="max-w-[710px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
-            Target Audience: CIOs, CAIOs, CTOs, CDOs, CISOs, COOs, Transformation Heads. Senior enterprise technology, data, operations, and risk leaders attend by invitation, subject to qualification based on an active mandate to deploy enterprise AI.
+            Join an exclusive cohort of 300 pre-qualified enterprise peers, from CIOs to CISOs and Transformation Heads. Access is complimentary but strictly validated to ensure every seat represents active deployment authority.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="#delegate-qualification">Apply for a Delegate Pass</ArrowButton>
