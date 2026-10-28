@@ -669,11 +669,11 @@ export function AgendaVision() {
       </section>
 
       <section className={styles.visionSection} id="the-2030-vision">
-        <div className={styles.split}>
-          <div className={styles.leftCol}>
+        <div className={`${styles.split} !items-center`}>
+          <div>
             <img src="/enterprise/images/agenda/driving-malaysia-stage.webp" alt="Executive panel discussion at World AI Show" loading="lazy" />
           </div>
-          <div className={styles.visionCopy}>
+          <div className={`${styles.visionCopy} !max-h-none !overflow-visible`}>
             <p>
               <strong>Measuring Business Value &amp; ROI:</strong> Moving beyond isolated proofs of concept to track expanded operational productivity KPIs, workflow transformation, and verified business outcomes at board level.
             </p>
@@ -683,11 +683,13 @@ export function AgendaVision() {
             <p>
               Mumbai serves as the official launch of the World AI Show Series in India, establishing a year-long executive roadmap that connects enterprise operational reality with verified boardroom outcomes.
             </p>
-            <blockquote>
-              &ldquo;Nearly 97% expect AI to improve productivity; about 73% already track productivity using expanded or comprehensive KPIs.&rdquo;
-              <cite className={styles.blockquoteCite}>&mdash; SOURCE: DELOITTE, STATE OF AI IN THE ENTERPRISE: INDIA INSIGHTS</cite>
-            </blockquote>
           </div>
+        </div>
+        <div className={styles.container}>
+          <blockquote className="w-full mt-11 mb-0 p-[38px_44px] max-sm:p-[28px_24px] border-[1.5px] border-[#18d4ff]/42 rounded-[20px] bg-gradient-to-br from-[#040b1b]/95 to-[#0a1834]/98 shadow-[0_0_35px_rgba(24,212,255,0.18),inset_0_0_25px_rgba(24,212,255,0.05)] text-[24px] max-sm:text-[19px] font-[750] leading-[1.45] text-[#f7f9ff]">
+            &ldquo;Nearly 97% expect AI to improve productivity; about 73% already track productivity using expanded or comprehensive KPIs.&rdquo;
+            <cite className={`${styles.blockquoteCite} not-italic`}>&mdash; SOURCE: DELOITTE, STATE OF AI IN THE ENTERPRISE: INDIA INSIGHTS</cite>
+          </blockquote>
         </div>
       </section>
 
