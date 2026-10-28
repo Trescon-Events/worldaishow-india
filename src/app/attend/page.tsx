@@ -755,7 +755,7 @@ export function AttendAssociationSection() {
             Partner with the <GradientText>World AI Show Series</GradientText>
           </h1>
           <p className="max-w-[710px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
-            Industry councils, trade chambers, and professional AI bodies partnering across Edition 1 in Mumbai, Regional Chapters (Q2–Q3), and the Series Finale (Q4).
+            Connect and collaborate with regional associations, federations, and regulatory bodies to foster and influence bilateral delegations across the India.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="/enterprise/association-enquiry">Partner with the Series</ArrowButton>
