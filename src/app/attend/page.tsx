@@ -701,7 +701,7 @@ export function AttendMediaSection() {
             Cover the Launch of the <GradientText>World AI Show Series in India</GradientText>
           </h1>
           <p className="max-w-[710px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
-            Press credentials, executive interview room access, and editorial distribution for Mumbai 2027 (20–21 April 2027 · 2 Days).
+            Secure accredited press credentials, dedicated broadcast suite access, and 1-on-1 briefings with CXOs, AI and transformation heads, setting the standard for India’s AI race.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="/enterprise/media-enquiry">Apply for Media Accreditation</ArrowButton>
