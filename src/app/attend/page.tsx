@@ -352,9 +352,6 @@ export function AttendCTASection() {
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-[#2E3C4D]/45" />
 
         <div className="relative z-10">
-          <span className="inline-flex items-center mb-[27px] px-[15px] py-2 border border-white/10 rounded-full text-white/72 text-[12px] tracking-[2px] uppercase select-none before:content-[''] before:w-[7px] before:h-[7px] before:mr-2.5 before:rounded-full before:bg-cyan font-mono">
-            Mumbai · 20–21 April 2027 · 2 Days · 300 Enterprise Leaders
-          </span>
           <h2 className="max-w-[760px] mx-auto mb-8 text-[#f7f9ff] font-[850] leading-[1.08] tracking-[-1.8px] text-[clamp(36px,5vw,56px)] max-sm:text-[32px] max-sm:tracking-[-1px]">
             Be in the room where <span className="bg-gradient-to-r from-[#C0F43C] to-[#18d4ff] bg-clip-text text-transparent">the operating model</span> gets decided.
           </h2>
@@ -425,9 +422,6 @@ export function AttendOverviewSection() {
       >
         <div className="heroBackdrop absolute bottom-0 right-[-3%] w-[58%] h-[84%] opacity-0 pointer-events-none" />
         <div className="relative z-10 max-w-[820px]">
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
-            How To Attend — Two Doors · Mumbai 2027
-          </span>
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(48px,6vw,76px)] max-sm:text-[42px]">
             Where AI becomes <GradientText>the operating model.</GradientText>
           </h1>
@@ -459,9 +453,6 @@ export function AttendOverviewSection() {
       <section className="py-[86px] bg-[#020c21] max-sm:py-[62px]" id="pass-matrix">
         <div className="w-[min(1120px,calc(100%-48px))] mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan/30 bg-cyan/10 text-cyan text-xs font-mono uppercase tracking-[2px] mb-3">
-              Pass Matrix · Two-Door Attendance Model
-            </span>
             <h2 className="max-w-[820px] mx-auto text-white font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(36px,4.6vw,54px)]">
               Choose your <GradientText>access pathway</GradientText>
             </h2>
@@ -567,9 +558,6 @@ export function AttendDelegateSection() {
         <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
 
         <div className="relative z-10 max-w-[820px]">
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
-            Delegate Pass — Complimentary, By Invitation &amp; Qualification
-          </span>
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(44px,5.5vw,68px)] max-sm:text-[38px]">
             Built for <GradientText>Enterprise CXOs.</GradientText>
           </h1>
@@ -628,9 +616,6 @@ export function AttendSponsorSection() {
         <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
 
         <div className="relative z-10 max-w-[820px]">
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
-            Commercial Packages &amp; Booth Standards
-          </span>
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(44px,5.5vw,68px)] max-sm:text-[38px]">
             Your buyers are redesigning workflows now, <GradientText>not after the pilot.</GradientText>
           </h1>
@@ -694,9 +679,6 @@ export function AttendMediaSection() {
         <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
 
         <div className="relative z-10 max-w-[820px]">
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
-            Press Accreditation · Mumbai 2027
-          </span>
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(44px,5.5vw,68px)] max-sm:text-[38px]">
             Cover the Launch of the <GradientText>World AI Show Series in India</GradientText>
           </h1>
@@ -748,9 +730,6 @@ export function AttendAssociationSection() {
         <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
 
         <div className="relative z-10 max-w-[820px]">
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
-            Trade Bodies &amp; Ecosystem Alliances
-          </span>
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(44px,5.5vw,68px)] max-sm:text-[38px]">
             Partner with the <GradientText>World AI Show Series</GradientText>
           </h1>

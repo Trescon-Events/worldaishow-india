@@ -31,10 +31,6 @@ export function OrganizerSection() {
         <div className="p-9 sm:p-11 rounded-[28px] border border-white/10 bg-gradient-to-b from-[#061428]/90 via-[#040d1d]/95 to-[#030915]/95 shadow-[0_24px_60px_rgba(0,0,0,0.45)]">
           {/* OUR REACH */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#18d4ff]/35 bg-[#18d4ff]/10 text-[#18d4ff] text-xs font-mono uppercase tracking-[2.4px] font-bold mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#18d4ff] animate-pulse" />
-              Global Series Scale
-            </div>
             <h3 className="text-center font-[850] text-white text-[clamp(26px,3.4vw,38px)] tracking-[-1px] uppercase mb-8">
               Our <GradientText>Reach</GradientText>
             </h3>

@@ -361,14 +361,6 @@ export function EcosystemSectionDemo() {
 
       {/* ───── S3 · The argument — page centre of gravity ───── */}
       <div className="relative z-10 w-full max-w-[1140px] mx-auto flex flex-col items-center text-center">
-        {/* Eyebrow Pill */}
-        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#18d4ff]/35 bg-[#051428]/90 shadow-[0_0_24px_rgba(24,212,255,0.14)] mb-6">
-          <span className="w-2 h-2 rounded-full bg-[#18d4ff] animate-pulse" />
-          <span className="text-[#18d4ff] text-xs font-mono font-bold uppercase tracking-[2.4px]">
-            The Execution Gap
-          </span>
-        </div>
-
         <h2 className="max-w-[940px] text-center font-[850] text-white leading-[1.06] tracking-[-1.8px] text-[clamp(34px,4.5vw,54px)] mb-6">
           Enterprises have proved AI in the sandbox.{" "}
           <GradientText>The battle now is making it work across daily business operations.</GradientText>
@@ -416,12 +408,6 @@ export function EcosystemSectionDemo() {
       {/* ───── S4 · What this is not ───── */}
       <div className="relative z-10 w-full max-w-[1140px] mx-auto flex flex-col items-center">
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#C0F43C]/35 bg-[#C0F43C]/10 shadow-[0_0_24px_rgba(192,244,60,0.12)] mb-5">
-            <span className="w-2 h-2 rounded-full bg-[#C0F43C]" />
-            <span className="text-[#C0F43C] text-xs font-mono font-bold uppercase tracking-[2.2px]">
-              Programme Positioning
-            </span>
-          </div>
           <h2 className="text-center font-[850] text-white leading-[1.06] tracking-[-1.8px] text-[clamp(32px,4.4vw,52px)]">
             Operational ownership over <GradientText>technology demonstrations</GradientText>
           </h2>

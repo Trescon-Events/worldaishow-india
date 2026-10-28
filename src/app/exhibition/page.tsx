@@ -46,9 +46,6 @@ export default function ExhibitionPage() {
       <section className="relative py-16 bg-[#020b1c] border-y border-white/10">
         <div className="w-[min(1114px,calc(100%-48px))] mx-auto">
           <div className="text-center mb-10">
-            <span className="inline-flex items-center mb-3 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
-              Exhibition &amp; 3D Floorplan Hub · Cloudflare R2 WebGL Model
-            </span>
             <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(30px,4vw,46px)] m-0">
               Standardized Booth <GradientText>Footprints &amp; Spaces</GradientText>
             </h2>

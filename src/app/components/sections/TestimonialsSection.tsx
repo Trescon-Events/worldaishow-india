@@ -93,10 +93,6 @@ export function TestimonialsSection() {
         {/* Heading + Carousel Controls */}
         <div className="flex items-end justify-between gap-6 mb-10 max-[980px]:flex-col max-[980px]:items-center max-[980px]:text-center">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan/30 bg-cyan/10 text-cyan text-xs font-mono uppercase tracking-[2px] mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse" />
-              Partner &amp; Industry Endorsements
-            </div>
             <h2 className="font-[850] text-white leading-[1.04] tracking-[-2px] text-[clamp(36px,4.6vw,54px)] m-0">
               What industry <br className="max-sm:hidden" />
               leaders <GradientText>are saying.</GradientText>

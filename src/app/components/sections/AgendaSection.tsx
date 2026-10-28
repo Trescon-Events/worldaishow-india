@@ -129,15 +129,6 @@ export function AgendaSection({
       `}</style>
 
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
-        {/* Eyebrow */}
-        {subtitle && (
-          <div className="text-center mb-4">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan/30 bg-cyan/10 text-cyan text-xs font-mono uppercase tracking-[2px]">
-              {subtitle}
-            </span>
-          </div>
-        )}
-
         {/* Headings */}
         <h2 className="text-center font-[850] text-white leading-[1.04] tracking-[-2px] text-[clamp(42px,5.2vw,60px)]">
           {title}

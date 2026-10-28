@@ -101,9 +101,6 @@ export default function NetworkingPage() {
       >
         <div className="w-[min(1114px,calc(100%-48px))] mx-auto relative z-10">
           <div className="max-w-[640px] w-full">
-            <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
-              Networking Suite &amp; Concierge · Mumbai 2027
-            </span>
             <h1 className="m-0 text-white font-[850] leading-[1.03] tracking-[-2.5px] text-[clamp(44px,5.8vw,74px)]">
               Every <br />
               Conversation. <br />
@@ -162,9 +159,6 @@ export default function NetworkingPage() {
 
           {/* Header */}
           <div className="text-center mb-16 max-w-[760px] mx-auto">
-            <span className="px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-[2px] bg-[#18d4ff]/10 text-[#18d4ff] border border-[#18d4ff]/20 mb-5 inline-block">
-              Section 12 · Networking Suite &amp; Attendee App
-            </span>
             <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(32px,4vw,44px)] m-0">
               Engineered for the <GradientText>Complete Buying Unit</GradientText>
             </h2>

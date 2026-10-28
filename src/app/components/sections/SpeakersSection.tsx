@@ -112,10 +112,6 @@ export function SpeakersSection({
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
         {/* Title and Header Block */}
         <div className="flex flex-col items-center text-center mb-[54px]">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan/30 bg-cyan/10 text-cyan text-xs font-mono uppercase tracking-[2px] mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
-            Series Faculty &amp; Past Speakers
-          </div>
           <h2 className="text-center font-[850] text-white leading-[1.08] tracking-[-1.8px] text-[clamp(34px,4.5vw,56px)] max-w-[920px]">
             {heading}
           </h2>

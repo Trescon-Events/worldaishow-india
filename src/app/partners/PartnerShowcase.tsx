@@ -111,11 +111,6 @@ export function PartnerShowcase() {
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#c0f43c]/20 to-transparent pointer-events-none" />
 
           <div className="relative z-10 flex flex-col items-center gap-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-white/10 rounded-full text-[11px] font-mono font-extrabold uppercase tracking-widest text-[#00ceff] bg-white/5">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#00ceff] animate-pulse" />
-              5 Content Pillars · 30-Min Stage Sessions · 9 &amp; 12 sqm Booths
-            </div>
-
             <h3 className="m-0 font-space-grotesk text-white font-[850] text-[clamp(28px,3.5vw,42px)] leading-tight tracking-tight">
               Put your solutions in front of <br />
               <GradientText>the cross-functional buying unit.</GradientText>

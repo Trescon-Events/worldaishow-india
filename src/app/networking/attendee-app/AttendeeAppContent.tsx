@@ -83,9 +83,6 @@ export function AttendeeAppContent() {
           
           {/* Section Header */}
           <div className="text-center mb-16 max-w-[760px] mx-auto">
-            <span className="px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-[2px] bg-[#C0F43C]/10 text-[#C0F43C] border border-[#C0F43C]/20 mb-5 inline-block">
-              App Features
-            </span>
             <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(32px,4vw,44px)] m-0">
               Built for Every <GradientText>Role in the Room</GradientText>
             </h2>

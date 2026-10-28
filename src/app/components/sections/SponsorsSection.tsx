@@ -60,14 +60,6 @@ export function SponsorsSection() {
   return (
     <section className="relative py-[100px] pb-0 bg-[#030b19] overflow-hidden max-sm:py-[72px] max-sm:pb-0" id="partners">
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
-        {/* S9 · Sponsor band */}
-        <div className="text-center mb-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan/30 bg-cyan/10 text-cyan text-xs font-mono uppercase tracking-[2px]">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
-            Partnerships
-          </div>
-        </div>
-
         {/* Title */}
         <h2 className="text-center font-[850] text-white leading-[1.06] tracking-[-2px] text-[clamp(36px,4.6vw,56px)] max-w-[920px] mx-auto">
           Your buyers are redesigning workflows now, <GradientText>not after the pilot</GradientText>

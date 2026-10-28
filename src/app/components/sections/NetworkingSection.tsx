@@ -68,10 +68,6 @@ export function NetworkingSection() {
         {/* S7 · Who is in the room */}
         <div className="flex flex-col items-center text-center">
           <div className="max-w-[780px] mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan/30 bg-cyan/10 text-cyan text-xs font-mono uppercase tracking-[2px] mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
-              Who Is In The Room
-            </div>
             <h2 className="font-[850] text-white leading-[1.06] tracking-[-1.8px] text-[clamp(34px,4.4vw,52px)] m-0">
               The complete enterprise <GradientText>buying unit.</GradientText>
             </h2>
@@ -181,10 +177,6 @@ export function NetworkingSection() {
         {/* S8 · How to attend — two doors */}
         <div className="mt-20 pt-16 border-t border-white/10">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan/30 bg-cyan/10 text-cyan text-xs font-mono uppercase tracking-[2px] mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
-              How To Attend — Two Doors
-            </div>
             <h3 className="text-white font-[850] text-[clamp(30px,3.8vw,44px)] leading-[1.08] tracking-[-1.2px]">
               Structured access for <GradientText>enterprise buyers &amp; providers</GradientText>
             </h3>

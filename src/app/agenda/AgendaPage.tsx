@@ -570,9 +570,6 @@ export function AgendaOverview() {
     <>
       <section className={`${styles.hero} pt-[200px]`} id="overview">
         <div className={styles.container}>
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
-            Executive Programme
-          </span>
           <h1>Two days,<br /><GradientText>five operational decisions.</GradientText></h1>
         </div>
       </section>
@@ -674,9 +671,6 @@ export function AgendaVision() {
         }}
       >
         <div className={styles.container}>
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
-            ENTERPRISE VALUE &amp; INDIA SERIES TRAJECTORY
-          </span>
           <h1>Enterprise AI Value &amp; <br /><GradientText>The India Series Trajectory.</GradientText></h1>
         </div>
       </section>
@@ -756,9 +750,6 @@ export function AgendaLiveTimeline() {
     <>
       <section className={`${styles.hero} pt-[200px]`} id="agenda-timeline-hero">
         <div className={styles.container}>
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
-            2-Day Executive Programme · 20–21 April 2027
-          </span>
           <h1><GradientText>Event Agenda</GradientText></h1>
         </div>
       </section>
@@ -793,9 +784,6 @@ export function AgendaThemes() {
         }}
       >
         <div className={styles.container}>
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
-            The 5 Master Content Pillars
-          </span>
           <h1>Five Talking Points. <br /><GradientText>Two Days.</GradientText></h1>
           <p className={styles.heroPara}>
             Workforce restructuring, operating-model change, and verified ROI run across all five content pillars.
@@ -862,9 +850,6 @@ export function AgendaCallForSpeakers() {
         }}
       >
         <div className={styles.container}>
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
-            Call for Enterprise Speakers
-          </span>
           <h1 className="text-white font-[850] tracking-[-2px] leading-[1.06] text-[clamp(44px,6vw,72px)] max-w-[860px]">
             If You Have Scaled AI in Production,{" "}
             <GradientText>Join us on the Stage</GradientText>

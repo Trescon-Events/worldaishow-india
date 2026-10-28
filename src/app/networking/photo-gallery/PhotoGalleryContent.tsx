@@ -61,9 +61,6 @@ export function PhotoGalleryContent() {
           
           {/* Left Column: Heading & Vertical Steps */}
           <div>
-            <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2.5px] bg-[#18d4ff]/5 shadow-[inset_0_0_12px_rgba(24,212,255,0.06)]">
-              AI Photo Gallery
-            </span>
             <h1 className="font-[850] text-white leading-none tracking-[-2.5px] text-[clamp(42px,5.2vw,66px)] m-0">
               Find Your Event <br />
               <GradientText>Photos Instantly</GradientText>

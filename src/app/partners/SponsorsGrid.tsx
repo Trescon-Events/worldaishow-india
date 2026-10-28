@@ -107,9 +107,6 @@ export function SponsorsGrid() {
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
         {/* Section intro */}
         <div className="text-center mb-12">
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
-            Past Ecosystem · World AI Show India
-          </span>
           <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(36px,4.5vw,54px)] max-w-[800px] mx-auto">
             Past Sponsors &amp; <GradientText>Partners</GradientText>
           </h2>
