@@ -64,9 +64,6 @@ export function HeroSection() {
             <strong className="block text-[34px] font-[850] text-white leading-none max-sm:text-[26px]">
               Mumbai, <GradientText>India</GradientText>
             </strong>
-            <span className="block mt-2 text-[13px] font-bold text-white/80 uppercase tracking-[1.5px] max-sm:text-[12px] max-sm:mt-1.5">
-              EDITION 1 · INDIA SERIES
-            </span>
           </div>
 
           {/* Column 3: Duration */}

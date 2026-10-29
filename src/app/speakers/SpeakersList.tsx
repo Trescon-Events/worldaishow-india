@@ -166,27 +166,6 @@ export function SpeakersList() {
               />
             </div>
           </div>
-
-          {/* Filter Pills: All · Chief AI Officers · CIOs & CTOs · Data & Architecture · CISOs & Risk */}
-          <div className="flex flex-wrap items-center gap-2.5">
-            {FILTER_PILLS.map((pill) => {
-              const isActive = activeFilter === pill;
-              return (
-                <button
-                  key={pill}
-                  type="button"
-                  onClick={() => setActiveFilter(pill)}
-                  className={`px-4 py-2 rounded-full font-mono text-[12px] uppercase tracking-[1.2px] font-bold transition-all duration-200 cursor-pointer ${
-                    isActive
-                      ? "bg-[#C0F43C] text-[#06111F] [color:#06111F!important] border border-[#C0F43C]"
-                      : "bg-white/5 text-white/70 border border-white/10 hover:border-cyan/40 hover:text-white"
-                  }`}
-                >
-                  {pill}
-                </button>
-              );
-            })}
-          </div>
         </div>
 
         {isLoading ? (
