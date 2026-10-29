@@ -129,42 +129,15 @@ export default function NetworkingPage() {
         </div>
       </section>
 
-      {/* Stats Row */}
-      <section className="relative py-12 border-y border-white/5 bg-[#020814]">
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto">
-          <div className="grid grid-cols-3 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1 text-center divide-x divide-white/10">
-            <div className="flex flex-col">
-              <span className="text-[40px] font-[900] text-[#C0F43C] tracking-tight">
-                300
-              </span>
-              <span className="text-[12.5px] text-white/50 uppercase tracking-widest font-mono font-bold mt-1.5">Qualified CXOs</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[40px] font-[900] text-[#C0F43C] tracking-tight">
-                20-Min
-              </span>
-              <span className="text-[12.5px] text-white/50 uppercase tracking-widest font-mono font-bold mt-1.5">Pre-Scheduled 1-on-1 Meetings</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[40px] font-[900] text-[#C0F43C] tracking-tight">15 CXOs</span>
-              <span className="text-[12.5px] text-white/50 uppercase tracking-widest font-mono font-bold mt-1.5">Per Closed-Door Roundtable</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── Section 2: Ways to Connect ── */}
       <section className="relative py-24 bg-[#030b19]">
         <div className="w-[min(1114px,calc(100%-48px))] mx-auto">
 
           {/* Header */}
-          <div className="text-center mb-16 max-w-[760px] mx-auto">
+          <div className="text-center mb-16">
             <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(32px,4vw,44px)] m-0">
               Engineered for the <GradientText>Complete Buying Unit</GradientText>
             </h2>
-            <p className="m-0 mt-5 text-white/60 text-[16px] leading-relaxed max-sm:text-[14px]">
-              Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Our networking suite connects CIOs, CAIOs, CTOs, CDOs, CISOs, and COOs with peers and vetted solution providers across 2 Days.
-            </p>
           </div>
 
           {/* 3 Cards Grid */}
