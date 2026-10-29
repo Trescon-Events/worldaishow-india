@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { FooterSection } from "../components/sections/FooterSection";
 import { Header } from "../components/sections/Header";
 import { AttendStats } from "./AttendStats";
+import { TierGroupedPartnershipsGrid } from "../partners/PartnerShowcase";
 import { GradientText } from "../components/Shared";
 import type { ReactNode } from "react";
 
@@ -657,9 +658,9 @@ export function AttendSponsorSection() {
       <section className="py-[86px] bg-gradient-to-b from-[#020b1c] to-[#031127] max-sm:py-[62px]">
         <div className="w-[min(1120px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-28px,1120px)]">
           <h2 className="m-0 mb-[42px] text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-center text-[clamp(40px,5vw,60px)] max-sm:text-[38px] max-sm:tracking-[-1px]">
-            Standardized Partnership <GradientText>Tiers &amp; Deliverables</GradientText>
+            Tier-Grouped <GradientText>Partnership</GradientText>
           </h2>
-          <BenefitGrid items={sponsorBenefits} />
+          <TierGroupedPartnershipsGrid />
         </div>
       </section>
     </>
