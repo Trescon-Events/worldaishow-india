@@ -87,7 +87,7 @@ export function SpeakersCTASection() {
             {/* CTA Button */}
             <div className="mt-9 pt-6 border-t border-white/[0.08]">
               <a
-                href="/enterprise/attend/delegate"
+                href="/mumbai/enterprise/attend/delegate"
                 className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-[15px] font-extrabold text-[#06111F] [color:#06111F!important] bg-[#C0F43C] shadow-[0_8px_24px_rgba(192,244,60,0.25)] hover:shadow-[0_12px_32px_rgba(192,244,60,0.45)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer max-sm:w-full"
               >
                 Apply for a Delegate Pass
@@ -153,7 +153,7 @@ export function SpeakersCTASection() {
             {/* CTA Button */}
             <div className="mt-9 pt-6 border-t border-white/[0.08]">
               <a
-                href="/enterprise/sponsorship-enquiry"
+                href="/mumbai/enterprise/sponsorship-enquiry"
                 className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-[15px] font-extrabold text-[#06111F] [color:#06111F!important] bg-[#18d4ff] shadow-[0_8px_24px_rgba(24,212,255,0.25)] hover:shadow-[0_12px_32px_rgba(24,212,255,0.45)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer max-sm:w-full"
               >
                 Enquire about sponsorship

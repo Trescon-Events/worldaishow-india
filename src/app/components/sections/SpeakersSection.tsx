@@ -43,7 +43,7 @@ export function SpeakersSection({
   );
 
   useEffect(() => {
-    fetch("/enterprise/api/konfhub-speakers")
+    fetch("/mumbai/enterprise/api/konfhub-speakers")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch speakers");
         return res.json();
@@ -81,7 +81,7 @@ export function SpeakersSection({
             name: speaker.name || "",
             designation: speaker.designation || "",
             company: speaker.organisation || "",
-            image: speaker.image_url || "/enterprise/images/speakers/default.png",
+            image: speaker.image_url || "/mumbai/enterprise/images/speakers/default.png",
             bio: speaker.about || "",
           }));
           setDisplaySpeakers(mapped);
@@ -135,13 +135,13 @@ export function SpeakersSection({
         {/* View All Speakers CTA Button */}
         <div className="mt-14 flex flex-wrap justify-center items-center gap-4">
           <a
-            href="/enterprise/speakers"
+            href="/mumbai/enterprise/speakers"
             className="inline-flex items-center justify-center h-[52px] px-8 rounded-full font-extrabold text-[15px] text-black [color:#06111f!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.3)] transition-all duration-200 cursor-pointer"
           >
             Explore Speakers Hub ➔
           </a>
           <a
-            href="/enterprise/agenda/call-for-speakers"
+            href="/mumbai/enterprise/agenda/call-for-speakers"
             className="inline-flex items-center justify-center h-[52px] px-8 rounded-full font-extrabold text-[15px] text-white border border-white/25 bg-white/5 hover:border-cyan hover:text-cyan transition-all duration-200 cursor-pointer"
           >
             Apply to Speak →

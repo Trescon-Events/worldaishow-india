@@ -58,28 +58,28 @@ function Counter({ end, suffix = "", duration = 1500 }: CounterProps) {
 
 const statsData = [
   {
-    icon: "/enterprise/icons/stats/1.svg",
+    icon: "/mumbai/enterprise/icons/stats/1.svg",
     number: 300,
     suffix: "",
     label: "Qualified CXOs",
     index: "01",
   },
   {
-    icon: "/enterprise/icons/stats/2.svg",
+    icon: "/mumbai/enterprise/icons/stats/2.svg",
     number: 45,
     suffix: "",
     label: "Speakers & Panelists",
     index: "02",
   },
   {
-    icon: "/enterprise/icons/stats/5.svg",
+    icon: "/mumbai/enterprise/icons/stats/5.svg",
     number: 5,
     suffix: "",
     label: "Content Pillars",
     index: "03",
   },
   {
-    icon: "/enterprise/icons/stats/3.svg",
+    icon: "/mumbai/enterprise/icons/stats/3.svg",
     number: 2,
     suffix: " Days",
     label: "Executive Conference",

@@ -66,7 +66,7 @@ export function FocusSectors() {
               />
               <img
                 className="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                src="/enterprise/images/networking/meet-leaders.webp"
+                src="/mumbai/enterprise/images/networking/meet-leaders.webp"
                 alt="Networking event attendees"
                 loading="lazy"
                 width={450}
@@ -86,7 +86,7 @@ export function FocusSectors() {
               >
                 <span className="grid place-items-center w-10 h-10 mb-2 border border-white/10 rounded-[8px] text-cyan bg-black/26 group-hover:border-[#C0F43C]/30 transition-all duration-300">
                   <img
-                    src={`/enterprise/icons/networking/${icon}`}
+                    src={`/mumbai/enterprise/icons/networking/${icon}`}
                     alt=""
                     width={25}
                     height={25}

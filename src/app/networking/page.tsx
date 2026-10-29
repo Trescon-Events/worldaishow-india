@@ -15,7 +15,7 @@ export default function NetworkingPage() {
     {
       title: "Attendee App",
       desc: "Personalized 2-day agenda builder & digital business cards — all from a single AI-powered executive app.",
-      href: "/enterprise/networking/attendee-app",
+      href: "/mumbai/enterprise/networking/attendee-app",
       action: "Explore",
       badgeBg: "bg-[#00ceff]",
       actionColor: "text-[#00ceff]",
@@ -26,7 +26,7 @@ export default function NetworkingPage() {
     {
       title: "AI Matchmaking",
       desc: "Algorithmic pre-scheduled 20-min 1-on-1 meetings connecting enterprise buyers and vetted solution providers.",
-      href: "/enterprise/networking/ai-matchmaking",
+      href: "/mumbai/enterprise/networking/ai-matchmaking",
       action: "Explore",
       badgeBg: "bg-[#C0F43C]",
       actionColor: "text-[#C0F43C]",
@@ -37,7 +37,7 @@ export default function NetworkingPage() {
     {
       title: "AI Photo Gallery",
       desc: "High-resolution executive photography from the global series, indexed instantly using AI face recognition.",
-      href: "/enterprise/networking/photo-gallery",
+      href: "/mumbai/enterprise/networking/photo-gallery",
       action: "Explore",
       badgeBg: "bg-[#926DFF]",
       actionColor: "text-[#926DFF]",
@@ -96,7 +96,7 @@ export default function NetworkingPage() {
       <section
         className="relative pt-[220px] pb-[120px] overflow-hidden bg-cover bg-center flex items-center min-h-[700px] max-md:pt-[170px]"
         style={{
-          backgroundImage: `linear-gradient(90deg, rgba(2, 7, 19, 0.96) 0%, rgba(2, 7, 19, 0.8) 45%, rgba(2, 7, 19, 0.25) 100%), url('/enterprise/images/networking/networking-hero-bg.webp')`
+          backgroundImage: `linear-gradient(90deg, rgba(2, 7, 19, 0.96) 0%, rgba(2, 7, 19, 0.8) 45%, rgba(2, 7, 19, 0.25) 100%), url('/mumbai/enterprise/images/networking/networking-hero-bg.webp')`
         }}
       >
         <div className="w-[min(1114px,calc(100%-48px))] mx-auto relative z-10">
@@ -113,13 +113,13 @@ export default function NetworkingPage() {
             {/* Quick links buttons */}
             <div className="flex flex-wrap items-center gap-4 mt-9 max-sm:flex-col max-sm:items-stretch">
               <a
-                href="/enterprise/attend/delegate"
+                href="/mumbai/enterprise/attend/delegate"
                 className="px-8 py-[15px] rounded-full !text-black [color:#06111f!important] bg-[#C0F43C] shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)] font-extrabold text-[14.5px] text-center transition-all duration-200 hover:-translate-y-0.5"
               >
                 Apply for a Delegate Pass ➔
               </a>
               <a
-                href="/enterprise/sponsorship-enquiry"
+                href="/mumbai/enterprise/sponsorship-enquiry"
                 className="px-8 py-[15px] rounded-full text-white border border-white/25 bg-white/5 hover:border-cyan font-extrabold text-[14.5px] text-center transition-all duration-200 hover:-translate-y-0.5"
               >
                 Enquire about sponsorship ➔
@@ -179,7 +179,7 @@ export default function NetworkingPage() {
                   <div className="flex justify-between items-center mb-6">
                     <span className={`w-12 h-12 rounded-2xl flex items-center justify-center ${way.badgeBg}`}>
                       <img
-                        src="/enterprise/images/networking/Icon.webp"
+                        src="/mumbai/enterprise/images/networking/Icon.webp"
                         alt="Icon"
                         className="w-[18px] h-[18px] object-contain brightness-0 invert-0 select-none"
                       />
@@ -295,13 +295,13 @@ export default function NetworkingPage() {
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <a
-              href="/enterprise/attend/delegate"
+              href="/mumbai/enterprise/attend/delegate"
               className="px-8 py-3.5 rounded-full text-black [color:#06111f!important] bg-[#C0F43C] font-extrabold text-sm shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)] transition-all duration-200 hover:-translate-y-0.5"
             >
               Apply for a Delegate Pass ➔
             </a>
             <a
-              href="/enterprise/sponsorship-enquiry"
+              href="/mumbai/enterprise/sponsorship-enquiry"
               className="px-8 py-3.5 rounded-full text-white border border-white/25 bg-white/5 hover:border-cyan font-extrabold text-sm transition-all duration-200 hover:-translate-y-0.5"
             >
               Enquire about sponsorship ➔

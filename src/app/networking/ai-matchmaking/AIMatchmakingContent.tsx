@@ -23,7 +23,7 @@ export function AIMatchmakingContent() {
       <section 
         className="relative net-inner-hero pt-[250px] pb-24 overflow-hidden"
         style={{
-          backgroundImage: `url('/enterprise/images/networking/ai-matchmaking-bg.webp')`,
+          backgroundImage: `url('/mumbai/enterprise/images/networking/ai-matchmaking-bg.webp')`,
           backgroundPosition: 'right center',
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
@@ -98,7 +98,7 @@ export function AIMatchmakingContent() {
             >
               <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#C0F43C] text-black mb-6">
                 <img 
-                  src="/enterprise/images/networking/Icon.webp" 
+                  src="/mumbai/enterprise/images/networking/Icon.webp" 
                   alt="Attendees" 
                   className="w-[14px] h-[14px] object-contain" 
                 />
@@ -111,7 +111,7 @@ export function AIMatchmakingContent() {
               <div className="flex flex-col gap-6">
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-1.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-1.webp"
                     alt="Checkmark Icon"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -119,7 +119,7 @@ export function AIMatchmakingContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-1.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-1.webp"
                     alt="Checkmark Icon"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -127,7 +127,7 @@ export function AIMatchmakingContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-1.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-1.webp"
                     alt="Checkmark Icon"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -145,7 +145,7 @@ export function AIMatchmakingContent() {
             >
               <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#926DFF] text-white mb-6">
                 <img 
-                  src="/enterprise/icons/attendee-app/exhibitor.webp" 
+                  src="/mumbai/enterprise/icons/attendee-app/exhibitor.webp" 
                   alt="Sponsors & Exhibitors" 
                   className="w-[14px] h-[14px] object-contain filter brightness-0" 
                 />
@@ -158,7 +158,7 @@ export function AIMatchmakingContent() {
               <div className="flex flex-col gap-6">
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-2.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-2.webp"
                     alt="Checkmark Icon"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -166,7 +166,7 @@ export function AIMatchmakingContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-2.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-2.webp"
                     alt="Checkmark Icon"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -174,7 +174,7 @@ export function AIMatchmakingContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-2.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-2.webp"
                     alt="Checkmark Icon"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />

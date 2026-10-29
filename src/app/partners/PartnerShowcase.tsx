@@ -62,7 +62,7 @@ export function PartnerShowcase() {
             <div className="relative rounded-[12px] overflow-hidden border-2 border-[#00ceff] bg-[#040916]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/enterprise/images/sponsors/showcase.webp"
+                src="/mumbai/enterprise/images/sponsors/showcase.webp"
                 alt="Enterprise AI Showcase at World AI Show"
                 className="w-full h-auto object-cover aspect-[1.7/1] transform group-hover:scale-[1.01] transition-all duration-500"
                 loading="lazy"
@@ -122,13 +122,13 @@ export function PartnerShowcase() {
 
             <div className="flex flex-wrap justify-center gap-4 mt-4 w-full max-sm:flex-col max-sm:items-center">
               <a
-                href="/enterprise/sponsorship-enquiry"
+                href="/mumbai/enterprise/sponsorship-enquiry"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[14px] font-extrabold text-[#06111F] [color:#06111F!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.35)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
                 Enquire about sponsorship <span className="font-mono">→</span>
               </a>
               <a
-                href="/enterprise/attend/sponsor"
+                href="/mumbai/enterprise/attend/sponsor"
                 className="inline-flex items-center justify-center px-7 py-3.5 border border-white/20 rounded-full text-[14px] font-extrabold text-white bg-white/5 hover:bg-white/10 hover:border-white/35 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
                 View Commercial Standards

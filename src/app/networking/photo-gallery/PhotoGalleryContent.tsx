@@ -51,7 +51,7 @@ export function PhotoGalleryContent() {
       {/* ── Section 1: Immersive Blurred Event Hero Section ── */}
       <section 
         className="relative net-inner-hero pt-[250px] pb-20 overflow-hidden flex items-center bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#020814]/92 before:via-[#031022]/88 before:to-[#020814] before:z-0"
-        style={{ backgroundImage: 'url("/enterprise/images/agenda/Agenda-bg.webp")' }}
+        style={{ backgroundImage: 'url("/mumbai/enterprise/images/agenda/Agenda-bg.webp")' }}
       >
         {/* Soft Ambient Spotlights */}
         <div className="absolute top-1/4 left-1/4 w-[450px] h-[450px] rounded-full bg-[#18d4ff]/8 blur-[110px] pointer-events-none z-0"></div>
@@ -205,7 +205,7 @@ export function PhotoGalleryContent() {
             >
               <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#C0F43C] text-black mb-6">
                 <img 
-                  src="/enterprise/images/networking/Icon.webp" 
+                  src="/mumbai/enterprise/images/networking/Icon.webp" 
                   alt="Attendees" 
                   className="w-[14px] h-[14px] object-contain filter brightness-0" 
                 />
@@ -217,7 +217,7 @@ export function PhotoGalleryContent() {
               <div className="flex flex-col gap-6">
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-1.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-1.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -225,7 +225,7 @@ export function PhotoGalleryContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-1.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-1.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -233,7 +233,7 @@ export function PhotoGalleryContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-1.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-1.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -241,7 +241,7 @@ export function PhotoGalleryContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-1.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-1.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -259,7 +259,7 @@ export function PhotoGalleryContent() {
             >
               <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#926DFF] text-white mb-6">
                 <img 
-                  src="/enterprise/icons/attendee-app/exhibitor.webp" 
+                  src="/mumbai/enterprise/icons/attendee-app/exhibitor.webp" 
                   alt="Sponsors & Exhibitors" 
                   className="w-[14px] h-[14px] object-contain filter brightness-0 invert" 
                 />
@@ -271,7 +271,7 @@ export function PhotoGalleryContent() {
               <div className="flex flex-col gap-6">
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-2.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-2.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -279,7 +279,7 @@ export function PhotoGalleryContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-2.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-2.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -287,7 +287,7 @@ export function PhotoGalleryContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-2.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-2.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -295,7 +295,7 @@ export function PhotoGalleryContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-2.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-2.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />

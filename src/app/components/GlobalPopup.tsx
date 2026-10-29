@@ -382,7 +382,7 @@ export function GlobalPopup() {
                   <span className="wais-info-text">Register now before<br/>all free passes are claimed.</span>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                  <a className="wais-cta-button" href="/enterprise/sponsorship-enquiry">
+                  <a className="wais-cta-button" href="/mumbai/enterprise/sponsorship-enquiry">
                     <span className="wais-cta-btn-span">ENQUIRE NOW</span>
                     <svg className="wais-cta-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
                       <path d="M1 10H15M15 10L10 5M15 10L10 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

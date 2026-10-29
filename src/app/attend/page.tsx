@@ -23,17 +23,17 @@ const valueCards: CardItem[] = [
   {
     title: "Where AI Becomes the Operating Model",
     text: "A two-day executive conference for 300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.",
-    icon: "/enterprise/images/Attend/enterprise-ai-in-action.svg",
+    icon: "/mumbai/enterprise/images/Attend/mumbai/enterprise-ai-in-action.svg",
   },
   {
     title: "The Complete Enterprise Buying Unit",
     text: "Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Connect across technology leadership, enterprise architecture & data, operations & transformation, and risk, security & compliance.",
-    icon: "/enterprise/images/Attend/region-ai-decision-makers.svg",
+    icon: "/mumbai/enterprise/images/Attend/region-ai-decision-makers.svg",
   },
   {
     title: "5 Master Content Pillars & Business Value",
     text: "Auditing the pre-AI operational baseline, expanded productivity KPIs, integration overheads, and governance frameworks to drive verified enterprise business value.",
-    icon: "/enterprise/images/Attend/insights-drive-transformation.svg",
+    icon: "/mumbai/enterprise/images/Attend/insights-drive-transformation.svg",
   },
 ];
 
@@ -41,42 +41,42 @@ const gatewayCards: CardItem[] = [
   {
     title: "2-Day Plenary Access",
     text: "Full access across 2 Days (20–21 April 2027) of opening keynotes, cross-functional panels, deployment case studies, and fireside dialogues.",
-    icon: "/enterprise/images/Attend/gateway/access-to-all-sessions.svg",
+    icon: "/mumbai/enterprise/images/Attend/gateway/access-to-all-sessions.svg",
   },
   {
     title: "Production Case Studies & ROI Insights",
     text: "Examine real enterprise deployments on stage — including pre-AI baselines, workflow redesign trade-offs, and verified business outcomes.",
-    icon: "/enterprise/images/Attend/gateway/high-value-networking.svg",
+    icon: "/mumbai/enterprise/images/Attend/gateway/high-value-networking.svg",
   },
   {
     title: "Executive Networking Lounges",
     text: "Dedicated VIP lounges and structured networking environments reserved for invited enterprise CXOs and transformation heads.",
-    icon: "/enterprise/images/Attend/gateway/enterprise-ai-showcases.svg",
+    icon: "/mumbai/enterprise/images/Attend/gateway/mumbai/enterprise-ai-showcases.svg",
   },
   {
     title: "Target Audience Qualification",
     text: "Curated exclusively for CIOs, CAIOs, CTOs, CDOs, CISOs, COOs, and Transformation Heads holding an active mandate to deploy enterprise AI.",
-    icon: "/enterprise/images/Attend/gateway/speaker-materials-and-insights.svg",
+    icon: "/mumbai/enterprise/images/Attend/gateway/speaker-materials-and-insights.svg",
   },
   {
     title: "Curated Executive Roundtables",
     text: "Opportunity to join closed-door, 15-CXO peer roundtables examining pilot-to-production architecture, data sovereignty, and agentic governance.",
-    icon: "/enterprise/images/Attend/gateway/curated-roundtable-discussions.svg",
+    icon: "/mumbai/enterprise/images/Attend/gateway/curated-roundtable-discussions.svg",
   },
   {
     title: "Pre-Scheduled 1-on-1 Meetings",
     text: "Algorithmic AI matchmaking connecting enterprise buyers with vetted solution providers in focused 20-minute meetings.",
-    icon: "/enterprise/images/Attend/gateway/networking-lunch-and-business-meetings.svg",
+    icon: "/mumbai/enterprise/images/Attend/gateway/networking-lunch-and-business-meetings.svg",
   },
   {
     title: "Exhibition Arena Access",
     text: "Explore standardized 9 sqm and 12 sqm enterprise technology showcases demonstrating production-ready platforms.",
-    icon: "/enterprise/images/Attend/gateway/exclusive-vip-networking-experiences.svg",
+    icon: "/mumbai/enterprise/images/Attend/gateway/exclusive-vip-networking-experiences.svg",
   },
   {
     title: "Unbundled Data Privacy Control",
     text: "Mandatory separate unbundled consent checkboxes for name/title and contact details — delegate contact details are shared only where consented.",
-    icon: "/enterprise/images/Attend/gateway/event-platform-access.svg",
+    icon: "/mumbai/enterprise/images/Attend/gateway/event-platform-access.svg",
   },
 ];
 
@@ -84,42 +84,42 @@ const sponsorBenefits: CardItem[] = [
   {
     title: "Lead Partner (1 Position)",
     text: "30-Min Keynote + 1 Panel + 12 sqm Booth + CXO Boardroom. Exclusive premier positioning for Mumbai 2027.",
-    icon: "/enterprise/images/Attend/sponsor/brand-visibility-at-scale.webp",
+    icon: "/mumbai/enterprise/images/Attend/sponsor/brand-visibility-at-scale.webp",
   },
   {
     title: "Platinum Partner",
     text: "30-Min Standalone Session + 9 sqm Booth. High-impact main-stage thought leadership paired with a standardized 9 sqm exhibition space.",
-    icon: "/enterprise/images/Attend/sponsor/speaking-opportunities.webp",
+    icon: "/mumbai/enterprise/images/Attend/sponsor/speaking-opportunities.webp",
   },
   {
     title: "Gold Partner",
     text: "30-Min Standalone Session + 9 sqm Booth. Dedicated 30-minute stage session and 9 sqm standard exhibition footprint.",
-    icon: "/enterprise/images/Attend/sponsor/product-showcase-floor.webp",
+    icon: "/mumbai/enterprise/images/Attend/sponsor/product-showcase-floor.webp",
   },
   {
     title: "Silver Partner",
     text: "1 Panel Seat + 9 sqm Booth. Executive panel participation across the five content pillars plus a 9 sqm standard booth.",
-    icon: "/enterprise/images/Attend/sponsor/qualified-lead-generation.webp",
+    icon: "/mumbai/enterprise/images/Attend/sponsor/qualified-lead-generation.webp",
   },
   {
     title: "Bronze Partner",
     text: "9 sqm Standard Turnkey Floor Presence. Standardized 9 sqm exhibition space in the main networking and showcase arena.",
-    icon: "/enterprise/images/Attend/sponsor/exclusive-sponsorship-branding.webp",
+    icon: "/mumbai/enterprise/images/Attend/sponsor/exclusive-sponsorship-branding.webp",
   },
   {
     title: "CXO Boardroom Partner (Standalone)",
     text: "15 Pre-Qualified CXOs, 5-Min Opening Address inside room. Closed-door executive roundtable built for high-trust peer dialogue.",
-    icon: "/enterprise/images/Attend/sponsor/hosted-meetings.webp",
+    icon: "/mumbai/enterprise/images/Attend/sponsor/hosted-meetings.webp",
   },
   {
     title: "Algorithmic 1-on-1 Matchmaking",
     text: "Pre-scheduled 20-minute 1-on-1 meetings with qualified members of the 39-person enterprise buying unit.",
-    icon: "/enterprise/images/Attend/sponsor/networking-lunch-branding.webp",
+    icon: "/mumbai/enterprise/images/Attend/sponsor/networking-lunch-branding.webp",
   },
   {
     title: "Consent-Governed Lead Sharing",
     text: "Compliant post-event executive engagement insights; delegate contact details are shared strictly where consented.",
-    icon: "/enterprise/images/Attend/sponsor/post-event-lead-report.webp",
+    icon: "/mumbai/enterprise/images/Attend/sponsor/post-event-lead-report.webp",
   },
 ];
 
@@ -127,42 +127,42 @@ const mediaBenefits: CardItem[] = [
   {
     title: "Press Credentials & Plenary Access",
     text: "Full media accreditation across both days of main-stage keynotes, panels, deployment case studies, and fireside dialogues.",
-    icon: "/enterprise/images/Attend/media/full-event-access.webp",
+    icon: "/mumbai/enterprise/images/Attend/media/full-event-access.webp",
   },
   {
     title: "Executive Interview Room Access",
     text: "Dedicated press workspace and private interview rooms for 1-on-1 briefings with CIOs, CAIOs, CTOs, and global speakers.",
-    icon: "/enterprise/images/Attend/media/dedicated-media-facilities.webp",
+    icon: "/mumbai/enterprise/images/Attend/media/dedicated-media-facilities.webp",
   },
   {
     title: "Editorial Distribution & Amplification",
     text: "Syndicate official research citations, India Series launch announcements, and enterprise AI insights to your readership.",
-    icon: "/enterprise/images/Attend/media/speaker-interview-access.webp",
+    icon: "/mumbai/enterprise/images/Attend/media/speaker-interview-access.webp",
   },
   {
     title: "Official Press & Research Kit",
     text: "Receive embargoed releases, speaker biographies, and verified research briefs ahead of Mumbai Edition 1.",
-    icon: "/enterprise/images/Attend/media/official-media-kit.webp",
+    icon: "/mumbai/enterprise/images/Attend/media/official-media-kit.webp",
   },
   {
     title: "Brand & Media Recognition",
     text: "Featured placement in the Supporting Media & Association Alliances showcase across the website and venue.",
-    icon: "/enterprise/images/Attend/media/amplified-media-visibility.webp",
+    icon: "/mumbai/enterprise/images/Attend/media/amplified-media-visibility.webp",
   },
   {
     title: "India Series Launch Coverage",
     text: "First-mover editorial access to Edition 1 of the World AI Show Series in India ahead of the regional chapters and Q4 Finale.",
-    icon: "/enterprise/images/Attend/media/brand-and-media-recognition.webp",
+    icon: "/mumbai/enterprise/images/Attend/media/brand-and-media-recognition.webp",
   },
   {
     title: "Exclusive Story Opportunities",
     text: "Capture real deployment baselines, productivity KPIs, and operational transformation stories directly from enterprise leaders.",
-    icon: "/enterprise/images/Attend/media/exclusive-story-opportunities.webp",
+    icon: "/mumbai/enterprise/images/Attend/media/exclusive-story-opportunities.webp",
   },
   {
     title: "Executive Networking Access",
     text: "Connect directly with 300 qualified CXOs and 45 speakers and panellists in Mumbai.",
-    icon: "/enterprise/images/Attend/media/networking-access.webp",
+    icon: "/mumbai/enterprise/images/Attend/media/networking-access.webp",
   },
 ];
 
@@ -170,48 +170,48 @@ const associationBenefits: CardItem[] = [
   {
     title: "Industry Councils & Trade Chambers",
     text: "Official alliance recognition for industry councils, trade chambers, and professional AI bodies across the India Series.",
-    icon: "/enterprise/images/Attend/partner/co-branding-opportunities.webp",
+    icon: "/mumbai/enterprise/images/Attend/partner/co-branding-opportunities.webp",
   },
   {
     title: "Member Qualification Pathway",
     text: "Priority nomination pathway for senior enterprise CIO, CAIO, CTO, CDO, CISO, and COO members to apply for Delegate Passes.",
-    icon: "/enterprise/images/Attend/partner/complimentary-delegate-passes.webp",
+    icon: "/mumbai/enterprise/images/Attend/partner/complimentary-delegate-passes.webp",
   },
   {
     title: "Co-Branded Ecosystem Outreach",
     text: "Joint executive communications, thought-leadership briefings, and visibility across the World AI Show Series in India.",
-    icon: "/enterprise/images/Attend/partner/joint-marketing-campaigns.webp",
+    icon: "/mumbai/enterprise/images/Attend/partner/joint-marketing-campaigns.webp",
   },
   {
     title: "Digital & Social Amplification",
     text: "Collaborative promotion across Trescon's global executive network and official World AI Show channels.",
-    icon: "/enterprise/images/Attend/partner/social-media-amplification.webp",
+    icon: "/mumbai/enterprise/images/Attend/partner/social-media-amplification.webp",
   },
   {
     title: "Steering & Faculty Nominations",
     text: "Nominate qualified enterprise practitioners with live production evidence for main-stage panels and roundtables.",
-    icon: "/enterprise/images/Attend/partner/speaking-opportunities.webp",
+    icon: "/mumbai/enterprise/images/Attend/partner/speaking-opportunities.webp",
   },
   {
     title: "VIP Networking Access",
     text: "Connect association leadership with 300 qualified enterprise CXOs and technology pioneers in Mumbai.",
-    icon: "/enterprise/images/Attend/partner/networking-access.webp",
+    icon: "/mumbai/enterprise/images/Attend/partner/networking-access.webp",
   },
   {
     title: "Post-Conference Playbook",
     text: "Share post-event executive synthesis and operational frameworks from the 5 Content Pillars with your members.",
-    icon: "/enterprise/images/Attend/partner/access-to-post-event-insights.webp",
+    icon: "/mumbai/enterprise/images/Attend/partner/access-to-post-event-insights.webp",
   },
   {
     title: "Year-Round India Series Alliance",
     text: "Extend collaboration from Edition 1 in Mumbai across the Q2–Q3 Regional Chapters to the Q4 Series Finale.",
-    icon: "/enterprise/images/Attend/partner/long-term-partnership-opportunities.webp",
+    icon: "/mumbai/enterprise/images/Attend/partner/long-term-partnership-opportunities.webp",
   },
 ];
 
 export function ArrowButton({
   children,
-  href = "/enterprise/sponsorship-enquiry",
+  href = "/mumbai/enterprise/sponsorship-enquiry",
   variant = "solid",
 }: {
   children: ReactNode;
@@ -358,14 +358,14 @@ export function AttendCTASection() {
 
           <div className="flex flex-wrap justify-center items-center gap-4 mt-8 mb-12 max-sm:flex-col max-sm:w-full">
             <a
-              href="/enterprise/attend/delegate"
+              href="/mumbai/enterprise/attend/delegate"
               className="inline-flex items-center justify-center gap-2 min-w-[178px] h-[49px] px-[32px] py-[15px] rounded-full text-[15px] font-extrabold text-[#06111f] [color:#06111f!important] bg-[#C0F43C] shadow-[0_8px_24px_rgba(192,244,60,0.25)] hover:shadow-[0_12px_32px_rgba(192,244,60,0.4)] hover:scale-[1.03] transition-all duration-200 cursor-pointer max-sm:w-full"
             >
               Apply for a Delegate Pass
               <span className="font-mono text-[16px] font-bold">→</span>
             </a>
             <a
-              href="/enterprise/sponsorship-enquiry"
+              href="/mumbai/enterprise/sponsorship-enquiry"
               className="inline-flex items-center justify-center min-w-[178px] h-[49px] px-[32px] py-[15px] rounded-full text-[15px] font-extrabold text-white bg-transparent border border-white/20 hover:border-white/40 hover:bg-white/5 hover:scale-[1.03] transition-all duration-200 cursor-pointer max-sm:w-full"
             >
               Enquire about sponsorship
@@ -416,7 +416,7 @@ export function AttendOverviewSection() {
         className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:right_center] bg-no-repeat max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
         style={{
           backgroundImage:
-            'linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.48) 42%, rgba(2, 7, 19, 0.05) 100%), url("/enterprise/images/Attend/Attend-Hero-bg.webp")',
+            'linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.48) 42%, rgba(2, 7, 19, 0.05) 100%), url("/mumbai/enterprise/images/Attend/Attend-Hero-bg.webp")',
         }}
         id="overview"
       >
@@ -429,10 +429,10 @@ export function AttendOverviewSection() {
             This is a two-day executive conference featuring 300+ CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.
           </p>
           <div className="flex flex-wrap gap-3.5 mt-10 max-sm:flex-col max-sm:items-start max-sm:gap-4">
-            <ArrowButton href="/enterprise/attend/delegate" variant="solid">
+            <ArrowButton href="/mumbai/enterprise/attend/delegate" variant="solid">
               Apply for a Delegate Pass
             </ArrowButton>
-            <ArrowButton href="/enterprise/sponsorship-enquiry" variant="outline">
+            <ArrowButton href="/mumbai/enterprise/sponsorship-enquiry" variant="outline">
               Enquire about sponsorship
             </ArrowButton>
           </div>
@@ -449,7 +449,7 @@ export function AttendOverviewSection() {
         </div>
       </section>
 
-      {/* Two-Door Pass Matrix Section (Section 08: /enterprise/attend/) */}
+      {/* Two-Door Pass Matrix Section (Section 08: /mumbai/enterprise/attend/) */}
       <section className="py-[86px] bg-[#020c21] max-sm:py-[62px]" id="pass-matrix">
         <div className="w-[min(1120px,calc(100%-48px))] mx-auto">
           <div className="text-center mb-12">
@@ -478,7 +478,7 @@ export function AttendOverviewSection() {
                 </ul>
               </div>
               <div>
-                <ArrowButton href="/enterprise/attend/delegate" variant="solid">
+                <ArrowButton href="/mumbai/enterprise/attend/delegate" variant="solid">
                   Apply for a Delegate Pass
                 </ArrowButton>
               </div>
@@ -503,10 +503,10 @@ export function AttendOverviewSection() {
                 </ul>
               </div>
               <div className="flex flex-wrap gap-3">
-                <ArrowButton href="/enterprise/sponsorship-enquiry" variant="outline">
+                <ArrowButton href="/mumbai/enterprise/sponsorship-enquiry" variant="outline">
                   Buy a Business Pass
                 </ArrowButton>
-                <ArrowButton href="/enterprise/attend/sponsor" variant="solid">
+                <ArrowButton href="/mumbai/enterprise/attend/sponsor" variant="solid">
                   Explore Sponsorship
                 </ArrowButton>
               </div>
@@ -551,7 +551,7 @@ export function AttendDelegateSection() {
       {/* Hero Section */}
       <section
         className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:right_center] bg-no-repeat max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
-        style={{ backgroundImage: 'url("/enterprise/images/Attend/Delegates-banner.webp")' }}
+        style={{ backgroundImage: 'url("/mumbai/enterprise/images/Attend/Delegates-banner.webp")' }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#020713]/88 via-[#020713]/48 to-transparent z-0 pointer-events-none" />
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
@@ -572,11 +572,11 @@ export function AttendDelegateSection() {
 
       <SplitSection
         button="Submit Qualification Enquiry"
-        buttonHref="/enterprise/general-enquiry"
+        buttonHref="/mumbai/enterprise/general-enquiry"
         id="delegate-qualification"
         eyebrow="Qualification & Consent Governance"
         imageAlt="Invited Enterprise CXOs at World AI Show"
-        imageSrc="/enterprise/images/Attend/AI-decision-maker.webp"
+        imageSrc="/mumbai/enterprise/images/Attend/AI-decision-maker.webp"
         title={<>2-Day Plenary Access &amp; <GradientText>Executive Networking</GradientText></>}
         text={
           <>
@@ -609,7 +609,7 @@ export function AttendSponsorSection() {
       {/* Hero Section */}
       <section
         className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:right_center] bg-no-repeat max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
-        style={{ backgroundImage: 'url("/enterprise/images/Attend/Sponsor-banner.webp")' }}
+        style={{ backgroundImage: 'url("/mumbai/enterprise/images/Attend/Sponsor-banner.webp")' }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#020713]/88 via-[#020713]/48 to-transparent z-0 pointer-events-none" />
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
@@ -623,18 +623,18 @@ export function AttendSponsorSection() {
             Enterprise AI decisions involve up to 39 cross-functional stakeholders (Foundry, 2026). Engage active buying units directly through plenary stage thought leadership, standardized exhibition spaces, and closed-door curated boardrooms.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
-            <ArrowButton href="/enterprise/sponsorship-enquiry">Enquire About Sponsorship</ArrowButton>
+            <ArrowButton href="/mumbai/enterprise/sponsorship-enquiry">Enquire About Sponsorship</ArrowButton>
           </div>
         </div>
       </section>
 
       <SplitSection
         button="Enquire About Sponsorship"
-        buttonHref="/enterprise/sponsorship-enquiry"
+        buttonHref="/mumbai/enterprise/sponsorship-enquiry"
         id="sponsor"
         eyebrow="Standardized Speaking & Booth Framework"
         imageAlt="Standardized Speaking and Booth Framework"
-        imageSrc="/enterprise/images/Attend/brand-center-innovation.webp"
+        imageSrc="/mumbai/enterprise/images/Attend/brand-center-innovation.webp"
         reverse={false}
         title={<>Put Your Solutions in Front of the <GradientText>Cross-Functional Buying Unit</GradientText></>}
         text={
@@ -672,7 +672,7 @@ export function AttendMediaSection() {
       {/* Hero Section */}
       <section
         className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:right_center] bg-no-repeat max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
-        style={{ backgroundImage: 'url("/enterprise/images/Attend/Media-banner.webp")' }}
+        style={{ backgroundImage: 'url("/mumbai/enterprise/images/Attend/Media-banner.webp")' }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#020713]/88 via-[#020713]/48 to-transparent z-0 pointer-events-none" />
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
@@ -686,17 +686,17 @@ export function AttendMediaSection() {
             Secure accredited press credentials, dedicated broadcast suite access, and 1-on-1 briefings with CXOs, AI and transformation heads, setting the standard for India’s AI race.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
-            <ArrowButton href="/enterprise/media-enquiry">Apply for Media Accreditation</ArrowButton>
+            <ArrowButton href="/mumbai/enterprise/media-enquiry">Apply for Media Accreditation</ArrowButton>
           </div>
         </div>
       </section>
 
       <SplitSection
         button="Apply for Media Accreditation"
-        buttonHref="/enterprise/media-enquiry"
+        buttonHref="/mumbai/enterprise/media-enquiry"
         id="media-partner"
         imageAlt="Media interview coverage"
-        imageSrc="/enterprise/images/Attend/cover-southeast.webp"
+        imageSrc="/mumbai/enterprise/images/Attend/cover-southeast.webp"
         title={<>Press Credentials &amp; <GradientText>Executive Interview Access</GradientText></>}
         text={
           <>
@@ -723,7 +723,7 @@ export function AttendAssociationSection() {
       {/* Hero Section */}
       <section
         className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:right_center] bg-no-repeat max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
-        style={{ backgroundImage: 'url("/enterprise/images/Attend/Association-banner.webp")' }}
+        style={{ backgroundImage: 'url("/mumbai/enterprise/images/Attend/Association-banner.webp")' }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#020713]/88 via-[#020713]/48 to-transparent z-0 pointer-events-none" />
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
@@ -737,17 +737,17 @@ export function AttendAssociationSection() {
             Connect and collaborate with regional associations, federations, and regulatory bodies to foster and influence bilateral delegations across the India.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
-            <ArrowButton href="/enterprise/association-enquiry">Partner with the Series</ArrowButton>
+            <ArrowButton href="/mumbai/enterprise/association-enquiry">Partner with the Series</ArrowButton>
           </div>
         </div>
       </section>
 
       <SplitSection
         button="Partner with the World AI Show Series"
-        buttonHref="/enterprise/association-enquiry"
+        buttonHref="/mumbai/enterprise/association-enquiry"
         id="association-partner"
         imageAlt="Strengthening the AI Ecosystem Together"
-        imageSrc="/enterprise/images/Attend/strengthening-ai-ecosystem.webp"
+        imageSrc="/mumbai/enterprise/images/Attend/strengthening-ai-ecosystem.webp"
         reverse={false}
         title={<>Industry Councils, Trade Chambers &amp; <GradientText>Professional AI Bodies</GradientText></>}
         text={

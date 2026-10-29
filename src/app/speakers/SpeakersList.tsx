@@ -51,7 +51,7 @@ export function SpeakersList() {
   const [activeFilter, setActiveFilter] = useState<FilterPill>("All");
 
   useEffect(() => {
-    fetch("/enterprise/api/konfhub-speakers")
+    fetch("/mumbai/enterprise/api/konfhub-speakers")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch speakers");
         return res.json();
@@ -96,7 +96,7 @@ export function SpeakersList() {
         name: s.name || "",
         designation: s.designation || "",
         company: s.organisation || "",
-        image: s.image_url || "/enterprise/images/speakers/default.png",
+        image: s.image_url || "/mumbai/enterprise/images/speakers/default.png",
         bio: s.about,
       }));
     }
@@ -141,7 +141,7 @@ export function SpeakersList() {
             </p>
           </div>
           <a
-            href="/enterprise/agenda/call-for-speakers"
+            href="/mumbai/enterprise/agenda/call-for-speakers"
             className="inline-flex items-center justify-center gap-2 h-[48px] px-7 rounded-full font-extrabold text-[14px] text-[#06111F] [color:#06111F!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.35)] transition-all duration-200 shrink-0"
           >
             Apply to Speak →

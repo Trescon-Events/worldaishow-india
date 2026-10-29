@@ -21,7 +21,7 @@ const channels: ChannelItem[] = [
       "Direct peer-to-peer insights exchange",
       "Strict executive alignment & curation"
     ],
-    image: "/enterprise/images/Attend/AI-decision-maker.webp",
+    image: "/mumbai/enterprise/images/Attend/AI-decision-maker.webp",
   },
   {
     title: "1:1 Business Matchmaking Meetings",
@@ -32,7 +32,7 @@ const channels: ChannelItem[] = [
       "Dedicated meeting assistants on-ground",
       "Direct transactional pipeline development"
     ],
-    image: "/enterprise/images/Attend/partner-with.webp",
+    image: "/mumbai/enterprise/images/Attend/partner-with.webp",
     reverse: true,
   },
   {
@@ -44,7 +44,7 @@ const channels: ChannelItem[] = [
       "Sovereign wealth & venture investor hubs",
       "Informal networking in premium settings"
     ],
-    image: "/enterprise/images/Attend/cover-southeast.webp"
+    image: "/mumbai/enterprise/images/Attend/cover-southeast.webp"
   }
 ];
 

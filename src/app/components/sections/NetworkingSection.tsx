@@ -117,7 +117,7 @@ export function NetworkingSection() {
               >
                 <span className="grid place-items-center w-10 h-10 shrink-0 border border-white/10 rounded-[8px] text-cyan bg-black/26 group-hover:border-green/30 transition-all duration-300">
                   <img
-                    src={`/enterprise/icons/networking/${icon}`}
+                    src={`/mumbai/enterprise/icons/networking/${icon}`}
                     alt=""
                     width={24}
                     height={24}
@@ -208,7 +208,7 @@ export function NetworkingSection() {
               </div>
               <div className="relative z-10">
                 <a
-                  href="/enterprise/attend/delegate"
+                  href="/mumbai/enterprise/attend/delegate"
                   className="inline-flex items-center justify-center gap-2.5 h-[50px] px-7 rounded-full font-extrabold text-[15px] text-[#06111F] [color:#06111F!important] bg-[#C0F43C] transition-all duration-300 group-hover:bg-[#cdfb50] group-hover:shadow-[0_0_28px_rgba(192,244,60,0.45)] hover:scale-[1.02]"
                 >
                   Apply for a Delegate Pass
@@ -242,7 +242,7 @@ export function NetworkingSection() {
               </div>
               <div className="relative z-10">
                 <a
-                  href="/enterprise/attend"
+                  href="/mumbai/enterprise/attend"
                   className="inline-flex items-center justify-center gap-2.5 h-[50px] px-7 rounded-full font-extrabold text-[15px] text-white border border-cyan/50 bg-cyan/10 transition-all duration-300 group-hover:bg-cyan group-hover:text-[#041022] group-hover:[color:#041022!important] group-hover:border-cyan group-hover:shadow-[0_0_28px_rgba(24,212,255,0.4)] hover:scale-[1.02]"
                 >
                   Buy a Business Pass

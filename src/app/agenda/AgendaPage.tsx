@@ -18,32 +18,32 @@ const formats = [
   {
     title: "Plenary Keynotes & Panels",
     text: "CIOs, CAIOs, CTOs, CDOs, CISOs, and COOs dissecting what changes between AI pilot and production, the AI-ready enterprise stack, and accountable agentic autonomy.",
-    image: "/enterprise/images/agenda/keynotes.webp"
+    image: "/mumbai/enterprise/images/agenda/keynotes.webp"
   },
   {
     title: "30-Minute Partner Thought Leadership",
     text: "Dedicated 30-minute standalone main-stage sessions examining production architectures, enterprise workflow redesign, and verified business outcomes.",
-    image: "/enterprise/images/agenda/panel-discussion.webp"
+    image: "/mumbai/enterprise/images/agenda/panel-discussion.webp"
   },
   {
     title: "Closed-Door Executive Roundtables",
     text: "Curated 15-CXO closed-door boardroom discussions operating under the Chatham House Rule alongside live production deployment case studies.",
-    image: "/enterprise/images/agenda/Fireside.webp"
+    image: "/mumbai/enterprise/images/agenda/Fireside.webp"
   }
 ];
 
 const gateway = [
-  ["Edition 1: The Enterprise Edition (Mumbai)", "20–21 April 2027 · 2 Days. The official launch of the World AI Show Series in India, convening 300 qualified CXOs.", "/enterprise/images/agenda/Enterprise.webp"],
-  ["Regional Chapters (Q2–Q3)", "Continuing the executive dialogue across India's priority technology and enterprise corridors throughout Q2 and Q3.", "/enterprise/images/agenda/Growing-dig.webp"],
-  ["Series Finale (Q4)", "Culminating in the 2027 World AI Show India Series Finale in Q4, uniting the country's complete enterprise AI leadership.", "/enterprise/images/agenda/Investment-innovation.webp"]
+  ["Edition 1: The Enterprise Edition (Mumbai)", "20–21 April 2027 · 2 Days. The official launch of the World AI Show Series in India, convening 300 qualified CXOs.", "/mumbai/enterprise/images/agenda/Enterprise.webp"],
+  ["Regional Chapters (Q2–Q3)", "Continuing the executive dialogue across India's priority technology and enterprise corridors throughout Q2 and Q3.", "/mumbai/enterprise/images/agenda/Growing-dig.webp"],
+  ["Series Finale (Q4)", "Culminating in the 2027 World AI Show India Series Finale in Q4, uniting the country's complete enterprise AI leadership.", "/mumbai/enterprise/images/agenda/Investment-innovation.webp"]
 ];
 
 const focusItems = [
-  ["Pillar 1: Enterprise AI Strategy & Business Value", "Use-case scale decisions, executive outcome ownership, and board-level productivity metrics.", "/enterprise/images/agenda/Policy.webp"],
-  ["Pillar 2: Pilot to Production & Workflow Redesign", "Continuous integration, latency, exception handling, and human-in-the-loop workflows.", "/enterprise/images/agenda/AI-infra.webp"],
-  ["Pillar 3: Agentic AI & Accountable Autonomy", "Agent identity, tool permissions, approval gates, auditability, and failure containment.", "/enterprise/images/agenda/investment.webp"],
-  ["Pillar 4: Data & Architecture (The AI-Ready Stack)", "Data quality and context retrieval, real-time enterprise access, API fabrics, hybrid/multi-cloud workload placement, interoperability, and data sovereignty.", "/enterprise/images/agenda/Global.webp"],
-  ["Pillar 5: Governance, Security & Proportionate Trust", "Proportionate risk tiering, synthetic media safeguards, and compliance guidelines.", "/enterprise/images/agenda/strong.webp"]
+  ["Pillar 1: Enterprise AI Strategy & Business Value", "Use-case scale decisions, executive outcome ownership, and board-level productivity metrics.", "/mumbai/enterprise/images/agenda/Policy.webp"],
+  ["Pillar 2: Pilot to Production & Workflow Redesign", "Continuous integration, latency, exception handling, and human-in-the-loop workflows.", "/mumbai/enterprise/images/agenda/AI-infra.webp"],
+  ["Pillar 3: Agentic AI & Accountable Autonomy", "Agent identity, tool permissions, approval gates, auditability, and failure containment.", "/mumbai/enterprise/images/agenda/investment.webp"],
+  ["Pillar 4: Data & Architecture (The AI-Ready Stack)", "Data quality and context retrieval, real-time enterprise access, API fabrics, hybrid/multi-cloud workload placement, interoperability, and data sovereignty.", "/mumbai/enterprise/images/agenda/Global.webp"],
+  ["Pillar 5: Governance, Security & Proportionate Trust", "Proportionate risk tiering, synthetic media safeguards, and compliance guidelines.", "/mumbai/enterprise/images/agenda/strong.webp"]
 ];
 
 type EnterpriseAgendaSession = {
@@ -585,7 +585,7 @@ export function AgendaOverview() {
               As Edition 1 of the World AI Show Series in India, the programme is built around five operational decisions that every cross-functional enterprise buying group must resolve across strategy, production workflow redesign, agentic autonomy, data context, and proportionate trust.
             </p>
           </div>
-          <img src="/enterprise/images/agenda/About.webp" alt="Executives networking at World AI Show" loading="lazy" />
+          <img src="/mumbai/enterprise/images/agenda/About.webp" alt="Executives networking at World AI Show" loading="lazy" />
         </div>
       </section>
 
@@ -633,8 +633,8 @@ export function AgendaOverview() {
           <h2>Be in the room where <GradientText>the operating model gets decided.</GradientText></h2>
           <p>Apply for a complimentary Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
           <div className={styles.actions}>
-            <a className={`${styles.button} ${styles.solid} group`} href="/enterprise/attend/delegate">Apply for a Delegate Pass <ArrowSVG /></a>
-            <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
+            <a className={`${styles.button} ${styles.solid} group`} href="/mumbai/enterprise/attend/delegate">Apply for a Delegate Pass <ArrowSVG /></a>
+            <a className={`${styles.button} ${styles.outline} group`} href="/mumbai/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
           </div>
           <dl>
             <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Days</dd></div>
@@ -667,7 +667,7 @@ export function AgendaVision() {
         className={`${styles.hero} pt-[200px]`}
         id="the-2030-vision-hero"
         style={{
-          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.52) 42%, rgba(2, 7, 19, 0.08) 100%), url(/enterprise/images/agenda/Vision-2030-bg.webp) right center / cover no-repeat"
+          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.52) 42%, rgba(2, 7, 19, 0.08) 100%), url(/mumbai/enterprise/images/agenda/Vision-2030-bg.webp) right center / cover no-repeat"
         }}
       >
         <div className={styles.container}>
@@ -680,7 +680,7 @@ export function AgendaVision() {
           <div className="grid grid-cols-[0.95fr_1.05fr] gap-12 items-stretch max-[980px]:grid-cols-1 mb-10">
             <div className="relative rounded-[22px] overflow-hidden border border-[#20d5ff]/30 bg-[#040d1d] shadow-[0_0_42px_rgba(0,206,255,0.14)] min-h-[420px]">
               <img
-                src="/enterprise/images/agenda/India-enterprise-2030Vision.jpg"
+                src="/mumbai/enterprise/images/agenda/India-enterprise-2030Vision.jpg"
                 alt="Executive panel discussion at World AI Show"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-[1.02]"
                 loading="lazy"
@@ -759,8 +759,8 @@ export function AgendaLiveTimeline() {
           <h2>Be in the room where <GradientText>the operating model gets decided.</GradientText></h2>
           <p>Apply for a complimentary Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
           <div className={styles.actions}>
-            <a className={`${styles.button} ${styles.solid} group`} href="/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
-            <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>
+            <a className={`${styles.button} ${styles.solid} group`} href="/mumbai/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
+            <a className={`${styles.button} ${styles.outline} group`} href="/mumbai/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>
           </div>
           <dl>
             <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Days</dd></div>
@@ -780,7 +780,7 @@ export function AgendaThemes() {
         className={`${styles.hero} pt-[200px]`}
         id="agenda-themes-hero"
         style={{
-          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.48) 42%, rgba(2, 7, 19, 0.05) 100%), url(/enterprise/images/agenda/Themes-bg.webp) right center / cover no-repeat"
+          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.48) 42%, rgba(2, 7, 19, 0.05) 100%), url(/mumbai/enterprise/images/agenda/Themes-bg.webp) right center / cover no-repeat"
         }}
       >
         <div className={styles.container}>
@@ -804,7 +804,7 @@ export function AgendaThemes() {
             </div>
             <a
               className={`${styles.button} ${styles.solid} group`}
-              href="/enterprise/sponsorship-enquiry"
+              href="/mumbai/enterprise/sponsorship-enquiry"
               style={{ minWidth: "220px" }}
             >
               Enquire about sponsorship
@@ -821,8 +821,8 @@ export function AgendaThemes() {
           <h2>Be in the room where <GradientText>the operating model gets decided.</GradientText></h2>
           <p>Apply for a complimentary Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
           <div className={styles.actions}>
-            <a className={`${styles.button} ${styles.solid} group`} href="/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
-            <a className={`${styles.button} ${styles.outline} group`} href="/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>
+            <a className={`${styles.button} ${styles.solid} group`} href="/mumbai/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
+            <a className={`${styles.button} ${styles.outline} group`} href="/mumbai/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>
           </div>
           <dl>
             <div><dt>Dates</dt><dd>20–21 April 2027 · 2 Days</dd></div>
@@ -842,7 +842,7 @@ export function AgendaCallForSpeakers() {
         className={`${styles.hero} pt-[200px]`}
         id="agenda-speakers-hero"
         style={{
-          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.52) 42%, rgba(2, 7, 19, 0.08) 100%), url(/enterprise/images/agenda/Call-speakers-bg.webp) right center / cover no-repeat",
+          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.52) 42%, rgba(2, 7, 19, 0.08) 100%), url(/mumbai/enterprise/images/agenda/Call-speakers-bg.webp) right center / cover no-repeat",
           alignItems: "center",
           minHeight: "750px",
           marginTop: "0",

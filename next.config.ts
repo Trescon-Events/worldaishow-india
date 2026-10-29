@@ -3,7 +3,7 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/enterprise",
+  basePath: "/mumbai/enterprise",
   trailingSlash: true, // Exports pages as /folder/index.html instead of folder.html
   images: {
     unoptimized: true,

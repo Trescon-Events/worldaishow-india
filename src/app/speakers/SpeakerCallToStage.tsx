@@ -37,7 +37,7 @@ export function SpeakerCallToStage() {
                 <li className="flex items-start gap-3.5 text-white/80 text-[15px]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/enterprise/images/agenda/icon-global.webp"
+                    src="/mumbai/enterprise/images/agenda/icon-global.webp"
                     alt="Global icon"
                     className="w-5 h-5 object-contain mt-[3px] select-none flex-shrink-0"
                   />
@@ -48,7 +48,7 @@ export function SpeakerCallToStage() {
                 <li className="flex items-start gap-3.5 text-white/80 text-[15px]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/enterprise/images/agenda/icon-speaker.webp"
+                    src="/mumbai/enterprise/images/agenda/icon-speaker.webp"
                     alt="Speaker icon"
                     className="w-5 h-5 object-contain mt-[3px] select-none flex-shrink-0"
                   />
@@ -59,7 +59,7 @@ export function SpeakerCallToStage() {
                 <li className="flex items-start gap-3.5 text-white/80 text-[15px]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/enterprise/images/agenda/icon-lightning.webp"
+                    src="/mumbai/enterprise/images/agenda/icon-lightning.webp"
                     alt="Lightning bolt icon"
                     className="w-5 h-5 object-contain mt-[3px] select-none flex-shrink-0"
                   />
@@ -76,7 +76,7 @@ export function SpeakerCallToStage() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#020b1c]/40 via-transparent to-transparent pointer-events-none z-1" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/enterprise/images/agenda/take-the-stage.webp"
+              src="/mumbai/enterprise/images/agenda/take-the-stage.webp"
               alt="Speaker presenting on stage at World AI Show"
               className="w-full h-[360px] md:h-[480px] filter saturate-[0.96] brightness-[0.96]"
               style={{ objectFit: "cover", objectPosition: "top" }}
@@ -88,12 +88,12 @@ export function SpeakerCallToStage() {
         {/* Centered bottom CTAs */}
         <div className="flex justify-center gap-4 mt-8 max-sm:flex-col max-sm:items-center">
           <a
-            href="/enterprise/speaker-enquiry"
+            href="/mumbai/enterprise/speaker-enquiry"
             className="inline-flex items-center justify-center gap-2 px-[32px] py-[16px] rounded-full text-[15px] font-extrabold text-[#06111f] [color:#06111f!important] bg-[#C0F43C] shadow-[0_0_24px_rgba(192,244,60,0.18)] hover:shadow-[0_0_32px_rgba(192,244,60,0.36)] hover:-translate-y-0.5 transition-all duration-200"
           >
             Apply to speak
             <img
-              src="/enterprise/images/agenda/arrow-top.webp"
+              src="/mumbai/enterprise/images/agenda/arrow-top.webp"
               alt="Arrow top icon"
               className="w-4 h-4 object-contain select-none flex-shrink-0"
             />

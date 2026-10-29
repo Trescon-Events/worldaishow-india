@@ -4,43 +4,43 @@ import { GradientText } from "../components/Shared";
 
 /* ── All logos combined for marquee rows ─────────────────────── */
 const row1 = [
-  { path: "/enterprise/images/sponsors/strategic/mdec.webp", alt: "MDEC" },
-  { path: "/enterprise/images/sponsors/strategic/mida.webp", alt: "MIDA" },
-  { path: "/enterprise/images/sponsors/gold/datadog.webp", alt: "Datadog" },
-  { path: "/enterprise/images/sponsors/gold/quantexa.webp", alt: "Quantexa" },
-  { path: "/enterprise/images/sponsors/gold/denodo.webp", alt: "Denodo" },
-  { path: "/enterprise/images/sponsors/gold/Alibaba-cloud.webp", alt: "Alibaba Cloud" },
-  { path: "/enterprise/images/sponsors/gold/ey.webp", alt: "EY" },
+  { path: "/mumbai/enterprise/images/sponsors/strategic/mdec.webp", alt: "MDEC" },
+  { path: "/mumbai/enterprise/images/sponsors/strategic/mida.webp", alt: "MIDA" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/datadog.webp", alt: "Datadog" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/quantexa.webp", alt: "Quantexa" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/denodo.webp", alt: "Denodo" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/Alibaba-cloud.webp", alt: "Alibaba Cloud" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/ey.webp", alt: "EY" },
 ];
 
 const row2 = [
-  { path: "/enterprise/images/sponsors/gold/Magure.webp", alt: "Magure" },
-  { path: "/enterprise/images/sponsors/gold/avatai.webp", alt: "Avatai" },
-  { path: "/enterprise/images/sponsors/gold/darwin.webp", alt: "Darwinbox" },
-  { path: "/enterprise/images/sponsors/gold/Bluepower.webp", alt: "Bluepower" },
-  { path: "/enterprise/images/sponsors/gold/Tcloud_logo.webp", alt: "TCloud" },
-  { path: "/enterprise/images/sponsors/gold/ucloud.webp", alt: "UCloud" },
-  { path: "/enterprise/images/sponsors/gold/asix.webp", alt: "ASIX" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/Magure.webp", alt: "Magure" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/avatai.webp", alt: "Avatai" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/darwin.webp", alt: "Darwinbox" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/Bluepower.webp", alt: "Bluepower" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/Tcloud_logo.webp", alt: "TCloud" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/ucloud.webp", alt: "UCloud" },
+  { path: "/mumbai/enterprise/images/sponsors/gold/asix.webp", alt: "ASIX" },
 ];
 
 /* White-banner media & association logos */
 const partnerLogos = [
-  "/enterprise/images/sponsors/association/starfindo.webp",
-  "/enterprise/images/sponsors/association/kumpul.webp",
-  "/enterprise/images/sponsors/association/forums.webp",
-  "/enterprise/images/sponsors/association/ddas.webp",
-  "/enterprise/images/sponsors/association/belux.webp",
-  "/enterprise/images/sponsors/association/lafrench.webp",
-  "/enterprise/images/sponsors/media/abo.webp",
-  "/enterprise/images/sponsors/media/analytic.webp",
-  "/enterprise/images/sponsors/media/asia.webp",
-  "/enterprise/images/sponsors/media/breakingai.webp",
-  "/enterprise/images/sponsors/media/cio.webp",
-  "/enterprise/images/sponsors/media/techdogs.webp",
-  "/enterprise/images/sponsors/media/techrevolt.webp",
-  "/enterprise/images/sponsors/media/techstorm.webp",
-  "/enterprise/images/sponsors/media/trp.webp",
-  "/enterprise/images/sponsors/media/wb.webp",
+  "/mumbai/enterprise/images/sponsors/association/starfindo.webp",
+  "/mumbai/enterprise/images/sponsors/association/kumpul.webp",
+  "/mumbai/enterprise/images/sponsors/association/forums.webp",
+  "/mumbai/enterprise/images/sponsors/association/ddas.webp",
+  "/mumbai/enterprise/images/sponsors/association/belux.webp",
+  "/mumbai/enterprise/images/sponsors/association/lafrench.webp",
+  "/mumbai/enterprise/images/sponsors/media/abo.webp",
+  "/mumbai/enterprise/images/sponsors/media/analytic.webp",
+  "/mumbai/enterprise/images/sponsors/media/asia.webp",
+  "/mumbai/enterprise/images/sponsors/media/breakingai.webp",
+  "/mumbai/enterprise/images/sponsors/media/cio.webp",
+  "/mumbai/enterprise/images/sponsors/media/techdogs.webp",
+  "/mumbai/enterprise/images/sponsors/media/techrevolt.webp",
+  "/mumbai/enterprise/images/sponsors/media/techstorm.webp",
+  "/mumbai/enterprise/images/sponsors/media/trp.webp",
+  "/mumbai/enterprise/images/sponsors/media/wb.webp",
 ];
 
 export function PartnerMarquee() {

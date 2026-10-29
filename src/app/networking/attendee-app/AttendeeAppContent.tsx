@@ -4,14 +4,14 @@ import { GradientText } from "../../components/Shared";
 
 export function AttendeeAppContent() {
   const badgeFeatures = [
-    { label: "Agenda", icon: "/enterprise/icons/attendee-app/calendar-lines-pen.webp" },
-    { label: "Networking", icon: "/enterprise/icons/attendee-app/network-user.webp" },
-    { label: "Speakers", icon: "/enterprise/icons/attendee-app/wais-speaker-icon-matched.webp" },
-    { label: "Sponsors", icon: "/enterprise/icons/attendee-app/money-check.webp" },
-    { label: "Exhibitors", icon: "/enterprise/icons/attendee-app/exhibitor.webp" },
-    { label: "QR Scan", icon: "/enterprise/icons/attendee-app/qr-scan.webp" },
-    { label: "Business Cards", icon: "/enterprise/icons/attendee-app/personal-finance.webp" },
-    { label: "Chat", icon: "/enterprise/icons/attendee-app/comment-dots.webp" }
+    { label: "Agenda", icon: "/mumbai/enterprise/icons/attendee-app/calendar-lines-pen.webp" },
+    { label: "Networking", icon: "/mumbai/enterprise/icons/attendee-app/network-user.webp" },
+    { label: "Speakers", icon: "/mumbai/enterprise/icons/attendee-app/wais-speaker-icon-matched.webp" },
+    { label: "Sponsors", icon: "/mumbai/enterprise/icons/attendee-app/money-check.webp" },
+    { label: "Exhibitors", icon: "/mumbai/enterprise/icons/attendee-app/exhibitor.webp" },
+    { label: "QR Scan", icon: "/mumbai/enterprise/icons/attendee-app/qr-scan.webp" },
+    { label: "Business Cards", icon: "/mumbai/enterprise/icons/attendee-app/personal-finance.webp" },
+    { label: "Chat", icon: "/mumbai/enterprise/icons/attendee-app/comment-dots.webp" }
   ];
 
   return (
@@ -20,7 +20,7 @@ export function AttendeeAppContent() {
       <section 
         className="relative net-inner-hero pt-[250px] pb-24 overflow-hidden"
         style={{
-          backgroundImage: `url('/enterprise/images/networking/attendee-app-hero-bg.webp')`,
+          backgroundImage: `url('/mumbai/enterprise/images/networking/attendee-app-hero-bg.webp')`,
           backgroundPosition: 'right center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat'
@@ -44,7 +44,7 @@ export function AttendeeAppContent() {
             </p>
             <div className="flex flex-wrap items-center gap-4 mt-8">
               <a
-                href="/enterprise/sponsorship-enquiry"
+                href="/mumbai/enterprise/sponsorship-enquiry"
                 className="px-6 h-[49px] inline-flex items-center justify-center gap-2.5 rounded-full font-extrabold text-sm transition-all duration-200 bg-[#C0F43C] text-black [color:#06111f!important] shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)] hover:-translate-y-0.5"
               >
                 Enquire Now ➔
@@ -102,7 +102,7 @@ export function AttendeeAppContent() {
             >
               <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#C0F43C] text-black mb-6">
                 <img 
-                  src="/enterprise/images/networking/Icon.webp" 
+                  src="/mumbai/enterprise/images/networking/Icon.webp" 
                   alt="Attendees" 
                   className="w-[14px] h-[14px] object-contain" 
                 />
@@ -115,7 +115,7 @@ export function AttendeeAppContent() {
               <div className="flex flex-col gap-6">
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/calendar-lines-pen.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/calendar-lines-pen.webp"
                     alt="Personalised Agenda Icon"
                     className="w-[26px] h-[26px] object-contain flex-none"
                   />
@@ -126,7 +126,7 @@ export function AttendeeAppContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/everything-in-one-place.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/everything-in-one-place.webp"
                     alt="Everything in One Place Icon"
                     className="w-[26px] h-[26px] object-contain flex-none"
                   />
@@ -137,7 +137,7 @@ export function AttendeeAppContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/network-user.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/network-user.webp"
                     alt="Seamless Networking Icon"
                     className="w-[26px] h-[26px] object-contain flex-none"
                   />
@@ -148,7 +148,7 @@ export function AttendeeAppContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/real-time-notifications.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/real-time-notifications.webp"
                     alt="Real-Time Notifications Icon"
                     className="w-[26px] h-[26px] object-contain flex-none"
                   />
@@ -159,7 +159,7 @@ export function AttendeeAppContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/ai-powered-matchmaking.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/ai-powered-matchmaking.webp"
                     alt="AI-Powered Matchmaking Icon"
                     className="w-[26px] h-[26px] object-contain flex-none"
                   />
@@ -180,7 +180,7 @@ export function AttendeeAppContent() {
             >
               <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#926DFF] text-white mb-6">
                 <img 
-                  src="/enterprise/icons/attendee-app/exhibitor.webp" 
+                  src="/mumbai/enterprise/icons/attendee-app/exhibitor.webp" 
                   alt="Sponsors & Exhibitors" 
                   className="w-[14px] h-[14px] object-contain filter brightness-0" 
                 />
@@ -193,7 +193,7 @@ export function AttendeeAppContent() {
               <div className="flex flex-col gap-6">
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/connect-with-high-intent-attendees.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/connect-with-high-intent-attendees.webp"
                     alt="Connect with High-Intent Attendees Icon"
                     className="w-[26px] h-[26px] object-contain flex-none"
                   />
@@ -204,7 +204,7 @@ export function AttendeeAppContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/drive-booth-traffic.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/drive-booth-traffic.webp"
                     alt="Drive Booth Traffic Icon"
                     className="w-[26px] h-[26px] object-contain flex-none"
                   />
@@ -215,7 +215,7 @@ export function AttendeeAppContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/direct-in-app-interactions.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/direct-in-app-interactions.webp"
                     alt="Direct In-App Interactions Icon"
                     className="w-[26px] h-[26px] object-contain flex-none"
                   />
@@ -226,7 +226,7 @@ export function AttendeeAppContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/capture-meaningful-leads.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/capture-meaningful-leads.webp"
                     alt="Capture Meaningful Leads Icon"
                     className="w-[26px] h-[26px] object-contain flex-none"
                   />

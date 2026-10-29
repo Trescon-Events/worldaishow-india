@@ -14,13 +14,13 @@ const subMenus: Record<string, string[]> = {
 };
 
 function getNavHref(item: string) {
-  if (item === "Home") return "/enterprise/";
-  if (item === "Attend") return "/enterprise/attend";
-  if (item === "Agenda") return "/enterprise/agenda";
-  if (item === "Speakers") return "/enterprise/speakers";
-  if (item === "Partner") return "/enterprise/partners";
-  if (item === "Networking") return "/enterprise/networking";
-  return `/enterprise/#${item.toLowerCase()}`;
+  if (item === "Home") return "/mumbai/enterprise/";
+  if (item === "Attend") return "/mumbai/enterprise/attend";
+  if (item === "Agenda") return "/mumbai/enterprise/agenda";
+  if (item === "Speakers") return "/mumbai/enterprise/speakers";
+  if (item === "Partner") return "/mumbai/enterprise/partners";
+  if (item === "Networking") return "/mumbai/enterprise/networking";
+  return `/mumbai/enterprise/#${item.toLowerCase()}`;
 }
 
 type HeaderProps = {
@@ -31,8 +31,8 @@ type HeaderProps = {
 
 /** Maps the current URL pathname to the matching top-level nav label */
 function getActiveFromPath(pathname: string): string {
-  const cleanPath = pathname.startsWith("/enterprise")
-    ? pathname.slice("/enterprise".length)
+  const cleanPath = pathname.startsWith("/mumbai/enterprise")
+    ? pathname.slice("/mumbai/enterprise".length)
     : pathname;
 
   if (cleanPath === "" || cleanPath === "/" || cleanPath === "/home") return "Home";
@@ -53,8 +53,8 @@ function getActiveFromPath(pathname: string): string {
 
 /** Maps the current URL pathname to the matching sub-nav item label */
 function getSubNavItemFromPath(pathname: string): string {
-  const cleanPath = pathname.startsWith("/enterprise")
-    ? pathname.slice("/enterprise".length)
+  const cleanPath = pathname.startsWith("/mumbai/enterprise")
+    ? pathname.slice("/mumbai/enterprise".length)
     : pathname;
 
   // Attend sub-pages
@@ -103,7 +103,7 @@ export function Header({ activeItem, subNavItems, activeSubNavItem }: HeaderProp
   }, [currentActiveItem]);
 
   useEffect(() => {
-    fetch("/enterprise/api/konfhub-sponsors")
+    fetch("/mumbai/enterprise/api/konfhub-sponsors")
       .then((r) => r.json())
       .then((json) => {
         const hasExhibitors = Boolean(
@@ -131,25 +131,25 @@ export function Header({ activeItem, subNavItems, activeSubNavItem }: HeaderProp
 
   function getSubNavHref(parentItem: string, subItem: string) {
     if (parentItem === "Networking" || parentItem === "Attend" || parentItem === "Agenda") {
-      const parentPath = parentItem === "Networking" ? "/enterprise/networking" : `/enterprise/${parentItem.toLowerCase()}`;
+      const parentPath = parentItem === "Networking" ? "/mumbai/enterprise/networking" : `/mumbai/enterprise/${parentItem.toLowerCase()}`;
       if (subItem === "Overview") return parentPath;
       return `${parentPath}/${subItem.toLowerCase().replaceAll(" ", "-")}`;
     }
-    const parentPath = parentItem === "Home" ? "/enterprise/" : `/enterprise/${parentItem.toLowerCase()}`;
+    const parentPath = parentItem === "Home" ? "/mumbai/enterprise/" : `/mumbai/enterprise/${parentItem.toLowerCase()}`;
     const hash = subItem.toLowerCase().replaceAll(" ", "-");
 
     if (parentItem === "Partner") {
-      if (hash === "overview") return "/enterprise/partners";
-      if (hash === "sponsors") return "/enterprise/partners#sponsors";
+      if (hash === "overview") return "/mumbai/enterprise/partners";
+      if (hash === "sponsors") return "/mumbai/enterprise/partners#sponsors";
 
       if (hash === "exhibitors" && !availableSections.exhibitors) {
-        return "/enterprise/partners#sponsors";
+        return "/mumbai/enterprise/partners#sponsors";
       }
       if (hash === "media" && !availableSections.media) {
-        return "/enterprise/partners#sponsors";
+        return "/mumbai/enterprise/partners#sponsors";
       }
       if (hash === "associations" && !availableSections.associations) {
-        return "/enterprise/partners#sponsors";
+        return "/mumbai/enterprise/partners#sponsors";
       }
     }
 
@@ -235,7 +235,7 @@ export function Header({ activeItem, subNavItems, activeSubNavItem }: HeaderProp
           <div className="flex items-center gap-[25px] whitespace-nowrap text-[15px] font-bold tracking-[1.2px] uppercase max-[1200px]:justify-end max-[1200px]:mr-2 ml-2">
             <a
               className="px-[23px] py-[15px] rounded-full !text-black [color:#06111f!important] bg-[#C0F43C] shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)] transition-all duration-200 hover:-translate-y-0.5 max-sm:px-3.5 max-sm:py-3 uppercase font-extrabold text-[14px] tracking-[1.2px]"
-              href="/enterprise/sponsorship-enquiry"
+              href="/mumbai/enterprise/sponsorship-enquiry"
             >
               Enquire Now
             </a>
@@ -398,7 +398,7 @@ export function Header({ activeItem, subNavItems, activeSubNavItem }: HeaderProp
             {/* Mobile Actions */}
             <div className="flex flex-col gap-3 mt-2 sm:hidden">
               <a
-                href="/enterprise/sponsorship-enquiry"
+                href="/mumbai/enterprise/sponsorship-enquiry"
                 onClick={() => setIsOpen(false)}
                 className="text-[14px] font-semibold text-white/80 hover:text-cyan transition-colors py-3 text-center border border-[#7eacd9]/20 rounded-full bg-white/5 shadow-[inset_0_0_12px_rgba(33,173,255,0.03)]"
               >

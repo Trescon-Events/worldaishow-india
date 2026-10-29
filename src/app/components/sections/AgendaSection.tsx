@@ -9,35 +9,35 @@ const themeItems = [
     heading: "Enterprise AI Strategy & Business Value",
     description:
       "Use-case scale decisions, executive outcome ownership, board-level productivity metrics.",
-    image: "/enterprise/images/agenda/keynotes.webp",
+    image: "/mumbai/enterprise/images/agenda/keynotes.webp",
   },
   {
     label: "Pilot to production and workflow redesign",
     heading: "Pilot to Production & Process Redesign",
     description:
       "Continuous integration, latency, exception handling, and human-in-the-loop workflows.",
-    image: "/enterprise/images/agenda/panel-discussion.webp",
+    image: "/mumbai/enterprise/images/agenda/panel-discussion.webp",
   },
   {
     label: "Agentic AI and accountable autonomy",
     heading: "Agentic AI & Accountable Autonomy",
     description:
       "Agent identity, tool permissions, approval gates, auditability, and failure containment.",
-    image: "/enterprise/images/agenda/driving-malaysia-stage.webp",
+    image: "/mumbai/enterprise/images/agenda/driving-malaysia-stage.webp",
   },
   {
     label: "Data & architecture (The AI-ready stack)",
     heading: "Data & Architecture (The AI-Ready Stack)",
     description:
       "Data quality and context retrieval, real-time enterprise access, API fabrics, hybrid/multi-cloud workload placement, interoperability, and data sovereignty.",
-    image: "/enterprise/images/agenda/driving-malaysia-speakers.webp",
+    image: "/mumbai/enterprise/images/agenda/driving-malaysia-speakers.webp",
   },
   {
     label: "Governance, security and proportionate trust",
     heading: "Governance, Security & Proportional Trust",
     description:
       "Proportionate risk tiering, synthetic media safeguards, and compliance guidelines.",
-    image: "/enterprise/images/agenda/Fireside.webp",
+    image: "/mumbai/enterprise/images/agenda/Fireside.webp",
   },
 ];
 

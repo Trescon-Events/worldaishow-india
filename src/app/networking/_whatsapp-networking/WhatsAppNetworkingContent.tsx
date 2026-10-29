@@ -21,7 +21,7 @@ export function WhatsAppNetworkingContent() {
       <section 
         className="relative net-inner-hero pt-[250px] pb-24 overflow-hidden"
         style={{ 
-          backgroundImage: `url('/enterprise/images/networking/networking-bg.png')`,
+          backgroundImage: `url('/mumbai/enterprise/images/networking/networking-bg.png')`,
           backgroundPosition: 'right center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -96,7 +96,7 @@ export function WhatsAppNetworkingContent() {
             >
               <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#C0F43C] text-black mb-6">
                 <img 
-                  src="/enterprise/images/networking/Icon.webp" 
+                  src="/mumbai/enterprise/images/networking/Icon.webp" 
                   alt="Attendees" 
                   className="w-[14px] h-[14px] object-contain filter brightness-0" 
                 />
@@ -108,7 +108,7 @@ export function WhatsAppNetworkingContent() {
               <div className="flex flex-col gap-6">
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-1.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-1.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -116,7 +116,7 @@ export function WhatsAppNetworkingContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-1.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-1.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -124,7 +124,7 @@ export function WhatsAppNetworkingContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-1.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-1.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -132,7 +132,7 @@ export function WhatsAppNetworkingContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-1.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-1.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -150,7 +150,7 @@ export function WhatsAppNetworkingContent() {
             >
               <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#926DFF] text-white mb-6">
                 <img 
-                  src="/enterprise/icons/attendee-app/exhibitor.webp" 
+                  src="/mumbai/enterprise/icons/attendee-app/exhibitor.webp" 
                   alt="Sponsors & Exhibitors" 
                   className="w-[14px] h-[14px] object-contain filter brightness-0 invert" 
                 />
@@ -162,7 +162,7 @@ export function WhatsAppNetworkingContent() {
               <div className="flex flex-col gap-6">
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-2.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-2.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -170,7 +170,7 @@ export function WhatsAppNetworkingContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-2.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-2.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -178,7 +178,7 @@ export function WhatsAppNetworkingContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-2.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-2.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -186,7 +186,7 @@ export function WhatsAppNetworkingContent() {
                 </div>
                 <div className="flex gap-4 items-start">
                   <img
-                    src="/enterprise/icons/attendee-app/tick-2.webp"
+                    src="/mumbai/enterprise/icons/attendee-app/tick-2.webp"
                     alt="Checkmark"
                     className="w-[24px] h-[24px] object-contain flex-none"
                   />
@@ -214,7 +214,7 @@ export function WhatsAppNetworkingContent() {
 
           <div className="mt-10 flex justify-center">
             <a
-              href="/enterprise/sponsorship-enquiry"
+              href="/mumbai/enterprise/sponsorship-enquiry"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-black [color:#06111f!important] bg-[#C0F43C] font-extrabold text-sm shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)] transition-all duration-200 hover:-translate-y-0.5 hover:scale-105"
             >
               Enquire Now

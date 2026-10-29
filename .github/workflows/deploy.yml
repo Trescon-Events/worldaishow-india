@@ -41,15 +41,15 @@ jobs:
                 if (entry.isDirectory()) walk(full);
                 else if (/\.(ts|tsx|js|jsx|json|css|html)$/.test(entry.name)) {
                   const content = fs.readFileSync(full, "utf8");
-                  if (content.includes("/enterprise")) {
-                    fs.writeFileSync(full, content.split("/enterprise").join("/worldaishow-india"), "utf8");
+                  if (content.includes("/mumbai/enterprise")) {
+                    fs.writeFileSync(full, content.split("/mumbai/enterprise").join("/worldaishow-india"), "utf8");
                   }
                 }
               }
             }
             walk("src");
             const cfg = fs.readFileSync("next.config.ts", "utf8");
-            fs.writeFileSync("next.config.ts", cfg.split("/enterprise").join("/worldaishow-india"), "utf8");
+            fs.writeFileSync("next.config.ts", cfg.split("/mumbai/enterprise").join("/worldaishow-india"), "utf8");
           '
 
       - name: Build with Next.js

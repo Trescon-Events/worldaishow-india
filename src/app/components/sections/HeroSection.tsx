@@ -9,7 +9,7 @@ export function HeroSection() {
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-72 z-0"
-        src="/enterprise/videos/wais-mumbai-hero-banner.mp4"
+        src="/mumbai/enterprise/videos/wais-mumbai-hero-banner.mp4"
         autoPlay
         muted
         loop
@@ -82,10 +82,10 @@ export function HeroSection() {
 
         {/* Hero CTA Actions */}
         <div className="flex justify-center flex-wrap gap-3.5 mt-9 max-sm:flex-col max-sm:items-center max-sm:gap-3.5 max-sm:w-full max-sm:max-w-[320px]">
-          <Button href="/enterprise/sponsorship-enquiry/" showArrow={true}>
+          <Button href="/mumbai/enterprise/sponsorship-enquiry/" showArrow={true}>
             Enquire Now (Sponsorship &amp; Passes)
           </Button>
-          <Button href="/enterprise/attend/sponsor/" variant="outline" showArrow={true}>
+          <Button href="/mumbai/enterprise/attend/sponsor/" variant="outline" showArrow={true}>
             Download Prospectus
           </Button>
         </div>

@@ -110,7 +110,7 @@ export function OrganizerSection() {
             <img
               className="block mt-[12px] h-auto object-contain select-none"
               style={{ width: "55%" }}
-              src="/enterprise/logos/Trescon-org.svg"
+              src="/mumbai/enterprise/logos/Trescon-org.svg"
               alt="Trescon"
               width={270}
               height={80}

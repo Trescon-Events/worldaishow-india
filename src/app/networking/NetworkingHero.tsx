@@ -6,7 +6,7 @@ export function NetworkingHero() {
   return (
     <section id="overview" className="relative min-h-[460px] flex items-start page-hero-top pb-[78px] overflow-hidden bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-[#020a1a]/92 before:z-0 max-sm:min-h-[400px] max-sm:pb-[50px]"
       style={{
-        backgroundImage: 'linear-gradient(90deg, rgba(1,7,18,0.98) 0%, rgba(2,9,25,0.8) 47%, rgba(2,9,25,0.4) 100%), url("/enterprise/images/networking/networking-hero-bg.webp")'
+        backgroundImage: 'linear-gradient(90deg, rgba(1,7,18,0.98) 0%, rgba(2,9,25,0.8) 47%, rgba(2,9,25,0.4) 100%), url("/mumbai/enterprise/images/networking/networking-hero-bg.webp")'
       }}
     >
       <div className="relative z-10 w-[min(1114px,calc(100%-48px))] mx-auto">

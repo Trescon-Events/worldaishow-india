@@ -14,7 +14,7 @@ export function FooterSection() {
           {/* Brand block */}
           <div className="flex flex-col">
             <img
-              src="/enterprise/logos/wais-27-enterprise_footer.svg"
+              src="/mumbai/enterprise/logos/wais-27-enterprise_footer.svg"
               alt="World AI Show: The Enterprise Edition | Mumbai 2027"
               width={250}
               height={50}
@@ -30,16 +30,16 @@ export function FooterSection() {
             <h3 className="m-0 mb-2 text-white/74 font-mono text-[12px] uppercase tracking-[5px] select-none">
               Event
             </h3>
-            <a href="/enterprise/attend" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/mumbai/enterprise/attend" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
               Attend
             </a>
-            <a href="/enterprise/agenda" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/mumbai/enterprise/agenda" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
               Agenda
             </a>
-            <a href="/enterprise/speakers" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/mumbai/enterprise/speakers" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
               Speakers
             </a>
-            <a href="/enterprise/partners" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/mumbai/enterprise/partners" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
               Partners
             </a>
           </div>
@@ -49,16 +49,16 @@ export function FooterSection() {
             <h3 className="m-0 mb-2 text-white/74 font-mono text-[12px] uppercase tracking-[5px] select-none">
               Enquiries
             </h3>
-            <a href="/enterprise/sponsorship-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/mumbai/enterprise/sponsorship-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
               Sponsorships
             </a>
-            <a href="/enterprise/attend/delegate" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/mumbai/enterprise/attend/delegate" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
               Delegate Pass
             </a>
-            <a href="/enterprise/media-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/mumbai/enterprise/media-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
               Media Partner
             </a>
-            <a href="/enterprise/speaker-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/mumbai/enterprise/speaker-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
               Speaker Slot
             </a>
           </div>
@@ -84,7 +84,7 @@ export function FooterSection() {
             >
               About Us
             </a>
-            <a href="/enterprise/general-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/mumbai/enterprise/general-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
               Contact Us
             </a>
           </div>

@@ -1,12 +1,14 @@
 # HANDOFF — World AI Show — Enterprise (Mumbai 2027 edition site)
 
-Last updated: 2026-10-21 (by Antigravity, for Lohith / Madhu's team).
+Last updated: 2026-10-29 (by Antigravity, for Lohith / Madhu's team).
 
 ## Current state
 
+- **Live URL:** `https://worldaishow.com/mumbai/enterprise`
 - **Repository:** `https://github.com/Trescon-Events/worldaishow-india.git`
+- **Cloudflare Pages Project:** `wais-enterprise` (`https://wais-enterprise.pages.dev`)
 - **Live Testing URL (GitHub Pages):** `https://trescon-events.github.io/worldaishow-india/`
-- **Base path:** `basePath: "/enterprise"` configured in `next.config.ts`. All internal asset paths and links use `/enterprise/...` (automatically rewritten to `/worldaishow-india/...` inside the GitHub Actions Pages deployment workflow `.github/workflows/deploy.yml`).
+- **Base path:** `basePath: "/mumbai/enterprise"` configured in `next.config.ts`. All internal asset paths and links use `/mumbai/enterprise/...` (automatically rewritten to `/worldaishow-india/...` inside the GitHub Actions Pages deployment workflow `.github/workflows/deploy.yml`).
 - **Brand Assets:** Header and footer logos wired at `public/logos/wais-27-enterprise_header.svg`, `public/logos/wais-27-enterprise_footer.svg`, and `public/logos/Wais-series-W.svg` (Global Series lockup).
 - **2026-10-21 Website Feedback Updates (`Website changes and feedback.docx`) Applied:**
   1. **Research & Statistics (`EcosystemSectionDemo.tsx`)**:

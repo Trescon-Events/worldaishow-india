@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "The premier cross-functional executive conference addressing the architecture, systems integration, agentic governance, and verifiable ROI of enterprise AI. 20–21 April 2027 · Mumbai, India · 2 Days.",
   icons: {
-    icon: "/enterprise/favicon.png",
+    icon: "/mumbai/enterprise/favicon.png",
   },
   openGraph: {
     title: "World AI Show: The Enterprise Edition | Mumbai 2027",

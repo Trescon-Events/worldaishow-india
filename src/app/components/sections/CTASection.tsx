@@ -30,7 +30,7 @@ export function CTASection() {
             </div>
             <div className="mt-8">
               <a
-                href="/enterprise/attend/delegate"
+                href="/mumbai/enterprise/attend/delegate"
                 className="inline-flex items-center gap-2 px-[28px] py-[14px] rounded-full text-[15px] font-extrabold text-[#06111f] [color:#06111f!important] bg-[#C0F43C] shadow-[0_8px_24px_rgba(192,244,60,0.25)] hover:shadow-[0_12px_32px_rgba(192,244,60,0.4)] hover:scale-[1.02] transition-all duration-200 cursor-pointer"
               >
                 Apply for a Delegate Pass
@@ -59,7 +59,7 @@ export function CTASection() {
             </div>
             <div className="mt-8">
               <a
-                href="/enterprise/sponsorship-enquiry"
+                href="/mumbai/enterprise/sponsorship-enquiry"
                 className="inline-flex items-center gap-2 px-[28px] py-[14px] rounded-full text-[15px] font-extrabold text-[#06111f] [color:#06111f!important] bg-[#18D4FF] shadow-[0_8px_24px_rgba(24,212,255,0.25)] hover:shadow-[0_12px_32px_rgba(24,212,255,0.4)] hover:scale-[1.02] transition-all duration-200 cursor-pointer"
               >
                 Enquire about sponsorship
@@ -94,7 +94,7 @@ export function CTASection() {
 
             <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
               <a
-                href="/enterprise/agenda/call-for-speakers"
+                href="/mumbai/enterprise/agenda/call-for-speakers"
                 className="inline-flex items-center gap-2 px-[30px] py-[14px] rounded-full text-[15px] font-extrabold text-white border border-white/25 bg-white/5 hover:border-[#C0F43C] hover:text-[#C0F43C] transition-all duration-200 cursor-pointer"
               >
                 Apply to speak

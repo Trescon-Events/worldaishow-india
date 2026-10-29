@@ -242,7 +242,7 @@ export function HeroSectionDemo() {
 
         {/* Hero CTA Actions */}
         <div className="flex justify-center gap-3 mt-[32px] mb-16 max-sm:mb-10 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:w-full max-sm:max-w-[280px]">
-          <Button href="/enterprise/sponsorship-enquiry/" showArrow={true}>Enquire Now</Button>
+          <Button href="/mumbai/enterprise/sponsorship-enquiry/" showArrow={true}>Enquire Now</Button>
         </div>
       </div>
     </section>
