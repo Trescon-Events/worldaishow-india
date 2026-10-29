@@ -115,9 +115,6 @@ export function OrganizerSection() {
               width={270}
               height={80}
             />
-            <h2 className="mt-6 text-white font-[850] text-[clamp(24px,2.8vw,32px)] leading-[1.15] tracking-[-0.8px]">
-              A premier India launch. 46 global editions of proven authority.
-            </h2>
           </div>
 
           {/* Copy content column */}
