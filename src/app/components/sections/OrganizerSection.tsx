@@ -30,15 +30,17 @@ export function OrganizerSection() {
         {/* OUR REACH & SERIES HIGHLIGHTS (Matching worldaishow.com reference) */}
         <div className="p-9 sm:p-11 rounded-[28px] border border-white/10 bg-gradient-to-b from-[#061428]/90 via-[#040d1d]/95 to-[#030915]/95 shadow-[0_24px_60px_rgba(0,0,0,0.45)]">
           {/* OUR REACH */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up">
             <h3 className="text-center font-[850] text-white text-[clamp(26px,3.4vw,38px)] tracking-[-1px] uppercase mb-8">
               Our <GradientText>Reach</GradientText>
             </h3>
 
             <div className="grid grid-cols-5 gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
-              {ourReachStats.map((item) => (
+              {ourReachStats.map((item, idx) => (
                 <div
                   key={item.label}
+                  data-aos="fade-up"
+                  data-aos-delay={String((idx % 5) * 90)}
                   className="p-5 rounded-2xl border border-white/10 bg-white/[0.025] hover:border-[#18d4ff]/45 hover:bg-white/[0.04] transition-all duration-300"
                 >
                   <strong className="block text-white font-[850] text-[clamp(28px,3.2vw,38px)] leading-none mb-2">
@@ -55,15 +57,17 @@ export function OrganizerSection() {
           <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent my-10" />
 
           {/* SERIES HIGHLIGHTS */}
-          <div className="text-center">
+          <div className="text-center" data-aos="fade-up">
             <h3 className="text-center font-[850] text-white text-[clamp(26px,3.4vw,38px)] tracking-[-1px] uppercase mb-8">
               Series <GradientText>Highlights</GradientText>
             </h3>
 
             <div className="grid grid-cols-5 gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
-              {seriesHighlightsRow1.map((item) => (
+              {seriesHighlightsRow1.map((item, idx) => (
                 <div
                   key={item.label}
+                  data-aos="fade-up"
+                  data-aos-delay={String((idx % 5) * 90)}
                   className="p-5 rounded-2xl border border-white/10 bg-white/[0.025] hover:border-[#C0F43C]/45 hover:bg-white/[0.04] transition-all duration-300"
                 >
                   <strong className="block text-[#C0F43C] font-[850] text-[clamp(28px,3.2vw,38px)] leading-none mb-2">
@@ -77,9 +81,11 @@ export function OrganizerSection() {
             </div>
 
             <div className="grid grid-cols-2 gap-4 max-w-[440px] mx-auto mt-4">
-              {seriesHighlightsRow2.map((item) => (
+              {seriesHighlightsRow2.map((item, idx) => (
                 <div
                   key={item.label}
+                  data-aos={idx === 0 ? "fade-right" : "fade-left"}
+                  data-aos-delay="100"
                   className="p-5 rounded-2xl border border-white/10 bg-white/[0.025] hover:border-[#C0F43C]/45 hover:bg-white/[0.04] transition-all duration-300"
                 >
                   <strong className="block text-[#C0F43C] font-[850] text-[clamp(28px,3.2vw,38px)] leading-none mb-2">
@@ -96,6 +102,7 @@ export function OrganizerSection() {
 
         {/* Main Organizer Layout Panel (S10 · Credibility & series heritage) */}
         <div
+          data-aos="fade-up"
           className="grid grid-cols-[0.68fr_1fr] gap-[56px] items-center min-h-[260px] p-[48px_56px] border border-white/10 border-t-[#00CEFF]/60 rounded-[28px] backdrop-blur-[16px] shadow-[0_16px_48px_rgba(0,0,0,0.4),0_0_32px_rgba(192,244,60,0.04)] max-[980px]:grid-cols-1 max-sm:p-[34px_22px] max-sm:gap-[32px]"
           style={{
             background:
@@ -103,7 +110,7 @@ export function OrganizerSection() {
           }}
         >
           {/* Logo column */}
-          <div className="flex flex-col">
+          <div className="flex flex-col" data-aos="fade-right" data-aos-delay="100">
             <span className="text-white/74 font-mono text-[12px] uppercase tracking-[3px] select-none">
               Organised by Trescon
             </span>
@@ -118,7 +125,7 @@ export function OrganizerSection() {
           </div>
 
           {/* Copy content column */}
-          <div className="flex flex-col">
+          <div className="flex flex-col" data-aos="fade-left" data-aos-delay="200">
             <p className="m-0 text-[#a4adbd] text-[16px] leading-[1.65]">
               World AI Show: The Enterprise Edition is organised by Trescon, the team behind World AI Show — the world&apos;s longest-running AI summit series convening 42,000+ C-level executives and 2,600+ speakers across 51+ countries.
             </p>

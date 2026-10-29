@@ -127,14 +127,16 @@ export function SponsorsSection() {
       {/* Governments and Associations Who Have Worked With Us In The Past (4x4 Grid from worldaishow.com) */}
       <div className="mt-20 py-16 bg-white text-center">
         <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
-          <h3 className="m-0 mb-10 text-[#151923] font-[850] text-[clamp(22px,2.8vw,32px)] leading-[1.2] tracking-[-0.5px] uppercase max-w-[820px] mx-auto">
+          <h3 data-aos="fade-up" className="m-0 mb-10 text-[#151923] font-[850] text-[clamp(22px,2.8vw,32px)] leading-[1.2] tracking-[-0.5px] uppercase max-w-[820px] mx-auto">
             Governments and Associations Who Have Worked With Us In The Past
           </h3>
 
           <div className="grid grid-cols-4 border border-slate-200 rounded-[16px] overflow-hidden max-md:grid-cols-2">
-            {governmentLogos.map((logo) => (
+            {governmentLogos.map((logo, idx) => (
               <div
                 key={logo.alt}
+                data-aos="fade-up"
+                data-aos-delay={String((idx % 4) * 90)}
                 className="flex items-center justify-center h-[126px] p-5 border-r border-b border-slate-200 bg-white hover:bg-slate-50 transition-colors duration-200"
               >
                 <img

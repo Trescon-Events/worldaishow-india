@@ -990,3 +990,57 @@ button[class*="bg-[#06111f]"] {
 .text-\[clamp\(54px\,6\.5vw\,82px\)\] {
     font-size: clamp(54px, 6.5vw, 82px) !important;
 }
+
+/* ── DATA-AOS Smooth Scroll Animations (fade-up, fade-right, fade-left, zoom-in) ── */
+[data-aos].aos-init {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 780ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+[data-aos="fade-up"].aos-init {
+  transform: translate3d(0, 34px, 0);
+}
+
+[data-aos="fade-down"].aos-init {
+  transform: translate3d(0, -34px, 0);
+}
+
+[data-aos="fade-right"].aos-init {
+  transform: translate3d(-40px, 0, 0);
+}
+
+[data-aos="fade-left"].aos-init {
+  transform: translate3d(40px, 0, 0);
+}
+
+[data-aos="zoom-in"].aos-init {
+  transform: scale(0.94) translate3d(0, 18px, 0);
+}
+
+[data-aos].aos-init.aos-animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+[data-aos][data-aos-delay="50"].aos-init { transition-delay: 50ms; }
+[data-aos][data-aos-delay="90"].aos-init { transition-delay: 90ms; }
+[data-aos][data-aos-delay="100"].aos-init { transition-delay: 100ms; }
+[data-aos][data-aos-delay="150"].aos-init { transition-delay: 150ms; }
+[data-aos][data-aos-delay="180"].aos-init { transition-delay: 180ms; }
+[data-aos][data-aos-delay="200"].aos-init { transition-delay: 200ms; }
+[data-aos][data-aos-delay="270"].aos-init { transition-delay: 270ms; }
+[data-aos][data-aos-delay="300"].aos-init { transition-delay: 300ms; }
+[data-aos][data-aos-delay="360"].aos-init { transition-delay: 360ms; }
+[data-aos][data-aos-delay="400"].aos-init { transition-delay: 400ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos].aos-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
