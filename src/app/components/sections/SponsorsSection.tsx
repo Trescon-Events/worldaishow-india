@@ -65,10 +65,6 @@ export function SponsorsSection() {
           Your buyers are redesigning workflows now, <GradientText>not after the pilot</GradientText>
         </h2>
 
-        <p className="mt-6 max-w-[780px] mx-auto text-center text-muted text-[18px] leading-[1.6] max-sm:text-[16px]">
-          Modern enterprise buying groups average 39 decision-makers (Foundry, 2026). Commercial partnerships are structured around 30-minute stage thought leadership, standardized 9 sqm and 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
-        </p>
-
         <div className="mt-8 flex justify-center">
           <a
             href="/mumbai/enterprise/attend/sponsor"
