@@ -640,17 +640,10 @@ export function AttendSponsorSection() {
         title={<>Put Your Solutions in Front of the <GradientText>Cross-Functional Buying Unit</GradientText></>}
         text={
           <>
-            • <strong>Lead Partner (1 Position):</strong> 30-Min Keynote + 1 Panel + 12 sqm Booth + CXO Boardroom
+            Enterprise AI decisions involve complete cross-functional committees across technology, operations, and risk governance. World AI Show: The Enterprise Edition puts your leadership directly in front of these active buying teams across two focused days in Mumbai.
             <br />
-            • <strong>Platinum Partner:</strong> 30-Min Standalone Session + 9 sqm Standard Booth
             <br />
-            • <strong>Gold Partner:</strong> 30-Min Standalone Session + 9 sqm Standard Booth
-            <br />
-            • <strong>Silver Partner:</strong> 1 Panel Seat + 9 sqm Standard Booth
-            <br />
-            • <strong>Bronze Partner:</strong> 9 sqm Standard Turnkey Floor Presence
-            <br />
-            • <strong>CXO Boardroom Partner (Standalone):</strong> 15 Pre-Qualified CXOs, 5-Min Opening Address inside room
+            From plenary speaking sessions and turnkey exhibition spaces to closed-door, boardrooms curated around your target accounts, our partnership packages deliver substantive pipeline acceleration and undisputed domain authority.
           </>
         }
       />
