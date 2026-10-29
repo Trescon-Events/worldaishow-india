@@ -60,14 +60,14 @@ const statsData = [
   {
     icon: "/mumbai/enterprise/icons/stats/1.svg",
     number: 300,
-    suffix: "",
+    suffix: "+",
     label: "Qualified CXOs",
     index: "01",
   },
   {
     icon: "/mumbai/enterprise/icons/stats/2.svg",
     number: 45,
-    suffix: "",
+    suffix: "+",
     label: "Speakers & Panelists",
     index: "02",
   },

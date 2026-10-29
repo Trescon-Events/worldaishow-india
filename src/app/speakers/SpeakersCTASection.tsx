@@ -46,7 +46,7 @@ export function SpeakersCTASection() {
               <div className="grid grid-cols-3 gap-3 mb-8 p-4 rounded-2xl border border-white/[0.08] bg-[#020814]/65 max-sm:grid-cols-1">
                 <div className="flex flex-col pr-2 border-r border-white/10 max-sm:border-r-0 max-sm:border-b max-sm:pb-3">
                   <strong className="text-[24px] xl:text-[26px] font-[850] leading-none text-[#C0F43C] tracking-tight tabular-nums">
-                    300
+                    300+
                   </strong>
                   <span className="mt-1.5 text-[10.5px] font-mono font-bold uppercase tracking-[1px] text-white/65 leading-snug">
                     Qualified CXOs
@@ -55,7 +55,7 @@ export function SpeakersCTASection() {
 
                 <div className="flex flex-col px-1 border-r border-white/10 max-sm:border-r-0 max-sm:border-b max-sm:pb-3 max-sm:px-0">
                   <strong className="text-[24px] xl:text-[26px] font-[850] leading-none text-[#C0F43C] tracking-tight tabular-nums">
-                    45
+                    45+
                   </strong>
                   <span className="mt-1.5 text-[10.5px] font-mono font-bold uppercase tracking-[1px] text-white/65 leading-snug">
                     Speakers &amp; Panelists

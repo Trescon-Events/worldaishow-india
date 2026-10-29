@@ -50,8 +50,8 @@ function Counter({ end, suffix = "", duration = 1500 }: { end: number; suffix?: 
 }
 
 const statsData = [
-  { number: 300, suffix: "", label: "Qualified CXOs" },
-  { number: 45, suffix: "", label: "Speakers & Panelists" },
+  { number: 300, suffix: "+", label: "Qualified CXOs" },
+  { number: 45, suffix: "+", label: "Speakers & Panelists" },
   { number: 5, suffix: "", label: "Content Pillars" },
   { number: 2, suffix: " Days", label: "Executive Conference" },
   { number: 46, suffix: "", label: "Global Series Editions" },

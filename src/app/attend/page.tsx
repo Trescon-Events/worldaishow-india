@@ -22,8 +22,8 @@ type CardItem = {
 const valueCards: CardItem[] = [
   {
     title: "Where AI Becomes the Operating Model",
-    text: "A two-day executive conference for 300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.",
-    icon: "/mumbai/enterprise/images/Attend/mumbai/enterprise-ai-in-action.svg",
+    text: "A two-day executive conference for 300+ CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.",
+    icon: "/mumbai/enterprise/images/Attend/enterprise-ai-in-action.svg",
   },
   {
     title: "The Complete Enterprise Buying Unit",
@@ -51,7 +51,7 @@ const gatewayCards: CardItem[] = [
   {
     title: "Executive Networking Lounges",
     text: "Dedicated VIP lounges and structured networking environments reserved for invited enterprise CXOs and transformation heads.",
-    icon: "/mumbai/enterprise/images/Attend/gateway/mumbai/enterprise-ai-showcases.svg",
+    icon: "/mumbai/enterprise/images/Attend/gateway/enterprise-ai-showcases.svg",
   },
   {
     title: "Target Audience Qualification",
