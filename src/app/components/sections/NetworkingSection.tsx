@@ -27,10 +27,7 @@ const buyingUnitConstituencies = [
 ];
 
 const industries = [
-  ["Banking, Financial Services and Insurance", "banking.webp"],
-  ["Manufacturing", "manufacturing.webp"],
   ["Retail and Ecommerce", "retail.webp"],
-  ["Healthcare and Pharma", "health.webp"],
   ["Telecommunications", "telecomunication.webp"],
   ["Supply Chain and Logistics", "logistic.webp"],
   ["Government, Public Sector and Smart Cities", "Government.webp"],
@@ -38,6 +35,9 @@ const industries = [
   ["Media and Entertainment", "Media.webp"],
   ["Travel and Tourism", "Travel.webp"],
   ["Education", "Education.webp"],
+  ["Banking, Financial Services and Insurance", "banking.webp"],
+  ["Manufacturing", "manufacturing.webp"],
+  ["Healthcare and Pharma", "health.webp"],
   ["Agriculture", "Agriculture.webp"],
 ] as const;
 
@@ -64,7 +64,6 @@ export function NetworkingSection() {
   return (
     <section className="relative py-[104px] bg-[#020C21] overflow-hidden max-sm:py-[72px]" id="networking">
       <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
-        
         {/* S7 · Who is in the room */}
         <div className="flex flex-col items-center text-center">
           <div className="max-w-[780px] mb-12">
@@ -99,7 +98,6 @@ export function NetworkingSection() {
               </article>
             ))}
           </div>
-
         </div>
 
         {/* Industry Sectors Grid */}
@@ -174,7 +172,7 @@ export function NetworkingSection() {
           </>
         )}
 
-        {/* S8 · How to attend — two doors */}
+        {/* S8 · How to attend — Delegate Pass */}
         <div className="mt-20 pt-16 border-t border-white/10">
           <div className="text-center mb-10">
             <h3 className="text-white font-[850] text-[clamp(30px,3.8vw,44px)] leading-[1.08] tracking-[-1.2px]">
@@ -182,7 +180,7 @@ export function NetworkingSection() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 max-[980px]:grid-cols-1">
+          <div className="max-w-[760px] mx-auto">
             {/* Door 1: Delegate Pass */}
             <div className="group relative flex flex-col justify-between p-8 rounded-[22px] border border-[#C0F43C]/35 bg-gradient-to-br from-[#C0F43C]/[0.09] via-[#041022] to-[#041022] shadow-[0_20px_50px_rgba(0,0,0,0.35)] overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#C0F43C]/80 hover:shadow-[0_28px_70px_rgba(0,0,0,0.55),0_0_42px_rgba(192,244,60,0.14)]">
               {/* Top glowing accent line */}
@@ -200,7 +198,7 @@ export function NetworkingSection() {
                   Door 01 · Enterprise Buyers
                 </span>
                 <h4 className="text-white font-extrabold text-[24px] leading-[1.2] mb-3 transition-colors duration-300 group-hover:text-[#f5ffe0]">
-                  Delegate Pass — complimentary, by invitation and qualification
+                  Delegate Pass — Only by Invitation and qualification
                 </h4>
                 <p className="text-muted text-[16px] leading-[1.6] mb-6 transition-colors duration-300 group-hover:text-white/85">
                   Senior enterprise technology, data, operations, and risk leaders attend by invitation, subject to qualification based on an active mandate to deploy enterprise AI.
@@ -216,43 +214,8 @@ export function NetworkingSection() {
                 </a>
               </div>
             </div>
-
-            {/* Door 2: Business Pass */}
-            <div className="group relative flex flex-col justify-between p-8 rounded-[22px] border border-cyan/35 bg-gradient-to-br from-cyan/[0.09] via-[#041022] to-[#041022] shadow-[0_20px_50px_rgba(0,0,0,0.35)] overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan/80 hover:shadow-[0_28px_70px_rgba(0,0,0,0.55),0_0_42px_rgba(24,212,255,0.14)]">
-              {/* Top glowing accent line */}
-              <div className="pointer-events-none absolute inset-x-10 top-0 h-[2px] bg-gradient-to-r from-transparent via-cyan/50 to-transparent transition-all duration-500 group-hover:inset-x-4 group-hover:via-cyan group-hover:shadow-[0_0_16px_#18d4ff]" />
-              {/* Ambient hover spotlight */}
-              <div className="pointer-events-none absolute -top-24 -right-24 w-64 h-64 rounded-full bg-cyan/10 blur-[60px] opacity-40 transition-all duration-500 group-hover:opacity-100 group-hover:scale-125" />
-              {/* Watermark */}
-              <span className="pointer-events-none select-none absolute top-5 right-7 font-mono font-black text-[54px] leading-none tracking-[-3px] text-white/[0.03] transition-colors duration-300 group-hover:text-cyan/[0.09]">
-                02
-              </span>
-
-              <div className="relative z-10">
-                <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan/12 border border-cyan/35 text-cyan font-mono text-[11px] uppercase tracking-[1.8px] mb-4 transition-all duration-300 group-hover:bg-cyan/20 group-hover:border-cyan/60">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan shadow-[0_0_8px_#18d4ff]" />
-                  Door 02 · Solution Providers
-                </span>
-                <h4 className="text-white font-extrabold text-[24px] leading-[1.2] mb-3 transition-colors duration-300 group-hover:text-[#e6fbff]">
-                  Business Pass — commercial access
-                </h4>
-                <p className="text-muted text-[16px] leading-[1.6] mb-6 transition-colors duration-300 group-hover:text-white/85">
-                  Paid access for technology solution providers, system integrators, consultancies, and practitioners outside the invitation criteria. Availability is strictly controlled.
-                </p>
-              </div>
-              <div className="relative z-10">
-                <a
-                  href="/mumbai/enterprise/attend"
-                  className="inline-flex items-center justify-center gap-2.5 h-[50px] px-7 rounded-full font-extrabold text-[15px] text-white border border-cyan/50 bg-cyan/10 transition-all duration-300 group-hover:bg-cyan group-hover:text-[#041022] group-hover:[color:#041022!important] group-hover:border-cyan group-hover:shadow-[0_0_28px_rgba(24,212,255,0.4)] hover:scale-[1.02]"
-                >
-                  Buy a Business Pass
-                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
-
       </div>
     </section>
   );

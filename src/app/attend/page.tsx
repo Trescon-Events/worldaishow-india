@@ -459,7 +459,7 @@ export function AttendOverviewSection() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 max-[980px]:grid-cols-1">
+          <div className="max-w-[760px] mx-auto">
             {/* Door 1 */}
             <div className="flex flex-col justify-between p-9 rounded-[24px] border border-[#C0F43C]/45 bg-gradient-to-br from-[#C0F43C]/10 via-[#041022] to-[#041022] shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
               <div>
@@ -467,7 +467,7 @@ export function AttendOverviewSection() {
                   Door 01 · Qualified Enterprise Buyers
                 </span>
                 <h3 className="text-white font-extrabold text-[26px] leading-[1.2] mb-3">
-                  Delegate Pass — Complimentary, By Invitation &amp; Qualification
+                  Delegate Pass — Only by Invitation and qualification
                 </h3>
                 <p className="text-white/80 text-[16px] leading-[1.6] mb-5">
                   For enterprise technology, operations, and risk leaders. Senior enterprise technology, data, operations, and risk leaders attend by invitation, subject to qualification based on an active mandate to deploy enterprise AI.
@@ -481,34 +481,6 @@ export function AttendOverviewSection() {
               <div>
                 <ArrowButton href="/mumbai/enterprise/attend/delegate" variant="solid">
                   Apply for a Delegate Pass
-                </ArrowButton>
-              </div>
-            </div>
-
-            {/* Door 2 */}
-            <div className="flex flex-col justify-between p-9 rounded-[24px] border border-cyan/40 bg-gradient-to-br from-cyan/10 via-[#041022] to-[#041022] shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
-              <div>
-                <span className="inline-block px-3.5 py-1 rounded-full bg-cyan/15 border border-cyan/40 text-cyan font-mono text-[11px] uppercase tracking-[1.8px] mb-4">
-                  Door 02 · Commercial Access
-                </span>
-                <h3 className="text-white font-extrabold text-[26px] leading-[1.2] mb-3">
-                  Business Pass — Commercial Access
-                </h3>
-                <p className="text-white/80 text-[16px] leading-[1.6] mb-5">
-                  For technology solution providers, software vendors, and consultants. Capped availability to protect buyer composition.
-                </p>
-                <ul className="space-y-2.5 mb-8 text-white/75 text-[15px] list-none p-0">
-                  <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Paid access for technology solution providers, system integrators, and consultancies</li>
-                  <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Strictly controlled availability to preserve the 300 qualified enterprise buyer ratio</li>
-                  <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Full 2-day access to main plenary sessions, exhibition arena, and networking app</li>
-                </ul>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                <ArrowButton href="/mumbai/enterprise/sponsorship-enquiry" variant="outline">
-                  Buy a Business Pass
-                </ArrowButton>
-                <ArrowButton href="/mumbai/enterprise/attend/sponsor" variant="solid">
-                  Explore Sponsorship
                 </ArrowButton>
               </div>
             </div>

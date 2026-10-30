@@ -48,7 +48,7 @@ export default function GeneralEnquiryPage() {
                 General <span className="text-[#18d4ff]">Enquiry</span>
               </h1>
               <p className="m-0 text-white/70 text-[16px] leading-relaxed mb-9">
-                Have questions about Delegate Passes (by invitation and qualification), Business Passes, or attending World AI Show: The Enterprise Edition | Mumbai 2027 (20–21 April 2027 · 2 Days)? Complete the form below and our team will respond promptly.
+                Have questions about passes or just attending World AI Show: The Enterprise Edition? Complete the form below and our team will respond promptly.
               </p>
 
               {/* Hubspot Form Embedded Container */}
