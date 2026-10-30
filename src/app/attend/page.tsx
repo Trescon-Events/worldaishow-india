@@ -464,7 +464,7 @@ export function AttendOverviewSection() {
         <div className="w-[min(1120px,calc(100%-48px))] mx-auto">
           <div className="text-center mb-12">
             <h2 className="max-w-[820px] mx-auto text-white font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(36px,4.6vw,54px)]">
-              Choose your <GradientText>access pathway</GradientText>
+              Your <GradientText>access pathway</GradientText>
             </h2>
           </div>
 
@@ -472,9 +472,6 @@ export function AttendOverviewSection() {
             {/* Door 1 */}
             <div className="flex flex-col justify-between p-9 rounded-[24px] border border-[#C0F43C]/45 bg-gradient-to-br from-[#C0F43C]/10 via-[#041022] to-[#041022] shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
               <div>
-                <span className="inline-block px-3.5 py-1 rounded-full bg-[#C0F43C]/15 border border-[#C0F43C]/40 text-[#C0F43C] font-mono text-[11px] uppercase tracking-[1.8px] mb-4">
-                  Door 01 · Qualified Enterprise Buyers
-                </span>
                 <h3 className="text-white font-extrabold text-[26px] leading-[1.2] mb-3">
                   Delegate Pass — Only by Invitation and qualification
                 </h3>
