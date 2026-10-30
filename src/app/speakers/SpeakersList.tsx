@@ -1,131 +1,28 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { SpeakerCard } from "./SpeakerCard";
 import { GradientText } from "../components/Shared";
 import { speakers as pastSpeakers } from "./data";
 
-interface KonfHubSpeaker {
-  speaker_id: number;
-  name: string;
-  designation: string;
-  organisation: string;
-  image_url: string;
-  speaker_order?: number;
-  about?: string;
-  tags?: { name: string }[];
-}
-
-const FILTER_PILLS = [
-  "All",
-  "Chief AI Officers",
-  "CIOs & CTOs",
-  "Data & Architecture",
-  "CISOs & Risk",
-] as const;
-
-type FilterPill = (typeof FILTER_PILLS)[number];
-
-function matchesFilter(designation: string, filter: FilterPill): boolean {
-  if (filter === "All") return true;
-  const d = designation.toLowerCase();
-  if (filter === "Chief AI Officers") {
-    return d.includes("ai") || d.includes("artificial intelligence") || d.includes("caio") || d.includes("innovation");
-  }
-  if (filter === "CIOs & CTOs") {
-    return d.includes("cio") || d.includes("cto") || d.includes("information") || d.includes("technology") || d.includes("digital") || d.includes("ceo") || d.includes("managing director");
-  }
-  if (filter === "Data & Architecture") {
-    return d.includes("data") || d.includes("cdo") || d.includes("architect") || d.includes("cloud") || d.includes("engineering");
-  }
-  if (filter === "CISOs & Risk") {
-    return d.includes("ciso") || d.includes("security") || d.includes("risk") || d.includes("cyber") || d.includes("governance") || d.includes("compliance") || d.includes("policy");
-  }
-  return true;
-}
-
 export function SpeakersList() {
-  const [liveSpeakers, setLiveSpeakers] = useState<KonfHubSpeaker[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [activeFilter, setActiveFilter] = useState<FilterPill>("All");
-
-  useEffect(() => {
-    fetch("/mumbai/enterprise/api/konfhub-speakers")
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch speakers");
-        return res.json();
-      })
-      .then((data) => {
-        const list: KonfHubSpeaker[] = [];
-        if (data.categorized && Array.isArray(data.categorized)) {
-          for (const cat of data.categorized) {
-            const entities = cat.entity || cat.speakers || [];
-            if (Array.isArray(entities)) {
-              list.push(...entities);
-            }
-          }
-        }
-        if (data.uncategorized && Array.isArray(data.uncategorized)) {
-          list.push(...data.uncategorized);
-        }
-
-        const uniqueMap = new Map();
-        for (const s of list) {
-          const key = s.name.trim().toLowerCase();
-          if (!uniqueMap.has(key)) {
-            uniqueMap.set(key, s);
-          }
-        }
-        const uniqueList = Array.from(uniqueMap.values());
-        uniqueList.sort((a, b) => (a.speaker_order ?? 999) - (b.speaker_order ?? 999));
-        setLiveSpeakers(uniqueList);
-      })
-      .catch((err) => {
-        console.error("Failed to load live speakers:", err);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }, []);
-
-  const baseList = useMemo(() => {
-    if (liveSpeakers.length > 0) {
-      return liveSpeakers.map((s, idx) => ({
-        id: String(s.speaker_id || idx),
-        name: s.name || "",
-        designation: s.designation || "",
-        company: s.organisation || "",
-        image: s.image_url || "/mumbai/enterprise/images/speakers/default.png",
-        bio: s.about,
-      }));
-    }
-    return pastSpeakers.map((s) => ({
-      id: s.id,
-      name: s.name,
-      designation: s.designation,
-      company: s.company,
-      image: s.image,
-      bio: s.bio,
-    }));
-  }, [liveSpeakers]);
 
   const filteredSpeakers = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
-    return baseList.filter((s) => {
-      const matchesQuery =
+    return pastSpeakers.filter((s) => {
+      return (
         !q ||
         s.name.toLowerCase().includes(q) ||
         s.designation.toLowerCase().includes(q) ||
-        s.company.toLowerCase().includes(q);
-      const matchesPill = matchesFilter(s.designation, activeFilter);
-      return matchesQuery && matchesPill;
+        s.company.toLowerCase().includes(q)
+      );
     });
-  }, [baseList, searchQuery, activeFilter]);
+  }, [searchQuery]);
 
   return (
     <section className="relative py-[92px] bg-[#020b1c] max-sm:py-[62px]" id="lineup">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1180px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1180px)]">
 
         {/* Faculty Intake Banner (Section 09) */}
         <div className="mb-12 p-7 rounded-[20px] border border-[#C0F43C]/35 bg-gradient-to-r from-[#C0F43C]/10 via-[#041022] to-[#18D4FF]/10 flex flex-wrap items-center justify-between gap-6">
@@ -137,7 +34,7 @@ export function SpeakersList() {
               If you have scaled AI in production, we want you on the stage
             </h3>
             <p className="text-white/75 text-[15px] leading-relaxed m-0">
-              Mumbai 2027 speaker announcements release in waves following steering committee review. Apply to join the 45 enterprise faculty members below, or browse past speakers from the global World AI Show series.
+              Mumbai 2027 speaker announcements release in waves following steering committee review. Apply to join the 45+ enterprise faculty members below, or browse past speakers from the global World AI Show series.
             </p>
           </div>
           <a
@@ -168,12 +65,10 @@ export function SpeakersList() {
           </div>
         </div>
 
-        {isLoading ? (
-          <p className="text-white/60 text-lg">Loading speaker directory...</p>
-        ) : filteredSpeakers.length === 0 ? (
+        {filteredSpeakers.length === 0 ? (
           <p className="text-white/60 text-lg">No speakers match your current search or filter criteria.</p>
         ) : (
-          <div className="speaker-grid grid grid-cols-3 gap-[22px] max-[980px]:grid-cols-2 max-sm:grid-cols-1">
+          <div className="speaker-grid grid grid-cols-4 gap-[22px] max-[1080px]:grid-cols-3 max-[768px]:grid-cols-2 max-sm:grid-cols-1">
             {filteredSpeakers.map((speaker, index) => (
               <SpeakerCard
                 key={speaker.id}

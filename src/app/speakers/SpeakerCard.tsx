@@ -1,7 +1,5 @@
 "use client";
 
-import type { CSSProperties } from "react";
-
 type SpeakerCardProps = {
   name: string;
   role: string;
@@ -16,23 +14,29 @@ function stripHtml(html?: string) {
   return html.replace(/<[^>]*>/g, "");
 }
 
-export function SpeakerCard({ name, role, company, image, index, bio }: SpeakerCardProps) {
+export function SpeakerCard({ name, role, company, image, bio }: SpeakerCardProps) {
   const cleanBio = stripHtml(bio);
 
   return (
     <div className="w-full h-[380px] cursor-pointer group">
-      <div className="speaker-card-inner relative w-full h-full overflow-hidden border border-[#248fff]/24 rounded-[16px] bg-[#050b16] transition-all duration-300 after:absolute after:inset-0 after:bg-gradient-to-t after:from-black/95 after:via-black/30 after:to-transparent">
+      <div className="speaker-card-inner relative w-full h-full overflow-hidden border border-[#248fff]/24 rounded-[16px] bg-gradient-to-b from-[#0c1d36] via-[#071224] to-[#040914] transition-all duration-300 after:absolute after:inset-0 after:bg-gradient-to-t after:from-black/95 after:via-black/35 after:to-transparent">
         <img
           src={image}
           alt={name}
           loading="lazy"
-          className="w-full h-full object-cover object-top opacity-80 transition-all duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover object-top opacity-90 transition-all duration-500 group-hover:scale-105"
         />
-        <div className="absolute z-10 left-5 right-5 bottom-5 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-2">
-          <h3 className="m-0 text-white font-[850] text-[22px] mb-1 leading-tight">{name}</h3>
-          <p className="m-0 text-white/70 text-[14px] font-medium leading-tight">{role}</p>
-          <span className="block mt-1 text-[#18d4ff] font-mono text-[10px] uppercase tracking-[1.8px] font-bold">{company}</span>
-          <div className="speaker-line block w-8 h-[2px] mt-3.5 bg-cyan transition-all duration-300" />
+        <div
+          className={`absolute z-10 left-5 right-5 bottom-5 transition-all duration-300 ${
+            cleanBio ? "group-hover:opacity-0 group-hover:translate-y-2" : ""
+          }`}
+        >
+          <h3 className="m-0 text-white font-[850] text-[20px] mb-1 leading-tight">{name}</h3>
+          <p className="m-0 text-white/75 text-[13px] font-medium leading-snug">{role}</p>
+          <span className="block mt-1.5 text-[#18d4ff] font-mono text-[10px] uppercase tracking-[1.6px] font-bold leading-snug">
+            {company}
+          </span>
+          <div className="speaker-line block w-8 h-[2px] mt-3 bg-cyan transition-all duration-300" />
         </div>
 
         {cleanBio && (
@@ -49,5 +53,3 @@ export function SpeakerCard({ name, role, company, image, index, bio }: SpeakerC
     </div>
   );
 }
-
-
