@@ -33,7 +33,7 @@ const formats = [
 ];
 
 const gateway = [
-  ["Edition 1: The Enterprise Edition (Mumbai)", "20–21 April 2027 · 2 Days. The official launch of the World AI Show Series in India, convening 300 qualified CXOs.", "/mumbai/enterprise/images/agenda/Enterprise.webp"],
+  ["Edition 1: The Enterprise Edition (Mumbai)", "20–21 April 2027 · 2 Days. The official launch of the World AI Show Series in India, convening 300+ qualified CXOs.", "/mumbai/enterprise/images/agenda/Enterprise.webp"],
   ["Regional Chapters (Q2–Q3)", "Continuing the executive dialogue across India's priority technology and enterprise corridors throughout Q2 and Q3.", "/mumbai/enterprise/images/agenda/Growing-dig.webp"],
   ["Series Finale (Q4)", "Culminating in the 2027 World AI Show India Series Finale in Q4, uniting the country's complete enterprise AI leadership.", "/mumbai/enterprise/images/agenda/Investment-innovation.webp"]
 ];
@@ -579,7 +579,7 @@ export function AgendaOverview() {
           <div>
             <h2>Operational ownership over <GradientText>technology demonstrations.</GradientText></h2>
             <p>
-              World AI Show: The Enterprise Edition | Mumbai 2027 is a two-day executive conference for 300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.
+              World AI Show: The Enterprise Edition | Mumbai 2027 is a two-day executive conference for 300+ CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.
             </p>
             <p>
               As Edition 1 of the World AI Show Series in India, the programme is built around five operational decisions that every cross-functional enterprise buying group must resolve across strategy, production workflow redesign, agentic autonomy, data context, and proportionate trust.

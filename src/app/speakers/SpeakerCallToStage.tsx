@@ -53,7 +53,7 @@ export function SpeakerCallToStage() {
                     className="w-5 h-5 object-contain mt-[3px] select-none flex-shrink-0"
                   />
                   <span>
-                    <strong className="text-white">300 Qualified CXOs in the Room:</strong> Engage directly with the cross-functional enterprise buying unit across technology, data, operations, and risk.
+                    <strong className="text-white">300+ Qualified CXOs in the Room:</strong> Engage directly with the cross-functional enterprise buying unit across technology, data, operations, and risk.
                   </span>
                 </li>
                 <li className="flex items-start gap-3.5 text-white/80 text-[15px]">

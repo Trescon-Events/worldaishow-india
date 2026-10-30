@@ -6,7 +6,7 @@ import { GradientText } from "../Shared";
 const faqs = [
   {
     q: "What is World AI Show: The Enterprise Edition?",
-    a: "World AI Show: The Enterprise Edition | Mumbai 2027 is a two-day executive conference for 300 CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.",
+    a: "World AI Show: The Enterprise Edition | Mumbai 2027 is a two-day executive conference for 300+ CIOs, CTOs, Chief AI Officers, CDOs, CISOs, COOs, and enterprise transformation leaders turning AI pilots into governed, measurable enterprise performance.",
   },
   {
     q: "How does this edition connect to the wider World AI Show Series in India?",

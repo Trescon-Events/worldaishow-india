@@ -162,7 +162,7 @@ const mediaBenefits: CardItem[] = [
   },
   {
     title: "Executive Networking Access",
-    text: "Connect directly with 300 qualified CXOs and 45 speakers and panellists in Mumbai.",
+    text: "Connect directly with 300+ qualified CXOs and 45+ speakers and panellists in Mumbai.",
     icon: "/mumbai/enterprise/images/Attend/media/networking-access.webp",
   },
 ];
@@ -195,7 +195,7 @@ const associationBenefits: CardItem[] = [
   },
   {
     title: "VIP Networking Access",
-    text: "Connect association leadership with 300 qualified enterprise CXOs and technology pioneers in Mumbai.",
+    text: "Connect association leadership with 300+ qualified enterprise CXOs and technology pioneers in Mumbai.",
     icon: "/mumbai/enterprise/images/Attend/partner/networking-access.webp",
   },
   {
@@ -535,7 +535,7 @@ export function AttendDelegateSection() {
             Built for <GradientText>Enterprise CXOs.</GradientText>
           </h1>
           <p className="max-w-[710px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
-            Join an exclusive cohort of 300 pre-qualified enterprise peers, from CIOs to CISOs and Transformation Heads. Access is complimentary but strictly validated to ensure every seat represents active deployment authority.
+            Join an exclusive cohort of 300+ pre-qualified enterprise peers, from CIOs to CISOs and Transformation Heads. Access is complimentary but strictly validated to ensure every seat represents active deployment authority.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="#delegate-qualification">Apply for a Delegate Pass</ArrowButton>
@@ -663,7 +663,7 @@ export function AttendMediaSection() {
         title={<>Press Credentials &amp; <GradientText>Executive Interview Access</GradientText></>}
         text={
           <>
-            World AI Show: The Enterprise Edition | Mumbai 2027 convenes 300 qualified enterprise CXOs and 45 speakers and panellists across 2 Days.
+            World AI Show: The Enterprise Edition | Mumbai 2027 convenes 300+ qualified enterprise CXOs and 45+ speakers and panellists across 2 Days.
             <br />
             <br />
             Accredited journalists, editors, and research analysts receive press credentials, executive interview room access, and editorial distribution opportunities across the World AI Show Series in India.
@@ -718,7 +718,7 @@ export function AttendAssociationSection() {
             World AI Show: The Enterprise Edition welcomes industry councils, trade chambers, and professional AI bodies to join as official supporting alliances for the launch of the World AI Show Series in India.
             <br />
             <br />
-            Connect your enterprise leadership members with 300 qualified CXOs, nominate faculty speakers with live production evidence, and collaborate across the full 2027 India Series trajectory.
+            Connect your enterprise leadership members with 300+ qualified CXOs, nominate faculty speakers with live production evidence, and collaborate across the full 2027 India Series trajectory.
           </>
         }
       />

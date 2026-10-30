@@ -87,6 +87,27 @@ const statsData = [
   },
 ];
 
+const ourReachStats = [
+  { end: 16, suffix: "M+", label: "General Media" },
+  { end: 19, suffix: "M+", label: "Targeted Media" },
+  { end: 220, suffix: "K+", label: "Twitter" },
+  { end: 170, suffix: "K+", label: "LinkedIn" },
+  { end: 150, suffix: "K+", label: "Direct Email" },
+];
+
+const seriesHighlightsRow1 = [
+  { end: 46, suffix: "", label: "Global Editions" },
+  { end: 42, suffix: "K+", label: "C-Level Attendees" },
+  { end: 2600, suffix: "+", label: "Speakers" },
+  { end: 93, suffix: "%", label: "Decision Makers" },
+  { end: 51, suffix: "+", label: "Countries Represented" },
+];
+
+const seriesHighlightsRow2 = [
+  { end: 1650, suffix: "+", label: "Exhibitors" },
+  { end: 830, suffix: "+", label: "Media Partners" },
+];
+
 /* ── Hover Particles Canvas Animation ─────────────────────── */
 function HoverParticles({ isHovered }: { isHovered: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -246,6 +267,79 @@ export function StatsSection() {
           {statsData.map((stat, idx) => (
             <StatCard key={stat.index} stat={stat} idx={idx} />
           ))}
+        </div>
+
+        {/* OUR REACH & SERIES HIGHLIGHTS (Moved right after The Power Behind the Room) */}
+        <div className="mt-16 p-9 sm:p-11 rounded-[28px] border border-white/10 bg-gradient-to-b from-[#061428]/90 via-[#040d1d]/95 to-[#030915]/95 shadow-[0_24px_60px_rgba(0,0,0,0.45)]">
+          {/* OUR REACH */}
+          <div className="text-center mb-12" data-aos="fade-up">
+            <h3 className="text-center font-[850] text-white text-[clamp(26px,3.4vw,38px)] tracking-[-1px] uppercase mb-8">
+              Our <GradientText>Reach</GradientText>
+            </h3>
+
+            <div className="grid grid-cols-5 gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2 text-center">
+              {ourReachStats.map((item, idx) => (
+                <div
+                  key={item.label}
+                  data-aos="fade-up"
+                  data-aos-delay={String((idx % 5) * 90)}
+                  className="p-5 rounded-2xl border border-white/10 bg-white/[0.025] hover:border-[#18d4ff]/45 hover:bg-white/[0.04] transition-all duration-300"
+                >
+                  <strong className="block text-white font-[850] text-[clamp(28px,3.2vw,38px)] leading-none mb-2">
+                    <Counter end={item.end} suffix={item.suffix} />
+                  </strong>
+                  <span className="block text-white/70 font-mono text-[11.5px] uppercase tracking-[1.4px] font-semibold">
+                    {item.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent my-10" />
+
+          {/* SERIES HIGHLIGHTS */}
+          <div className="text-center" data-aos="fade-up">
+            <h3 className="text-center font-[850] text-white text-[clamp(26px,3.4vw,38px)] tracking-[-1px] uppercase mb-8">
+              Series <GradientText>Highlights</GradientText>
+            </h3>
+
+            <div className="grid grid-cols-5 gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
+              {seriesHighlightsRow1.map((item, idx) => (
+                <div
+                  key={item.label}
+                  data-aos="fade-up"
+                  data-aos-delay={String((idx % 5) * 90)}
+                  className="p-5 rounded-2xl border border-white/10 bg-white/[0.025] hover:border-[#C0F43C]/45 hover:bg-white/[0.04] transition-all duration-300"
+                >
+                  <strong className="block text-[#C0F43C] font-[850] text-[clamp(28px,3.2vw,38px)] leading-none mb-2">
+                    <Counter end={item.end} suffix={item.suffix} />
+                  </strong>
+                  <span className="block text-white/70 font-mono text-[11.5px] uppercase tracking-[1.4px] font-semibold">
+                    {item.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 max-w-[440px] mx-auto mt-4">
+              {seriesHighlightsRow2.map((item, idx) => (
+                <div
+                  key={item.label}
+                  data-aos={idx === 0 ? "fade-right" : "fade-left"}
+                  data-aos-delay="100"
+                  className="p-5 rounded-2xl border border-white/10 bg-white/[0.025] hover:border-[#C0F43C]/45 hover:bg-white/[0.04] transition-all duration-300"
+                >
+                  <strong className="block text-[#C0F43C] font-[850] text-[clamp(28px,3.2vw,38px)] leading-none mb-2">
+                    <Counter end={item.end} suffix={item.suffix} />
+                  </strong>
+                  <span className="block text-white/70 font-mono text-[11.5px] uppercase tracking-[1.4px] font-semibold">
+                    {item.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
