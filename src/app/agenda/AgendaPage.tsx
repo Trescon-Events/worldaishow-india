@@ -787,7 +787,7 @@ export function AgendaThemes() {
         className={`${styles.hero} pt-[200px]`}
         id="agenda-themes-hero"
         style={{
-          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.48) 42%, rgba(2, 7, 19, 0.05) 100%), url(/mumbai/enterprise/images/agenda/Themes-bg.webp) right center / cover no-repeat"
+          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.48) 42%, rgba(2, 7, 19, 0.05) 100%), url(/mumbai/enterprise/images/agenda/mumbai-agenda-themes.jpg) right center / cover no-repeat"
         }}
       >
         <div className={styles.container}>
