@@ -8,7 +8,7 @@ export function HeroSection() {
     >
       {/* Background Video */}
       <video
-        className="absolute inset-0 w-full h-full object-cover opacity-72 z-0"
+        className="absolute inset-0 w-full h-full object-cover opacity-55 z-0"
         src="/mumbai/enterprise/videos/wais-mumbai-hero-banner.mp4"
         autoPlay
         muted
@@ -17,9 +17,13 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      {/* Cyber Grid overlays */}
+      {/* Dark Video Tint & Cyber Grid overlays */}
       <div
-        className="hero-overlay absolute inset-0 z-1 opacity-58 pointer-events-none"
+        className="absolute inset-0 z-1 bg-[#020917]/35 pointer-events-none"
+        aria-hidden="true"
+      />
+      <div
+        className="hero-overlay absolute inset-0 z-1 opacity-75 pointer-events-none"
         aria-hidden="true"
       />
       <div
@@ -70,6 +74,9 @@ export function HeroSection() {
             <strong className="block text-[34px] font-[850] text-white leading-none max-sm:text-[26px]">
               Mumbai, <GradientText>India</GradientText>
             </strong>
+            <span className="block mt-2 text-[13px] font-bold text-white/80 uppercase tracking-[1.5px] max-sm:text-[12px] max-sm:mt-1.5">
+              The 52nd Global Edition
+            </span>
           </div>
 
           {/* Column 3: Duration */}
