@@ -181,22 +181,14 @@ export function NetworkingSection() {
           </div>
 
           <div className="max-w-[760px] mx-auto">
-            {/* Door 1: Delegate Pass */}
-            <div className="group relative flex flex-col justify-between p-8 rounded-[22px] border border-[#C0F43C]/35 bg-gradient-to-br from-[#C0F43C]/[0.09] via-[#041022] to-[#041022] shadow-[0_20px_50px_rgba(0,0,0,0.35)] overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#C0F43C]/80 hover:shadow-[0_28px_70px_rgba(0,0,0,0.55),0_0_42px_rgba(192,244,60,0.14)]">
+            {/* Delegate Pass */}
+            <div className="group relative flex flex-col items-center text-center justify-between p-8 rounded-[22px] border border-[#C0F43C]/35 bg-gradient-to-br from-[#C0F43C]/[0.09] via-[#041022] to-[#041022] shadow-[0_20px_50px_rgba(0,0,0,0.35)] overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#C0F43C]/80 hover:shadow-[0_28px_70px_rgba(0,0,0,0.55),0_0_42px_rgba(192,244,60,0.14)]">
               {/* Top glowing accent line */}
               <div className="pointer-events-none absolute inset-x-10 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#C0F43C]/50 to-transparent transition-all duration-500 group-hover:inset-x-4 group-hover:via-[#C0F43C] group-hover:shadow-[0_0_16px_#C0F43C]" />
               {/* Ambient hover spotlight */}
               <div className="pointer-events-none absolute -top-24 -right-24 w-64 h-64 rounded-full bg-[#C0F43C]/10 blur-[60px] opacity-40 transition-all duration-500 group-hover:opacity-100 group-hover:scale-125" />
-              {/* Watermark */}
-              <span className="pointer-events-none select-none absolute top-5 right-7 font-mono font-black text-[54px] leading-none tracking-[-3px] text-white/[0.03] transition-colors duration-300 group-hover:text-[#C0F43C]/[0.09]">
-                01
-              </span>
 
-              <div className="relative z-10">
-                <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#C0F43C]/12 border border-[#C0F43C]/35 text-[#C0F43C] font-mono text-[11px] uppercase tracking-[1.8px] mb-4 transition-all duration-300 group-hover:bg-[#C0F43C]/20 group-hover:border-[#C0F43C]/60">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C0F43C] shadow-[0_0_8px_#C0F43C]" />
-                  Door 01 · Enterprise Buyers
-                </span>
+              <div className="relative z-10 max-w-[640px]">
                 <h4 className="text-white font-extrabold text-[24px] leading-[1.2] mb-3 transition-colors duration-300 group-hover:text-[#f5ffe0]">
                   Delegate Pass — Only by Invitation and qualification
                 </h4>
