@@ -17,7 +17,7 @@ export function PartnersHero() {
           <GradientText>Partner</GradientText> at World AI Show
         </h1>
         <p className="max-w-[680px] mt-6 mb-0 text-white/84 text-[20px] leading-relaxed max-sm:text-base">
-          Commercial partnerships are structured around 30-minute stage thought leadership, standardized 9 or 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
+          Commercial partnerships are structured around stage thought leadership, standardized exhibition spaces, and curated closed-door CXO boardrooms.
         </p>
       </div>
     </section>
