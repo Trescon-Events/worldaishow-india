@@ -748,7 +748,14 @@ export function AgendaVision() {
 export function AgendaLiveTimeline() {
   return (
     <>
-      <section className={`${styles.hero} pt-[200px]`} id="agenda-timeline-hero">
+      <section
+        className={`${styles.hero} pt-[200px]`}
+        id="agenda-timeline-hero"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.52) 42%, rgba(2, 7, 19, 0.08) 100%), url(/mumbai/enterprise/images/agenda/mumbai-agenda-hero.jpg) right center / cover no-repeat",
+        }}
+      >
         <div className={styles.container}>
           <h1><GradientText>Event Agenda</GradientText></h1>
         </div>
