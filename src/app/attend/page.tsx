@@ -414,13 +414,22 @@ export function AttendOverviewSection() {
     <>
       {/* Hero Section */}
       <section
-        className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:right_center] bg-no-repeat max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
-        style={{
-          backgroundImage:
-            'linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.48) 42%, rgba(2, 7, 19, 0.05) 100%), url("/mumbai/enterprise/images/Attend/Attend-Hero-bg.webp")',
-        }}
+        className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
         id="overview"
       >
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat -scale-x-100 pointer-events-none z-0"
+          style={{
+            backgroundImage: 'url("/mumbai/enterprise/images/Attend/Mumbai-attend-overview.jpg")',
+          }}
+        />
+        <div
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.48) 42%, rgba(2, 7, 19, 0.05) 100%)",
+          }}
+        />
         <div className="heroBackdrop absolute bottom-0 right-[-3%] w-[58%] h-[84%] opacity-0 pointer-events-none" />
         <div className="relative z-10 max-w-[820px]">
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(48px,6vw,76px)] max-sm:text-[42px]">
