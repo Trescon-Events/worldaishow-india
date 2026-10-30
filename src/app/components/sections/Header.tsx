@@ -4,13 +4,13 @@ import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "../Shared";
 
-const navItems = ["Home", "Attend", "Agenda", "Speakers", "Partner", "Networking"];
+const navItems = ["Home", "Attend", "Agenda", "Speakers", "Partner"];
 
 // Dropdown submenus — Speakers excluded
 const subMenus: Record<string, string[]> = {
   Attend: ["Overview", "Delegate", "Sponsor", "Media Partner", "Association Partner"],
   Agenda: ["Overview", "The 2030 Vision", "Agenda", "Themes", "Call for Speakers"],
-  Networking: ["Overview", "Attendee APP", "AI Matchmaking", "Photo Gallery"],
+
 };
 
 function getNavHref(item: string) {
