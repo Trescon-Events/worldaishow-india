@@ -686,7 +686,7 @@ export function AttendAssociationSection() {
       {/* Hero Section */}
       <section
         className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:right_center] bg-no-repeat max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
-        style={{ backgroundImage: 'url("/mumbai/enterprise/images/Attend/Association-banner.webp")' }}
+        style={{ backgroundImage: 'url("/mumbai/enterprise/images/Attend/Mumbai-associationpartner-header.jpg")' }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#020713]/88 via-[#020713]/48 to-transparent z-0 pointer-events-none" />
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
