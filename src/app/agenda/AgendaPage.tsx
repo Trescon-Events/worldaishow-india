@@ -631,7 +631,7 @@ export function AgendaOverview() {
       <section className={styles.finalCta} id="cta">
         <div className={styles.ctaBox}>
           <h2>Be in the room where <GradientText>the operating model gets decided.</GradientText></h2>
-          <p>Apply for a complimentary Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
+          <p>Apply for a Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
           <div className={styles.actions}>
             <a className={`${styles.button} ${styles.solid} group`} href="/mumbai/enterprise/attend/delegate">Apply for a Delegate Pass <ArrowSVG /></a>
             <a className={`${styles.button} ${styles.outline} group`} href="/mumbai/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
@@ -764,7 +764,7 @@ export function AgendaLiveTimeline() {
       <section className={styles.finalCta} id="cta">
         <div className={styles.ctaBox}>
           <h2>Be in the room where <GradientText>the operating model gets decided.</GradientText></h2>
-          <p>Apply for a complimentary Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
+          <p>Apply for a Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
           <div className={styles.actions}>
             <a className={`${styles.button} ${styles.solid} group`} href="/mumbai/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
             <a className={`${styles.button} ${styles.outline} group`} href="/mumbai/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>
@@ -826,7 +826,7 @@ export function AgendaThemes() {
       <section className={styles.finalCta} id="cta">
         <div className={styles.ctaBox}>
           <h2>Be in the room where <GradientText>the operating model gets decided.</GradientText></h2>
-          <p>Apply for a complimentary Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
+          <p>Apply for a Delegate Pass (by invitation and qualification), enquire about commercial sponsorship, or apply to join the enterprise faculty.</p>
           <div className={styles.actions}>
             <a className={`${styles.button} ${styles.solid} group`} href="/mumbai/enterprise/sponsorship-enquiry">Enquire about sponsorship <ArrowSVG /></a>
             <a className={`${styles.button} ${styles.outline} group`} href="/mumbai/enterprise/speaker-enquiry">Apply to speak <ArrowSVG /></a>

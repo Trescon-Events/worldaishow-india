@@ -544,7 +544,7 @@ export function AttendDelegateSection() {
             Built for <GradientText>Enterprise CXOs.</GradientText>
           </h1>
           <p className="max-w-[710px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
-            Join an exclusive cohort of 300+ pre-qualified enterprise peers, from CIOs to CISOs and Transformation Heads. Access is complimentary but strictly validated to ensure every seat represents active deployment authority.
+            Join an exclusive cohort of 300+ pre-qualified enterprise peers, from CIOs to CISOs and Transformation Heads. Access is by invitation and qualification, strictly validated to ensure every seat represents active deployment authority.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="#delegate-qualification">Apply for a Delegate Pass</ArrowButton>

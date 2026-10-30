@@ -36,42 +36,6 @@ export function SpeakersCTASection() {
             <div className="absolute -top-20 -right-20 w-52 h-52 rounded-full bg-[#C0F43C]/10 blur-3xl pointer-events-none" />
 
             <div>
-              {/* Eyebrow Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#C0F43C]/35 bg-[#C0F43C]/10 text-[#C0F43C] font-mono text-[11px] font-bold uppercase tracking-[1.8px] mb-7">
-                <span className="w-2 h-2 rounded-full bg-[#C0F43C] animate-pulse" />
-                Mumbai · 20–21 April 2027 · Executive Access
-              </div>
-
-              {/* Structured 3-Column Mini Stat Strip */}
-              <div className="grid grid-cols-3 gap-3 mb-8 p-4 rounded-2xl border border-white/[0.08] bg-[#020814]/65 max-sm:grid-cols-1">
-                <div className="flex flex-col pr-2 border-r border-white/10 max-sm:border-r-0 max-sm:border-b max-sm:pb-3">
-                  <strong className="text-[24px] xl:text-[26px] font-[850] leading-none text-[#C0F43C] tracking-tight tabular-nums">
-                    300+
-                  </strong>
-                  <span className="mt-1.5 text-[10.5px] font-mono font-bold uppercase tracking-[1px] text-white/65 leading-snug">
-                    Qualified CXOs
-                  </span>
-                </div>
-
-                <div className="flex flex-col px-1 border-r border-white/10 max-sm:border-r-0 max-sm:border-b max-sm:pb-3 max-sm:px-0">
-                  <strong className="text-[24px] xl:text-[26px] font-[850] leading-none text-[#C0F43C] tracking-tight tabular-nums">
-                    45+
-                  </strong>
-                  <span className="mt-1.5 text-[10.5px] font-mono font-bold uppercase tracking-[1px] text-white/65 leading-snug">
-                    Speakers &amp; Panelists
-                  </span>
-                </div>
-
-                <div className="flex flex-col pl-1 max-sm:pl-0">
-                  <strong className="text-[24px] xl:text-[26px] font-[850] leading-none text-white tracking-tight">
-                    2 Days
-                  </strong>
-                  <span className="mt-1.5 text-[10.5px] font-mono font-bold uppercase tracking-[1px] text-white/65 leading-snug">
-                    20–21 Apr 2027
-                  </span>
-                </div>
-              </div>
-
               {/* Title / Heading */}
               <h2 className="m-0 text-white font-[850] leading-[1.1] tracking-[-1.4px] text-[clamp(26px,3.1vw,38px)]">
                 Be in the room where{" "}
@@ -80,7 +44,7 @@ export function SpeakersCTASection() {
 
               {/* Description Subtitle */}
               <p className="m-0 mt-4 text-white/75 text-[15.5px] leading-[1.65]">
-                Delegate Pass — complimentary, by invitation and qualification for senior enterprise technology, data, operations, and risk leaders.
+                Delegate Pass — by invitation and qualification for senior enterprise technology, data, operations, and risk leaders.
               </p>
             </div>
 
@@ -111,33 +75,6 @@ export function SpeakersCTASection() {
             <div className="absolute -top-20 -right-20 w-52 h-52 rounded-full bg-[#18d4ff]/10 blur-3xl pointer-events-none" />
 
             <div>
-              {/* Eyebrow Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#18d4ff]/35 bg-[#18d4ff]/10 text-[#18d4ff] font-mono text-[11px] font-bold uppercase tracking-[1.8px] mb-7">
-                <span className="w-2 h-2 rounded-full bg-[#18d4ff] animate-pulse" />
-                5 Pillars · 30-Min Sessions · 9 &amp; 12 sqm Booths
-              </div>
-
-              {/* Structured 2-Column Mini Stat Strip */}
-              <div className="grid grid-cols-[1fr_1.15fr] gap-4 mb-8 p-4 rounded-2xl border border-white/[0.08] bg-[#020814]/65 max-sm:grid-cols-1">
-                <div className="flex flex-col pr-3 border-r border-white/10 max-sm:border-r-0 max-sm:border-b max-sm:pb-3">
-                  <strong className="text-[24px] xl:text-[26px] font-[850] leading-none text-[#18d4ff] tracking-tight tabular-nums">
-                    39 Leaders
-                  </strong>
-                  <span className="mt-1.5 text-[10.5px] font-mono font-bold uppercase tracking-[1px] text-white/65 leading-snug">
-                    Per Buying Group (Foundry, 2026)
-                  </span>
-                </div>
-
-                <div className="flex flex-col pl-1 max-sm:pl-0">
-                  <strong className="text-[24px] xl:text-[26px] font-[850] leading-none text-[#C0F43C] tracking-tight">
-                    9 &amp; 12 sqm
-                  </strong>
-                  <span className="mt-1.5 text-[10.5px] font-mono font-bold uppercase tracking-[1px] text-white/65 leading-snug">
-                    Standard &amp; Lead Booth Spaces
-                  </span>
-                </div>
-              </div>
-
               {/* Title / Heading */}
               <h2 className="m-0 text-white font-[850] leading-[1.1] tracking-[-1.4px] text-[clamp(26px,3.1vw,38px)]">
                 Put your solutions in front of{" "}

@@ -13,8 +13,8 @@ const faqs = [
     a: "Mumbai serves as Edition 1 — the official launch of the World AI Show Series in India — initiating a multi-city executive roadmap across regional chapters (Q2–Q3) and culminating in the 2027 Series Finale (Q4).",
   },
   {
-    q: "Who qualifies for a complimentary Delegate Pass?",
-    a: "The Delegate Pass is complimentary, by invitation and qualification, for senior enterprise technology, data, operations, and risk leaders (CIOs, CAIOs, CTOs, CDOs, CISOs, COOs, and Transformation Heads) holding an active mandate to deploy enterprise AI. Technology solution providers, software vendors, system integrators, and consultancies may apply for a paid Business Pass.",
+    q: "Who qualifies for a Delegate Pass?",
+    a: "The Delegate Pass is by invitation and qualification for senior enterprise technology, data, operations, and risk leaders (CIOs, CAIOs, CTOs, CDOs, CISOs, COOs, and Transformation Heads) holding an active mandate to deploy enterprise AI.",
   },
   {
     q: "What does the 2-day programme cover?",
