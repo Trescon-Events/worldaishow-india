@@ -1,16 +1,16 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "../Shared";
 
-const navItems = ["Home", "Attend", "Agenda", "Speakers", "Partner"];
+const navItems = ["Home", "Attend", "Agenda", "Speakers", "Partner", "Networking"];
 
 // Dropdown submenus — Speakers excluded
 const subMenus: Record<string, string[]> = {
   Attend: ["Overview", "Delegate", "Sponsor", "Media Partner", "Association Partner"],
   Agenda: ["Overview", "The 2030 Vision", "Agenda", "Themes", "Call for Speakers"],
-
+  Networking: ["Overview", "AI Matchmaking", "Photo Gallery"],
 };
 
 function getNavHref(item: string) {
@@ -69,10 +69,10 @@ function getSubNavItemFromPath(pathname: string): string {
   if (cleanPath.startsWith("/agenda/call-for-speakers"))   return "Call for Speakers";
   if (cleanPath.startsWith("/agenda"))                     return "Overview";
   // Networking sub-pages
-  if (cleanPath.startsWith("/networking/attendee-app"))         return "Attendee APP";
-  if (cleanPath.startsWith("/networking/ai-matchmaking"))       return "AI Matchmaking";
-  if (cleanPath.startsWith("/networking/photo-gallery"))        return "Photo Gallery";
-  if (cleanPath.startsWith("/networking"))                      return "Overview";
+  if (cleanPath.startsWith("/networking/attendee-app"))    return "Attendee APP";
+  if (cleanPath.startsWith("/networking/ai-matchmaking"))  return "AI Matchmaking";
+  if (cleanPath.startsWith("/networking/photo-gallery"))   return "Photo Gallery";
+  if (cleanPath.startsWith("/networking"))                 return "Overview";
   return "";
 }
 
@@ -184,8 +184,8 @@ export function Header({ activeItem, subNavItems, activeSubNavItem }: HeaderProp
   }, [isOpen]);
 
   // Persistent subnav bar (shown on page load for pages that have subNavItems)
-  const filteredSubNavItems = subNavItems 
-    ? subNavItems.filter(item => item !== "Agenda") 
+  const filteredSubNavItems = subNavItems
+    ? subNavItems.filter(item => item !== "Agenda" && item !== "Attendee APP")
     : [];
   const hasPeristentSubnav = filteredSubNavItems.length > 0;
 
@@ -268,7 +268,7 @@ export function Header({ activeItem, subNavItems, activeSubNavItem }: HeaderProp
           </button>
         </nav>
 
-        {/* ── Dropdown Sub-Nav (Attend, Agenda, etc.) ── */}
+        {/* ── Dropdown Sub-Nav (Attend, Agenda, Networking) ── */}
         <nav
           className={`absolute left-1/2 top-[82px] -translate-x-1/2 flex justify-around w-[calc(100%-48px)] max-w-[1008px] h-[41px] px-[34px] items-center rounded-b-[24px] text-[#101727] bg-white/92 shadow-[0_16px_38px_rgba(0,0,0,0.16)] text-[12px] font-semibold tracking-[1.6px] uppercase transition-all duration-300 ease-out max-[1200px]:hidden ${
             currentActiveItem && subMenus[currentActiveItem]

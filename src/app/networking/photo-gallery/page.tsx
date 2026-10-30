@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "High-resolution executive photography from the global World AI Show series.",
 };
 
-const subNav = ["Overview", "Attendee APP", "AI Matchmaking", "Photo Gallery"];
+const subNav = ["Overview", "AI Matchmaking", "Photo Gallery"];
 
 export default function PhotoGalleryPage() {
   return (

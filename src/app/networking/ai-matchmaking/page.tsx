@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Algorithmic pre-scheduled 20-min 1-on-1 meetings at World AI Show: The Enterprise Edition | Mumbai 2027.",
 };
 
-const subNav = ["Overview", "Attendee APP", "AI Matchmaking", "Photo Gallery"];
+const subNav = ["Overview", "AI Matchmaking", "Photo Gallery"];
 
 export default function AIMatchmakingPage() {
   return (

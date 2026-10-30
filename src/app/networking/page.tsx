@@ -4,25 +4,14 @@ import { FooterSection } from "../components/sections/FooterSection";
 import { GradientText } from "../components/Shared";
 
 export const metadata: Metadata = {
-  title: "Networking Suite & Attendee App | World AI Show: The Enterprise Edition | Mumbai 2027",
-  description: "Explore the Networking Suite for World AI Show: The Enterprise Edition | Mumbai 2027: Algorithmic pre-scheduled 20-min 1-on-1 meetings, personalized 2-day agenda builder & digital business cards, and executive photo gallery.",
+  title: "Networking Suite | World AI Show: The Enterprise Edition | Mumbai 2027",
+  description: "Explore the Networking Suite for World AI Show: The Enterprise Edition | Mumbai 2027: Algorithmic pre-scheduled 20-min 1-on-1 meetings and executive photo gallery.",
 };
 
-const subNav = ["Overview", "Attendee APP", "AI Matchmaking", "Photo Gallery"];
+const subNav = ["Overview", "AI Matchmaking", "Photo Gallery"];
 
 export default function NetworkingPage() {
   const waysToConnect = [
-    {
-      title: "Attendee App",
-      desc: "Personalized 2-day agenda builder & digital business cards — all from a single AI-powered executive app.",
-      href: "/mumbai/enterprise/networking/attendee-app",
-      action: "Explore",
-      badgeBg: "bg-[#00ceff]",
-      actionColor: "text-[#00ceff]",
-      borderColor: "border-[#00ceff]/15",
-      hoverBorder: "hover:border-[#00ceff]/45",
-      hoverTitle: "group-hover:text-[#00ceff]"
-    },
     {
       title: "AI Matchmaking",
       desc: "Algorithmic pre-scheduled 20-min 1-on-1 meetings connecting enterprise buyers and vetted solution providers.",
@@ -140,8 +129,8 @@ export default function NetworkingPage() {
             </h2>
           </div>
 
-          {/* 3 Cards Grid */}
-          <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
+          {/* 2 Cards Grid */}
+          <div className="grid grid-cols-2 gap-6 max-w-[780px] mx-auto max-sm:grid-cols-1">
             {waysToConnect.map((way) => (
               <a
                 key={way.title}
@@ -243,7 +232,7 @@ export default function NetworkingPage() {
                   Your Network Starts <span className="text-[#a78bfa]">Before Day One</span>
                 </h3>
                 <p className="m-0 text-white/70 text-[14px] leading-relaxed">
-                  Qualified delegates and commercial partners receive early access to the attendee app ahead of 20–21 April 2027 — build your personalized 2-day agenda and pre-schedule 20-minute 1-on-1 meetings.
+                  Qualified delegates and commercial partners receive early access to pre-schedule 20-minute 1-on-1 meetings ahead of 20–21 April 2027.
                 </p>
               </div>
 
