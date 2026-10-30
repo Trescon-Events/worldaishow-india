@@ -30,13 +30,13 @@ export function HeroSection() {
       {/* Hero Content */}
       <div className="container relative z-10 mx-auto px-6 pt-[220px] lg:pt-[240px] pb-16 max-sm:pt-[175px] max-sm:pb-12 max-sm:px-4 flex flex-col items-center">
         {/* Event Lockup Logo */}
-        <div className="mb-6 flex justify-center">
+        <div className="mb-6 flex justify-center w-full">
           <img
             src="/mumbai/enterprise/logos/wais-27-enterprise_header.svg"
             alt="World AI Show: The Enterprise Edition | Mumbai"
-            width={240}
-            height={96}
-            className="w-[210px] sm:w-[240px] h-auto object-contain drop-shadow-[0_4px_24px_rgba(0,0,0,0.45)]"
+            width={450}
+            height={180}
+            className="w-full max-w-[320px] sm:max-w-[450px] sm:w-[450px] h-auto object-contain drop-shadow-[0_4px_24px_rgba(0,0,0,0.45)]"
           />
         </div>
 
