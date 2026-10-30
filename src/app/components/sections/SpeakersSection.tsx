@@ -8,7 +8,7 @@ import { speakers as fallbackSpeakers } from "../../speakers/data";
 export function SpeakersSection({
   heading = (
     <>
-      Enterprise <GradientText>Faculty</GradientText>
+      Past Enterprise <GradientText>Faculty</GradientText>
     </>
   ),
 }: {
