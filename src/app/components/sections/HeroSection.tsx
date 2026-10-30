@@ -29,10 +29,16 @@ export function HeroSection() {
 
       {/* Hero Content */}
       <div className="container relative z-10 mx-auto px-6 pt-[220px] lg:pt-[240px] pb-16 max-sm:pt-[175px] max-sm:pb-12 max-sm:px-4 flex flex-col items-center">
-        {/* Event Lockup Sub-label */}
-        <p className="text-white/95 font-mono text-[15px] sm:text-[18px] lg:text-[20px] uppercase tracking-[2.5px] font-bold mb-5">
-          World AI Show: The Enterprise Edition | Mumbai
-        </p>
+        {/* Event Lockup Logo */}
+        <div className="mb-6 flex justify-center">
+          <img
+            src="/mumbai/enterprise/logos/wais-27-enterprise_header.svg"
+            alt="World AI Show: The Enterprise Edition | Mumbai"
+            width={240}
+            height={96}
+            className="w-[210px] sm:w-[240px] h-auto object-contain drop-shadow-[0_4px_24px_rgba(0,0,0,0.45)]"
+          />
+        </div>
 
         {/* Hero Title */}
         <h1 className="max-w-[1020px] mx-auto text-white font-[850] leading-[1.08] xl:leading-[72px] tracking-[-1.8px] text-[clamp(34px,4.8vw,68px)] xl:text-[68px] text-center mb-6">
