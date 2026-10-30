@@ -83,7 +83,7 @@ export function SpeakersCTASection() {
 
               {/* Description Subtitle */}
               <p className="m-0 mt-4 text-white/75 text-[15.5px] leading-[1.65]">
-                Commercial partnerships are structured around 30-minute standalone stage sessions, standardized 9 sqm and 12 sqm exhibition spaces, and curated closed-door CXO boardrooms.
+                Commercial partnerships are structured around standalone stage sessions, standardized exhibition spaces, and curated closed-door CXO boardrooms.
               </p>
             </div>
 
