@@ -13,7 +13,7 @@ export function SpeakersHero() {
     >
       <div className="relative z-10 w-[min(1114px,calc(100%-48px))] mx-auto">
         <h1 className="m-0 text-white font-[850] leading-[1.05] tracking-[-2px] text-[clamp(48px,5.8vw,78px)]">
-          <GradientText>ENTERPRISE FACULTY</GradientText>
+          <GradientText>Enterprise Faculty</GradientText>
         </h1>
         <p className="max-w-[680px] mt-6 mb-0 text-white/84 text-[20px] leading-relaxed max-sm:text-base">
           45+ CIOs, CAIOs, CTOs, CDOs, CISOs, COOs, and enterprise transformation leaders are being curated for Mumbai 2027 based on live production evidence: the original baseline, trade-offs made, exception rates, and verified business outcomes.
