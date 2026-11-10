@@ -18,10 +18,6 @@ import { BRANDBOOK_URIS } from "./BrandBookBgElements";
 export function AiMumbaiLiveThemeStyles() {
   const pulseDark = `url("${BRANDBOOK_URIS.digitalPulseDark}")`;
   const pulseLight = `url("${BRANDBOOK_URIS.digitalPulseLight}")`;
-  const microDark = `url("${BRANDBOOK_URIS.microLinearDark}")`;
-  const microLight = `url("${BRANDBOOK_URIS.microLinearLight}")`;
-  const vortexGridDark = `url("${BRANDBOOK_URIS.dataVortexDark}")`;
-  const vortexGridLight = `url("${BRANDBOOK_URIS.dataVortexLight}")`;
   const waveDark = `url("${BRANDBOOK_URIS.halftoneWaveDark}")`;
   const waveLight = `url("${BRANDBOOK_URIS.halftoneWaveLight}")`;
   const isoVortexDark = `url("${BRANDBOOK_URIS.isometricVortexDark}")`;
@@ -78,166 +74,87 @@ export function AiMumbaiLiveThemeStyles() {
       }
 
       /* =====================================================================
-         2. DARK BLUE (#08121e) SECTIONS WITH BRAND BOOK BG ELEMENTS:
-            - Hero (#home / .page-hero-top)
-            - Ecosystem (#ecosystem) -> Pattern 02: Data Vortex + Halftone Wave
-            - Speakers (#speakers / #lineup) -> Pattern 01: Digital Pulse + Isometric Vortex
-            - Testimonials (#testimonials) -> Pattern 02: Data Vortex + Halftone Wave
-            - Organizer (#organizer) -> Pattern 01: Digital Pulse + Halftone Wave
-            - Footer (#footer / #cta)
+         2. DARK BLUE (#08121e) SECTIONS
+            - Hero Banner: NO Brand Book background elements (clean video tint)
+            - Content Sections: Strictly 1 single element per section (no-repeat)
          ===================================================================== */
       .ai2047-live-theme .hero-bg {
         background:
           linear-gradient(180deg, rgba(8, 18, 30, 0.25), #08121e 98%),
-          radial-gradient(ellipse at 50% 93%, rgba(0, 158, 173, 0.28), transparent 28%),
-          radial-gradient(ellipse at 18% 19%, rgba(0, 105, 184, 0.35), transparent 36%),
+          radial-gradient(ellipse at 50% 93%, rgba(0, 158, 173, 0.22), transparent 28%),
+          radial-gradient(ellipse at 18% 19%, rgba(0, 105, 184, 0.28), transparent 36%),
           #08121e !important;
       }
 
       .ai2047-live-theme .hero-overlay {
-        background-image:
-          ${isoVortexDark},
-          ${waveDark},
-          ${pulseDark},
-          ${microDark},
+        background:
           linear-gradient(180deg, rgba(8, 18, 30, 0.35) 0%, rgba(8, 18, 30, 0.78) 72%, #08121e 100%) !important;
-        background-size:
-          520px auto,
-          820px auto,
-          440px 440px,
-          22px 58px,
-          100% 100% !important;
-        background-position:
-          right -60px top 60px,
-          left -120px bottom -40px,
-          left -100px top -80px,
-          0 0,
-          center !important;
-        background-repeat:
-          no-repeat,
-          no-repeat,
-          no-repeat,
-          repeat,
-          no-repeat !important;
       }
 
       .ai2047-live-theme .hero-grid-pattern {
-        background-image:
-          ${vortexGridDark},
-          radial-gradient(ellipse at center, rgba(0, 158, 173, 0.32), transparent 55%) !important;
-        background-size: 180px 180px, 100% 100% !important;
-        background-repeat: repeat, no-repeat !important;
+        background: none !important;
       }
 
       .ai2047-live-theme .page-hero-top {
         background-image:
-          ${isoVortexDark},
-          ${pulseDark},
           linear-gradient(90deg, rgba(8, 18, 30, 0.94) 0%, rgba(8, 18, 30, 0.72) 48%, rgba(8, 18, 30, 0.2) 100%),
           url("/mumbai/enterprise/images/speakers/Mumbai-speakers-overview.jpg") !important;
-        background-size: 460px auto, 420px 420px, 100% 100%, cover !important;
-        background-position: right -40px top 40px, left -80px bottom -80px, center, center !important;
-        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat !important;
+        background-size: 100% 100%, cover !important;
+        background-position: center, center !important;
+        background-repeat: no-repeat, no-repeat !important;
       }
       .ai2047-live-theme .page-hero-top::after {
         background: linear-gradient(to top, #08121e, transparent) !important;
       }
 
-      /* Pattern 02: Data Vortex Grid + Halftone Wave + Isometric Vortex on #ecosystem & #testimonials */
-      .ai2047-live-theme #ecosystem,
-      .ai2047-live-theme #testimonials {
+      /* #ecosystem -> Strictly 1 element: Isometric Data Vortex (top-right) */
+      .ai2047-live-theme #ecosystem {
         background-image:
           ${isoVortexDark},
-          ${waveDark},
-          ${pulseDark},
-          ${vortexGridDark},
-          radial-gradient(circle at 18% 20%, rgba(0, 105, 184, 0.2), transparent 36rem),
-          radial-gradient(circle at 82% 80%, rgba(0, 158, 173, 0.14), transparent 34rem),
           linear-gradient(180deg, #08121e 0%, #0a1726 50%, #08121e 100%) !important;
-        background-size:
-          500px auto,
-          760px auto,
-          420px 420px,
-          200px 200px,
-          100% 100%,
-          100% 100%,
-          100% 100% !important;
-        background-position:
-          right -60px top 30px,
-          left -110px bottom -30px,
-          left -90px top -90px,
-          0 0,
-          center,
-          center,
-          center !important;
-        background-repeat:
-          no-repeat,
-          no-repeat,
-          no-repeat,
-          repeat,
-          no-repeat,
-          no-repeat,
-          no-repeat !important;
+        background-size: 460px auto, 100% 100% !important;
+        background-position: right -50px top 40px, center !important;
+        background-repeat: no-repeat, no-repeat !important;
         background-color: #08121e !important;
       }
 
-      /* Pattern 01: Digital Pulse + Micro-Linear Texture + Halftone Wave on #speakers, #organizer, #lineup, #cta */
+      /* #speakers & #lineup -> Strictly 1 element: Digital Pulse (top-left) */
       .ai2047-live-theme #speakers,
+      .ai2047-live-theme #lineup {
+        background-image:
+          ${pulseDark},
+          linear-gradient(180deg, #08121e 0%, #0a1726 50%, #08121e 100%) !important;
+        background-size: 420px 420px, 100% 100% !important;
+        background-position: left -90px top -70px, center !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-color: #08121e !important;
+      }
+
+      /* #testimonials -> Strictly 1 element: Halftone Wave (bottom-left) */
+      .ai2047-live-theme #testimonials {
+        background-image:
+          ${waveDark},
+          linear-gradient(180deg, #08121e 0%, #0a1726 50%, #08121e 100%) !important;
+        background-size: 680px auto, 100% 100% !important;
+        background-position: left -110px bottom -30px, center !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-color: #08121e !important;
+      }
+
+      /* #organizer & #cta -> Strictly 1 element: Digital Pulse (bottom-right) */
       .ai2047-live-theme #organizer,
-      .ai2047-live-theme #lineup,
       .ai2047-live-theme #cta {
         background-image:
-          ${isoVortexDark},
-          ${waveDark},
           ${pulseDark},
-          ${pulseDark},
-          ${pulseDark},
-          ${microDark},
-          radial-gradient(circle at 15% 22%, rgba(0, 105, 184, 0.18), transparent 36rem),
-          radial-gradient(circle at 85% 78%, rgba(0, 158, 173, 0.14), transparent 34rem),
           linear-gradient(180deg, #08121e 0%, #0a1726 50%, #08121e 100%) !important;
-        background-size:
-          480px auto,
-          760px auto,
-          440px 440px,
-          360px 360px,
-          380px 380px,
-          22px 58px,
-          100% 100%,
-          100% 100%,
-          100% 100% !important;
-        background-position:
-          right -50px top 40px,
-          left -100px bottom -30px,
-          left -110px top -90px,
-          right 8% bottom -110px,
-          left 14% bottom -130px,
-          0 0,
-          center,
-          center,
-          center !important;
-        background-repeat:
-          no-repeat,
-          no-repeat,
-          no-repeat,
-          no-repeat,
-          no-repeat,
-          repeat,
-          no-repeat,
-          no-repeat,
-          no-repeat !important;
+        background-size: 400px 400px, 100% 100% !important;
+        background-position: right -80px bottom -80px, center !important;
+        background-repeat: no-repeat, no-repeat !important;
         background-color: #08121e !important;
       }
 
       .ai2047-live-theme #footer {
-        background-image:
-          ${pulseDark},
-          ${microDark},
-          linear-gradient(180deg, #08121e 0%, #050c15 100%) !important;
-        background-size: 380px 380px, 22px 58px, 100% 100% !important;
-        background-position: right -90px bottom -90px, 0 0, center !important;
-        background-repeat: no-repeat, repeat, no-repeat !important;
-        background-color: #08121e !important;
+        background: #08121e !important;
         border-top: 1px solid rgba(0, 158, 173, 0.35) !important;
       }
 
@@ -265,87 +182,74 @@ export function AiMumbaiLiveThemeStyles() {
       }
 
       /* =====================================================================
-         3. ALTERNATING WHITE (#FFFFFF / #F4F8FC) SECTIONS WITH BRAND BOOK BG:
-            - Stats (#attend) -> Pattern 01: Digital Pulse + Micro-Linear + Isometric Vortex
-            - Agenda (#agenda) -> Pattern 02: Data Vortex Grid + Halftone Wave
-            - Networking (#networking) -> Pattern 01: Digital Pulse + Micro-Linear + Halftone Wave
-            - Sponsors (#partners) -> Pattern 02: Data Vortex Grid + Digital Pulse
-            - FAQ (#faq) -> Pattern 01: Digital Pulse + Micro-Linear + Isometric Vortex
+         3. ALTERNATING WHITE (#FFFFFF / #F4F8FC) SECTIONS
+            - Strictly 1 single element per section (no-repeat)
          ===================================================================== */
 
-      /* Pattern 01: Digital Pulse (Page 1 & 2 of Brand Book) on #attend, #networking, #faq */
-      .ai2047-live-theme #attend,
-      .ai2047-live-theme #networking,
-      .ai2047-live-theme #faq {
+      /* #attend -> Strictly 1 element: Digital Pulse (top-left) */
+      .ai2047-live-theme #attend {
         background-image:
-          ${isoVortexLight},
-          ${waveLight},
           ${pulseLight},
-          ${pulseLight},
-          ${pulseLight},
-          ${pulseLight},
-          ${microLight},
           linear-gradient(180deg, #FFFFFF 0%, #F4F8FC 100%) !important;
-        background-size:
-          460px auto,
-          740px auto,
-          440px 440px,
-          360px 360px,
-          340px 340px,
-          380px 380px,
-          22px 58px,
-          100% 100% !important;
-        background-position:
-          right -40px top 35px,
-          left -110px bottom -25px,
-          left -95px top -85px,
-          left 5% bottom -110px,
-          right -65px top 36%,
-          right 10% bottom -95px,
-          0 0,
-          center !important;
-        background-repeat:
-          no-repeat,
-          no-repeat,
-          no-repeat,
-          no-repeat,
-          no-repeat,
-          no-repeat,
-          repeat,
-          no-repeat !important;
+        background-size: 420px 420px, 100% 100% !important;
+        background-position: left -90px top -70px, center !important;
+        background-repeat: no-repeat, no-repeat !important;
         background-color: #FFFFFF !important;
         color: #08121e !important;
         border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
         border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
       }
 
-      /* Pattern 02: Data Vortex (Page 3 & 4 of Brand Book) on #agenda & #partners */
-      .ai2047-live-theme #agenda,
-      .ai2047-live-theme #partners {
+      /* #agenda -> Strictly 1 element: Halftone Wave (bottom-right) */
+      .ai2047-live-theme #agenda {
+        background-image:
+          ${waveLight},
+          linear-gradient(180deg, #FFFFFF 0%, #F4F8FC 100%) !important;
+        background-size: 680px auto, 100% 100% !important;
+        background-position: right -100px bottom -30px, center !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-color: #FFFFFF !important;
+        color: #08121e !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+      }
+
+      /* #networking -> Strictly 1 element: Isometric Data Vortex (top-right) */
+      .ai2047-live-theme #networking {
         background-image:
           ${isoVortexLight},
-          ${waveLight},
-          ${pulseLight},
-          ${vortexGridLight},
           linear-gradient(180deg, #FFFFFF 0%, #F4F8FC 100%) !important;
-        background-size:
-          460px auto,
-          720px auto,
-          400px 400px,
-          200px 200px,
-          100% 100% !important;
-        background-position:
-          right -45px top 30px,
-          left -100px bottom -30px,
-          left -85px top -85px,
-          0 0,
-          center !important;
-        background-repeat:
-          no-repeat,
-          no-repeat,
-          no-repeat,
-          repeat,
-          no-repeat !important;
+        background-size: 440px auto, 100% 100% !important;
+        background-position: right -50px top 40px, center !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-color: #FFFFFF !important;
+        color: #08121e !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+      }
+
+      /* #partners -> Strictly 1 element: Digital Pulse (bottom-left) */
+      .ai2047-live-theme #partners {
+        background-image:
+          ${pulseLight},
+          linear-gradient(180deg, #FFFFFF 0%, #F4F8FC 100%) !important;
+        background-size: 400px 400px, 100% 100% !important;
+        background-position: left -80px bottom -80px, center !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-color: #FFFFFF !important;
+        color: #08121e !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+      }
+
+      /* #faq -> Strictly 1 element: Isometric Data Vortex (top-left) */
+      .ai2047-live-theme #faq {
+        background-image:
+          ${isoVortexLight},
+          linear-gradient(180deg, #FFFFFF 0%, #F4F8FC 100%) !important;
+        background-size: 420px auto, 100% 100% !important;
+        background-position: left -50px top 40px, center !important;
+        background-repeat: no-repeat, no-repeat !important;
         background-color: #FFFFFF !important;
         color: #08121e !important;
         border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
@@ -413,15 +317,7 @@ export function AiMumbaiLiveThemeStyles() {
 
       /* Our Reach & Series Highlights Panel inside #attend */
       .ai2047-live-theme #attend > div > div.mt-16 {
-        background-image:
-          ${isoVortexLight},
-          ${pulseLight},
-          ${vortexGridLight},
-          linear-gradient(180deg, rgba(244, 248, 252, 0.94) 0%, rgba(238, 245, 252, 0.96) 100%) !important;
-        background-size: 380px auto, 360px 360px, 180px 180px, 100% 100% !important;
-        background-position: right -40px top -20px, left -80px bottom -80px, 0 0, center !important;
-        background-repeat: no-repeat, no-repeat, repeat, no-repeat !important;
-        background-color: #F4F8FC !important;
+        background: #F4F8FC !important;
         border: 1px solid rgba(0, 105, 184, 0.18) !important;
         box-shadow: 0 20px 50px rgba(8, 18, 30, 0.06) !important;
       }
@@ -489,14 +385,7 @@ export function AiMumbaiLiveThemeStyles() {
         border-color: rgba(0, 105, 184, 0.16) !important;
       }
       .ai2047-live-theme #networking .max-w-\\[760px\\] > div {
-        background-image:
-          ${isoVortexDark},
-          ${microDark},
-          linear-gradient(145deg, #08121e 0%, #0e2238 100%) !important;
-        background-size: 340px auto, 22px 58px, 100% 100% !important;
-        background-position: right -50px top -30px, 0 0, center !important;
-        background-repeat: no-repeat, repeat, no-repeat !important;
-        background-color: #08121e !important;
+        background: linear-gradient(145deg, #08121e 0%, #0e2238 100%) !important;
         border: 1.5px solid #009EAD !important;
         box-shadow: 0 24px 55px rgba(8, 18, 30, 0.22) !important;
       }
