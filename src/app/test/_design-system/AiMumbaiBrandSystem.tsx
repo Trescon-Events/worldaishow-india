@@ -366,13 +366,16 @@ export function AiMumbaiLiveThemeStyles() {
         color: #08121e !important;
       }
 
-      /* GradientText inside White Sections -> Rich Sovereign Blue (#0069B8) to Signal Teal (#009EAD) */
+      /* Highlighted Text inside White Sections -> Single Solid Color (#0069B8 Sovereign Blue) */
       .ai2047-live-theme #attend .bg-clip-text.text-transparent,
       .ai2047-live-theme #agenda .bg-clip-text.text-transparent,
       .ai2047-live-theme #networking .bg-clip-text.text-transparent,
       .ai2047-live-theme #partners .bg-clip-text.text-transparent,
       .ai2047-live-theme #faq .bg-clip-text.text-transparent {
-        background-image: linear-gradient(90deg, #0069B8 0%, #009EAD 100%) !important;
+        background-image: none !important;
+        background-color: transparent !important;
+        -webkit-text-fill-color: #0069B8 !important;
+        color: #0069B8 !important;
       }
 
       /* Body & Muted Copy inside White Sections */
@@ -535,20 +538,23 @@ export function AiMumbaiLiveThemeStyles() {
       }
 
       /* =====================================================================
-         4. GRADIENT TEXT & ACCENTS IN DARK SECTIONS (#08121e)
+         4. SOLID SINGLE-COLOR ACCENT TEXT IN DARK SECTIONS (#08121e)
          ===================================================================== */
       .ai2047-live-theme .bg-clip-text.text-transparent {
-        background-image: linear-gradient(90deg, #7CE8F2 0%, #009EAD 52%, #38B6FF 100%) !important;
+        background-image: none !important;
+        background-color: transparent !important;
+        -webkit-text-fill-color: #009EAD !important;
+        color: #009EAD !important;
       }
 
       .ai2047-live-theme .text-\\[\\#C0F43C\\],
       .ai2047-live-theme .text-\\[\\#c0f43c\\] {
-        color: #38D8E6 !important;
+        color: #009EAD !important;
       }
 
       .ai2047-live-theme #ecosystem .h-2\\.5 > div:first-child {
-        background: linear-gradient(90deg, #0069B8 0%, #009EAD 65%, #7CE8F2 100%) !important;
-        box-shadow: 0 0 14px rgba(0, 158, 173, 0.65) !important;
+        background: #009EAD !important;
+        box-shadow: 0 0 14px rgba(0, 158, 173, 0.55) !important;
       }
 
       /* Secondary Outline Buttons -> Signal Teal (#009EAD) Border */
