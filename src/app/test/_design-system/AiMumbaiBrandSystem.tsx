@@ -255,58 +255,38 @@ export function AiMumbaiLiveThemeStyles() {
       }
 
       /* =====================================================================
-         4. SPEAKER CARD TREATMENT (CONCEPT 2 — NEURAL DATA FLOW)
+         4. SPEAKER CARD TREATMENT (CONCEPT 2 — NEURAL DATA FLOW PORTRAITS)
          ===================================================================== */
       .ai2047-live-theme .speaker-card-inner {
-        background:
-          linear-gradient(180deg, #0069B8 0%, #004B87 58%, #00284D 100%) !important;
+        background: #01040B !important;
         border: 1px solid #009EAD !important;
         box-shadow:
-          0 18px 42px rgba(0, 18, 38, 0.52),
-          0 0 22px rgba(0, 158, 173, 0.26),
-          inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
-      }
-
-      /* Elliptical Dot-Matrix Vortex Ring + Neural Data Streams Behind Portrait */
-      .ai2047-live-theme .speaker-card-inner::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image: ${VORTEX_NEURAL_SVG_DATA_URI};
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-        z-index: 1;
-        pointer-events: none;
-        transition: transform 0.55s ease, opacity 0.4s ease;
-        opacity: 0.92;
+          0 18px 42px rgba(0, 12, 28, 0.65),
+          0 0 22px rgba(0, 158, 173, 0.28),
+          inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
       }
 
       .ai2047-live-theme .speaker-card-inner:hover {
         border-color: #7CE8F2 !important;
         box-shadow:
-          0 22px 52px rgba(0, 18, 38, 0.65),
-          0 0 32px rgba(0, 158, 173, 0.45),
-          inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
-      }
-
-      .ai2047-live-theme .speaker-card-inner:hover::before {
-        transform: scale(1.06);
-        opacity: 1;
+          0 22px 52px rgba(0, 12, 28, 0.78),
+          0 0 32px rgba(0, 158, 173, 0.48),
+          inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
       }
 
       .ai2047-live-theme .speaker-card-inner > img {
         position: relative;
         z-index: 2;
+        opacity: 1 !important;
       }
 
-      /* Smooth Sovereign Blue to Dark Gradient Overlay for Text Legibility */
+      /* Subtle bottom vignette only under the text label so the neural chest streams stay bright */
       .ai2047-live-theme .speaker-card-inner::after {
         background: linear-gradient(
           to top,
-          rgba(0, 26, 52, 0.96) 0%,
-          rgba(0, 48, 92, 0.42) 44%,
-          transparent 100%
+          rgba(1, 6, 16, 0.88) 0%,
+          rgba(1, 8, 22, 0.25) 28%,
+          transparent 55%
         ) !important;
         z-index: 3 !important;
       }

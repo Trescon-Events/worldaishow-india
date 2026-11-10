@@ -4,7 +4,7 @@ import { HeroSection } from "../../components/sections/HeroSection";
 import { StatsSection } from "../../components/sections/StatsSection";
 import { EcosystemSectionDemo as EcosystemSection } from "../../components/sections/EcosystemSectionDemo";
 import { AgendaSection } from "../../components/sections/AgendaSection";
-import { SpeakersSection } from "../../components/sections/SpeakersSection";
+import { TestSpeakersSection as SpeakersSection } from "../_design-system/TestSpeakersComponents";
 import { NetworkingSection } from "../../components/sections/NetworkingSection";
 import { TestimonialsSection } from "../../components/sections/TestimonialsSection";
 import { SponsorsSection } from "../../components/sections/SponsorsSection";

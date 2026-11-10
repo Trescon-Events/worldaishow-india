@@ -2,7 +2,7 @@
 
 import { Header } from "../../components/sections/Header";
 import { SpeakersHero } from "../../speakers/SpeakersHero";
-import { SpeakersList } from "../../speakers/SpeakersList";
+import { TestSpeakersList as SpeakersList } from "../_design-system/TestSpeakersComponents";
 import { SpeakersCTASection } from "../../speakers/SpeakersCTASection";
 import { FooterSection } from "../../components/sections/FooterSection";
 import { AiMumbaiLiveThemeStyles } from "../_design-system/AiMumbaiBrandSystem";
