@@ -25,6 +25,8 @@ export function AiMumbaiLiveThemeStyles() {
 
   return (
     <style>{`
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
       .ai2047-live-theme {
         --bg: #08121e;
         --panel: #0d1d31;
@@ -49,6 +51,137 @@ export function AiMumbaiLiveThemeStyles() {
         --color-cyan: #009EAD;
         --color-blue: #0069B8;
         --color-green: #F15928;
+
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+      }
+
+      /* =====================================================================
+         0. BRAND BOOK TYPOGRAPHIC SYSTEM (1.200 MODULAR SCALE — PAGES 30–34)
+            - Headlines: Space Grotesk (H1 Bold 57px/115%, H2 Semibold 48px/120%,
+              H3 Semibold 40px/120%, H4 Medium 33px/125%, H5 Medium 27px/130%)
+            - Body & UI: Plus Jakarta Sans (B1 Medium 23px/135%, B2 Regular 19px/145%,
+              P Regular 16px/150%, C Regular 12px/160%)
+            - Do Not Compress or Distort Letterforms (reset negative tracking)
+         ===================================================================== */
+      .ai2047-live-theme h1,
+      .ai2047-live-theme h2,
+      .ai2047-live-theme h3,
+      .ai2047-live-theme h4,
+      .ai2047-live-theme h5,
+      .ai2047-live-theme .hero-bg strong,
+      .ai2047-live-theme #attend article strong,
+      .ai2047-live-theme #attend > div > div.mt-16 strong {
+        font-family: 'Space Grotesk', sans-serif !important;
+        letter-spacing: -0.01em !important;
+      }
+
+      /* H1: Space Grotesk Bold — 57px / 115% */
+      .ai2047-live-theme h1 {
+        font-size: clamp(36px, 4.5vw, 57px) !important;
+        line-height: 1.15 !important;
+        font-weight: 700 !important;
+      }
+
+      /* H2: Space Grotesk Semibold — 48px / 120% */
+      .ai2047-live-theme h2 {
+        font-size: clamp(30px, 3.8vw, 48px) !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+      }
+
+      /* H3 (Section-level): Space Grotesk Semibold — 40px / 120% */
+      .ai2047-live-theme h3 {
+        font-size: clamp(26px, 3vw, 40px) !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+      }
+
+      /* H4: Space Grotesk Medium — 33px / 125% */
+      .ai2047-live-theme h4,
+      .ai2047-live-theme #attend > div > div.mt-16 h3 {
+        font-size: clamp(22px, 2.4vw, 33px) !important;
+        line-height: 1.25 !important;
+        font-weight: 500 !important;
+      }
+
+      /* H5 (Card-level titles & Delegate Pass title): Space Grotesk Medium — 27px / 130% */
+      .ai2047-live-theme h5,
+      .ai2047-live-theme #ecosystem article h3,
+      .ai2047-live-theme #agenda article h3,
+      .ai2047-live-theme #networking article h3,
+      .ai2047-live-theme #networking .max-w-\\[760px\\] h4,
+      .ai2047-live-theme #lineup .rounded-\\[20px\\] h3,
+      .ai2047-live-theme #cta article h3 {
+        font-size: clamp(20px, 2vw, 27px) !important;
+        line-height: 1.3 !important;
+        font-weight: 500 !important;
+      }
+
+      /* Body Text, Reports, Digital Interfaces -> Plus Jakarta Sans */
+      .ai2047-live-theme p,
+      .ai2047-live-theme li,
+      .ai2047-live-theme dd,
+      .ai2047-live-theme summary,
+      .ai2047-live-theme input,
+      .ai2047-live-theme blockquote {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        letter-spacing: 0 !important;
+      }
+
+      /* B1: Plus Jakarta Sans Medium — 23px / 135% (Hero Standfirst) */
+      .ai2047-live-theme #home .container > p {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: clamp(18px, 1.8vw, 23px) !important;
+        line-height: 1.35 !important;
+        font-weight: 500 !important;
+      }
+
+      /* B2: Plus Jakarta Sans Regular — 19px / 145% (Section Lead Descriptions) */
+      .ai2047-live-theme #ecosystem > div > div.text-center > p:first-of-type,
+      .ai2047-live-theme #agenda > div > p,
+      .ai2047-live-theme #networking > div > div.flex > div > p,
+      .ai2047-live-theme #organizer p {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: clamp(16px, 1.5vw, 19px) !important;
+        line-height: 1.45 !important;
+        font-weight: 400 !important;
+      }
+
+      /* P: Plus Jakarta Sans Regular — 16px / 150% (Card Body, FAQ Answers, Standard Copy) */
+      .ai2047-live-theme article p,
+      .ai2047-live-theme #faq details p,
+      .ai2047-live-theme #networking .max-w-\\[760px\\] p,
+      .ai2047-live-theme #lineup p,
+      .ai2047-live-theme #cta p {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        font-weight: 400 !important;
+      }
+
+      /* Speaker Card Typography (Space Grotesk Name + Plus Jakarta Sans Role/Bio) */
+      .ai2047-live-theme .speaker-card-inner h3,
+      .ai2047-live-theme .speaker-card-inner h4 {
+        font-family: 'Space Grotesk', sans-serif !important;
+        font-size: 21px !important;
+        line-height: 1.25 !important;
+        font-weight: 600 !important;
+      }
+      .ai2047-live-theme .speaker-card-inner p {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 13.5px !important;
+        line-height: 1.45 !important;
+        font-weight: 400 !important;
+      }
+
+      /* C: Plus Jakarta Sans Regular — 12px / 160% (Captions, Eyebrows, Citations, Badges) */
+      .ai2047-live-theme .font-mono,
+      .ai2047-live-theme #home .grid span.uppercase,
+      .ai2047-live-theme #ecosystem > div > div.text-center > p:last-of-type {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 12px !important;
+        line-height: 1.6 !important;
+        font-weight: 400 !important;
       }
 
       /* =====================================================================
