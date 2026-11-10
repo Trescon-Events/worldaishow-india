@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { SpeakerPreviewClient } from "./SpeakerPreviewClient";
 
 export const metadata: Metadata = {
-  title: "AI Mumbai | AI 2047 — Dummy Speaker Template Preview (Sandbox)",
+  title: "Speakers Preview (New Color Palette) | World AI Show: The Enterprise Edition | Mumbai 2027",
   description:
-    "Isolated dummy speaker page preview (Concept 2 — Neural Data Flow) for AI Mumbai (AI 2047 Initiative).",
+    "Isolated staging speakers page preview using the exact live speakers page design with the new 80/15/05 Sovereign Blue (#0069B8), Signal Teal (#009EAD), and Pulse Orange (#F15928) color palette.",
   robots: { index: false, follow: false },
 };
 

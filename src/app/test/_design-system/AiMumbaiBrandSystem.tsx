@@ -1,767 +1,327 @@
 import React from "react";
-import Link from "next/link";
 
 /**
- * AI MUMBAI | AI 2047 — ISOLATED STAGING DESIGN SYSTEM
- * ----------------------------------------------------
- * Strictly scoped to /test/home-preview and /test/speaker-preview.
- * Zero impact on live production routes or global styles.
- *
- * Color Distribution (80 / 15 / 05):
- * - 80% Sovereign Blue (#0069B8 | RGB 0, 105, 184 | CMYK 87, 61, 0, 0)
- * - 15% Signal Teal    (#009EAD | RGB 0, 158, 173 | CMYK 80, 18, 31, 0) — Never used as large section background
- * - 05% Pulse Orange   (#F15928 | RGB 241, 89, 40 | CMYK 00, 77, 88, 00) — Strict CTA & live/urgent focal elements
- *
- * Modular Type Scale (Space Grotesk — 1.200 Ratio):
- * - H1: 57px / 115% / Bold
- * - H2: 48px / 120% / Bold
- * - H3: 40px / 120% / Bold
- * - H4: 33px / 125% / Bold
- * - H5: 27px / 130% / Bold
- * - Body 1: 23px / 135%
- * - Body 2: 19px / 145%
- * - Paragraph: 16px / 150%
- * - Caption: 12px / 160%
+ * AI MUMBAI | AI 2047 — SCOPED COLOR & MOTIF OVERRIDE FOR LIVE DESIGN
+ * -------------------------------------------------------------------
+ * Keeps the exact same layout, components, and structure as the live homepage
+ * and live speakers page, while applying the brand book 80/15/05 color system:
+ * - 80% Primary / Dominant: Sovereign Blue (#0069B8)
+ * - 15% Secondary / Support: Signal Teal (#009EAD)
+ * - 05% Tertiary / Accent: Pulse Orange (#F15928)
+ * Plus the Concept 2 (Neural Data Flow + Elliptical Dot-Matrix Vortex Ring)
+ * treatment inside `.speaker-card-inner`.
  */
 
-export const AI2047_TOKENS = {
-  sovereignBlue: "#0069B8",
-  sovereignDeep: "#002B52",
-  sovereignAbyss: "#001830",
-  signalTeal: "#009EAD",
-  pulseOrange: "#F15928",
-};
+const VORTEX_NEURAL_SVG_DATA_URI = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 480' fill='none'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='42%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23009EAD' stop-opacity='0.55'/%3E%3Cstop offset='55%25' stop-color='%230069B8' stop-opacity='0.35'/%3E%3Cstop offset='100%25' stop-color='%230069B8' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='200' cy='200' r='175' fill='url(%23g)'/%3E%3Cg transform='translate(200,195) rotate(-12) scale(1,0.82)'%3E%3Ccircle cx='0' cy='0' r='68' stroke='%23009EAD' stroke-width='4.5' stroke-linecap='round' stroke-dasharray='2 12' opacity='0.55'/%3E%3Ccircle cx='0' cy='0' r='92' stroke='%230069B8' stroke-width='4' stroke-linecap='round' stroke-dasharray='2 14' opacity='0.65'/%3E%3Ccircle cx='0' cy='0' r='116' stroke='%23009EAD' stroke-width='3.5' stroke-linecap='round' stroke-dasharray='2 15' opacity='0.5'/%3E%3Ccircle cx='0' cy='0' r='140' stroke='%230069B8' stroke-width='3' stroke-linecap='round' stroke-dasharray='2 16' opacity='0.55'/%3E%3Ccircle cx='0' cy='0' r='164' stroke='%23009EAD' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='2 18' opacity='0.4'/%3E%3C/g%3E%3Cpath d='M28 360 C76 300 96 232 148 182 C178 152 166 96 212 52' stroke='%23009EAD' stroke-width='1.8' stroke-dasharray='6 5' opacity='0.75'/%3E%3Cpath d='M372 352 C320 295 298 224 252 174 C218 140 232 90 186 46' stroke='%237CE8F2' stroke-width='1.8' stroke-dasharray='6 5' opacity='0.7'/%3E%3Ccircle cx='148' cy='182' r='3.5' fill='%23009EAD'/%3E%3Ccircle cx='212' cy='52' r='4' fill='%237CE8F2'/%3E%3Ccircle cx='252' cy='174' r='3.5' fill='%23009EAD'/%3E%3C/svg%3E")`;
 
-export interface Concept2Speaker {
-  id: string;
-  name: string;
-  designation: string;
-  organization: string;
-  image: string;
-  sessionTag: string;
-  sessionTitle: string;
-  sessionTime: string;
-  sessionStage: string;
-  track: string;
-  leadBio: string;
-  fullBio: string[];
-  focusAreas: string[];
-  linkedinUrl: string;
-  xUrl: string;
-}
+const SECTION_HALFTONE_VORTEX_URI = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 900' fill='none'%3E%3Cg transform='translate(450,450) rotate(-14) scale(1,0.84)' opacity='0.08'%3E%3Ccircle cx='0' cy='0' r='120' stroke='%23009EAD' stroke-width='6' stroke-linecap='round' stroke-dasharray='2 20'/%3E%3Ccircle cx='0' cy='0' r='175' stroke='%230069B8' stroke-width='5.5' stroke-linecap='round' stroke-dasharray='2 22'/%3E%3Ccircle cx='0' cy='0' r='230' stroke='%23009EAD' stroke-width='5' stroke-linecap='round' stroke-dasharray='2 24'/%3E%3Ccircle cx='0' cy='0' r='285' stroke='%230069B8' stroke-width='4.5' stroke-linecap='round' stroke-dasharray='2 26'/%3E%3Ccircle cx='0' cy='0' r='340' stroke='%23009EAD' stroke-width='4' stroke-linecap='round' stroke-dasharray='2 28'/%3E%3Ccircle cx='0' cy='0' r='395' stroke='%230069B8' stroke-width='3.5' stroke-linecap='round' stroke-dasharray='2 30'/%3E%3C/g%3E%3C/svg%3E")`;
 
-export const STAGING_SPEAKERS: Concept2Speaker[] = [
-  {
-    id: "sumnesh-joshi",
-    name: "Sumnesh Joshi",
-    designation: "Deputy Director General, Ministry of Communications",
-    organization: "Government of India",
-    image: "/mumbai/enterprise/images/speakers/processed/Sumnesh-Joshi.png",
-    sessionTag: "KEYNOTE · SOVEREIGN AI INFRASTRUCTURE",
-    sessionTitle: "Architecting India’s Sovereign Compute & Digital Public Intelligence Grid for 2047",
-    sessionTime: "Day 1 · 20 April 2027 · 09:30 – 10:15 IST",
-    sessionStage: "Plenary Hall A · Sovereign Stage",
-    track: "Sovereign Infrastructure",
-    leadBio:
-      "Spearheading national telecommunications modernization, sovereign compute corridors, and public-sector AI governance frameworks under the AI 2047 national transformation mandate.",
-    fullBio: [
-      "As Deputy Director General at the Ministry of Communications, Government of India, Sumnesh Joshi leads policy architecture and cross-ministerial execution for next-generation digital infrastructure, high-density sovereign data fabrics, and secure AI adoption across critical national systems.",
-      "With over two decades of technology leadership spanning telecom standards, federated data governance, and large-scale public digital platforms, his work focuses on bridging sovereign compute capacity with enterprise-grade regulatory guardrails—ensuring India’s transition from AI consumer to foundational AI architect by 2047.",
-    ],
-    focusAreas: [
-      "Sovereign Compute Fabrics",
-      "AI 2047 National Policy",
-      "Digital Public Infrastructure",
-      "Telecom & Edge AI Grid",
-      "Federated Data Governance",
-      "Algorithmic Auditability",
-    ],
-    linkedinUrl: "#linkedin-sumnesh-joshi",
-    xUrl: "#x-sumnesh-joshi",
-  },
-  {
-    id: "ashwini-tewari",
-    name: "Ashwini Tewari",
-    designation: "Managing Director",
-    organization: "State Bank of India",
-    image: "/mumbai/enterprise/images/speakers/processed/Ashwini.png",
-    sessionTag: "PLENARY · ENTERPRISE AUTOMATION",
-    sessionTitle: "Autonomous Banking at Population Scale: Deploying Governed Multi-Agent Workflows",
-    sessionTime: "Day 1 · 20 April 2027 · 11:15 – 12:00 IST",
-    sessionStage: "Plenary Hall A · Sovereign Stage",
-    track: "Enterprise Automation",
-    leadBio:
-      "Driving core banking intelligence, risk-governed agentic operations, and real-time financial inclusion across more than 500 million customer accounts.",
-    fullBio: [
-      "Ashwini Tewari serves as Managing Director at the State Bank of India, overseeing enterprise technology transformation, operational resilience, and institutional AI deployment across India’s largest financial institution.",
-      "Under his stewardship, SBI has transitioned from isolated analytics pilots to production-grade generative and predictive systems spanning fraud telemetry, automated underwriting, and multilingual customer copilot architectures.",
-    ],
-    focusAreas: [
-      "Population-Scale FinTech AI",
-      "Multi-Agent Risk Controls",
-      "Zero-Trust Financial Cloud",
-      "Autonomous Treasury & Credit",
-      "Regulatory Compliance Ops",
-    ],
-    linkedinUrl: "#linkedin-ashwini-tewari",
-    xUrl: "#x-ashwini-tewari",
-  },
-  {
-    id: "cp-gurnani",
-    name: "CP Gurnani",
-    designation: "Co-Founder & Executive Vice Chairman",
-    organization: "AIonOS",
-    image: "/mumbai/enterprise/images/speakers/processed/Chander-Prakash.png",
-    sessionTag: "FIRESIDE · GENERATIVE SYSTEMS",
-    sessionTitle: "From Legacy IT Services to Agentic Enterprise Operating Models",
-    sessionTime: "Day 1 · 20 April 2027 · 14:15 – 15:00 IST",
-    sessionStage: "Grand Ballroom · AI 2047 Forum",
-    track: "Generative Systems",
-    leadBio:
-      "Pioneering AI-native enterprise operating models that re-architect global supply chains, customer ecosystems, and autonomous service delivery.",
-    fullBio: [
-      "CP Gurnani is Co-Founder and Executive Vice Chairman of AIonOS and former MD & CEO of Tech Mahindra. A globally recognized enterprise transformation leader, he advises boards and sovereign funds on scaling AI-first business architectures.",
-      "At AI Mumbai, he examines the structural shift from human-in-the-loop software workflows to autonomous agentic enterprises capable of verifiable P&L impact.",
-    ],
-    focusAreas: [
-      "AI-Native Operating Models",
-      "Enterprise RAG & Copilots",
-      "Boardroom AI Transformation",
-      "Global Delivery Automation",
-      "Verifiable Enterprise ROI",
-    ],
-    linkedinUrl: "#linkedin-cp-gurnani",
-    xUrl: "#x-cp-gurnani",
-  },
-  {
-    id: "kirti-patil",
-    name: "Kirti Patil",
-    designation: "Chief Technology Officer",
-    organization: "Kotak Mahindra Life Insurance",
-    image: "/mumbai/enterprise/images/speakers/processed/Kirti-Patil.png",
-    sessionTag: "PANEL · AI GOVERNANCE",
-    sessionTitle: "Deterministic Guardrails for Non-Deterministic Models in Regulated Enterprises",
-    sessionTime: "Day 2 · 21 April 2027 · 10:30 – 11:15 IST",
-    sessionStage: "Hall B · Governance & Risk Track",
-    track: "AI Governance",
-    leadBio:
-      "Architecting zero-hallucination clinical and actuarial AI pipelines, model observability, and enterprise data lineage in regulated insurance.",
-    fullBio: [
-      "Kirti Patil is Chief Technology Officer at Kotak Mahindra Life Insurance, where she leads cloud-native architecture, enterprise data platforms, and governed generative AI engineering.",
-      "Her work centers on establishing continuous red-teaming, PII-safe retrieval architectures, and deterministic policy enforcement layers for customer-facing AI agents.",
-    ],
-    focusAreas: [
-      "AI Guardrails & Red-Teaming",
-      "Actuarial & Claims Automation",
-      "Model Observability",
-      "Privacy-Preserving RAG",
-      "Enterprise Data Lineage",
-    ],
-    linkedinUrl: "#linkedin-kirti-patil",
-    xUrl: "#x-kirti-patil",
-  },
-];
-
-/**
- * Modular CSS Scoped Stylesheet for the AI Mumbai | AI 2047 Brand System.
- * Injected only inside `/test/*` routes so zero rules leak into production.
- */
-export function AiMumbaiScopedStyles() {
+export function AiMumbaiLiveThemeStyles() {
   return (
     <style>{`
-      .ai2047-sandbox-root {
-        --sb-sovereign-blue: #0069B8;
-        --sb-sovereign-deep: #002B52;
-        --sb-sovereign-abyss: #00162B;
-        --sb-signal-teal: #009EAD;
-        --sb-pulse-orange: #F15928;
-        font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
-        background-color: #002344;
-        color: #FFFFFF;
+      .ai2047-live-theme {
+        --bg: #003E70;
+        --panel: #004E8C;
+        --panel-soft: #005BA1;
+        --line: rgba(0, 158, 173, 0.45);
+        --line-green: rgba(241, 89, 40, 0.55);
+        --text: #FFFFFF;
+        --muted: #D9EEF9;
+        --dim: #A6D1EC;
+        --cyan: #009EAD;
+        --blue: #0069B8;
+        --green: #F15928;
+
+        --color-bg: #003E70;
+        --color-panel: #004E8C;
+        --color-panel-soft: #005BA1;
+        --color-line: rgba(0, 158, 173, 0.45);
+        --color-line-green: rgba(241, 89, 40, 0.55);
+        --color-text: #FFFFFF;
+        --color-muted: #D9EEF9;
+        --color-dim: #A6D1EC;
+        --color-cyan: #009EAD;
+        --color-blue: #0069B8;
+        --color-green: #F15928;
       }
 
-      /* 1.200 Modular Scale Typography Hierarchy (Space Grotesk) */
-      .ai2047-h1 {
-        font-size: clamp(38px, 4.8vw, 57px);
-        line-height: 1.15;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-      }
-      .ai2047-h2 {
-        font-size: clamp(32px, 3.8vw, 48px);
-        line-height: 1.20;
-        font-weight: 700;
-        letter-spacing: -0.018em;
-      }
-      .ai2047-h3 {
-        font-size: clamp(26px, 3vw, 40px);
-        line-height: 1.20;
-        font-weight: 700;
-        letter-spacing: -0.015em;
-      }
-      .ai2047-h4 {
-        font-size: clamp(24px, 2.4vw, 33px);
-        line-height: 1.25;
-        font-weight: 700;
-        letter-spacing: -0.01em;
-      }
-      .ai2047-h5 {
-        font-size: clamp(21px, 2vw, 27px);
-        line-height: 1.30;
-        font-weight: 700;
-      }
-      .ai2047-body1 {
-        font-size: clamp(19px, 1.7vw, 23px);
-        line-height: 1.35;
-        font-weight: 400;
-      }
-      .ai2047-body2 {
-        font-size: 19px;
-        line-height: 1.45;
-        font-weight: 400;
-      }
-      .ai2047-paragraph {
-        font-size: 16px;
-        line-height: 1.50;
-        font-weight: 400;
-      }
-      .ai2047-caption {
-        font-size: 12px;
-        line-height: 1.60;
-        font-weight: 500;
-      }
-
-      /* Brand Micro-Linear Texture & Concentric Halftone Background */
-      .ai2047-micro-linear {
-        background-image:
-          repeating-linear-gradient(
-            90deg,
-            rgba(0, 158, 173, 0.06) 0px,
-            rgba(0, 158, 173, 0.06) 1px,
-            transparent 1px,
-            transparent 48px
-          ),
-          repeating-linear-gradient(
-            180deg,
-            rgba(0, 105, 184, 0.08) 0px,
-            rgba(0, 105, 184, 0.08) 1px,
-            transparent 1px,
-            transparent 48px
-          );
-      }
-
-      /* Sovereign Blue Canvas (80% Dominant Anchor with WCAG AAA Contrast Protection) */
-      .ai2047-sovereign-canvas {
+      /* =====================================================================
+         1. 80% DOMINANT SOVEREIGN BLUE (#0069B8) BACKGROUNDS & CANVASES
+         ===================================================================== */
+      .ai2047-live-theme main,
+      .ai2047-live-theme .page-speakers {
         background:
-          radial-gradient(circle at 18% 15%, rgba(0, 105, 184, 0.78) 0%, rgba(0, 105, 184, 0) 52%),
-          radial-gradient(circle at 82% 24%, rgba(0, 105, 184, 0.65) 0%, rgba(0, 105, 184, 0) 48%),
-          linear-gradient(180deg, #004E8C 0%, #003566 38%, #002142 78%, #001830 100%);
+          radial-gradient(circle at 15% 12%, rgba(0, 158, 173, 0.18), transparent 34rem),
+          radial-gradient(circle at 85% 22%, rgba(0, 105, 184, 0.55), transparent 38rem),
+          linear-gradient(180deg, #005A9E 0%, #004780 45%, #003663 100%) !important;
       }
 
-      .ai2047-sovereign-card {
+      /* Sticky Header Pill in Deep Sovereign Blue with 1px Signal Teal Border */
+      .ai2047-live-theme header nav {
+        background: linear-gradient(90deg, rgba(0, 42, 78, 0.92) 0%, rgba(0, 68, 122, 0.90) 50%, rgba(0, 42, 78, 0.92) 100%) !important;
+        border-color: rgba(0, 158, 173, 0.55) !important;
+        box-shadow: 0 20px 55px rgba(0, 18, 38, 0.55), inset 0 0 24px rgba(0, 158, 173, 0.16) !important;
+      }
+
+      /* Hero Background & Video Overlay in Sovereign Blue (#0069B8) */
+      .ai2047-live-theme .hero-bg {
+        background:
+          linear-gradient(180deg, rgba(0, 74, 134, 0.35), #00437A 98%),
+          radial-gradient(ellipse at 50% 93%, rgba(0, 158, 173, 0.38), transparent 28%),
+          radial-gradient(ellipse at 18% 19%, rgba(0, 105, 184, 0.55), transparent 36%),
+          #004A86 !important;
+      }
+
+      .ai2047-live-theme .hero-overlay {
+        background:
+          ${SECTION_HALFTONE_VORTEX_URI} center/920px no-repeat,
+          linear-gradient(180deg, rgba(0, 62, 114, 0.35) 0%, rgba(0, 74, 134, 0.72) 65%, rgba(0, 56, 104, 0.94) 100%),
+          repeating-linear-gradient(90deg, transparent 0 76px, rgba(0, 158, 173, 0.10) 77px 78px, transparent 79px 119px) !important;
+      }
+
+      .ai2047-live-theme .hero-grid-pattern {
+        background:
+          radial-gradient(ellipse at center, rgba(0, 158, 173, 0.42), transparent 45%),
+          repeating-radial-gradient(ellipse at center, transparent 0 12px, rgba(0, 158, 173, 0.25) 13px 14px) !important;
+      }
+
+      /* Speakers Hero Overlay in Sovereign Blue */
+      .ai2047-live-theme .page-hero-top {
+        background-image:
+          linear-gradient(90deg, rgba(0, 52, 96, 0.94) 0%, rgba(0, 82, 148, 0.72) 48%, rgba(0, 69, 124, 0.22) 100%),
+          url("/mumbai/enterprise/images/speakers/Mumbai-speakers-overview.jpg") !important;
+      }
+      .ai2047-live-theme .page-hero-top::after {
+        background: linear-gradient(to top, #004A86, transparent) !important;
+      }
+
+      /* Major Section Canvases -> 80% Sovereign Blue (#0069B8) Spectrum + Halftone Vortex */
+      .ai2047-live-theme #attend,
+      .ai2047-live-theme #ecosystem,
+      .ai2047-live-theme #agenda,
+      .ai2047-live-theme #speakers,
+      .ai2047-live-theme #networking,
+      .ai2047-live-theme #testimonials,
+      .ai2047-live-theme #partners,
+      .ai2047-live-theme #organizer,
+      .ai2047-live-theme #faq,
+      .ai2047-live-theme #lineup,
+      .ai2047-live-theme #cta {
+        background-image:
+          ${SECTION_HALFTONE_VORTEX_URI},
+          repeating-linear-gradient(90deg, rgba(0, 158, 173, 0.05) 0px, rgba(0, 158, 173, 0.05) 1px, transparent 1px, transparent 56px),
+          linear-gradient(180deg, #00589E 0%, #004782 52%, #003B6D 100%) !important;
+        background-size: 880px 880px, 56px 56px, 100% 100% !important;
+        background-position: right -180px center, center, center !important;
+        background-repeat: no-repeat, repeat, no-repeat !important;
+        background-color: #004B87 !important;
+      }
+
+      /* Alternate odd/even sections slightly within Sovereign Blue for visual rhythm */
+      .ai2047-live-theme #ecosystem,
+      .ai2047-live-theme #speakers,
+      .ai2047-live-theme #testimonials,
+      .ai2047-live-theme #organizer,
+      .ai2047-live-theme #cta {
+        background-image:
+          ${SECTION_HALFTONE_VORTEX_URI},
+          repeating-linear-gradient(90deg, rgba(0, 158, 173, 0.05) 0px, rgba(0, 158, 173, 0.05) 1px, transparent 1px, transparent 56px),
+          linear-gradient(180deg, #004B87 0%, #005EA8 50%, #004278 100%) !important;
+        background-position: left -180px center, center, center !important;
+      }
+
+      /* Footer in Deep Sovereign Blue */
+      .ai2047-live-theme #footer {
+        background: linear-gradient(180deg, #003562 0%, #002444 100%) !important;
+        border-top: 1px solid rgba(0, 158, 173, 0.45) !important;
+      }
+
+      /* Cards & Panels -> Sovereign Blue Glassmorphic Containers with 1px Signal Teal (#009EAD) Borders */
+      .ai2047-live-theme #attend article,
+      .ai2047-live-theme #attend > div > div.mt-16,
+      .ai2047-live-theme #ecosystem article,
+      .ai2047-live-theme #agenda article,
+      .ai2047-live-theme #networking article,
+      .ai2047-live-theme #testimonials article,
+      .ai2047-live-theme #organizer > div > div,
+      .ai2047-live-theme #faq > div > div,
+      .ai2047-live-theme #cta article {
+        background: linear-gradient(155deg, rgba(0, 105, 184, 0.65) 0%, rgba(0, 66, 122, 0.88) 55%, rgba(0, 42, 80, 0.95) 100%) !important;
+        border: 1px solid rgba(0, 158, 173, 0.58) !important;
+        box-shadow: 0 20px 50px rgba(0, 18, 38, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+      }
+
+      .ai2047-live-theme #attend article:hover,
+      .ai2047-live-theme #ecosystem article:hover,
+      .ai2047-live-theme #agenda article:hover,
+      .ai2047-live-theme #networking article:hover,
+      .ai2047-live-theme #cta article:hover {
+        border-color: #009EAD !important;
+        box-shadow: 0 24px 60px rgba(0, 18, 38, 0.55), 0 0 28px rgba(0, 158, 173, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+      }
+
+      /* Delegate Pass Card & Executive Mandate Callout Banner */
+      .ai2047-live-theme #networking .max-w-\\[760px\\] > div,
+      .ai2047-live-theme #ecosystem .rounded-\\[24px\\].border-\\[\\#C0F43C\\]\\/35,
+      .ai2047-live-theme #lineup .rounded-\\[20px\\].border-\\[\\#C0F43C\\]\\/35 {
+        background: linear-gradient(135deg, rgba(0, 105, 184, 0.72) 0%, rgba(0, 62, 114, 0.92) 60%, rgba(0, 40, 76, 0.96) 100%) !important;
+        border: 1px solid #009EAD !important;
+        box-shadow: 0 22px 55px rgba(0, 18, 38, 0.48), 0 0 32px rgba(0, 158, 173, 0.22) !important;
+      }
+
+      /* =====================================================================
+         2. 15% SECONDARY SIGNAL TEAL (#009EAD) — GRADIENT TEXT, BORDERS & PILLS
+         ===================================================================== */
+      .ai2047-live-theme .bg-clip-text.text-transparent {
+        background-image: linear-gradient(90deg, #9BF2FA 0%, #38D8E6 48%, #009EAD 100%) !important;
+      }
+
+      /* Remap Lime Green (#C0F43C) Text Accents to Luminous Signal Teal / Pulse Orange */
+      .ai2047-live-theme .text-\\[\\#C0F43C\\],
+      .ai2047-live-theme .text-\\[\\#c0f43c\\] {
+        color: #7CE8F2 !important;
+      }
+
+      /* Active Nav Item in Header -> Pulse Orange (#F15928) */
+      .ai2047-live-theme header nav a.text-\\[\\#c0f43c\\] {
+        color: #F15928 !important;
+      }
+      .ai2047-live-theme header nav span.bg-\\[\\#c0f43c\\] {
+        background-color: #F15928 !important;
+      }
+
+      /* Stats Big Numbers -> Crisp White / Luminous Signal Teal */
+      .ai2047-live-theme #attend strong.text-\\[\\#C0F43C\\] {
+        color: #7CE8F2 !important;
+      }
+
+      /* Telemetry Progress Bars -> Signal Teal (#009EAD) & Pulse Orange (#F15928) */
+      .ai2047-live-theme #ecosystem .h-2\\.5 > div:first-child {
+        background: linear-gradient(90deg, #0069B8 0%, #009EAD 65%, #7CE8F2 100%) !important;
+        box-shadow: 0 0 14px rgba(0, 158, 173, 0.65) !important;
+      }
+
+      /* Secondary Outline Buttons -> Signal Teal (#009EAD) Border */
+      .ai2047-live-theme a[class*="border-[#4eb9ff]"],
+      .ai2047-live-theme a[class*="border-white/25"] {
+        border: 1.5px solid #009EAD !important;
+        background-color: rgba(0, 46, 86, 0.55) !important;
+        color: #FFFFFF !important;
+        box-shadow: 0 0 20px rgba(0, 158, 173, 0.22) !important;
+      }
+      .ai2047-live-theme a[class*="border-[#4eb9ff]"]:hover,
+      .ai2047-live-theme a[class*="border-white/25"]:hover {
+        background-color: rgba(0, 158, 173, 0.25) !important;
+        border-color: #7CE8F2 !important;
+      }
+
+      /* =====================================================================
+         3. 05% TERTIARY PULSE ORANGE (#F15928) — HIGH-CONVERSION PRIMARY CTAS
+         ===================================================================== */
+      .ai2047-live-theme a[class*="bg-[#C0F43C]"],
+      .ai2047-live-theme a[class*="bg-[#c0f43c]"],
+      .ai2047-live-theme button[class*="bg-[#C0F43C]"],
+      .ai2047-live-theme a[class*="bg-[#18d4ff]"] {
+        background-color: #F15928 !important;
+        color: #FFFFFF !important;
+        border-color: #F15928 !important;
+        box-shadow: 0 8px 26px rgba(241, 89, 40, 0.42) !important;
+      }
+
+      .ai2047-live-theme a[class*="bg-[#C0F43C]"]:hover,
+      .ai2047-live-theme a[class*="bg-[#c0f43c]"]:hover,
+      .ai2047-live-theme a[class*="bg-[#18d4ff]"]:hover {
+        background-color: #FF6B3B !important;
+        box-shadow: 0 12px 34px rgba(241, 89, 40, 0.58) !important;
+      }
+
+      .ai2047-live-theme a[class*="bg-[#C0F43C]"] svg,
+      .ai2047-live-theme a[class*="bg-[#C0F43C]"] span,
+      .ai2047-live-theme a[class*="bg-[#18d4ff]"] svg,
+      .ai2047-live-theme a[class*="bg-[#18d4ff]"] span {
+        color: #FFFFFF !important;
+      }
+
+      /* Footer Social Icons -> Signal Teal Border with Pulse Orange Hover */
+      .ai2047-live-theme #footer a[class*="border-[#C0F43C]"] {
+        border-color: #009EAD !important;
+        color: #7CE8F2 !important;
+        box-shadow: 0 0 14px rgba(0, 158, 173, 0.25) !important;
+      }
+      .ai2047-live-theme #footer a[class*="border-[#C0F43C]"]:hover {
+        border-color: #F15928 !important;
+        background-color: #F15928 !important;
+        color: #FFFFFF !important;
+      }
+
+      /* =====================================================================
+         4. SPEAKER CARD TREATMENT (CONCEPT 2 — NEURAL DATA FLOW)
+         ===================================================================== */
+      .ai2047-live-theme .speaker-card-inner {
+        background:
+          linear-gradient(180deg, #0069B8 0%, #004B87 58%, #00284D 100%) !important;
+        border: 1px solid #009EAD !important;
+        box-shadow:
+          0 18px 42px rgba(0, 18, 38, 0.52),
+          0 0 22px rgba(0, 158, 173, 0.26),
+          inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+      }
+
+      /* Elliptical Dot-Matrix Vortex Ring + Neural Data Streams Behind Portrait */
+      .ai2047-live-theme .speaker-card-inner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: ${VORTEX_NEURAL_SVG_DATA_URI};
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        z-index: 1;
+        pointer-events: none;
+        transition: transform 0.55s ease, opacity 0.4s ease;
+        opacity: 0.92;
+      }
+
+      .ai2047-live-theme .speaker-card-inner:hover {
+        border-color: #7CE8F2 !important;
+        box-shadow:
+          0 22px 52px rgba(0, 18, 38, 0.65),
+          0 0 32px rgba(0, 158, 173, 0.45),
+          inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+      }
+
+      .ai2047-live-theme .speaker-card-inner:hover::before {
+        transform: scale(1.06);
+        opacity: 1;
+      }
+
+      .ai2047-live-theme .speaker-card-inner > img {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Smooth Sovereign Blue to Dark Gradient Overlay for Text Legibility */
+      .ai2047-live-theme .speaker-card-inner::after {
         background: linear-gradient(
-          155deg,
-          rgba(0, 105, 184, 0.42) 0%,
-          rgba(0, 56, 104, 0.78) 55%,
-          rgba(0, 26, 51, 0.94) 100%
-        );
-        border: 1px solid rgba(0, 158, 173, 0.55);
-        box-shadow:
-          0 20px 50px rgba(0, 12, 28, 0.55),
-          0 0 24px rgba(0, 158, 173, 0.14),
-          inset 0 1px 0 rgba(255, 255, 255, 0.14);
-        backdrop-filter: blur(16px);
+          to top,
+          rgba(0, 26, 52, 0.96) 0%,
+          rgba(0, 48, 92, 0.42) 44%,
+          transparent 100%
+        ) !important;
+        z-index: 3 !important;
       }
 
-      .ai2047-sovereign-card:hover {
-        border-color: #009EAD;
-        box-shadow:
-          0 24px 60px rgba(0, 12, 28, 0.68),
-          0 0 32px rgba(0, 158, 173, 0.28),
-          inset 0 1px 0 rgba(255, 255, 255, 0.22);
+      .ai2047-live-theme .speaker-card-inner > div {
+        z-index: 10 !important;
       }
 
-      @keyframes ai2047PulseFlow {
-        0%, 100% { stroke-dashoffset: 0; opacity: 0.72; }
-        50% { stroke-dashoffset: -28; opacity: 1; }
+      .ai2047-live-theme .speaker-card-inner .speaker-line {
+        background-color: #009EAD !important;
       }
-
-      .ai2047-neural-stream {
-        stroke-dasharray: 8 6;
-        animation: ai2047PulseFlow 6s ease-in-out infinite;
+      .ai2047-live-theme .speaker-card-inner:hover .speaker-line {
+        width: 56px !important;
+        background-color: #F15928 !important;
       }
     `}</style>
-  );
-}
-
-/**
- * Concentric Halftone Dot-Matrix / Circular Vortex Pattern SVG
- * Uses #0069B8 and #009EAD at 5%-10% opacity (or higher inside speaker avatar halos).
- */
-export function HalftoneVortexRings({
-  className = "",
-  opacity = 0.09,
-  variant = "canvas",
-}: {
-  className?: string;
-  opacity?: number;
-  variant?: "canvas" | "avatar";
-}) {
-  const rings = variant === "avatar" ? [46, 64, 82, 100, 118, 136, 154] : [90, 140, 190, 240, 290, 340, 390, 440];
-  return (
-    <svg
-      viewBox="0 0 960 960"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={`pointer-events-none select-none ${className}`}
-      style={{ opacity }}
-      aria-hidden="true"
-    >
-      <defs>
-        <radialGradient id={`vortexGrad-${variant}`} cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#009EAD" stopOpacity="0.95" />
-          <stop offset="55%" stopColor="#0069B8" stopOpacity="0.85" />
-          <stop offset="100%" stopColor="#0069B8" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-
-      {/* Elliptical dynamic dot-matrix vortex rings */}
-      <g transform="translate(480, 480) rotate(-14) scale(1, 0.84)">
-        {rings.map((radius, rIdx) => {
-          const dotRadius = Math.max(1.8, 5.2 - rIdx * 0.42);
-          const circumference = 2 * Math.PI * radius;
-          const dotCount = Math.floor(circumference / (variant === "avatar" ? 13 : 18));
-          const dash = `${dotRadius} ${circumference / dotCount - dotRadius}`;
-          const strokeColor = rIdx % 2 === 0 ? "#009EAD" : "#0069B8";
-          return (
-            <circle
-              key={radius}
-              cx="0"
-              cy="0"
-              r={radius}
-              stroke={strokeColor}
-              strokeWidth={dotRadius * 1.9}
-              strokeLinecap="round"
-              strokeDasharray={dash}
-              transform={`rotate(${rIdx * 11})`}
-            />
-          );
-        })}
-      </g>
-
-      {/* Subtle inner luminous core */}
-      <circle cx="480" cy="480" r={variant === "avatar" ? 140 : 280} fill={`url(#vortexGrad-${variant})`} opacity="0.28" />
-    </svg>
-  );
-}
-
-/**
- * Concept 2 — Neural Data Flow SVG Overlay
- * Flowing Sovereign Blue (#0069B8) & Signal Teal (#009EAD) luminous data streams
- * and neural pathways emerging from the speaker silhouette.
- */
-export function NeuralDataStreamsOverlay({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 400 460"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={`pointer-events-none select-none ${className}`}
-      aria-hidden="true"
-    >
-      <defs>
-        <linearGradient id="neuralBeamLeft" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#0069B8" stopOpacity="0" />
-          <stop offset="50%" stopColor="#0069B8" stopOpacity="0.9" />
-          <stop offset="100%" stopColor="#009EAD" stopOpacity="1" />
-        </linearGradient>
-        <linearGradient id="neuralBeamRight" x1="100%" y1="100%" x2="0%" y2="0%">
-          <stop offset="0%" stopColor="#0069B8" stopOpacity="0" />
-          <stop offset="50%" stopColor="#009EAD" stopOpacity="0.85" />
-          <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.95" />
-        </linearGradient>
-        <filter id="neuralGlow" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="3.5" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
-      </defs>
-
-      {/* Flowing cybernetic neural pathways emerging from silhouette shoulders & head */}
-      <g filter="url(#neuralGlow)">
-        <path
-          d="M 36 360 C 78 310, 92 240, 146 188 C 178 156, 165 98, 210 56"
-          stroke="url(#neuralBeamLeft)"
-          strokeWidth="2.2"
-          className="ai2047-neural-stream"
-        />
-        <path
-          d="M 18 395 C 88 355, 118 282, 164 232 C 194 198, 212 142, 266 94"
-          stroke="url(#neuralBeamLeft)"
-          strokeWidth="1.5"
-          opacity="0.85"
-        />
-        <path
-          d="M 368 354 C 318 302, 298 228, 250 176 C 216 142, 230 92, 184 48"
-          stroke="url(#neuralBeamRight)"
-          strokeWidth="2.2"
-          className="ai2047-neural-stream"
-        />
-        <path
-          d="M 382 392 C 322 342, 286 278, 236 220 C 204 182, 178 134, 134 86"
-          stroke="url(#neuralBeamRight)"
-          strokeWidth="1.5"
-          opacity="0.8"
-        />
-
-        {/* Synaptic Data Nodes */}
-        <circle cx="146" cy="188" r="4" fill="#009EAD" />
-        <circle cx="210" cy="56" r="4.5" fill="#FFFFFF" />
-        <circle cx="250" cy="176" r="4" fill="#009EAD" />
-        <circle cx="184" cy="48" r="3.5" fill="#009EAD" />
-        <circle cx="266" cy="94" r="3.5" fill="#0069B8" />
-        <circle cx="134" cy="86" r="3.5" fill="#009EAD" />
-      </g>
-    </svg>
-  );
-}
-
-/**
- * Concept 2 — Neural Data Flow Speaker Card Component
- * - Deep glassmorphic Sovereign Blue container
- * - 1px Signal Teal (#009EAD) luminous border glow
- * - Elliptical dynamic dot-matrix halo/vortex ring behind avatar
- * - High-contrast speaker portrait augmented with flowing blue/cyan neural data streams
- * - Speaker Name (H4: 33px / 125% Bold), Title/Company (Body 2: 19px / Caption: 12px), and Session Tag
- */
-export function Concept2SpeakerCard({
-  speaker,
-  href = "/test/speaker-preview",
-}: {
-  speaker: Concept2Speaker;
-  href?: string;
-}) {
-  return (
-    <article className="ai2047-sovereign-card group relative rounded-[22px] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5">
-      {/* Top Signal Teal 1px luminous highlight bar */}
-      <div
-        className="h-[2px] w-full"
-        style={{
-          background: "linear-gradient(90deg, rgba(0,105,184,0) 0%, #009EAD 50%, rgba(0,105,184,0) 100%)",
-        }}
-      />
-
-      {/* Portrait Canvas with Elliptical Halftone Vortex Halo & Neural Data Streams */}
-      <div className="relative h-[320px] w-full overflow-hidden bg-gradient-to-b from-[#00589C] via-[#003B6D] to-[#001D38]">
-        {/* Elliptical Dot-Matrix Vortex Ring Behind Avatar */}
-        <HalftoneVortexRings
-          variant="avatar"
-          opacity={0.42}
-          className="absolute inset-0 w-full h-full scale-125 group-hover:scale-[1.32] group-hover:rotate-6 transition-transform duration-700"
-        />
-
-        {/* Cybernetic Neural Data Streams Behind & Around Silhouette */}
-        <NeuralDataStreamsOverlay className="absolute inset-0 w-full h-full z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
-
-        {/* High-Contrast Speaker Portrait */}
-        <img
-          src={speaker.image}
-          alt={speaker.name}
-          loading="lazy"
-          className="relative z-20 w-full h-full object-cover object-top contrast-110 saturate-105 transition-transform duration-500 group-hover:scale-105"
-        />
-
-        {/* Foreground Neural Stream Accents & Sovereign Blue Contrast Protection Overlay */}
-        <div
-          className="absolute inset-0 z-30 pointer-events-none"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(0, 105, 184, 0.08) 0%, rgba(0, 53, 102, 0.32) 58%, rgba(0, 24, 48, 0.96) 100%)",
-          }}
-        />
-
-        {/* Top Session Tag Pill in Signal Teal (#009EAD) */}
-        <div className="absolute top-4 left-4 right-4 z-40 flex items-center justify-between gap-2">
-          <span
-            className="ai2047-caption inline-flex items-center gap-1.5 px-3 py-1 rounded-full uppercase tracking-[0.12em] font-bold text-white border"
-            style={{
-              backgroundColor: "rgba(0, 24, 48, 0.82)",
-              borderColor: "#009EAD",
-              boxShadow: "0 0 14px rgba(0, 158, 173, 0.35)",
-            }}
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#009EAD]" />
-            {speaker.sessionTag}
-          </span>
-        </div>
-      </div>
-
-      {/* Card Body: H4 Speaker Name, Body 2 Designation, Caption Company */}
-      <div className="relative z-30 p-6 pt-5 flex-1 flex flex-col justify-between bg-gradient-to-b from-[#001D38]/95 to-[#001529]">
-        <div>
-          <h4 className="ai2047-h4 m-0 text-white group-hover:text-[#7CE8F2] transition-colors">
-            {speaker.name}
-          </h4>
-          <p className="ai2047-body2 m-0 mt-2 text-white/92 font-medium">
-            {speaker.designation}
-          </p>
-          <span
-            className="ai2047-caption block mt-2 uppercase tracking-[0.16em] font-bold"
-            style={{ color: "#009EAD" }}
-          >
-            {speaker.organization}
-          </span>
-        </div>
-
-        <div className="mt-5 pt-4 border-t border-[#009EAD]/30 flex items-center justify-between gap-3">
-          <span className="ai2047-caption text-white/75 truncate">{speaker.sessionStage}</span>
-          <Link
-            href={`${href}?speaker=${speaker.id}`}
-            className="ai2047-caption inline-flex items-center gap-1.5 font-bold uppercase tracking-[0.12em] text-white hover:text-[#F15928] transition-colors shrink-0"
-          >
-            Profile &amp; Session
-            <span aria-hidden="true">→</span>
-          </Link>
-        </div>
-      </div>
-    </article>
-  );
-}
-
-/**
- * Sticky Sandbox Header with "AI Mumbai | AI 2047" branding,
- * "SANDBOX TEST VIEW" safety banner, navigation anchors, and Pulse Orange (#F15928) CTA.
- */
-export function AiMumbaiHeader({ activePage }: { activePage: "home" | "speaker" }) {
-  return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#001B36]/92 border-b border-[#009EAD]/40 shadow-[0_10px_30px_rgba(0,12,28,0.45)]">
-      {/* Top Sandbox Safety & Environment Strip */}
-      <div className="w-full bg-[#001224] border-b border-[#009EAD]/30 px-4 py-1.5">
-        <div className="max-w-[1280px] mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2.5">
-            <span
-              className="ai2047-caption inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-[0.14em] text-white"
-              style={{ backgroundColor: "#F15928" }}
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-              SANDBOX TEST VIEW
-            </span>
-            <span className="ai2047-caption text-white/80 hidden sm:inline">
-              Isolated Staging Environment · AI Mumbai (AI 2047 Initiative) · 80/15/05 Brand System
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Link
-              href="/test/home-preview"
-              className={`ai2047-caption px-3 py-0.5 rounded-full border transition-all ${
-                activePage === "home"
-                  ? "bg-[#0069B8] text-white border-[#009EAD] font-bold"
-                  : "text-white/75 border-white/20 hover:border-[#009EAD]"
-              }`}
-            >
-              Page A: /test/home-preview
-            </Link>
-            <Link
-              href="/test/speaker-preview"
-              className={`ai2047-caption px-3 py-0.5 rounded-full border transition-all ${
-                activePage === "speaker"
-                  ? "bg-[#0069B8] text-white border-[#009EAD] font-bold"
-                  : "text-white/75 border-white/20 hover:border-[#009EAD]"
-              }`}
-            >
-              Page B: /test/speaker-preview
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Sticky Navigation Bar */}
-      <div className="max-w-[1280px] mx-auto px-6 py-4 flex items-center justify-between gap-4">
-        {/* Brand Lockup: AI Mumbai | AI 2047 */}
-        <Link href="/test/home-preview" className="flex items-center gap-3.5 group">
-          <div
-            className="w-11 h-11 rounded-xl flex items-center justify-center font-bold text-white border shadow-[0_0_20px_rgba(0,158,173,0.3)]"
-            style={{
-              background: "linear-gradient(135deg, #0069B8 0%, #003B6F 100%)",
-              borderColor: "#009EAD",
-            }}
-          >
-            <span className="text-[17px] tracking-tighter font-extrabold">AI</span>
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-[20px] font-bold tracking-tight text-white">AI MUMBAI</span>
-              <span className="text-[#009EAD] font-bold">|</span>
-              <span
-                className="ai2047-caption px-2 py-0.5 rounded font-bold tracking-[0.14em] uppercase"
-                style={{
-                  backgroundColor: "rgba(0, 158, 173, 0.18)",
-                  color: "#7CE8F2",
-                  border: "1px solid rgba(0, 158, 173, 0.5)",
-                }}
-              >
-                AI 2047
-              </span>
-            </div>
-            <span className="ai2047-caption block text-white/70 tracking-[0.08em]">
-              SOVEREIGN ENTERPRISE EDITION · MUMBAI
-            </span>
-          </div>
-        </Link>
-
-        {/* Navigation Menu Anchors */}
-        <nav className="hidden lg:flex items-center gap-7" aria-label="Staging Navigation">
-          <Link
-            href="/test/home-preview#hero"
-            className="ai2047-paragraph text-white/90 hover:text-[#7CE8F2] font-medium transition-colors"
-          >
-            Overview
-          </Link>
-          <Link
-            href="/test/home-preview#pillars"
-            className="ai2047-paragraph text-white/90 hover:text-[#7CE8F2] font-medium transition-colors"
-          >
-            Core Pillars
-          </Link>
-          <Link
-            href="/test/home-preview#keynotes"
-            className="ai2047-paragraph text-white/90 hover:text-[#7CE8F2] font-medium transition-colors"
-          >
-            Keynote Faculty
-          </Link>
-          <Link
-            href="/test/home-preview#metrics"
-            className="ai2047-paragraph text-white/90 hover:text-[#7CE8F2] font-medium transition-colors"
-          >
-            Impact &amp; Scale
-          </Link>
-          <Link
-            href="/test/speaker-preview"
-            className="ai2047-paragraph text-white/90 hover:text-[#7CE8F2] font-medium transition-colors flex items-center gap-1.5"
-          >
-            <span className="w-2 h-2 rounded-full bg-[#009EAD]" />
-            Speaker Sandbox
-          </Link>
-        </nav>
-
-        {/* Primary High-Conversion CTA (5% Pulse Orange #F15928) */}
-        <div className="flex items-center gap-3">
-          <a
-            href="#register-cta"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold text-[15px] text-white transition-all duration-200 hover:-translate-y-0.5"
-            style={{
-              backgroundColor: "#F15928",
-              boxShadow: "0 8px 24px rgba(241, 89, 40, 0.42)",
-            }}
-          >
-            Register Now
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-/**
- * Institutional Sandbox Footer with Brand Credits, 80/15/05 Color Legend & Links
- */
-export function AiMumbaiFooter() {
-  return (
-    <footer className="relative border-t border-[#009EAD]/40 bg-[#001224] text-white overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-6 py-14">
-        {/* Brand Book Token Verification Bar */}
-        <div className="mb-10 p-5 rounded-2xl border border-[#009EAD]/40 bg-[#001F3D]/80 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <span
-              className="ai2047-caption px-2.5 py-1 rounded font-bold uppercase tracking-[0.14em]"
-              style={{ backgroundColor: "#0069B8" }}
-            >
-              DESIGN SYSTEM AUDIT
-            </span>
-            <span className="ai2047-paragraph text-white/90 font-medium">
-              Strict 80 / 15 / 05 Brand Book Distribution · Space Grotesk 1.200 Modular Scale · WCAG AAA Contrast
-            </span>
-          </div>
-          <div className="flex flex-wrap items-center gap-4">
-            <span className="ai2047-caption flex items-center gap-2 text-white/85">
-              <span className="w-3.5 h-3.5 rounded-full bg-[#0069B8] border border-white/40" />
-              80% Sovereign Blue (#0069B8)
-            </span>
-            <span className="ai2047-caption flex items-center gap-2 text-white/85">
-              <span className="w-3.5 h-3.5 rounded-full bg-[#009EAD] border border-white/40" />
-              15% Signal Teal (#009EAD)
-            </span>
-            <span className="ai2047-caption flex items-center gap-2 text-white/85">
-              <span className="w-3.5 h-3.5 rounded-full bg-[#F15928] border border-white/40" />
-              05% Pulse Orange (#F15928)
-            </span>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-white/15">
-          <div className="md:col-span-5">
-            <div className="flex items-center gap-3 mb-4">
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-white border"
-                style={{ backgroundColor: "#0069B8", borderColor: "#009EAD" }}
-              >
-                AI
-              </div>
-              <div>
-                <div className="text-[20px] font-bold tracking-tight">AI MUMBAI | AI 2047</div>
-                <div className="ai2047-caption text-[#7CE8F2]">
-                  THE SOVEREIGN ENTERPRISE AI SUMMIT
-                </div>
-              </div>
-            </div>
-            <p className="ai2047-paragraph text-white/80 max-w-[440px] m-0">
-              Part of the national AI 2047 initiative. Bringing together sovereign policymakers, enterprise CXOs, and deep-tech architects to build India’s AI operating model.
-            </p>
-          </div>
-
-          <div className="md:col-span-4">
-            <h5 className="ai2047-caption uppercase tracking-[0.16em] text-[#7CE8F2] font-bold mb-3">
-              Staging Deliverables
-            </h5>
-            <ul className="space-y-2.5 list-none p-0 m-0">
-              <li>
-                <Link href="/test/home-preview" className="ai2047-paragraph text-white/85 hover:text-white underline-offset-4 hover:underline">
-                  Page A: Staging Homepage (/test/home-preview)
-                </Link>
-              </li>
-              <li>
-                <Link href="/test/speaker-preview" className="ai2047-paragraph text-white/85 hover:text-white underline-offset-4 hover:underline">
-                  Page B: Speaker Template (/test/speaker-preview)
-                </Link>
-              </li>
-              <li>
-                <Link href="/test/home-preview#pillars" className="ai2047-paragraph text-white/85 hover:text-white underline-offset-4 hover:underline">
-                  Core Pillars &amp; Sovereign Tracks
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="md:col-span-3">
-            <h5 className="ai2047-caption uppercase tracking-[0.16em] text-[#7CE8F2] font-bold mb-3">
-              Sandbox Notice
-            </h5>
-            <p className="ai2047-caption text-white/75 m-0">
-              SANDBOX ENVIRONMENT: This route is an isolated staging duplicate created for UI/UX brand-book evaluation. Live production routes remain untouched.
-            </p>
-          </div>
-        </div>
-
-        <div className="pt-6 flex flex-wrap items-center justify-between gap-4">
-          <span className="ai2047-caption text-white/70">
-            © 2027 AI Mumbai · AI 2047 Initiative · Trescon Global Series (52nd Edition)
-          </span>
-          <span className="ai2047-caption text-[#7CE8F2]">
-            WCAG AA/AAA Verified · Sovereign Blue (#0069B8) · Signal Teal (#009EAD) · Pulse Orange (#F15928)
-          </span>
-        </div>
-      </div>
-    </footer>
   );
 }
