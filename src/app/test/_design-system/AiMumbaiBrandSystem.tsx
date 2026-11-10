@@ -270,7 +270,7 @@ export function AiMumbaiLiveThemeStyles() {
         color: #08121e !important;
       }
 
-      /* Highlighted Text inside White Sections -> Single Solid Color (#0069B8 Sovereign Blue) */
+      /* Highlighted Text inside White Sections -> Single Solid Color (#009EAD Signal Teal) */
       .ai2047-live-theme #attend .bg-clip-text.text-transparent,
       .ai2047-live-theme #agenda .bg-clip-text.text-transparent,
       .ai2047-live-theme #networking .bg-clip-text.text-transparent,
@@ -278,8 +278,8 @@ export function AiMumbaiLiveThemeStyles() {
       .ai2047-live-theme #faq .bg-clip-text.text-transparent {
         background-image: none !important;
         background-color: transparent !important;
-        -webkit-text-fill-color: #0069B8 !important;
-        color: #0069B8 !important;
+        -webkit-text-fill-color: #009EAD !important;
+        color: #009EAD !important;
       }
 
       /* Body & Muted Copy inside White Sections */
