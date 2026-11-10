@@ -11,7 +11,7 @@ export function SpeakerPreviewClient() {
   return (
     <div className="ai2047-live-theme">
       <AiMumbaiLiveThemeStyles />
-      <main className="page-speakers relative min-h-screen bg-[#004A86] text-white font-space-grotesk overflow-x-hidden">
+      <main className="page-speakers relative min-h-screen bg-[#08121e] text-white font-space-grotesk overflow-x-hidden">
         <Header activeItem="Speakers" />
         <SpeakersHero />
         <SpeakersList />

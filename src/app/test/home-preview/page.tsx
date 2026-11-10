@@ -24,7 +24,7 @@ export default function StagingHomePreviewPage() {
   return (
     <div className="ai2047-live-theme">
       <AiMumbaiLiveThemeStyles />
-      <main className="relative flex flex-col min-h-screen overflow-x-hidden bg-[#004A86]">
+      <main className="relative flex flex-col min-h-screen overflow-x-hidden bg-[#08121e]">
         <Header activeItem="Home" />
         <HeroSection />
         <StatsSection />
