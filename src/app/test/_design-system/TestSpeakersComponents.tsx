@@ -5,10 +5,7 @@ import { GradientText } from "../../components/Shared";
 import { SpeakerCard } from "../../speakers/SpeakerCard";
 import { speakers as baseSpeakers } from "../../speakers/data";
 
-export const testNeuralSpeakers = baseSpeakers.map((s) => ({
-  ...s,
-  image: s.image.replace("/images/speakers/processed/", "/images/speakers/test-neural/"),
-}));
+export const testNeuralSpeakers = baseSpeakers;
 
 export function TestSpeakersSection({
   heading = (

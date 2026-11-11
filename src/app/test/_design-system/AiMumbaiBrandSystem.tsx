@@ -1028,35 +1028,33 @@ export function AiMumbaiLiveThemeStyles() {
       }
 
       /* =====================================================================
-         7. SPEAKER CARD TREATMENT (CONCEPT 2 — NEURAL DATA FLOW PORTRAITS)
+         7. SPEAKER CARD TREATMENT (HOME PAGE SPEAKER PORTRAIT CARDS)
          ===================================================================== */
       .ai2047-live-theme .speaker-card-inner {
-        background: #010612 !important;
-        border: 1.5px solid #009EAD !important;
-        box-shadow:
-          0 18px 38px rgba(0, 52, 102, 0.22),
-          0 0 18px rgba(0, 158, 173, 0.18) !important;
+        background: linear-gradient(180deg, #0c1d36 0%, #071224 55%, #040914 100%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.24) !important;
+        box-shadow: 0 18px 38px rgba(0, 28, 64, 0.26) !important;
       }
 
       .ai2047-live-theme .speaker-card-inner:hover {
         border-color: #F15928 !important;
         box-shadow:
-          0 22px 46px rgba(0, 52, 102, 0.32),
-          0 0 28px rgba(241, 89, 40, 0.28) !important;
+          0 22px 46px rgba(0, 28, 64, 0.34),
+          0 0 24px rgba(241, 89, 40, 0.26) !important;
       }
 
       .ai2047-live-theme .speaker-card-inner > img {
         position: relative;
         z-index: 2;
-        opacity: 1 !important;
+        opacity: 0.96 !important;
       }
 
       .ai2047-live-theme .speaker-card-inner::after {
         background: linear-gradient(
           to top,
-          rgba(1, 10, 24, 0.92) 0%,
-          rgba(1, 10, 24, 0.25) 28%,
-          transparent 55%
+          rgba(4, 9, 20, 0.95) 0%,
+          rgba(4, 9, 20, 0.35) 36%,
+          transparent 65%
         ) !important;
         z-index: 3 !important;
       }

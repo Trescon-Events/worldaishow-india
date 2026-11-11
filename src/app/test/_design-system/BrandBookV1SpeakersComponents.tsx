@@ -3,13 +3,13 @@
 import { useMemo, useState, type ReactNode } from "react";
 import { GradientText } from "../../components/Shared";
 import { SpeakerCard } from "../../speakers/SpeakerCard";
-import { testNeuralSpeakers } from "./TestSpeakersComponents";
+import { speakers as baseSpeakers } from "../../speakers/data";
 
 /**
  * AI 2047 Brand Book V1.0 — Speaker Sections (Pages 57–61)
+ * - Uses the exact live home page speaker portraits (/images/speakers/processed/*)
  * - Sovereign Blue (#0069B8) institutional showcase band (80% brand anchor)
- * - Midnight Core (#08121E) speaker portrait cards with Signal Teal (#009EAD) framing
- *   and Pulse Orange (#F15928) focal CTAs (strictly white text on orange BG)
+ * - Clean live home page SpeakerCard portrait treatment + Pulse Orange (#F15928) focal CTAs
  */
 export function BrandBookV1SpeakersSection({
   heading = (
@@ -20,7 +20,7 @@ export function BrandBookV1SpeakersSection({
 }: {
   heading?: ReactNode;
 } = {}) {
-  const displaySpeakers = testNeuralSpeakers.slice(0, 8);
+  const displaySpeakers = baseSpeakers.slice(0, 8);
 
   return (
     <section
@@ -30,10 +30,6 @@ export function BrandBookV1SpeakersSection({
       <div className="w-[min(1200px,calc(100%-48px))] mx-auto max-sm:w-[calc(100%-32px)]">
         {/* Title and Header Block */}
         <div className="flex flex-col items-center text-center mb-[52px]">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#08121E]/28 border border-white/25 text-white text-[12px] font-semibold uppercase tracking-[1.6px] mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#F15928]" />
-            Global AI 2047 Series Faculty
-          </span>
           <h2 className="text-center text-white max-w-[920px] m-0">
             {heading}
           </h2>
@@ -79,7 +75,7 @@ export function BrandBookV1SpeakersList() {
 
   const filteredSpeakers = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
-    return testNeuralSpeakers.filter((s) => {
+    return baseSpeakers.filter((s) => {
       return (
         !q ||
         s.name.toLowerCase().includes(q) ||

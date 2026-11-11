@@ -1026,11 +1026,11 @@ export function Ai2047BrandBookV1Styles() {
       }
 
       /* =====================================================================
-         10. SPEAKER PORTRAIT CARDS (BRAND BOOK SOCIAL TEMPLATES — PAGES 57–60)
+         10. SPEAKER PORTRAIT CARDS (HOME PAGE SPEAKER PORTRAIT CARDS)
          ===================================================================== */
       .ai2047-brandbook-v1 .speaker-card-inner {
-        background: #08121E !important;
-        border: 1.5px solid #009EAD !important;
+        background: linear-gradient(180deg, #0c1d36 0%, #071224 55%, #040914 100%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.24) !important;
         box-shadow: 0 18px 38px rgba(8, 18, 30, 0.28) !important;
       }
       .ai2047-brandbook-v1 .speaker-card-inner:hover {
@@ -1040,14 +1040,14 @@ export function Ai2047BrandBookV1Styles() {
       .ai2047-brandbook-v1 .speaker-card-inner > img {
         position: relative;
         z-index: 2;
-        opacity: 1 !important;
+        opacity: 0.96 !important;
       }
       .ai2047-brandbook-v1 .speaker-card-inner::after {
         background: linear-gradient(
           to top,
-          rgba(8, 18, 30, 0.95) 0%,
-          rgba(8, 18, 30, 0.32) 30%,
-          transparent 56%
+          rgba(4, 9, 20, 0.95) 0%,
+          rgba(4, 9, 20, 0.35) 36%,
+          transparent 65%
         ) !important;
         z-index: 3 !important;
       }
