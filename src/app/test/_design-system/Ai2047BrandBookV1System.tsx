@@ -1,0 +1,1132 @@
+import React from "react";
+import { BRANDBOOK_URIS } from "./BrandBookBgElements";
+
+/**
+ * AI 2047 — STRICT BRAND BOOK V1.0 DESIGN SYSTEM (.ai2047-brandbook-v1)
+ * ---------------------------------------------------------------------
+ * Implements the complete 69-page AI 2047-BrandBook_V1.0 (1).pdf specification
+ * in an isolated preview scope (.ai2047-brandbook-v1) without touching live pages
+ * or the existing /test/home-preview & /test/speaker-preview routes:
+ *
+ * 1. Official 80 / 15 / 05 Color Hierarchy (Pages 18–26):
+ *    - Sovereign Blue (#0069B8) — 80% Dominant Brand Anchor
+ *    - Signal Teal (#009EAD)    — 15% Data/Telemetry Support (NEVER full section bg; NEVER body copy)
+ *    - Pulse Orange (#F15928)   — 5% High-Conversion CTA & Focal Accent (NEVER body copy)
+ *    - Cloud White (#F7F9FC)    — Official Neutral Light Base + #FFFFFF Elevated Cards
+ *    - Midnight Core (#08121E)  — Official Neutral Dark Base + #0D1B2E Elevated Dark Panels
+ *
+ * 2. Logo Clear Space & Zero-Effect Rule (Pages 10–17):
+ *    - Minimum width >= 64px, zero drop-shadow/glow effects on logos, clean tonal contrast.
+ *
+ * 3. 1.200 Modular Typographic System (Pages 27–33):
+ *    - Space Grotesk strictly for Headlines: H1 Bold 57px/115%, H2 Semibold 48px/120%,
+ *      H3 Semibold 40px/120%, H4 Medium 33px/125%, H5 Medium 27px/130%.
+ *    - Plus Jakarta Sans strictly for Body & UI: B1 Medium 23px/135%, B2 Regular 19px/145%,
+ *      P Regular 16px/150%, C Regular 12px/160%.
+ *
+ * 4. Official Brand Book Vector Motifs (Pages 35–41):
+ *    - Zero background motifs on Hero photography/video; strictly 1 motif per content section.
+ *
+ * 5. 4px Spacing System & 12-Column 1200px Container Grid (Pages 48–55).
+ */
+export function Ai2047BrandBookV1Styles() {
+  const pulseLight = `url("${BRANDBOOK_URIS.digitalPulseLight}")`;
+  const waveLight = `url("${BRANDBOOK_URIS.halftoneWaveLight}")`;
+  const isoVortexLight = `url("${BRANDBOOK_URIS.isometricVortexLight}")`;
+  const isoVortexDark = `url("${BRANDBOOK_URIS.isometricVortexDark}")`;
+  const waveDark = `url("${BRANDBOOK_URIS.halftoneWaveDark}")`;
+
+  // Subtle pure-white Brand Book Digital Pulse motif for #0069B8 Sovereign Blue bands
+  const pulseOnSovereignBlue = `url("${BRANDBOOK_URIS.digitalPulseLight
+    .replace(/%230069B8/g, "%23FFFFFF")
+    .replace(/%23009EAD/g, "%23FFFFFF")}")`;
+
+  return (
+    <style>{`
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+      .ai2047-brandbook-v1 {
+        /* Official Brand Book V1.0 Tokens (Pages 18–26) */
+        --bb-sovereign-blue: #0069B8;
+        --bb-signal-teal: #009EAD;
+        --bb-pulse-orange: #F15928;
+        --bb-cloud-white: #F7F9FC;
+        --bb-midnight-core: #08121E;
+        --bb-midnight-elevated: #0D1B2E;
+        --bb-pure-white: #FFFFFF;
+
+        --bg: #F7F9FC;
+        --panel: #FFFFFF;
+        --panel-soft: #F7F9FC;
+        --line: rgba(0, 105, 184, 0.20);
+        --line-green: rgba(241, 89, 40, 0.55);
+        --text: #08121E;
+        --muted: #334155;
+        --dim: #52657A;
+        --cyan: #009EAD;
+        --blue: #0069B8;
+        --green: #F15928;
+
+        --color-bg: #F7F9FC;
+        --color-panel: #FFFFFF;
+        --color-panel-soft: #F7F9FC;
+        --color-line: rgba(0, 105, 184, 0.20);
+        --color-line-green: rgba(241, 89, 40, 0.55);
+        --color-text: #08121E;
+        --color-muted: #334155;
+        --color-dim: #52657A;
+        --color-cyan: #009EAD;
+        --color-blue: #0069B8;
+        --color-green: #F15928;
+
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        color: #08121E;
+        background-color: #F7F9FC;
+      }
+
+      /* =====================================================================
+         1. LOGO SYSTEM: CLEAR SPACE, MIN-WIDTH >= 64PX & ZERO EFFECTS (PAGES 10–17)
+            Page 17 Explicit Rule: "Don't use any effect on logo"
+         ===================================================================== */
+      .ai2047-brandbook-v1 img[src*="wais-27-enterprise"] {
+        opacity: 0 !important;
+      }
+
+      .ai2047-brandbook-v1 header nav > a:first-child {
+        width: 176px !important;
+        min-width: 64px !important;
+        height: 56px !important;
+      }
+      .ai2047-brandbook-v1 header nav > a:first-child img {
+        min-width: 64px !important;
+        object-fit: contain !important;
+        object-position: left center !important;
+        filter: none !important;
+        box-shadow: none !important;
+      }
+
+      .ai2047-brandbook-v1 #home .container > div:first-child img {
+        width: auto !important;
+        height: auto !important;
+        min-width: 64px !important;
+        max-width: 320px !important;
+        max-height: 152px !important;
+        filter: none !important;
+        box-shadow: none !important;
+      }
+      @media (max-width: 640px) {
+        .ai2047-brandbook-v1 #home .container > div:first-child img {
+          max-width: 236px !important;
+          max-height: 116px !important;
+        }
+      }
+
+      .ai2047-brandbook-v1 #footer img[data-brandbook-logo="footer"] {
+        width: auto !important;
+        height: auto !important;
+        min-width: 64px !important;
+        max-width: 212px !important;
+        max-height: 96px !important;
+        object-position: left center !important;
+        filter: none !important;
+        box-shadow: none !important;
+      }
+
+      /* =====================================================================
+         2. 12-COLUMN 1200PX CONTAINER GRID & 4PX SPACING RHYTHM (PAGES 52–55)
+            - XL Desktop Container: 1200px max-width, 24px gutter
+            - Mobile (<640px): 16px side margins -> calc(100% - 32px)
+         ===================================================================== */
+      .ai2047-brandbook-v1 section > div[class*="1180px"],
+      .ai2047-brandbook-v1 section > div[class*="1140px"],
+      .ai2047-brandbook-v1 #footer > div[class*="1180px"] {
+        width: min(1200px, calc(100% - 48px)) !important;
+      }
+      @media (max-width: 640px) {
+        .ai2047-brandbook-v1 section > div[class*="1180px"],
+        .ai2047-brandbook-v1 section > div[class*="1140px"],
+        .ai2047-brandbook-v1 #footer > div[class*="1180px"] {
+          width: calc(100% - 32px) !important;
+        }
+      }
+
+      /* =====================================================================
+         3. 1.200 MODULAR TYPOGRAPHIC SYSTEM (PAGES 27–33)
+            - Space Grotesk strictly for Headlines (H1–H5) & Metric Numerals
+            - Plus Jakarta Sans strictly for Body, Captions, Buttons & UI
+            - Zero compressed or distorted letterforms
+         ===================================================================== */
+      .ai2047-brandbook-v1 h1,
+      .ai2047-brandbook-v1 h2,
+      .ai2047-brandbook-v1 h3,
+      .ai2047-brandbook-v1 h4,
+      .ai2047-brandbook-v1 h5,
+      .ai2047-brandbook-v1 .hero-bg strong,
+      .ai2047-brandbook-v1 #attend article strong,
+      .ai2047-brandbook-v1 #attend > div > div.mt-16 strong {
+        font-family: 'Space Grotesk', sans-serif !important;
+        letter-spacing: -0.01em !important;
+      }
+
+      /* H1: Space Grotesk Bold (700) — 57px / 115% */
+      .ai2047-brandbook-v1 h1 {
+        font-size: clamp(36px, 4.5vw, 57px) !important;
+        line-height: 1.15 !important;
+        font-weight: 700 !important;
+      }
+
+      /* H2: Space Grotesk Semibold (600) — 48px / 120% */
+      .ai2047-brandbook-v1 h2 {
+        font-size: clamp(30px, 3.8vw, 48px) !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+      }
+
+      /* H3: Space Grotesk Semibold (600) — 40px / 120% */
+      .ai2047-brandbook-v1 h3 {
+        font-size: clamp(26px, 3vw, 40px) !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+      }
+
+      /* H4: Space Grotesk Medium (500) — 33px / 125% */
+      .ai2047-brandbook-v1 h4,
+      .ai2047-brandbook-v1 #attend > div > div.mt-16 h3 {
+        font-size: clamp(22px, 2.4vw, 33px) !important;
+        line-height: 1.25 !important;
+        font-weight: 500 !important;
+      }
+
+      /* H5 (Card-level Headings): Space Grotesk Medium (500) — 27px / 130% */
+      .ai2047-brandbook-v1 h5,
+      .ai2047-brandbook-v1 #ecosystem article h3,
+      .ai2047-brandbook-v1 #agenda article h3,
+      .ai2047-brandbook-v1 #networking article h3,
+      .ai2047-brandbook-v1 #networking .max-w-\\[760px\\] h4,
+      .ai2047-brandbook-v1 #lineup .rounded-\\[20px\\] h3,
+      .ai2047-brandbook-v1 #cta article h3 {
+        font-size: clamp(20px, 2vw, 27px) !important;
+        line-height: 1.3 !important;
+        font-weight: 500 !important;
+      }
+
+      /* Footer Column Eyebrows -> Plus Jakarta Sans C (12px / 160%) */
+      .ai2047-brandbook-v1 #footer h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 12px !important;
+        line-height: 1.6 !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.2em !important;
+      }
+
+      /* Body, Lists, Inputs, Accordion, Buttons -> Plus Jakarta Sans */
+      .ai2047-brandbook-v1 p,
+      .ai2047-brandbook-v1 li,
+      .ai2047-brandbook-v1 dd,
+      .ai2047-brandbook-v1 summary,
+      .ai2047-brandbook-v1 input,
+      .ai2047-brandbook-v1 blockquote,
+      .ai2047-brandbook-v1 a,
+      .ai2047-brandbook-v1 button {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        letter-spacing: 0 !important;
+      }
+
+      /* B1: Plus Jakarta Sans Medium (500) — 23px / 135% (Hero Standfirst) */
+      .ai2047-brandbook-v1 #home .container > p {
+        font-size: clamp(18px, 1.8vw, 23px) !important;
+        line-height: 1.35 !important;
+        font-weight: 500 !important;
+      }
+
+      /* B2: Plus Jakarta Sans Regular (400) — 19px / 145% (Section Lead Copy) */
+      .ai2047-brandbook-v1 #ecosystem > div > div.text-center > p:first-of-type,
+      .ai2047-brandbook-v1 #ecosystem > div > p,
+      .ai2047-brandbook-v1 #agenda > div > p,
+      .ai2047-brandbook-v1 #networking > div > div.flex > div > p,
+      .ai2047-brandbook-v1 #organizer p {
+        font-size: clamp(16px, 1.5vw, 19px) !important;
+        line-height: 1.45 !important;
+        font-weight: 400 !important;
+      }
+
+      /* P: Plus Jakarta Sans Regular (400) — 16px / 150% (Standard Copy) */
+      .ai2047-brandbook-v1 article p,
+      .ai2047-brandbook-v1 #faq details p,
+      .ai2047-brandbook-v1 #networking .max-w-\\[760px\\] p,
+      .ai2047-brandbook-v1 #lineup p,
+      .ai2047-brandbook-v1 #cta p {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        font-weight: 400 !important;
+      }
+
+      /* C: Plus Jakarta Sans Regular (400) — 12px / 160% (Captions, Citations, Metadata) */
+      .ai2047-brandbook-v1 .font-mono,
+      .ai2047-brandbook-v1 #home .grid span.uppercase,
+      .ai2047-brandbook-v1 #ecosystem > div > div.text-center > p:last-of-type {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 12px !important;
+        line-height: 1.6 !important;
+        font-weight: 400 !important;
+      }
+
+      /* =====================================================================
+         4. STICKY HEADER (FROSTED CLOUD WHITE #F7F9FC + SOVEREIGN BLUE BORDER)
+         ===================================================================== */
+      .ai2047-brandbook-v1 main,
+      .ai2047-brandbook-v1 .page-speakers {
+        background-color: #F7F9FC !important;
+        color: #08121E !important;
+      }
+
+      .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] {
+        background: rgba(247, 249, 252, 0.96) !important;
+        backdrop-filter: blur(12px) !important;
+        border: 1px solid rgba(0, 105, 184, 0.22) !important;
+        box-shadow: 0 14px 36px rgba(8, 18, 30, 0.12) !important;
+      }
+
+      .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] .uppercase a:not([class*="bg-[#C0F43C]"]) {
+        color: #08121E !important;
+        font-weight: 600 !important;
+      }
+      .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] .uppercase a:not([class*="bg-[#C0F43C]"]):hover {
+        color: #0069B8 !important;
+      }
+
+      /* Active Nav Indicator -> Pulse Orange (#F15928, 5% Accent) */
+      .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] a.text-\\[\\#c0f43c\\] {
+        color: #F15928 !important;
+      }
+      .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] span.bg-\\[\\#c0f43c\\] {
+        background-color: #F15928 !important;
+      }
+
+      /* Mobile Navigation Drawer */
+      .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] > button {
+        background: #FFFFFF !important;
+        border-color: rgba(0, 105, 184, 0.26) !important;
+        color: #08121E !important;
+      }
+      .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] > button span {
+        background-color: #08121E !important;
+      }
+      .ai2047-brandbook-v1 header > div.rounded-\\[24px\\] {
+        background: #F7F9FC !important;
+        border-color: rgba(0, 105, 184, 0.24) !important;
+        box-shadow: 0 22px 52px rgba(8, 18, 30, 0.22) !important;
+      }
+      .ai2047-brandbook-v1 header > div.rounded-\\[24px\\] a {
+        color: #08121E !important;
+      }
+      .ai2047-brandbook-v1 header > div.rounded-\\[24px\\] a.text-\\[\\#c0f43c\\] {
+        color: #F15928 !important;
+      }
+      .ai2047-brandbook-v1 header > div.rounded-\\[24px\\] button {
+        border-color: rgba(0, 105, 184, 0.22) !important;
+        color: #08121E !important;
+      }
+
+      /* =====================================================================
+         5. HERO BANNER (#home & .page-hero-top) — PAGE 45 PHOTOGRAPHY RULE
+            - Official Neutral Dark: Midnight Core (#08121E) + Sovereign Blue (#0069B8)
+              clean tonal wash (zero vector clutter over video/photography)
+            - Signal Teal (#009EAD) H1 highlight -> WCAG AAA on #08121E (Page 24)
+         ===================================================================== */
+      .ai2047-brandbook-v1 .hero-bg {
+        background:
+          linear-gradient(180deg, rgba(8, 18, 30, 0.68) 0%, rgba(8, 18, 30, 0.88) 100%),
+          radial-gradient(ellipse at 50% 88%, rgba(0, 105, 184, 0.34), transparent 45%),
+          #08121E !important;
+      }
+
+      .ai2047-brandbook-v1 #home > div.bg-\\[\\#020917\\]\\/35 {
+        background-color: rgba(8, 18, 30, 0.56) !important;
+      }
+
+      .ai2047-brandbook-v1 .hero-overlay {
+        background:
+          linear-gradient(180deg, rgba(8, 18, 30, 0.48) 0%, rgba(8, 18, 30, 0.78) 68%, #08121E 100%) !important;
+      }
+
+      .ai2047-brandbook-v1 .hero-grid-pattern {
+        background: none !important;
+      }
+
+      .ai2047-brandbook-v1 #home .container > p {
+        color: #F7F9FC !important;
+      }
+
+      /* Hero Metadata Strip Cards -> Midnight Core + Sovereign Blue Frame */
+      .ai2047-brandbook-v1 #home .grid > div {
+        background-color: rgba(8, 18, 30, 0.82) !important;
+        border-color: rgba(0, 105, 184, 0.48) !important;
+      }
+
+      .ai2047-brandbook-v1 .page-hero-top {
+        background-image:
+          linear-gradient(90deg, rgba(8, 18, 30, 0.94) 0%, rgba(8, 18, 30, 0.80) 52%, rgba(0, 105, 184, 0.38) 100%),
+          url("/mumbai/enterprise/images/speakers/Mumbai-speakers-overview.jpg") !important;
+        background-size: 100% 100%, cover !important;
+        background-position: center, center !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-color: #08121E !important;
+      }
+      .ai2047-brandbook-v1 .page-hero-top::after {
+        background: linear-gradient(to top, #08121E, transparent) !important;
+      }
+
+      /* =====================================================================
+         6. CLOUD WHITE (#F7F9FC) NEUTRAL LIGHT SECTIONS + #FFFFFF CARDS
+            (Page 22: bg-light-primary / surface-light-base)
+            Strictly 1 official Brand Book vector motif per section (Pages 35–41)
+         ===================================================================== */
+
+      /* #attend -> Cloud White (#F7F9FC) + Digital Pulse (top-left) */
+      .ai2047-brandbook-v1 #attend {
+        background-image: ${pulseLight} !important;
+        background-size: 420px 420px !important;
+        background-position: left -90px top -70px !important;
+        background-repeat: no-repeat !important;
+        background-color: #F7F9FC !important;
+        color: #08121E !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+      }
+
+      /* #agenda -> Cloud White (#F7F9FC) + Halftone Wave (bottom-right) */
+      .ai2047-brandbook-v1 #agenda {
+        background-image: ${waveLight} !important;
+        background-size: 680px auto !important;
+        background-position: right -100px bottom -30px !important;
+        background-repeat: no-repeat !important;
+        background-color: #F7F9FC !important;
+        color: #08121E !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+      }
+
+      /* #networking -> Cloud White (#F7F9FC) + Isometric Data Vortex (top-right) */
+      .ai2047-brandbook-v1 #networking {
+        background-image: ${isoVortexLight} !important;
+        background-size: 440px auto !important;
+        background-position: right -50px top 40px !important;
+        background-repeat: no-repeat !important;
+        background-color: #F7F9FC !important;
+        color: #08121E !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+      }
+
+      /* #partners -> Cloud White (#F7F9FC) + Digital Pulse (bottom-left) */
+      .ai2047-brandbook-v1 #partners {
+        background-image: ${pulseLight} !important;
+        background-size: 400px 400px !important;
+        background-position: left -80px bottom -80px !important;
+        background-repeat: no-repeat !important;
+        background-color: #F7F9FC !important;
+        color: #08121E !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+      }
+
+      /* #faq -> Cloud White (#F7F9FC) + Isometric Data Vortex (top-left) */
+      .ai2047-brandbook-v1 #faq {
+        background-image: ${isoVortexLight} !important;
+        background-size: 420px auto !important;
+        background-position: left -50px top 40px !important;
+        background-repeat: no-repeat !important;
+        background-color: #F7F9FC !important;
+        color: #08121E !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+      }
+
+      /* #cta (on Speaker Preview) -> Cloud White (#F7F9FC) + Digital Pulse (bottom-right) */
+      .ai2047-brandbook-v1 #cta {
+        background-image: ${pulseLight} !important;
+        background-size: 400px 400px !important;
+        background-position: right -80px bottom -80px !important;
+        background-repeat: no-repeat !important;
+        background-color: #F7F9FC !important;
+        color: #08121E !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+      }
+      .ai2047-brandbook-v1 #cta > div[aria-hidden="true"] {
+        display: none !important;
+      }
+
+      /* Typography on Cloud White (#F7F9FC) Sections -> Midnight Core (#08121E) */
+      .ai2047-brandbook-v1 #attend h2,
+      .ai2047-brandbook-v1 #attend h3,
+      .ai2047-brandbook-v1 #agenda h2,
+      .ai2047-brandbook-v1 #agenda h3,
+      .ai2047-brandbook-v1 #networking h2,
+      .ai2047-brandbook-v1 #networking h3,
+      .ai2047-brandbook-v1 #networking h4,
+      .ai2047-brandbook-v1 #partners h2,
+      .ai2047-brandbook-v1 #partners h3,
+      .ai2047-brandbook-v1 #faq h2,
+      .ai2047-brandbook-v1 #cta h2,
+      .ai2047-brandbook-v1 #cta article h3 {
+        color: #08121E !important;
+      }
+
+      .ai2047-brandbook-v1 #attend p,
+      .ai2047-brandbook-v1 #agenda p,
+      .ai2047-brandbook-v1 #networking p,
+      .ai2047-brandbook-v1 #partners p,
+      .ai2047-brandbook-v1 #faq p,
+      .ai2047-brandbook-v1 #cta article p {
+        color: #334155 !important;
+      }
+
+      /* #attend Stat Cards + Sovereign Blue (#0069B8) "Our Reach" Band */
+      .ai2047-brandbook-v1 #attend article {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(0, 105, 184, 0.22) !important;
+        box-shadow: 0 12px 32px rgba(8, 18, 30, 0.06) !important;
+      }
+      .ai2047-brandbook-v1 #attend article:hover {
+        border-color: #0069B8 !important;
+        box-shadow: 0 18px 40px rgba(0, 105, 184, 0.14) !important;
+      }
+      .ai2047-brandbook-v1 #attend article span.absolute {
+        color: #64748B !important;
+      }
+      .ai2047-brandbook-v1 #attend article strong {
+        color: #0069B8 !important;
+      }
+      .ai2047-brandbook-v1 #attend article p {
+        color: #08121E !important;
+      }
+
+      .ai2047-brandbook-v1 #attend > div > div.mt-16 {
+        background: #0069B8 !important;
+        border: 1px solid #0069B8 !important;
+        box-shadow: 0 22px 52px rgba(0, 105, 184, 0.22) !important;
+      }
+      .ai2047-brandbook-v1 #attend > div > div.mt-16 h3 {
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1 #attend > div > div.mt-16 div.rounded-2xl {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(255, 255, 255, 0.9) !important;
+        box-shadow: 0 10px 26px rgba(8, 18, 30, 0.16) !important;
+      }
+      .ai2047-brandbook-v1 #attend > div > div.mt-16 div.rounded-2xl:hover {
+        border-color: #F15928 !important;
+      }
+      .ai2047-brandbook-v1 #attend > div > div.mt-16 div.rounded-2xl strong {
+        color: #0069B8 !important;
+      }
+      .ai2047-brandbook-v1 #attend > div > div.mt-16 div.rounded-2xl span {
+        color: #08121E !important;
+      }
+      .ai2047-brandbook-v1 #attend > div > div.mt-16 div.h-\\[1px\\] {
+        background: rgba(255, 255, 255, 0.25) !important;
+      }
+
+      /* #agenda Cards */
+      .ai2047-brandbook-v1 #agenda article {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(0, 105, 184, 0.22) !important;
+        box-shadow: 0 12px 32px rgba(8, 18, 30, 0.06) !important;
+      }
+      .ai2047-brandbook-v1 #agenda article:hover {
+        border-color: #0069B8 !important;
+        box-shadow: 0 18px 42px rgba(0, 105, 184, 0.14) !important;
+      }
+      .ai2047-brandbook-v1 #agenda article span.w-\\[48px\\],
+      .ai2047-brandbook-v1 #agenda article span.rounded-full {
+        background-color: #F7F9FC !important;
+        border-color: rgba(0, 105, 184, 0.28) !important;
+        color: #0069B8 !important;
+      }
+
+      /* #networking Cards + Sovereign Blue Delegate Pass Banner */
+      .ai2047-brandbook-v1 #networking article {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(0, 105, 184, 0.22) !important;
+        box-shadow: 0 12px 30px rgba(8, 18, 30, 0.05) !important;
+      }
+      .ai2047-brandbook-v1 #networking article:hover {
+        border-color: #0069B8 !important;
+        box-shadow: 0 18px 38px rgba(0, 105, 184, 0.13) !important;
+      }
+      .ai2047-brandbook-v1 #networking article span.font-mono {
+        color: #0069B8 !important;
+        font-weight: 700 !important;
+      }
+      .ai2047-brandbook-v1 #networking article strong {
+        color: #08121E !important;
+      }
+      .ai2047-brandbook-v1 #networking .border-t.border-white\\/10 {
+        border-color: rgba(0, 105, 184, 0.16) !important;
+      }
+      .ai2047-brandbook-v1 #networking .max-w-\\[760px\\] > div {
+        background: #0069B8 !important;
+        border: 1.5px solid #009EAD !important;
+        box-shadow: 0 22px 52px rgba(0, 105, 184, 0.24) !important;
+      }
+      .ai2047-brandbook-v1 #networking .max-w-\\[760px\\] > div h4 {
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1 #networking .max-w-\\[760px\\] > div p {
+        color: #F7F9FC !important;
+      }
+
+      /* #partners Sponsor Tiles */
+      .ai2047-brandbook-v1 #partners span.bg-white {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(0, 105, 184, 0.18) !important;
+        box-shadow: 0 8px 24px rgba(8, 18, 30, 0.05) !important;
+      }
+
+      /* #faq Accordion & #cta Cards */
+      .ai2047-brandbook-v1 #faq > div > div,
+      .ai2047-brandbook-v1 #cta article {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(0, 105, 184, 0.22) !important;
+        box-shadow: 0 16px 42px rgba(8, 18, 30, 0.06) !important;
+      }
+      .ai2047-brandbook-v1 #cta article:hover {
+        border-color: #F15928 !important;
+      }
+      .ai2047-brandbook-v1 #cta article .border-t,
+      .ai2047-brandbook-v1 #faq details {
+        border-color: rgba(0, 105, 184, 0.16) !important;
+      }
+      .ai2047-brandbook-v1 #faq details summary span,
+      .ai2047-brandbook-v1 #faq details summary i,
+      .ai2047-brandbook-v1 #faq details[open] summary strong {
+        color: #0069B8 !important;
+      }
+      .ai2047-brandbook-v1 #faq details summary strong {
+        color: #08121E !important;
+      }
+
+      /* =====================================================================
+         7. MIDNIGHT CORE (#08121E) INSTITUTIONAL DATA & ENDORSEMENT SECTIONS
+            (Pages 22, 24, 59–67: #ecosystem, #testimonials, #footer)
+         ===================================================================== */
+
+      /* #ecosystem -> Midnight Core (#08121E) + Isometric Data Vortex Dark (top-right) */
+      .ai2047-brandbook-v1 #ecosystem {
+        background-image: ${isoVortexDark} !important;
+        background-size: 460px auto !important;
+        background-position: right -50px top 40px !important;
+        background-repeat: no-repeat !important;
+        background-color: #08121E !important;
+        color: #FFFFFF !important;
+        border-top: 2px solid #0069B8 !important;
+        border-bottom: 2px solid #0069B8 !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem > div[aria-hidden="true"] {
+        display: none !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem h2 {
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem > div > p,
+      .ai2047-brandbook-v1 #ecosystem > div > div.text-center > p {
+        color: rgba(247, 249, 252, 0.86) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem > div > div.text-center > p span.font-mono {
+        color: rgba(247, 249, 252, 0.66) !important;
+      }
+
+      /* Elevated Midnight Telemetry Cards inside #ecosystem */
+      .ai2047-brandbook-v1 #ecosystem article {
+        background: #0D1B2E !important;
+        border: 1px solid rgba(0, 105, 184, 0.52) !important;
+        box-shadow: 0 20px 46px rgba(0, 0, 0, 0.34) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article:hover {
+        border-color: #009EAD !important;
+        box-shadow: 0 24px 54px rgba(0, 0, 0, 0.45) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article h3 {
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article p {
+        color: rgba(247, 249, 252, 0.82) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article p.font-bold {
+        color: #FFFFFF !important;
+        font-weight: 600 !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article div.w-11.h-11,
+      .ai2047-brandbook-v1 #ecosystem article div.w-13.h-13 {
+        background: rgba(0, 105, 184, 0.22) !important;
+        border-color: rgba(0, 105, 184, 0.55) !important;
+        color: #FFFFFF !important;
+        box-shadow: none !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article div.w-11.h-11 svg,
+      .ai2047-brandbook-v1 #ecosystem article div.w-13.h-13 svg {
+        color: #009EAD !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article span.rounded-full {
+        background: rgba(0, 105, 184, 0.24) !important;
+        border-color: rgba(0, 105, 184, 0.55) !important;
+        color: #F7F9FC !important;
+        font-weight: 600 !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article .border-t {
+        border-color: rgba(0, 105, 184, 0.30) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article .space-y-2 .flex span:first-child {
+        color: rgba(247, 249, 252, 0.78) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article .space-y-2 .flex span:last-child {
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article .h-2\\.5 {
+        background-color: #08121E !important;
+        border-color: rgba(0, 105, 184, 0.42) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article .h-2\\.5 > div:first-child {
+        background: #009EAD !important;
+        box-shadow: none !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article .mt-7 span.font-mono,
+      .ai2047-brandbook-v1 #ecosystem article span.text-white\\/50 {
+        color: rgba(247, 249, 252, 0.65) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article .mt-7 span.text-\\[\\#18d4ff\\] {
+        color: #009EAD !important;
+        font-weight: 600 !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article span.text-\\[76px\\] {
+        color: rgba(0, 105, 184, 0.14) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article div.h-\\[1px\\] {
+        background-color: rgba(0, 105, 184, 0.28) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article div.h-\\[1px\\] > div {
+        background: #009EAD !important;
+      }
+
+      /* Executive Mandate Callout inside #ecosystem -> Sovereign Blue Anchor Card */
+      .ai2047-brandbook-v1 #ecosystem .rounded-\\[24px\\].border-\\[\\#C0F43C\\]\\/35 {
+        background: #0069B8 !important;
+        border: 1.5px solid #009EAD !important;
+        box-shadow: 0 22px 52px rgba(0, 0, 0, 0.36) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem .rounded-\\[24px\\].border-\\[\\#C0F43C\\]\\/35 > div.w-1\\.5 {
+        background: #F15928 !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem .rounded-\\[24px\\].border-\\[\\#C0F43C\\]\\/35 div.w-14.h-14 {
+        background: #08121E !important;
+        border-color: #009EAD !important;
+        color: #009EAD !important;
+        box-shadow: none !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem .rounded-\\[24px\\].border-\\[\\#C0F43C\\]\\/35 p,
+      .ai2047-brandbook-v1 #ecosystem .rounded-\\[24px\\].border-\\[\\#C0F43C\\]\\/35 span {
+        color: #FFFFFF !important;
+      }
+
+      /* #testimonials -> Midnight Core (#08121E) + Halftone Wave Dark (bottom-left) */
+      .ai2047-brandbook-v1 #testimonials {
+        background-image: ${waveDark} !important;
+        background-size: 680px auto !important;
+        background-position: left -110px bottom -30px !important;
+        background-repeat: no-repeat !important;
+        background-color: #08121E !important;
+        color: #FFFFFF !important;
+        border-top: 2px solid #0069B8 !important;
+        border-bottom: 2px solid #0069B8 !important;
+      }
+
+      /* #footer -> Midnight Core (#08121E) Institutional Footer */
+      .ai2047-brandbook-v1 #footer {
+        background-color: #08121E !important;
+        background-image: none !important;
+        border-top: 2px solid #0069B8 !important;
+        color: #F7F9FC !important;
+      }
+      .ai2047-brandbook-v1 #footer .border-b {
+        border-color: rgba(0, 105, 184, 0.35) !important;
+      }
+      .ai2047-brandbook-v1 #footer h3 {
+        color: #009EAD !important;
+      }
+      .ai2047-brandbook-v1 #footer p,
+      .ai2047-brandbook-v1 #footer a.text-muted {
+        color: rgba(247, 249, 252, 0.85) !important;
+      }
+      .ai2047-brandbook-v1 #footer a.text-muted:hover {
+        color: #009EAD !important;
+      }
+      .ai2047-brandbook-v1 #footer p.font-mono {
+        color: rgba(247, 249, 252, 0.65) !important;
+      }
+      .ai2047-brandbook-v1 #footer a[class*="border-[#C0F43C]"] {
+        background-color: #0D1B2E !important;
+        border-color: rgba(0, 105, 184, 0.55) !important;
+        color: #F7F9FC !important;
+      }
+      .ai2047-brandbook-v1 #footer a[class*="border-[#C0F43C]"]:hover {
+        background-color: #F15928 !important;
+        border-color: #F15928 !important;
+        color: #FFFFFF !important;
+      }
+
+      /* =====================================================================
+         8. SOVEREIGN BLUE (#0069B8) INSTITUTIONAL ANCHOR BANDS (80% DOMINANCE)
+            (#speakers, #lineup, #organizer)
+         ===================================================================== */
+      .ai2047-brandbook-v1 #speakers,
+      .ai2047-brandbook-v1 #lineup {
+        background-image: ${pulseOnSovereignBlue} !important;
+        background-size: 420px 420px !important;
+        background-position: left -90px top -70px !important;
+        background-repeat: no-repeat !important;
+        background-color: #0069B8 !important;
+        color: #FFFFFF !important;
+      }
+
+      .ai2047-brandbook-v1 #organizer {
+        background-image: ${pulseOnSovereignBlue} !important;
+        background-size: 400px 400px !important;
+        background-position: right -80px bottom -80px !important;
+        background-repeat: no-repeat !important;
+        background-color: #0069B8 !important;
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1 #organizer > div > div {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(255, 255, 255, 0.92) !important;
+        border-top: 4px solid #F15928 !important;
+        box-shadow: 0 22px 52px rgba(8, 18, 30, 0.24) !important;
+      }
+      .ai2047-brandbook-v1 #organizer h2,
+      .ai2047-brandbook-v1 #organizer h3 {
+        color: #08121E !important;
+      }
+      .ai2047-brandbook-v1 #organizer p {
+        color: #334155 !important;
+      }
+      .ai2047-brandbook-v1 #organizer span.font-mono {
+        color: #0069B8 !important;
+        font-weight: 700 !important;
+      }
+      .ai2047-brandbook-v1 #organizer a {
+        color: #0069B8 !important;
+        font-weight: 600 !important;
+      }
+      .ai2047-brandbook-v1 #organizer a:hover {
+        color: #F15928 !important;
+      }
+
+      /* =====================================================================
+         9. STRICT WCAG AA/AAA HEADLINE HIGHLIGHTS (PAGE 24 CONTRAST MATRIX)
+            - On Cloud White (#F7F9FC): Sovereign Blue (#0069B8) -> WCAG AAA
+            - On Midnight Core (#08121E): Signal Teal (#009EAD)  -> WCAG AAA
+            - On Sovereign Blue (#0069B8): Crisp Pure White (#FFFFFF) + Pulse Orange accent bar
+            (Zero off-palette hexes; zero 2-color text gradients)
+         ===================================================================== */
+      .ai2047-brandbook-v1 #attend .bg-clip-text.text-transparent,
+      .ai2047-brandbook-v1 #agenda .bg-clip-text.text-transparent,
+      .ai2047-brandbook-v1 #networking .bg-clip-text.text-transparent,
+      .ai2047-brandbook-v1 #partners .bg-clip-text.text-transparent,
+      .ai2047-brandbook-v1 #faq .bg-clip-text.text-transparent,
+      .ai2047-brandbook-v1 #cta .bg-clip-text.text-transparent {
+        background-image: none !important;
+        background-color: transparent !important;
+        -webkit-text-fill-color: #0069B8 !important;
+        color: #0069B8 !important;
+      }
+
+      .ai2047-brandbook-v1 #home .bg-clip-text.text-transparent,
+      .ai2047-brandbook-v1 .page-hero-top .bg-clip-text.text-transparent,
+      .ai2047-brandbook-v1 #ecosystem .bg-clip-text.text-transparent,
+      .ai2047-brandbook-v1 #testimonials .bg-clip-text.text-transparent {
+        background-image: none !important;
+        background-color: transparent !important;
+        -webkit-text-fill-color: #009EAD !important;
+        color: #009EAD !important;
+      }
+
+      .ai2047-brandbook-v1 #speakers h2 .bg-clip-text.text-transparent,
+      .ai2047-brandbook-v1 #lineup h2 .bg-clip-text.text-transparent,
+      .ai2047-brandbook-v1 #attend > div > div.mt-16 h3 .bg-clip-text.text-transparent {
+        background-image: none !important;
+        background-color: transparent !important;
+        -webkit-text-fill-color: #FFFFFF !important;
+        color: #FFFFFF !important;
+        text-decoration: underline !important;
+        text-decoration-color: #F15928 !important;
+        text-decoration-thickness: 3px !important;
+        text-underline-offset: 6px !important;
+      }
+
+      .ai2047-brandbook-v1 .text-\\[\\#C0F43C\\],
+      .ai2047-brandbook-v1 .text-\\[\\#c0f43c\\] {
+        color: #0069B8 !important;
+      }
+      .ai2047-brandbook-v1 #home .text-\\[\\#C0F43C\\],
+      .ai2047-brandbook-v1 .page-hero-top .text-\\[\\#C0F43C\\],
+      .ai2047-brandbook-v1 #ecosystem .text-\\[\\#C0F43C\\] {
+        color: #009EAD !important;
+      }
+
+      /* =====================================================================
+         10. BUTTON SYSTEM (5% PULSE ORANGE PRIMARY + SOVEREIGN BLUE SECONDARY)
+         ===================================================================== */
+      .ai2047-brandbook-v1 a[class*="bg-[#C0F43C]"],
+      .ai2047-brandbook-v1 a[class*="bg-[#c0f43c]"],
+      .ai2047-brandbook-v1 button[class*="bg-[#C0F43C]"],
+      .ai2047-brandbook-v1 a[class*="bg-[#18d4ff]"] {
+        background-color: #F15928 !important;
+        color: #FFFFFF !important;
+        border-color: #F15928 !important;
+        box-shadow: 0 8px 24px rgba(241, 89, 40, 0.34) !important;
+      }
+
+      .ai2047-brandbook-v1 a[class*="bg-[#C0F43C]"]:hover,
+      .ai2047-brandbook-v1 a[class*="bg-[#c0f43c]"]:hover,
+      .ai2047-brandbook-v1 a[class*="bg-[#18d4ff]"]:hover {
+        background-color: #D94B1E !important;
+        border-color: #D94B1E !important;
+        box-shadow: 0 12px 32px rgba(241, 89, 40, 0.46) !important;
+      }
+
+      .ai2047-brandbook-v1 a[class*="bg-[#C0F43C]"] svg,
+      .ai2047-brandbook-v1 a[class*="bg-[#C0F43C]"] span,
+      .ai2047-brandbook-v1 a[class*="bg-[#18d4ff]"] svg,
+      .ai2047-brandbook-v1 a[class*="bg-[#18d4ff]"] span {
+        color: #FFFFFF !important;
+      }
+
+      /* Secondary Buttons on Hero vs Cloud White Sections */
+      .ai2047-brandbook-v1 #home a[class*="border-[#4eb9ff]"] {
+        border: 1.5px solid #009EAD !important;
+        background-color: rgba(8, 18, 30, 0.72) !important;
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1 #home a[class*="border-[#4eb9ff]"]:hover {
+        background-color: #0069B8 !important;
+        border-color: #0069B8 !important;
+      }
+
+      .ai2047-brandbook-v1 #agenda a[class*="border-white/25"],
+      .ai2047-brandbook-v1 #networking a[class*="border-white/25"],
+      .ai2047-brandbook-v1 #partners a[class*="border-white/25"] {
+        border: 1.5px solid #0069B8 !important;
+        background-color: #FFFFFF !important;
+        color: #0069B8 !important;
+        box-shadow: 0 6px 18px rgba(8, 18, 30, 0.06) !important;
+      }
+      .ai2047-brandbook-v1 #networking .max-w-\\[760px\\] a[class*="border-white/25"] {
+        border: 1.5px solid #FFFFFF !important;
+        background-color: #FFFFFF !important;
+        color: #0069B8 !important;
+      }
+      .ai2047-brandbook-v1 #agenda a[class*="border-white/25"]:hover,
+      .ai2047-brandbook-v1 #networking a[class*="border-white/25"]:hover,
+      .ai2047-brandbook-v1 #partners a[class*="border-white/25"]:hover {
+        background-color: #0069B8 !important;
+        border-color: #0069B8 !important;
+        color: #FFFFFF !important;
+      }
+
+      /* =====================================================================
+         11. SPEAKER PORTRAIT CARDS (BRAND BOOK SOCIAL TEMPLATES — PAGES 57–60)
+             Midnight Core (#08121E) + Signal Teal (#009EAD) Frame + Pulse Orange Accent
+         ===================================================================== */
+      .ai2047-brandbook-v1 .speaker-card-inner {
+        background: #08121E !important;
+        border: 1.5px solid #009EAD !important;
+        box-shadow: 0 18px 38px rgba(8, 18, 30, 0.28) !important;
+      }
+      .ai2047-brandbook-v1 .speaker-card-inner:hover {
+        border-color: #F15928 !important;
+        box-shadow: 0 22px 46px rgba(8, 18, 30, 0.38) !important;
+      }
+      .ai2047-brandbook-v1 .speaker-card-inner > img {
+        position: relative;
+        z-index: 2;
+        opacity: 1 !important;
+      }
+      .ai2047-brandbook-v1 .speaker-card-inner::after {
+        background: linear-gradient(
+          to top,
+          rgba(8, 18, 30, 0.95) 0%,
+          rgba(8, 18, 30, 0.32) 30%,
+          transparent 56%
+        ) !important;
+        z-index: 3 !important;
+      }
+      .ai2047-brandbook-v1 .speaker-card-inner > div {
+        z-index: 10 !important;
+      }
+      .ai2047-brandbook-v1 .speaker-card-inner h3,
+      .ai2047-brandbook-v1 .speaker-card-inner h4 {
+        font-family: 'Space Grotesk', sans-serif !important;
+        font-size: 21px !important;
+        line-height: 1.25 !important;
+        font-weight: 600 !important;
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1 .speaker-card-inner p {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 13.5px !important;
+        line-height: 1.45 !important;
+        font-weight: 400 !important;
+        color: rgba(247, 249, 252, 0.85) !important;
+      }
+      .ai2047-brandbook-v1 .speaker-card-inner .speaker-line {
+        background-color: #009EAD !important;
+      }
+      .ai2047-brandbook-v1 .speaker-card-inner:hover .speaker-line {
+        width: 56px !important;
+        background-color: #F15928 !important;
+      }
+
+      /* =====================================================================
+         12. 24X24PX ICON KEYLINES & MICRO-ANIMATIONS (PAGES 50–51)
+         ===================================================================== */
+      @keyframes bbV1IconFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+      @keyframes bbV1GlyphBreathe {
+        0%, 100% { transform: scale(1) rotate(0deg); }
+        50% { transform: scale(1.10) rotate(2deg); }
+      }
+      @keyframes bbV1PulseRing {
+        0% { transform: scale(1); opacity: 0.55; }
+        75%, 100% { transform: scale(1.55); opacity: 0; }
+      }
+      @keyframes bbV1SectorSheen {
+        0%, 65% { transform: translateX(-160%) skewX(-22deg); }
+        100% { transform: translateX(180%) skewX(-22deg); }
+      }
+      @keyframes bbV1IconSpringPop {
+        0% { transform: scale(1) rotate(0deg); }
+        45% { transform: scale(1.22) rotate(-5deg); }
+        75% { transform: scale(0.96) rotate(2deg); }
+        100% { transform: scale(1.10) rotate(0deg); }
+      }
+
+      /* #attend 4 Stat Icons */
+      .ai2047-brandbook-v1 #attend article div.rounded-full {
+        position: relative !important;
+        width: 48px !important;
+        height: 48px !important;
+        background-color: #0069B8 !important;
+        box-shadow: 0 8px 20px rgba(0, 105, 184, 0.25) !important;
+        animation: bbV1IconFloat 3.4s ease-in-out infinite !important;
+        transition: background-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease !important;
+      }
+      .ai2047-brandbook-v1 #attend article div.rounded-full::after {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: 9999px;
+        border: 1.5px solid #009EAD;
+        pointer-events: none;
+        animation: bbV1PulseRing 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+      }
+      .ai2047-brandbook-v1 #attend article div.rounded-full img {
+        width: 24px !important;
+        height: 24px !important;
+        filter: brightness(0) invert(1) !important;
+        animation: bbV1GlyphBreathe 3.4s ease-in-out infinite !important;
+      }
+      .ai2047-brandbook-v1 #attend article:nth-child(2) div.rounded-full,
+      .ai2047-brandbook-v1 #attend article:nth-child(2) div.rounded-full::after,
+      .ai2047-brandbook-v1 #attend article:nth-child(2) div.rounded-full img { animation-delay: 0.65s !important; }
+      .ai2047-brandbook-v1 #attend article:nth-child(3) div.rounded-full,
+      .ai2047-brandbook-v1 #attend article:nth-child(3) div.rounded-full::after,
+      .ai2047-brandbook-v1 #attend article:nth-child(3) div.rounded-full img { animation-delay: 1.3s !important; }
+      .ai2047-brandbook-v1 #attend article:nth-child(4) div.rounded-full,
+      .ai2047-brandbook-v1 #attend article:nth-child(4) div.rounded-full::after,
+      .ai2047-brandbook-v1 #attend article:nth-child(4) div.rounded-full img { animation-delay: 1.95s !important; }
+
+      .ai2047-brandbook-v1 #attend article:hover div.rounded-full {
+        background-color: #F15928 !important;
+        box-shadow: 0 10px 26px rgba(241, 89, 40, 0.38) !important;
+        transform: translateY(-4px) scale(1.08) !important;
+        animation-play-state: paused !important;
+      }
+      .ai2047-brandbook-v1 #attend article:hover div.rounded-full img {
+        animation: bbV1IconSpringPop 0.52s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+      }
+
+      /* #networking 12 Priority Sector Icons */
+      .ai2047-brandbook-v1 #networking article span.w-10.h-10 {
+        position: relative !important;
+        overflow: hidden !important;
+        border-radius: 10px !important;
+        background-color: #0069B8 !important;
+        border: 1px solid #0069B8 !important;
+        box-shadow: 0 6px 16px rgba(0, 105, 184, 0.20) !important;
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.28s ease, border-color 0.28s ease !important;
+      }
+      .ai2047-brandbook-v1 #networking article span.w-10.h-10::before {
+        content: "";
+        position: absolute;
+        inset: -20% -10%;
+        width: 55%;
+        background: rgba(255, 255, 255, 0.25);
+        pointer-events: none;
+        z-index: 1;
+        animation: bbV1SectorSheen 4.6s ease-in-out infinite;
+      }
+      .ai2047-brandbook-v1 #networking article span.w-10.h-10 img {
+        position: relative;
+        z-index: 2;
+        filter: brightness(0) invert(1) !important;
+        animation: bbV1GlyphBreathe 3.2s ease-in-out infinite !important;
+      }
+      .ai2047-brandbook-v1 #networking article:hover span.w-10.h-10 {
+        background-color: #F15928 !important;
+        border-color: #F15928 !important;
+        transform: translateY(-2px) scale(1.10) rotate(-3deg) !important;
+      }
+
+      /* #ecosystem, #agenda & #testimonials Icons */
+      .ai2047-brandbook-v1 #ecosystem article div.w-11.h-11,
+      .ai2047-brandbook-v1 #ecosystem article div.w-13.h-13,
+      .ai2047-brandbook-v1 #agenda article span.w-\\[48px\\],
+      .ai2047-brandbook-v1 #testimonials .bb-v1-quote-icon {
+        animation: bbV1IconFloat 3.8s ease-in-out infinite !important;
+        transition: background-color 0.28s ease, border-color 0.28s ease, color 0.28s ease, transform 0.3s ease !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article:hover div.w-11.h-11,
+      .ai2047-brandbook-v1 #ecosystem article:hover div.w-13.h-13,
+      .ai2047-brandbook-v1 #agenda article:hover span.w-\\[48px\\] {
+        background-color: #0069B8 !important;
+        border-color: #0069B8 !important;
+        color: #FFFFFF !important;
+        transform: translateY(-3px) scale(1.08) !important;
+        animation-play-state: paused !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article:hover div.w-11.h-11 svg,
+      .ai2047-brandbook-v1 #ecosystem article:hover div.w-13.h-13 svg,
+      .ai2047-brandbook-v1 #agenda article:hover span.w-\\[48px\\] svg {
+        color: #FFFFFF !important;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ai2047-brandbook-v1 #attend article div.rounded-full,
+        .ai2047-brandbook-v1 #attend article div.rounded-full::after,
+        .ai2047-brandbook-v1 #attend article div.rounded-full img,
+        .ai2047-brandbook-v1 #networking article span.w-10.h-10::before,
+        .ai2047-brandbook-v1 #networking article span.w-10.h-10 img,
+        .ai2047-brandbook-v1 #ecosystem article div.w-11.h-11,
+        .ai2047-brandbook-v1 #ecosystem article div.w-13.h-13,
+        .ai2047-brandbook-v1 #agenda article span.w-\\[48px\\],
+        .ai2047-brandbook-v1 #testimonials .bb-v1-quote-icon {
+          animation: none !important;
+        }
+      }
+    `}</style>
+  );
+}
