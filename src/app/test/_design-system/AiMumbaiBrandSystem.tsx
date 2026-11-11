@@ -1061,6 +1061,273 @@ export function AiMumbaiLiveThemeStyles() {
         width: 56px !important;
         background-color: #F15928 !important;
       }
+
+      /* =====================================================================
+         8. TEST PAGE ICON ANIMATIONS (AMBIENT + INTERACTIVE HOVER)
+            Covers:
+            - #attend 4 Stat Card Icons (01–04)
+            - #networking 12 Priority Enterprise Sector Icons
+            - #ecosystem Telemetry, Mandate & Standard Card Icons
+            - #agenda 5 Talking Point Pillar Icons
+            - #testimonials Quote Badge Icon
+         ===================================================================== */
+      @keyframes ai2047IconFloat {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+
+      @keyframes ai2047GlyphBreathe {
+        0%, 100% {
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          transform: scale(1.12) rotate(3deg);
+        }
+      }
+
+      @keyframes ai2047PulseRing {
+        0% {
+          transform: scale(1);
+          opacity: 0.6;
+        }
+        75% {
+          transform: scale(1.58);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1.58);
+          opacity: 0;
+        }
+      }
+
+      @keyframes ai2047SectorSheen {
+        0%, 65% {
+          transform: translateX(-160%) skewX(-22deg);
+        }
+        100% {
+          transform: translateX(180%) skewX(-22deg);
+        }
+      }
+
+      @keyframes ai2047SectorGlyph {
+        0%, 100% {
+          transform: translateY(0px) scale(1);
+        }
+        50% {
+          transform: translateY(-2.5px) scale(1.1);
+        }
+      }
+
+      @keyframes ai2047IconSpringPop {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        45% {
+          transform: scale(1.24) rotate(-6deg);
+        }
+        75% {
+          transform: scale(0.95) rotate(3deg);
+        }
+        100% {
+          transform: scale(1.12) rotate(0deg);
+        }
+      }
+
+      /* --- A. #attend 4 Stat Icons (01 CXOs, 02 Speakers, 03 Pillars, 04 Days) --- */
+      .ai2047-live-theme #attend article div.rounded-full {
+        position: relative !important;
+        width: 46px !important;
+        height: 46px !important;
+        background-color: #0069B8 !important;
+        box-shadow: 0 8px 20px rgba(0, 105, 184, 0.28) !important;
+        animation: ai2047IconFloat 3.4s ease-in-out infinite !important;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease !important;
+      }
+
+      /* Concentric Signal Pulse Ring around each Stat Icon */
+      .ai2047-live-theme #attend article div.rounded-full::after {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: 9999px;
+        border: 1.5px solid #009EAD;
+        pointer-events: none;
+        animation: ai2047PulseRing 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+      }
+
+      /* Staggered timing across cards 01–04 */
+      .ai2047-live-theme #attend article:nth-child(1) div.rounded-full,
+      .ai2047-live-theme #attend article:nth-child(1) div.rounded-full::after,
+      .ai2047-live-theme #attend article:nth-child(1) div.rounded-full img {
+        animation-delay: 0s !important;
+      }
+      .ai2047-live-theme #attend article:nth-child(2) div.rounded-full,
+      .ai2047-live-theme #attend article:nth-child(2) div.rounded-full::after,
+      .ai2047-live-theme #attend article:nth-child(2) div.rounded-full img {
+        animation-delay: 0.65s !important;
+      }
+      .ai2047-live-theme #attend article:nth-child(3) div.rounded-full,
+      .ai2047-live-theme #attend article:nth-child(3) div.rounded-full::after,
+      .ai2047-live-theme #attend article:nth-child(3) div.rounded-full img {
+        animation-delay: 1.3s !important;
+      }
+      .ai2047-live-theme #attend article:nth-child(4) div.rounded-full,
+      .ai2047-live-theme #attend article:nth-child(4) div.rounded-full::after,
+      .ai2047-live-theme #attend article:nth-child(4) div.rounded-full img {
+        animation-delay: 1.95s !important;
+      }
+
+      /* Crisp Pure White Stat SVG + Gentle Breathing Motion */
+      .ai2047-live-theme #attend article div.rounded-full img {
+        filter: brightness(0) invert(1) !important;
+        animation: ai2047GlyphBreathe 3.4s ease-in-out infinite !important;
+        will-change: transform;
+      }
+
+      /* Stat Card Hover -> Pulse Orange (#F15928) + Elastic Pop */
+      .ai2047-live-theme #attend article:hover div.rounded-full {
+        background-color: #F15928 !important;
+        box-shadow: 0 10px 26px rgba(241, 89, 40, 0.42) !important;
+        transform: translateY(-4px) scale(1.1) !important;
+        animation-play-state: paused !important;
+      }
+      .ai2047-live-theme #attend article:hover div.rounded-full::after {
+        border-color: #F15928 !important;
+        animation-duration: 1.4s !important;
+      }
+      .ai2047-live-theme #attend article:hover div.rounded-full img {
+        animation: ai2047IconSpringPop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+      }
+
+      /* --- B. #networking 12 Priority Enterprise Sector Icons --- */
+      .ai2047-live-theme #networking article span.w-10.h-10 {
+        position: relative !important;
+        overflow: hidden !important;
+        border-radius: 10px !important;
+        background-color: #0069B8 !important;
+        border: 1px solid rgba(0, 158, 173, 0.45) !important;
+        box-shadow: 0 6px 16px rgba(0, 105, 184, 0.22) !important;
+        transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease !important;
+      }
+
+      /* Diagonal Specular Sheen Wave Across the 12 Sector Icons */
+      .ai2047-live-theme #networking article span.w-10.h-10::before {
+        content: "";
+        position: absolute;
+        inset: -20% -10%;
+        width: 55%;
+        background: rgba(255, 255, 255, 0.28);
+        pointer-events: none;
+        z-index: 1;
+        animation: ai2047SectorSheen 4.6s ease-in-out infinite;
+      }
+
+      /* Unify all 12 raster .webp icons to crisp pure white + ambient float */
+      .ai2047-live-theme #networking article span.w-10.h-10 img {
+        position: relative;
+        z-index: 2;
+        filter: brightness(0) invert(1) !important;
+        animation: ai2047SectorGlyph 3.2s ease-in-out infinite !important;
+        will-change: transform;
+      }
+
+      /* Staggered wave across all 12 sector cards in the 4x3 grid */
+      .ai2047-live-theme #networking article:nth-child(1) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(1) span.w-10.h-10 img { animation-delay: 0s !important; }
+      .ai2047-live-theme #networking article:nth-child(2) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(2) span.w-10.h-10 img { animation-delay: 0.28s !important; }
+      .ai2047-live-theme #networking article:nth-child(3) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(3) span.w-10.h-10 img { animation-delay: 0.56s !important; }
+      .ai2047-live-theme #networking article:nth-child(4) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(4) span.w-10.h-10 img { animation-delay: 0.84s !important; }
+      .ai2047-live-theme #networking article:nth-child(5) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(5) span.w-10.h-10 img { animation-delay: 1.12s !important; }
+      .ai2047-live-theme #networking article:nth-child(6) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(6) span.w-10.h-10 img { animation-delay: 1.4s !important; }
+      .ai2047-live-theme #networking article:nth-child(7) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(7) span.w-10.h-10 img { animation-delay: 1.68s !important; }
+      .ai2047-live-theme #networking article:nth-child(8) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(8) span.w-10.h-10 img { animation-delay: 1.96s !important; }
+      .ai2047-live-theme #networking article:nth-child(9) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(9) span.w-10.h-10 img { animation-delay: 2.24s !important; }
+      .ai2047-live-theme #networking article:nth-child(10) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(10) span.w-10.h-10 img { animation-delay: 2.52s !important; }
+      .ai2047-live-theme #networking article:nth-child(11) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(11) span.w-10.h-10 img { animation-delay: 2.8s !important; }
+      .ai2047-live-theme #networking article:nth-child(12) span.w-10.h-10::before,
+      .ai2047-live-theme #networking article:nth-child(12) span.w-10.h-10 img { animation-delay: 3.08s !important; }
+
+      /* Sector Card Hover -> Pulse Orange (#F15928) + Kinetic Spring Bounce */
+      .ai2047-live-theme #networking article:hover span.w-10.h-10 {
+        background-color: #F15928 !important;
+        border-color: #F15928 !important;
+        box-shadow: 0 10px 24px rgba(241, 89, 40, 0.38) !important;
+        transform: translateY(-2px) scale(1.12) rotate(-4deg) !important;
+      }
+      .ai2047-live-theme #networking article:hover span.w-10.h-10 img {
+        filter: brightness(0) invert(1) !important;
+        animation: ai2047IconSpringPop 0.52s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+      }
+
+      /* --- C. #ecosystem, #agenda & #testimonials Section Icons --- */
+      .ai2047-live-theme #ecosystem article div.w-11.h-11,
+      .ai2047-live-theme #ecosystem article div.w-13.h-13,
+      .ai2047-live-theme #agenda article span.w-\\[48px\\],
+      .ai2047-live-theme #testimonials article span.rounded-\\[12px\\] {
+        animation: ai2047IconFloat 3.8s ease-in-out infinite !important;
+        transition: background-color 0.28s ease, border-color 0.28s ease, color 0.28s ease, transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease !important;
+      }
+
+      .ai2047-live-theme #ecosystem .rounded-\\[24px\\].border-\\[\\#C0F43C\\]\\/35 div.w-14.h-14 {
+        position: relative !important;
+        animation: ai2047IconFloat 3.4s ease-in-out infinite !important;
+      }
+      .ai2047-live-theme #ecosystem .rounded-\\[24px\\].border-\\[\\#C0F43C\\]\\/35 div.w-14.h-14::after {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        border-radius: 16px;
+        border: 1.5px solid #009EAD;
+        pointer-events: none;
+        animation: ai2047PulseRing 3s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+      }
+
+      .ai2047-live-theme #ecosystem article:hover div.w-11.h-11,
+      .ai2047-live-theme #ecosystem article:hover div.w-13.h-13,
+      .ai2047-live-theme #agenda article:hover span.w-\\[48px\\] {
+        background-color: #0069B8 !important;
+        border-color: #0069B8 !important;
+        color: #FFFFFF !important;
+        box-shadow: 0 8px 22px rgba(0, 105, 184, 0.3) !important;
+        transform: translateY(-3px) scale(1.1) rotate(-4deg) !important;
+        animation-play-state: paused !important;
+      }
+      .ai2047-live-theme #ecosystem article:hover div.w-11.h-11 svg,
+      .ai2047-live-theme #ecosystem article:hover div.w-13.h-13 svg,
+      .ai2047-live-theme #agenda article:hover span.w-\\[48px\\] svg {
+        color: #FFFFFF !important;
+        animation: ai2047IconSpringPop 0.52s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ai2047-live-theme #attend article div.rounded-full,
+        .ai2047-live-theme #attend article div.rounded-full::after,
+        .ai2047-live-theme #attend article div.rounded-full img,
+        .ai2047-live-theme #networking article span.w-10.h-10::before,
+        .ai2047-live-theme #networking article span.w-10.h-10 img,
+        .ai2047-live-theme #ecosystem article div.w-11.h-11,
+        .ai2047-live-theme #ecosystem article div.w-13.h-13,
+        .ai2047-live-theme #ecosystem .rounded-\\[24px\\].border-\\[\\#C0F43C\\]\\/35 div.w-14.h-14,
+        .ai2047-live-theme #ecosystem .rounded-\\[24px\\].border-\\[\\#C0F43C\\]\\/35 div.w-14.h-14::after,
+        .ai2047-live-theme #agenda article span.w-\\[48px\\],
+        .ai2047-live-theme #testimonials article span.rounded-\\[12px\\] {
+          animation: none !important;
+        }
+      }
     `}</style>
   );
 }
