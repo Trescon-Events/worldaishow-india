@@ -116,13 +116,6 @@ function PartnerMark({ name }: { name: string }) {
   );
 }
 
-/**
- * AI 2047 Brand Book V1.0 — Executive Testimonials & Scroll-Zoom Cinema Reel
- * - Surface: Official Neutral Dark — Midnight Core (#08121E, Page 22)
- * - Primary Structural Framing: Sovereign Blue (#0069B8, 80% Hierarchy)
- * - Telemetry / Headline Highlight: Signal Teal (#009EAD, AAA on #08121E per Page 24)
- * - Active Focal Indicator / Kicker Dot: Pulse Orange (#F15928, 5% Hierarchy)
- */
 export function BrandBookV1TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -195,7 +188,6 @@ export function BrandBookV1TestimonialsSection() {
   const videoRotateX = (1 - zoomProgress) * 8;
   const videoTranslateY = (1 - zoomProgress) * 34;
   const videoOpacity = 0.65 + 0.35 * zoomProgress;
-  const cornerOffset = (1 - zoomProgress) * 10;
 
   return (
     <section
@@ -248,21 +240,11 @@ export function BrandBookV1TestimonialsSection() {
             </h2>
           </div>
 
-          {/* Sleek Counter + Circular Arrow Controls */}
+          {/* Circular Arrow Controls */}
           <div
             className="flex items-center gap-2.5 shrink-0"
             aria-label="Testimonial controls"
           >
-            <div className="px-4 py-2 rounded-full bg-[#0D1B2E] border border-[#0069B8]/45 text-[13px] font-semibold select-none">
-              <span className="text-[#009EAD] font-bold">
-                {String(activeIndex + 1).padStart(2, "0")}
-              </span>
-              <span className="text-[#F7F9FC]/35 mx-1.5">/</span>
-              <span className="text-[#F7F9FC]/75">
-                {String(testimonials.length).padStart(2, "0")}
-              </span>
-            </div>
-
             <button
               type="button"
               onClick={previous}
@@ -305,21 +287,11 @@ export function BrandBookV1TestimonialsSection() {
 
         {/* ───── Featured Executive Quote Stage (12-Column Split on Elevated Midnight Card) ───── */}
         <div className="relative rounded-[24px] bg-[#0D1B2E] border border-[#0069B8]/55 shadow-[0_24px_60px_rgba(0,0,0,0.42)] p-8 sm:p-11 overflow-hidden">
-          {/* Sovereign Blue Top Rule + Pulse Orange Left Focal Spine */}
+          {/* Pulse Orange Left Focal Spine */}
           <div
             className="absolute left-0 top-8 bottom-8 w-[4px] rounded-r-full bg-[#F15928]"
             aria-hidden="true"
           />
-
-          {/* Subtle Sovereign Blue Quote Watermark */}
-          <svg
-            className="pointer-events-none select-none absolute top-6 right-10 w-28 h-28 text-[#0069B8]/12"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-          </svg>
 
           <div className="relative z-10 grid grid-cols-12 gap-8 items-center max-lg:grid-cols-1">
             {/* Left 8 Columns: Quote & Outcome Metadata */}
@@ -338,9 +310,6 @@ export function BrandBookV1TestimonialsSection() {
                 <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#08121E] border border-[#009EAD]/45 text-[#F7F9FC] text-[12px] font-semibold">
                   <span className="w-2 h-2 rounded-full bg-[#009EAD]" />
                   {active.highlight}
-                </span>
-                <span className="text-[12px] font-semibold uppercase tracking-[1.5px] text-[#F7F9FC]/60 ml-auto max-sm:ml-0">
-                  Endorser {active.id}
                 </span>
               </div>
 
@@ -406,7 +375,7 @@ export function BrandBookV1TestimonialsSection() {
           </div>
         </div>
 
-        {/* ───── 4-Card Interactive Partner Selector Rail (24px Grid Gutter) ───── */}
+        {/* ───── 4-Card Interactive Partner Selector Rail (No Card Numbers) ───── */}
         <div className="grid grid-cols-4 gap-6 mt-6 max-[980px]:grid-cols-2 max-sm:grid-cols-1">
           {testimonials.map((item, idx) => {
             const isSelected = idx === activeIndex;
@@ -433,19 +402,13 @@ export function BrandBookV1TestimonialsSection() {
                   </span>
 
                   <span
-                    className={`inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[1.4px] ${
-                      isSelected ? "text-[#F15928]" : "text-[#F7F9FC]/60"
+                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                      isSelected
+                        ? "bg-[#F15928] scale-110"
+                        : "bg-[#0069B8] group-hover:bg-[#009EAD]"
                     }`}
-                  >
-                    <span
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        isSelected
-                          ? "bg-[#F15928] scale-110"
-                          : "bg-[#0069B8] group-hover:bg-[#009EAD]"
-                      }`}
-                    />
-                    {item.id}
-                  </span>
+                    aria-hidden="true"
+                  />
                 </div>
 
                 <div
@@ -493,40 +456,6 @@ export function BrandBookV1TestimonialsSection() {
               transition: "transform 90ms linear, opacity 120ms linear",
             }}
           >
-            {/* Sovereign Blue & Signal Teal Architectural Corner Locks */}
-            <span
-              aria-hidden="true"
-              className="pointer-events-none absolute -top-2.5 -left-2.5 w-7 h-7 border-t-[3px] border-l-[3px] border-[#0069B8] rounded-tl-[10px] max-sm:hidden"
-              style={{
-                transform: `translate(${-cornerOffset}px, ${-cornerOffset}px)`,
-                opacity: zoomProgress,
-              }}
-            />
-            <span
-              aria-hidden="true"
-              className="pointer-events-none absolute -top-2.5 -right-2.5 w-7 h-7 border-t-[3px] border-r-[3px] border-[#0069B8] rounded-tr-[10px] max-sm:hidden"
-              style={{
-                transform: `translate(${cornerOffset}px, ${-cornerOffset}px)`,
-                opacity: zoomProgress,
-              }}
-            />
-            <span
-              aria-hidden="true"
-              className="pointer-events-none absolute -bottom-2.5 -left-2.5 w-7 h-7 border-b-[3px] border-l-[3px] border-[#009EAD] rounded-bl-[10px] max-sm:hidden"
-              style={{
-                transform: `translate(${-cornerOffset}px, ${cornerOffset}px)`,
-                opacity: zoomProgress,
-              }}
-            />
-            <span
-              aria-hidden="true"
-              className="pointer-events-none absolute -bottom-2.5 -right-2.5 w-7 h-7 border-b-[3px] border-r-[3px] border-[#009EAD] rounded-br-[10px] max-sm:hidden"
-              style={{
-                transform: `translate(${cornerOffset}px, ${cornerOffset}px)`,
-                opacity: zoomProgress,
-              }}
-            />
-
             {/* Elevated Institutional Frame around 16:9 YouTube Player */}
             <div
               className="rounded-[24px] bg-[#0D1B2E] p-3 sm:p-4 border border-[#0069B8]/60"

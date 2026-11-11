@@ -23,7 +23,7 @@ export function TestSpeakersSection({
 
   return (
     <section
-      className="relative py-[104px] bg-gradient-to-b from-[#051224]/70 to-[#020a18]/96 max-sm:py-[72px]"
+      className="relative py-[104px] bg-[#0069B8] max-sm:py-[72px]"
       id="speakers"
     >
       <div className="w-[min(1180px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1180px)]">
@@ -53,15 +53,15 @@ export function TestSpeakersSection({
         <div className="mt-14 flex flex-wrap justify-center items-center gap-4">
           <a
             href="/mumbai/enterprise/test/speaker-preview"
-            className="inline-flex items-center justify-center h-[52px] px-8 rounded-full font-extrabold text-[15px] text-black [color:#06111f!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.3)] transition-all duration-200 cursor-pointer"
+            className="test-cta-primary inline-flex items-center justify-center gap-2.5 h-[52px] px-8 rounded-full font-bold text-[15px] text-white bg-[#F15928] cursor-pointer"
           >
-            Explore Speakers Hub ➔
+            Explore Speakers Hub <span className="cta-arrow inline-block">➔</span>
           </a>
           <a
             href="/mumbai/enterprise/agenda/call-for-speakers"
-            className="inline-flex items-center justify-center h-[52px] px-8 rounded-full font-extrabold text-[15px] text-white border border-white/25 bg-white/5 hover:border-cyan hover:text-cyan transition-all duration-200 cursor-pointer"
+            className="test-cta-secondary inline-flex items-center justify-center gap-2.5 h-[52px] px-8 rounded-full font-bold text-[15px] text-[#0069B8] border border-white/25 bg-white cursor-pointer"
           >
-            Apply to Speak →
+            Apply to Speak <span className="cta-arrow inline-block">→</span>
           </a>
         </div>
       </div>
@@ -85,26 +85,26 @@ export function TestSpeakersList() {
   }, [searchQuery]);
 
   return (
-    <section className="relative py-[92px] bg-[#020b1c] max-sm:py-[62px]" id="lineup">
+    <section className="relative py-[92px] bg-[#0069B8] max-sm:py-[62px]" id="lineup">
       <div className="w-[min(1180px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1180px)]">
         {/* Faculty Intake Banner */}
-        <div className="mb-12 p-7 rounded-[20px] border border-[#C0F43C]/35 bg-gradient-to-r from-[#C0F43C]/10 via-[#041022] to-[#18D4FF]/10 flex flex-wrap items-center justify-between gap-6">
+        <div className="mb-12 p-7 rounded-[20px] border border-[#C0F43C]/35 bg-white flex flex-wrap items-center justify-between gap-6">
           <div className="max-w-[700px]">
-            <span className="inline-block font-mono text-[11px] uppercase tracking-[1.8px] text-[#C0F43C] mb-2">
+            <span className="inline-block font-mono text-[11px] uppercase tracking-[1.8px] text-[#009EAD] mb-2">
               Mumbai 2027 Faculty Intake · Unannounced Slots Open
             </span>
-            <h3 className="text-white font-extrabold text-[22px] leading-snug m-0 mb-1.5">
+            <h3 className="text-[#0B1F3A] font-extrabold text-[22px] leading-snug m-0 mb-1.5">
               If you have scaled AI in production, we want you on the stage
             </h3>
-            <p className="text-white/75 text-[15px] leading-relaxed m-0">
+            <p className="text-[#334155] text-[15px] leading-relaxed m-0">
               Mumbai 2027 speaker announcements release in waves following steering committee review. Apply to join the 45+ enterprise faculty members below, or browse past speakers from the global World AI Show series.
             </p>
           </div>
           <a
             href="/mumbai/enterprise/agenda/call-for-speakers"
-            className="inline-flex items-center justify-center gap-2 h-[48px] px-7 rounded-full font-extrabold text-[14px] text-[#06111F] [color:#06111F!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.35)] transition-all duration-200 shrink-0"
+            className="test-cta-primary inline-flex items-center justify-center gap-2 h-[48px] px-7 rounded-full font-bold text-[14px] text-white bg-[#F15928] shrink-0"
           >
-            Apply to Speak →
+            Apply to Speak <span className="cta-arrow inline-block">→</span>
           </a>
         </div>
 
@@ -121,14 +121,14 @@ export function TestSpeakersList() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by name, designation, or company"
-                className="w-full h-[44px] px-4 rounded-full bg-[#051024] border border-white/15 text-white text-[14px] placeholder:text-white/45 focus:outline-none focus:border-cyan transition-colors"
+                className="w-full h-[44px] px-4 rounded-full bg-white border border-white/85 text-[#0B1F3A] text-[14px] placeholder:text-[#64748B] focus:outline-none focus:border-[#F15928] transition-colors"
               />
             </div>
           </div>
         </div>
 
         {filteredSpeakers.length === 0 ? (
-          <p className="text-white/60 text-lg">No speakers match your current search or filter criteria.</p>
+          <p className="text-white/85 text-lg">No speakers match your current search or filter criteria.</p>
         ) : (
           <div className="speaker-grid grid grid-cols-4 gap-[22px] max-[1080px]:grid-cols-3 max-[768px]:grid-cols-2 max-sm:grid-cols-1">
             {filteredSpeakers.map((speaker, index) => (

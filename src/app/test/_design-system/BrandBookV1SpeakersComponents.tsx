@@ -9,8 +9,7 @@ import { testNeuralSpeakers } from "./TestSpeakersComponents";
  * AI 2047 Brand Book V1.0 — Speaker Sections (Pages 57–61)
  * - Sovereign Blue (#0069B8) institutional showcase band (80% brand anchor)
  * - Midnight Core (#08121E) speaker portrait cards with Signal Teal (#009EAD) framing
- *   and Pulse Orange (#F15928) focal role/CTA accents
- * - Routes "Explore Speakers Hub" directly to /mumbai/enterprise/test/brandbook-speaker-preview
+ *   and Pulse Orange (#F15928) focal CTAs (strictly white text on orange BG)
  */
 export function BrandBookV1SpeakersSection({
   heading = (
@@ -40,7 +39,7 @@ export function BrandBookV1SpeakersSection({
           </h2>
         </div>
 
-        {/* Speakers Grid Container (12-column / 4-up grid, 24px gutter per Page 54) */}
+        {/* Speakers Grid Container */}
         <div className="speaker-grid grid grid-cols-4 gap-[24px] max-[1080px]:grid-cols-3 max-[768px]:grid-cols-2 max-sm:grid-cols-1">
           {displaySpeakers.map((speaker, index) => (
             <SpeakerCard
@@ -59,15 +58,15 @@ export function BrandBookV1SpeakersSection({
         <div className="mt-14 flex flex-wrap justify-center items-center gap-4">
           <a
             href="/mumbai/enterprise/test/brandbook-speaker-preview"
-            className="inline-flex items-center justify-center h-[52px] px-8 rounded-full font-bold text-[15px] text-white bg-[#F15928] hover:bg-[#D94B1E] shadow-[0_8px_24px_rgba(241,89,40,0.36)] transition-all duration-200 cursor-pointer"
+            className="bb-cta-primary inline-flex items-center justify-center gap-2.5 h-[52px] px-8 rounded-full font-bold text-[15px] text-white bg-[#F15928] cursor-pointer"
           >
-            Explore Speakers Hub ➔
+            Explore Speakers Hub <span className="cta-arrow inline-block">➔</span>
           </a>
           <a
             href="/mumbai/enterprise/agenda/call-for-speakers"
-            className="inline-flex items-center justify-center h-[52px] px-8 rounded-full font-bold text-[15px] text-[#0069B8] border border-white/25 bg-white hover:bg-[#08121E] hover:text-white hover:border-[#08121E] transition-all duration-200 cursor-pointer"
+            className="bb-cta-secondary inline-flex items-center justify-center gap-2.5 h-[52px] px-8 rounded-full font-bold text-[15px] text-[#0069B8] border border-white/25 bg-white cursor-pointer"
           >
-            Apply to Speak →
+            Apply to Speak <span className="cta-arrow inline-block">→</span>
           </a>
         </div>
       </div>
@@ -93,11 +92,11 @@ export function BrandBookV1SpeakersList() {
   return (
     <section className="relative py-[96px] bg-[#0069B8] max-sm:py-[64px]" id="lineup">
       <div className="w-[min(1200px,calc(100%-48px))] mx-auto max-sm:w-[calc(100%-32px)]">
-        {/* Institutional Faculty Intake Banner (Midnight Core #08121E card on Sovereign Blue #0069B8) */}
+        {/* Institutional Faculty Intake Banner */}
         <div className="mb-12 p-8 rounded-[20px] border border-[#009EAD]/60 bg-[#08121E] shadow-[0_20px_48px_rgba(8,18,30,0.28)] flex flex-wrap items-center justify-between gap-6">
           <div className="max-w-[720px]">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F15928]/16 border border-[#F15928]/45 text-[#F15928] text-[12px] font-semibold uppercase tracking-[1.5px] mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F15928]" />
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F15928] text-white text-[12px] font-semibold uppercase tracking-[1.5px] mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-white" />
               Mumbai 2027 Faculty Intake · Unannounced Slots Open
             </span>
             <h3 className="text-white m-0 mb-2">
@@ -109,9 +108,9 @@ export function BrandBookV1SpeakersList() {
           </div>
           <a
             href="/mumbai/enterprise/agenda/call-for-speakers"
-            className="inline-flex items-center justify-center gap-2 h-[48px] px-7 rounded-full font-bold text-[14px] text-white bg-[#F15928] hover:bg-[#D94B1E] shadow-[0_8px_24px_rgba(241,89,40,0.36)] transition-all duration-200 shrink-0"
+            className="bb-cta-primary inline-flex items-center justify-center gap-2 h-[48px] px-7 rounded-full font-bold text-[14px] text-white bg-[#F15928] shrink-0"
           >
-            Apply to Speak →
+            Apply to Speak <span className="cta-arrow inline-block">→</span>
           </a>
         </div>
 
