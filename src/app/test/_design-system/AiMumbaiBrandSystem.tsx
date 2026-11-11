@@ -562,93 +562,93 @@ export function AiMumbaiLiveThemeStyles() {
         color: #64748B !important;
       }
 
-      /* #testimonials Controls, Spotlight Card & Selector Buttons */
-      .ai2047-live-theme #testimonials [aria-label="Testimonial controls"] button {
+      /* #testimonials Controls, Spotlight Card & Selector Buttons (legacy fallback) */
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) [aria-label="Testimonial controls"] button {
         background: #FFFFFF !important;
         border-color: rgba(0, 105, 184, 0.24) !important;
         color: #0B1F3A !important;
       }
-      .ai2047-live-theme #testimonials [aria-label="Testimonial controls"] button:hover {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) [aria-label="Testimonial controls"] button:hover {
         border-color: #0069B8 !important;
         color: #0069B8 !important;
       }
-      .ai2047-live-theme #testimonials [aria-label="Testimonial controls"] > div {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) [aria-label="Testimonial controls"] > div {
         background: #FFFFFF !important;
         border-color: rgba(0, 105, 184, 0.22) !important;
       }
-      .ai2047-live-theme #testimonials [aria-label="Testimonial controls"] > div span:first-child {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) [aria-label="Testimonial controls"] > div span:first-child {
         color: #0069B8 !important;
       }
-      .ai2047-live-theme #testimonials [aria-label="Testimonial controls"] > div span:not(:first-child) {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) [aria-label="Testimonial controls"] > div span:not(:first-child) {
         color: #64748B !important;
       }
-      .ai2047-live-theme #testimonials article blockquote {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article blockquote {
         color: #0B1F3A !important;
       }
-      .ai2047-live-theme #testimonials article span.text-\\[180px\\] {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article span.text-\\[180px\\] {
         color: rgba(0, 105, 184, 0.06) !important;
       }
-      .ai2047-live-theme #testimonials article span.text-white\\/55 {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article span.text-white\\/55 {
         color: #52657A !important;
       }
-      .ai2047-live-theme #testimonials article span.rounded-\\[12px\\] {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article span.rounded-\\[12px\\] {
         background: #EAF4FC !important;
         border-color: rgba(0, 158, 173, 0.35) !important;
         color: #009EAD !important;
       }
-      .ai2047-live-theme #testimonials article span.rounded-full {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article span.rounded-full {
         background: #EAF4FC !important;
         border-color: rgba(0, 105, 184, 0.24) !important;
         color: #0069B8 !important;
       }
-      .ai2047-live-theme #testimonials article span.rounded-full > span {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article span.rounded-full > span {
         background-color: #009EAD !important;
       }
-      .ai2047-live-theme #testimonials article div.rounded-\\[18px\\] {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article div.rounded-\\[18px\\] {
         background: #F0F7FD !important;
         border-color: rgba(0, 105, 184, 0.2) !important;
       }
-      .ai2047-live-theme #testimonials article div.rounded-\\[18px\\] .border-b,
-      .ai2047-live-theme #testimonials article div.rounded-\\[18px\\] .border-t {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article div.rounded-\\[18px\\] .border-b,
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article div.rounded-\\[18px\\] .border-t {
         border-color: rgba(0, 105, 184, 0.14) !important;
       }
-      .ai2047-live-theme #testimonials article div.rounded-\\[18px\\] span.rounded-md {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article div.rounded-\\[18px\\] span.rounded-md {
         background: #FFFFFF !important;
         border-color: rgba(0, 105, 184, 0.2) !important;
         color: #0069B8 !important;
       }
-      .ai2047-live-theme #testimonials article div.rounded-\\[18px\\] div.text-white\\/45,
-      .ai2047-live-theme #testimonials article div.rounded-\\[18px\\] span.text-white\\/45 {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article div.rounded-\\[18px\\] div.text-white\\/45,
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article div.rounded-\\[18px\\] span.text-white\\/45 {
         color: #52657A !important;
       }
-      .ai2047-live-theme #testimonials article div.rounded-\\[18px\\] strong {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article div.rounded-\\[18px\\] strong {
         color: #0B1F3A !important;
       }
-      .ai2047-live-theme #testimonials article div.rounded-\\[18px\\] span.mt-1\\.5 {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) article div.rounded-\\[18px\\] span.mt-1\\.5 {
         color: #009EAD !important;
         font-weight: 600 !important;
       }
-      .ai2047-live-theme #testimonials .grid-cols-4 > button {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) .grid-cols-4 > button {
         background: rgba(255, 255, 255, 0.78) !important;
         border: 1px solid rgba(0, 105, 184, 0.18) !important;
         box-shadow: 0 6px 18px rgba(0, 65, 120, 0.05) !important;
       }
-      .ai2047-live-theme #testimonials .grid-cols-4 > button:hover {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) .grid-cols-4 > button:hover {
         background: #FFFFFF !important;
         border-color: rgba(0, 105, 184, 0.38) !important;
       }
-      .ai2047-live-theme #testimonials .grid-cols-4 > button[class*="-translate-y-0.5"] {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) .grid-cols-4 > button[class*="-translate-y-0.5"] {
         background: #FFFFFF !important;
         border: 1.5px solid #0069B8 !important;
         box-shadow: 0 14px 30px rgba(0, 105, 184, 0.14) !important;
       }
-      .ai2047-live-theme #testimonials .grid-cols-4 > button div.text-white {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) .grid-cols-4 > button div.text-white {
         color: #0B1F3A !important;
       }
-      .ai2047-live-theme #testimonials .grid-cols-4 > button div.text-white\\/50 {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) .grid-cols-4 > button div.text-white\\/50 {
         color: #475569 !important;
       }
-      .ai2047-live-theme #testimonials .grid-cols-4 > button span.font-mono {
+      .ai2047-live-theme #testimonials:not(.test-testimonials-redesign) .grid-cols-4 > button span.font-mono {
         color: #0069B8 !important;
       }
 
@@ -1277,7 +1277,8 @@ export function AiMumbaiLiveThemeStyles() {
       .ai2047-live-theme #ecosystem article div.w-11.h-11,
       .ai2047-live-theme #ecosystem article div.w-13.h-13,
       .ai2047-live-theme #agenda article span.w-\\[48px\\],
-      .ai2047-live-theme #testimonials article span.rounded-\\[12px\\] {
+      .ai2047-live-theme #testimonials article span.rounded-\\[12px\\],
+      .ai2047-live-theme #testimonials .test-quote-icon {
         animation: ai2047IconFloat 3.8s ease-in-out infinite !important;
         transition: background-color 0.28s ease, border-color 0.28s ease, color 0.28s ease, transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease !important;
       }

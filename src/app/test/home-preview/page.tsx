@@ -6,7 +6,7 @@ import { EcosystemSectionDemo as EcosystemSection } from "../../components/secti
 import { AgendaSection } from "../../components/sections/AgendaSection";
 import { TestSpeakersSection as SpeakersSection } from "../_design-system/TestSpeakersComponents";
 import { NetworkingSection } from "../../components/sections/NetworkingSection";
-import { TestimonialsSection } from "../../components/sections/TestimonialsSection";
+import { TestTestimonialsSection as TestimonialsSection } from "../_design-system/TestTestimonialsSection";
 import { SponsorsSection } from "../../components/sections/SponsorsSection";
 import { OrganizerSection } from "../../components/sections/OrganizerSection";
 import { FAQSection } from "../../components/sections/FAQSection";
