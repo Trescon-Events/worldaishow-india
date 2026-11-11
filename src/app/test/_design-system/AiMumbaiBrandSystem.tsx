@@ -6,7 +6,7 @@ import { BRANDBOOK_URIS } from "./BrandBookBgElements";
  * -------------------------------------------------------------------
  * Keeps the exact same layout, components, and structure as the live homepage
  * and live speakers page, while applying:
- * - Light Blue (#E6F2FB / #EAF4FC) primary tinted sections (replacing #08121e)
+ * - Brand Blue (#0069B8) primary alternating sections (with crisp white headings & white cards)
  * - White (#FFFFFF) alternating sections
  * - Brand Book Accents: Sovereign Blue (#0069B8), Signal Teal (#009EAD), Pulse Orange (#F15928)
  * - Authentic Brand Book SVG Elements (Pages 35–41 of AI 2047-BrandBook_V1.0.pdf):
@@ -20,12 +20,23 @@ export function AiMumbaiLiveThemeStyles() {
   const waveLight = `url("${BRANDBOOK_URIS.halftoneWaveLight}")`;
   const isoVortexLight = `url("${BRANDBOOK_URIS.isometricVortexLight}")`;
 
+  // Subtle pure-white Brand Book motifs for #0069B8 Brand Blue sections (strictly 1 per section)
+  const pulseOnBlue = `url("${BRANDBOOK_URIS.digitalPulseLight
+    .replace(/%230069B8/g, "%23FFFFFF")
+    .replace(/%23009EAD/g, "%23FFFFFF")}")`;
+  const waveOnBlue = `url("${BRANDBOOK_URIS.halftoneWaveLight
+    .replace(/%230069B8/g, "%23FFFFFF")
+    .replace(/%23009EAD/g, "%23FFFFFF")}")`;
+  const isoVortexOnBlue = `url("${BRANDBOOK_URIS.isometricVortexLight
+    .replace(/%230069B8/g, "%23FFFFFF")
+    .replace(/%23009EAD/g, "%23FFFFFF")}")`;
+
   return (
     <style>{`
       @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
       .ai2047-live-theme {
-        --bg: #E6F2FB;
+        --bg: #0069B8;
         --panel: #FFFFFF;
         --panel-soft: #F2F8FE;
         --line: rgba(0, 105, 184, 0.22);
@@ -37,7 +48,7 @@ export function AiMumbaiLiveThemeStyles() {
         --blue: #0069B8;
         --green: #F15928;
 
-        --color-bg: #E6F2FB;
+        --color-bg: #0069B8;
         --color-panel: #FFFFFF;
         --color-panel-soft: #F2F8FE;
         --color-line: rgba(0, 105, 184, 0.22);
@@ -231,21 +242,21 @@ export function AiMumbaiLiveThemeStyles() {
       }
 
       /* =====================================================================
-         1. BASE CANVAS & STICKY HEADER IN LIGHT BLUE (#E6F2FB / FROSTED GLASS)
+         1. BASE CANVAS (#0069B8 BRAND BLUE) & FROSTED WHITE STICKY HEADER
          ===================================================================== */
       .ai2047-live-theme main,
       .ai2047-live-theme .page-speakers {
-        background-color: #E6F2FB !important;
+        background-color: #0069B8 !important;
         color: #0B1F3A !important;
       }
 
       .ai2047-live-theme header nav[aria-label="Primary navigation"] {
-        background: rgba(238, 246, 253, 0.94) !important;
-        border: 1px solid rgba(0, 105, 184, 0.24) !important;
-        box-shadow: 0 16px 42px rgba(0, 65, 120, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+        background: rgba(255, 255, 255, 0.96) !important;
+        border: 1px solid rgba(0, 105, 184, 0.22) !important;
+        box-shadow: 0 16px 42px rgba(0, 32, 68, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
       }
 
-      /* Desktop Nav Links on Light Blue Frosted Header */
+      /* Desktop Nav Links on Frosted White Header */
       .ai2047-live-theme header nav[aria-label="Primary navigation"] .uppercase a:not([class*="bg-[#C0F43C]"]) {
         color: #0B1F3A !important;
       }
@@ -261,7 +272,7 @@ export function AiMumbaiLiveThemeStyles() {
         background-color: #F15928 !important;
       }
 
-      /* Mobile Hamburger Toggle & Drawer on Light Blue Header */
+      /* Mobile Hamburger Toggle & Drawer on Frosted White Header */
       .ai2047-live-theme header nav[aria-label="Primary navigation"] > button {
         background: #FFFFFF !important;
         border-color: rgba(0, 105, 184, 0.26) !important;
@@ -271,9 +282,9 @@ export function AiMumbaiLiveThemeStyles() {
         background-color: #0B1F3A !important;
       }
       .ai2047-live-theme header > div.rounded-\\[24px\\] {
-        background: rgba(238, 246, 253, 0.98) !important;
+        background: rgba(255, 255, 255, 0.98) !important;
         border-color: rgba(0, 105, 184, 0.24) !important;
-        box-shadow: 0 22px 52px rgba(0, 52, 102, 0.2) !important;
+        box-shadow: 0 22px 52px rgba(0, 32, 68, 0.24) !important;
       }
       .ai2047-live-theme header > div.rounded-\\[24px\\] a {
         color: #0B1F3A !important;
@@ -316,12 +327,12 @@ export function AiMumbaiLiveThemeStyles() {
       .ai2047-live-theme .page-hero-top .bg-clip-text.text-transparent {
         background-image: none !important;
         background-color: transparent !important;
-        -webkit-text-fill-color: #38D8E6 !important;
-        color: #38D8E6 !important;
+        -webkit-text-fill-color: #9BF6FF !important;
+        color: #9BF6FF !important;
       }
 
       .ai2047-live-theme #home .container > p {
-        color: #E6F2FB !important;
+        color: #F0F8FF !important;
       }
 
       .ai2047-live-theme .page-hero-top {
@@ -337,76 +348,68 @@ export function AiMumbaiLiveThemeStyles() {
       }
 
       /* =====================================================================
-         3. LIGHT BLUE (#E6F2FB / #EAF4FC) SECTIONS (REPLACING #08121e)
+         3. BRAND BLUE (#0069B8) SECTIONS (ALTERNATING WITH WHITE #FFFFFF)
             - Strictly 1 single Brand Book element per section (no-repeat)
-            - Alternates cleanly with White (#FFFFFF) sections
+            - Crisp White (#FFFFFF) headings & elevated White (#FFFFFF) cards
          ===================================================================== */
 
-      /* #ecosystem -> Light Blue + Strictly 1 element: Isometric Data Vortex (top-right) */
+      /* #ecosystem -> Brand Blue (#0069B8) + Strictly 1 element: Isometric Data Vortex (top-right) */
       .ai2047-live-theme #ecosystem {
-        background-image:
-          ${isoVortexLight},
-          linear-gradient(180deg, #E4F1FB 0%, #EDF6FD 52%, #E4F1FB 100%) !important;
-        background-size: 460px auto, 100% 100% !important;
-        background-position: right -50px top 40px, center !important;
-        background-repeat: no-repeat, no-repeat !important;
-        background-color: #E6F2FB !important;
-        color: #0B1F3A !important;
-        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
-        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+        background-image: ${isoVortexOnBlue} !important;
+        background-size: 460px auto !important;
+        background-position: right -50px top 40px !important;
+        background-repeat: no-repeat !important;
+        background-color: #0069B8 !important;
+        color: #FFFFFF !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
       }
       /* Hide dark-mode grid & blur overlays inside #ecosystem */
       .ai2047-live-theme #ecosystem > div[aria-hidden="true"] {
         display: none !important;
       }
 
-      /* #speakers & #lineup -> Light Blue + Strictly 1 element: Digital Pulse (top-left) */
+      /* #speakers & #lineup -> Brand Blue (#0069B8) + Strictly 1 element: Digital Pulse (top-left) */
       .ai2047-live-theme #speakers,
       .ai2047-live-theme #lineup {
-        background-image:
-          ${pulseLight},
-          linear-gradient(180deg, #E4F1FB 0%, #EDF6FD 52%, #E4F1FB 100%) !important;
-        background-size: 420px 420px, 100% 100% !important;
-        background-position: left -90px top -70px, center !important;
-        background-repeat: no-repeat, no-repeat !important;
-        background-color: #E6F2FB !important;
-        color: #0B1F3A !important;
-        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
-        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+        background-image: ${pulseOnBlue} !important;
+        background-size: 420px 420px !important;
+        background-position: left -90px top -70px !important;
+        background-repeat: no-repeat !important;
+        background-color: #0069B8 !important;
+        color: #FFFFFF !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
       }
 
-      /* #testimonials -> Light Blue + Strictly 1 element: Halftone Wave (bottom-left) */
+      /* #testimonials -> Brand Blue (#0069B8) + Strictly 1 element: Halftone Wave (bottom-left) */
       .ai2047-live-theme #testimonials {
-        background-image:
-          ${waveLight},
-          linear-gradient(180deg, #E4F1FB 0%, #EDF6FD 52%, #E4F1FB 100%) !important;
-        background-size: 680px auto, 100% 100% !important;
-        background-position: left -110px bottom -30px, center !important;
-        background-repeat: no-repeat, no-repeat !important;
-        background-color: #E6F2FB !important;
-        color: #0B1F3A !important;
-        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
-        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+        background-image: ${waveOnBlue} !important;
+        background-size: 680px auto !important;
+        background-position: left -110px bottom -30px !important;
+        background-repeat: no-repeat !important;
+        background-color: #0069B8 !important;
+        color: #FFFFFF !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
       }
       .ai2047-live-theme #testimonials > div[aria-hidden="true"] {
         display: none !important;
       }
 
-      /* #organizer -> Light Blue + Strictly 1 element: Digital Pulse (bottom-right) */
+      /* #organizer -> Brand Blue (#0069B8) + Strictly 1 element: Digital Pulse (bottom-right) */
       .ai2047-live-theme #organizer {
-        background-image:
-          ${pulseLight},
-          linear-gradient(180deg, #E4F1FB 0%, #EDF6FD 52%, #E4F1FB 100%) !important;
-        background-size: 400px 400px, 100% 100% !important;
-        background-position: right -80px bottom -80px, center !important;
-        background-repeat: no-repeat, no-repeat !important;
-        background-color: #E6F2FB !important;
-        color: #0B1F3A !important;
-        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
-        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+        background-image: ${pulseOnBlue} !important;
+        background-size: 400px 400px !important;
+        background-position: right -80px bottom -80px !important;
+        background-repeat: no-repeat !important;
+        background-color: #0069B8 !important;
+        color: #FFFFFF !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
       }
 
-      /* #cta (on Speaker Preview, between Light Blue #lineup and Light Blue #footer) -> White + 1 element */
+      /* #cta (on Speaker Preview, between Brand Blue #lineup and Brand Blue #footer) -> White + 1 element */
       .ai2047-live-theme #cta {
         background-image:
           ${pulseLight},
@@ -423,32 +426,45 @@ export function AiMumbaiLiveThemeStyles() {
         display: none !important;
       }
 
-      /* #footer -> Light Blue Surface + Dark Enterprise Logo */
+      /* #footer -> Brand Blue (#0069B8) Surface + White Enterprise Logo */
       .ai2047-live-theme #footer {
-        background: linear-gradient(180deg, #E2EFFB 0%, #D7E9F8 100%) !important;
-        border-top: 1px solid rgba(0, 105, 184, 0.22) !important;
-        color: #0B1F3A !important;
+        background-color: #0069B8 !important;
+        background-image: none !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.22) !important;
+        color: #FFFFFF !important;
       }
 
-      /* --- Typography & Crisp White Cards inside Light Blue Sections --- */
+      /* --- Section-Level Headings Directly on Brand Blue (#0069B8) -> Pure White --- */
       .ai2047-live-theme #ecosystem h2,
-      .ai2047-live-theme #ecosystem article h3,
       .ai2047-live-theme #speakers h2,
       .ai2047-live-theme #testimonials h2,
-      .ai2047-live-theme #lineup h2,
+      .ai2047-live-theme #lineup h2 {
+        color: #FFFFFF !important;
+      }
+
+      /* --- Card-Level Headings Inside White (#FFFFFF) Cards -> Deep Navy (#0B1F3A) --- */
+      .ai2047-live-theme #ecosystem article h3,
       .ai2047-live-theme #lineup .rounded-\\[20px\\] h3,
-      .ai2047-live-theme #cta h2 {
+      .ai2047-live-theme #cta h2,
+      .ai2047-live-theme #cta article h3 {
         color: #0B1F3A !important;
       }
 
+      /* --- Lead Paragraphs & Citations Directly on Brand Blue (#0069B8) --- */
       .ai2047-live-theme #ecosystem > div > p,
+      .ai2047-live-theme #ecosystem > div > div.text-center > p {
+        color: rgba(255, 255, 255, 0.92) !important;
+      }
+      .ai2047-live-theme #ecosystem > div > p span.font-mono,
+      .ai2047-live-theme #ecosystem > div > div.text-center > p span.font-mono {
+        color: rgba(255, 255, 255, 0.78) !important;
+      }
+
+      /* --- Body Copy Inside White (#FFFFFF) Cards --- */
       .ai2047-live-theme #organizer p,
       .ai2047-live-theme #lineup .rounded-\\[20px\\] p,
       .ai2047-live-theme #cta article p {
         color: #334155 !important;
-      }
-      .ai2047-live-theme #ecosystem > div > p span.font-mono {
-        color: #52657A !important;
       }
 
       /* Crisp White Cards inside #ecosystem, #testimonials, #organizer, #cta */
@@ -457,14 +473,14 @@ export function AiMumbaiLiveThemeStyles() {
       .ai2047-live-theme #organizer > div > div,
       .ai2047-live-theme #cta article {
         background: #FFFFFF !important;
-        border: 1px solid rgba(0, 105, 184, 0.2) !important;
-        box-shadow: 0 16px 40px rgba(0, 65, 120, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.85) !important;
+        box-shadow: 0 20px 46px rgba(0, 24, 56, 0.2) !important;
       }
 
       .ai2047-live-theme #ecosystem article:hover,
       .ai2047-live-theme #cta article:hover {
-        border-color: #009EAD !important;
-        box-shadow: 0 22px 48px rgba(0, 105, 184, 0.15) !important;
+        border-color: #F15928 !important;
+        box-shadow: 0 24px 54px rgba(0, 24, 56, 0.28) !important;
       }
 
       /* #ecosystem Telemetry Cards & Operational Ownership Cards */
@@ -549,14 +565,15 @@ export function AiMumbaiLiveThemeStyles() {
         color: #0B1F3A !important;
       }
 
-      /* #lineup Search Input & Divider */
+      /* #lineup Search Input & Divider on Brand Blue (#0069B8) */
       .ai2047-live-theme #lineup .border-b.border-white\\/10 {
-        border-color: rgba(0, 105, 184, 0.18) !important;
+        border-color: rgba(255, 255, 255, 0.24) !important;
       }
       .ai2047-live-theme #lineup input[type="search"] {
         background-color: #FFFFFF !important;
-        border-color: rgba(0, 105, 184, 0.28) !important;
+        border-color: rgba(255, 255, 255, 0.85) !important;
         color: #0B1F3A !important;
+        box-shadow: 0 8px 20px rgba(0, 22, 52, 0.16) !important;
       }
       .ai2047-live-theme #lineup input[type="search"]::placeholder {
         color: #64748B !important;
@@ -672,24 +689,24 @@ export function AiMumbaiLiveThemeStyles() {
         border-color: rgba(0, 105, 184, 0.14) !important;
       }
 
-      /* #footer Typography, Links & Social Icons on Light Blue */
+      /* #footer Typography, Links & Social Icons on Brand Blue (#0069B8) */
       .ai2047-live-theme #footer .border-b {
-        border-color: rgba(0, 105, 184, 0.2) !important;
+        border-color: rgba(255, 255, 255, 0.22) !important;
       }
       .ai2047-live-theme #footer h3 {
-        color: #0B1F3A !important;
+        color: #FFFFFF !important;
       }
       .ai2047-live-theme #footer p {
-        color: #334155 !important;
+        color: rgba(255, 255, 255, 0.9) !important;
       }
       .ai2047-live-theme #footer a.text-muted {
-        color: #334155 !important;
+        color: rgba(255, 255, 255, 0.9) !important;
       }
       .ai2047-live-theme #footer a.text-muted:hover {
-        color: #0069B8 !important;
+        color: #9BF6FF !important;
       }
       .ai2047-live-theme #footer p.font-mono {
-        color: #475569 !important;
+        color: rgba(255, 255, 255, 0.78) !important;
       }
 
       /* =====================================================================
@@ -814,28 +831,31 @@ export function AiMumbaiLiveThemeStyles() {
         color: #0B1F3A !important;
       }
 
-      /* Our Reach & Series Highlights Panel inside #attend -> Tinted Light Blue */
+      /* Our Reach & Series Highlights Panel inside #attend -> Brand Blue (#0069B8) */
       .ai2047-live-theme #attend > div > div.mt-16 {
-        background: #EAF4FC !important;
-        border: 1px solid rgba(0, 105, 184, 0.2) !important;
-        box-shadow: 0 20px 50px rgba(0, 65, 120, 0.06) !important;
+        background: #0069B8 !important;
+        border: 1px solid rgba(0, 105, 184, 0.35) !important;
+        box-shadow: 0 24px 56px rgba(0, 52, 102, 0.2) !important;
+      }
+      .ai2047-live-theme #attend > div > div.mt-16 h3 {
+        color: #FFFFFF !important;
       }
       .ai2047-live-theme #attend > div > div.mt-16 div.rounded-2xl {
         background: #FFFFFF !important;
-        border: 1px solid rgba(0, 105, 184, 0.16) !important;
-        box-shadow: 0 6px 20px rgba(0, 65, 120, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.85) !important;
+        box-shadow: 0 10px 26px rgba(0, 24, 56, 0.16) !important;
       }
       .ai2047-live-theme #attend > div > div.mt-16 div.rounded-2xl:hover {
-        border-color: #009EAD !important;
+        border-color: #F15928 !important;
       }
-      .ai2047-live-theme #attend > div > div.mt-16 strong {
+      .ai2047-live-theme #attend > div > div.mt-16 div.rounded-2xl strong {
         color: #0069B8 !important;
       }
-      .ai2047-live-theme #attend > div > div.mt-16 span {
+      .ai2047-live-theme #attend > div > div.mt-16 div.rounded-2xl span {
         color: #334155 !important;
       }
       .ai2047-live-theme #attend > div > div.mt-16 div.h-\\[1px\\] {
-        background: linear-gradient(90deg, transparent, rgba(0, 105, 184, 0.25), transparent) !important;
+        background: rgba(255, 255, 255, 0.24) !important;
       }
 
       /* --- Section: #agenda (5 Talking Points) on White --- */
@@ -883,17 +903,17 @@ export function AiMumbaiLiveThemeStyles() {
       .ai2047-live-theme #networking .border-t.border-white\\/10 {
         border-color: rgba(0, 105, 184, 0.16) !important;
       }
-      /* Delegate Pass Card inside #networking -> Light Blue Card */
+      /* Delegate Pass Card inside #networking -> Brand Blue (#0069B8) Card */
       .ai2047-live-theme #networking .max-w-\\[760px\\] > div {
-        background: linear-gradient(145deg, #E4F1FB 0%, #F1F8FE 100%) !important;
+        background: #0069B8 !important;
         border: 1.5px solid #009EAD !important;
-        box-shadow: 0 20px 48px rgba(0, 65, 120, 0.12) !important;
+        box-shadow: 0 22px 52px rgba(0, 52, 102, 0.22) !important;
       }
       .ai2047-live-theme #networking .max-w-\\[760px\\] > div h4 {
-        color: #0B1F3A !important;
+        color: #FFFFFF !important;
       }
       .ai2047-live-theme #networking .max-w-\\[760px\\] > div p {
-        color: #334155 !important;
+        color: rgba(255, 255, 255, 0.92) !important;
       }
 
       /* --- Section: #partners (Sponsors) on White --- */
@@ -927,22 +947,33 @@ export function AiMumbaiLiveThemeStyles() {
       }
 
       /* =====================================================================
-         5. SOLID SINGLE-COLOR ACCENT TEXT (#009EAD SIGNAL TEAL — NO 2-COLOR GRADIENTS)
+         5. SOLID SINGLE-COLOR ACCENT TEXT (NO 2-COLOR GRADIENTS)
+            - On White (#FFFFFF) sections & White cards: #009EAD (Signal Teal)
+            - Directly on Brand Blue (#0069B8) backgrounds: #9BF6FF (Ice Cyan)
          ===================================================================== */
       .ai2047-live-theme #attend .bg-clip-text.text-transparent,
-      .ai2047-live-theme #ecosystem .bg-clip-text.text-transparent,
+      .ai2047-live-theme #ecosystem article .bg-clip-text.text-transparent,
       .ai2047-live-theme #agenda .bg-clip-text.text-transparent,
-      .ai2047-live-theme #speakers .bg-clip-text.text-transparent,
       .ai2047-live-theme #networking .bg-clip-text.text-transparent,
-      .ai2047-live-theme #testimonials .bg-clip-text.text-transparent,
       .ai2047-live-theme #partners .bg-clip-text.text-transparent,
       .ai2047-live-theme #faq .bg-clip-text.text-transparent,
-      .ai2047-live-theme #lineup .bg-clip-text.text-transparent,
       .ai2047-live-theme #cta .bg-clip-text.text-transparent {
         background-image: none !important;
         background-color: transparent !important;
         -webkit-text-fill-color: #009EAD !important;
         color: #009EAD !important;
+      }
+
+      /* Headings sitting directly on Brand Blue (#0069B8) surfaces */
+      .ai2047-live-theme #ecosystem h2 .bg-clip-text.text-transparent,
+      .ai2047-live-theme #speakers h2 .bg-clip-text.text-transparent,
+      .ai2047-live-theme #testimonials h2 .bg-clip-text.text-transparent,
+      .ai2047-live-theme #lineup h2 .bg-clip-text.text-transparent,
+      .ai2047-live-theme #attend > div > div.mt-16 h3 .bg-clip-text.text-transparent {
+        background-image: none !important;
+        background-color: transparent !important;
+        -webkit-text-fill-color: #9BF6FF !important;
+        color: #9BF6FF !important;
       }
 
       .ai2047-live-theme .text-\\[\\#C0F43C\\],
@@ -965,14 +996,20 @@ export function AiMumbaiLiveThemeStyles() {
       }
 
       .ai2047-live-theme a[class*="border-white/25"] {
-        border: 1.5px solid #0069B8 !important;
+        border: 1.5px solid #FFFFFF !important;
         background-color: #FFFFFF !important;
         color: #0069B8 !important;
+        box-shadow: 0 8px 22px rgba(0, 28, 60, 0.16) !important;
+      }
+      .ai2047-live-theme #agenda a[class*="border-white/25"],
+      .ai2047-live-theme #networking a[class*="border-white/25"],
+      .ai2047-live-theme #partners a[class*="border-white/25"] {
+        border: 1.5px solid #0069B8 !important;
         box-shadow: 0 6px 18px rgba(0, 65, 120, 0.08) !important;
       }
       .ai2047-live-theme a[class*="border-white/25"]:hover {
-        background-color: #0069B8 !important;
-        border-color: #0069B8 !important;
+        background-color: #F15928 !important;
+        border-color: #F15928 !important;
         color: #FFFFFF !important;
       }
 

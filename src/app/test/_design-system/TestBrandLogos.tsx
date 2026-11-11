@@ -43,15 +43,15 @@ export function TestBrandLogos() {
         }
       });
 
-      // 3. Footer Brand Logo -> Dark text lockup on Light Blue Footer
+      // 3. Footer Brand Logo -> White text lockup on Brand Blue (#0069B8) Footer
       const footerImgs = root.querySelectorAll<HTMLImageElement>(
         '#footer img[src*="wais-27-enterprise"], #footer img[data-test-logo="footer"]'
       );
       footerImgs.forEach((img) => {
         img.dataset.testLogo = "footer";
-        applyFallbackOnError(img, "wais-26-enterprise-dark-logo.png");
-        if (!img.src.includes("wais-26-enterprise-dark-logo.png")) {
-          img.src = DARK_LOGO_SRC;
+        applyFallbackOnError(img, "wais-26-enterprise-white-logo.png");
+        if (!img.src.includes("wais-26-enterprise-white-logo.png")) {
+          img.src = WHITE_LOGO_SRC;
         }
       });
     };

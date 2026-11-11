@@ -236,11 +236,11 @@ export function TestTestimonialsSection() {
         {/* ───── Top Editorial Header + Navigation Controls ───── */}
         <div className="flex items-end justify-between gap-6 mb-11 max-[920px]:flex-col max-[920px]:items-start">
           <div>
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF] border border-[#0069B8]/20 text-[#0069B8] text-[12px] font-semibold uppercase tracking-[1.6px] mb-4 shadow-[0_4px_14px_rgba(0,65,120,0.06)]">
-              <span className="w-2 h-2 rounded-full bg-[#009EAD]" />
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF] border border-white/60 text-[#0069B8] text-[12px] font-semibold uppercase tracking-[1.6px] mb-4 shadow-[0_8px_20px_rgba(0,22,52,0.16)]">
+              <span className="w-2 h-2 rounded-full bg-[#F15928]" />
               Verified Partner Endorsements
             </span>
-            <h2 className="m-0 text-[#0B1F3A]">
+            <h2 className="m-0 text-[#FFFFFF]">
               What industry leaders <GradientText>are saying.</GradientText>
             </h2>
           </div>
@@ -250,7 +250,7 @@ export function TestTestimonialsSection() {
             className="flex items-center gap-2.5 shrink-0"
             aria-label="Testimonial controls"
           >
-            <div className="px-4 py-2 rounded-full bg-[#FFFFFF] border border-[#0069B8]/20 shadow-[0_4px_14px_rgba(0,65,120,0.06)] text-[13px] font-semibold select-none">
+            <div className="px-4 py-2 rounded-full bg-[#FFFFFF] border border-white/60 shadow-[0_8px_20px_rgba(0,22,52,0.16)] text-[13px] font-semibold select-none">
               <span className="text-[#0069B8] font-bold">
                 {String(activeIndex + 1).padStart(2, "0")}
               </span>
@@ -263,7 +263,7 @@ export function TestTestimonialsSection() {
             <button
               type="button"
               onClick={previous}
-              className="grid place-items-center w-11 h-11 rounded-full bg-[#FFFFFF] border border-[#0069B8]/22 text-[#0B1F3A] shadow-[0_4px_14px_rgba(0,65,120,0.06)] cursor-pointer transition-all duration-200 hover:bg-[#0069B8] hover:border-[#0069B8] hover:text-[#FFFFFF] hover:-translate-y-0.5 outline-none"
+              className="grid place-items-center w-11 h-11 rounded-full bg-[#FFFFFF] border border-white/60 text-[#0B1F3A] shadow-[0_8px_20px_rgba(0,22,52,0.16)] cursor-pointer transition-all duration-200 hover:bg-[#F15928] hover:border-[#F15928] hover:text-[#FFFFFF] hover:-translate-y-0.5 outline-none"
               aria-label="Previous testimonial"
             >
               <svg
@@ -282,7 +282,7 @@ export function TestTestimonialsSection() {
             <button
               type="button"
               onClick={next}
-              className="grid place-items-center w-11 h-11 rounded-full bg-[#FFFFFF] border border-[#0069B8]/22 text-[#0B1F3A] shadow-[0_4px_14px_rgba(0,65,120,0.06)] cursor-pointer transition-all duration-200 hover:bg-[#0069B8] hover:border-[#0069B8] hover:text-[#FFFFFF] hover:-translate-y-0.5 outline-none"
+              className="grid place-items-center w-11 h-11 rounded-full bg-[#FFFFFF] border border-white/60 text-[#0B1F3A] shadow-[0_8px_20px_rgba(0,22,52,0.16)] cursor-pointer transition-all duration-200 hover:bg-[#F15928] hover:border-[#F15928] hover:text-[#FFFFFF] hover:-translate-y-0.5 outline-none"
               aria-label="Next testimonial"
             >
               <svg
@@ -301,10 +301,10 @@ export function TestTestimonialsSection() {
         </div>
 
         {/* ───── Featured Executive Quote Stage (Full-Width Bento Split) ───── */}
-        <div className="test-quote-stage relative rounded-[24px] bg-[#FFFFFF] border border-[#0069B8]/20 shadow-[0_20px_50px_rgba(0,65,120,0.09)] p-8 sm:p-11 overflow-hidden">
-          {/* Solid Sovereign Blue Left Architectural Spine */}
+        <div className="test-quote-stage relative rounded-[24px] bg-[#FFFFFF] border border-white/80 shadow-[0_24px_56px_rgba(0,22,52,0.24)] p-8 sm:p-11 overflow-hidden">
+          {/* Solid Pulse Orange Left Architectural Spine */}
           <div
-            className="absolute left-0 top-8 bottom-8 w-[4px] rounded-r-full bg-[#0069B8]"
+            className="absolute left-0 top-8 bottom-8 w-[4px] rounded-r-full bg-[#F15928]"
             aria-hidden="true"
           />
 
@@ -392,7 +392,7 @@ export function TestTestimonialsSection() {
           </div>
 
           {/* Live Auto-Cycle Progress Bar along Bottom Edge */}
-          <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#E6F2FB]">
+          <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#EAF4FC]">
             <div
               key={`progress-${active.id}`}
               className="test-progress-fill h-full w-full bg-[#009EAD]"
@@ -411,8 +411,8 @@ export function TestTestimonialsSection() {
                 onClick={() => setActiveIndex(idx)}
                 className={`group relative text-left p-5 rounded-[18px] border transition-all duration-300 cursor-pointer overflow-hidden outline-none ${
                   isSelected
-                    ? "bg-[#FFFFFF] border-[#0069B8] border-[1.5px] shadow-[0_14px_32px_rgba(0,105,184,0.16)] -translate-y-1"
-                    : "bg-[#FFFFFF]/82 border-[#0069B8]/18 hover:bg-[#FFFFFF] hover:border-[#0069B8]/45 hover:-translate-y-0.5 shadow-[0_6px_18px_rgba(0,65,120,0.05)]"
+                    ? "bg-[#FFFFFF] border-[#F15928] border-[2px] shadow-[0_18px_38px_rgba(0,22,52,0.28)] -translate-y-1"
+                    : "bg-[#FFFFFF]/92 border-white/50 hover:bg-[#FFFFFF] hover:border-white hover:-translate-y-0.5 shadow-[0_10px_24px_rgba(0,22,52,0.14)]"
                 }`}
               >
                 <div className="flex items-center justify-between gap-3 mb-3.5">
@@ -468,7 +468,7 @@ export function TestTestimonialsSection() {
             className="flex flex-col items-center text-center mb-7 transition-opacity duration-300"
             style={{ opacity: Math.min(1, 0.45 + zoomProgress * 0.75) }}
           >
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF] border border-[#0069B8]/20 text-[#0069B8] text-[12px] font-semibold uppercase tracking-[1.5px] shadow-[0_4px_14px_rgba(0,65,120,0.06)]">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF] border border-white/60 text-[#0069B8] text-[12px] font-semibold uppercase tracking-[1.5px] shadow-[0_8px_20px_rgba(0,22,52,0.16)]">
               <span className="w-2 h-2 rounded-full bg-[#F15928] animate-pulse" />
               Client Voices · WAIS India Edition
             </span>
@@ -487,7 +487,7 @@ export function TestTestimonialsSection() {
             {/* Architectural Framing Corner Accents that lock in on zoom */}
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute -top-2.5 -left-2.5 w-7 h-7 border-t-[3px] border-l-[3px] border-[#0069B8] rounded-tl-[10px] max-sm:hidden"
+              className="pointer-events-none absolute -top-2.5 -left-2.5 w-7 h-7 border-t-[3px] border-l-[3px] border-[#FFFFFF] rounded-tl-[10px] max-sm:hidden"
               style={{
                 transform: `translate(${-cornerOffset}px, ${-cornerOffset}px)`,
                 opacity: zoomProgress,
@@ -495,7 +495,7 @@ export function TestTestimonialsSection() {
             />
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute -top-2.5 -right-2.5 w-7 h-7 border-t-[3px] border-r-[3px] border-[#0069B8] rounded-tr-[10px] max-sm:hidden"
+              className="pointer-events-none absolute -top-2.5 -right-2.5 w-7 h-7 border-t-[3px] border-r-[3px] border-[#FFFFFF] rounded-tr-[10px] max-sm:hidden"
               style={{
                 transform: `translate(${cornerOffset}px, ${-cornerOffset}px)`,
                 opacity: zoomProgress,
@@ -503,7 +503,7 @@ export function TestTestimonialsSection() {
             />
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute -bottom-2.5 -left-2.5 w-7 h-7 border-b-[3px] border-l-[3px] border-[#009EAD] rounded-bl-[10px] max-sm:hidden"
+              className="pointer-events-none absolute -bottom-2.5 -left-2.5 w-7 h-7 border-b-[3px] border-l-[3px] border-[#9BF6FF] rounded-bl-[10px] max-sm:hidden"
               style={{
                 transform: `translate(${-cornerOffset}px, ${cornerOffset}px)`,
                 opacity: zoomProgress,
@@ -511,7 +511,7 @@ export function TestTestimonialsSection() {
             />
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute -bottom-2.5 -right-2.5 w-7 h-7 border-b-[3px] border-r-[3px] border-[#009EAD] rounded-br-[10px] max-sm:hidden"
+              className="pointer-events-none absolute -bottom-2.5 -right-2.5 w-7 h-7 border-b-[3px] border-r-[3px] border-[#9BF6FF] rounded-br-[10px] max-sm:hidden"
               style={{
                 transform: `translate(${cornerOffset}px, ${cornerOffset}px)`,
                 opacity: zoomProgress,
@@ -520,11 +520,11 @@ export function TestTestimonialsSection() {
 
             {/* Elevated White Cinema Frame around 16:9 YouTube Player */}
             <div
-              className="rounded-[24px] bg-[#FFFFFF] p-3 sm:p-4 border border-[#0069B8]/25"
+              className="rounded-[24px] bg-[#FFFFFF] p-3 sm:p-4 border border-white/80"
               style={{
-                boxShadow: `0 ${Math.round(16 + 24 * zoomProgress)}px ${Math.round(
-                  40 + 44 * zoomProgress
-                )}px rgba(0, 65, 120, ${(0.08 + 0.14 * zoomProgress).toFixed(2)})`,
+                boxShadow: `0 ${Math.round(18 + 26 * zoomProgress)}px ${Math.round(
+                  44 + 46 * zoomProgress
+                )}px rgba(0, 20, 48, ${(0.18 + 0.16 * zoomProgress).toFixed(2)})`,
               }}
             >
               {/* Cinema Top Bar */}
