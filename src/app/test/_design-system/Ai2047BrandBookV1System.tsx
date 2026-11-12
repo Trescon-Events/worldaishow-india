@@ -1295,6 +1295,27 @@ export function Ai2047BrandBookV1Styles() {
       /* =====================================================================
          15. INNER PAGES COHESION (.ai2047-brandbook-inner)
          ===================================================================== */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main {
+        overflow-x: clip !important;
+        overflow-y: visible !important;
+      }
+
+      @media (min-width: 981px) {
+        .ai2047-brandbook-v1.ai2047-brandbook-inner .grid.overflow-x-auto,
+        .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="overflow-x-auto"] {
+          overflow: visible !important;
+        }
+      }
+
+      @media (max-width: 980px) {
+        .ai2047-brandbook-v1.ai2047-brandbook-inner .grid.overflow-x-auto,
+        .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="overflow-x-auto"] {
+          overflow-x: auto !important;
+          overflow-y: hidden !important;
+        }
+      }
+
       .ai2047-brandbook-v1.ai2047-brandbook-inner main {
         background: #08121E !important;
         background-image: none !important;
