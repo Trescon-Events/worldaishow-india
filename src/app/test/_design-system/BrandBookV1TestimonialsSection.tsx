@@ -121,6 +121,27 @@ export function BrandBookV1TestimonialsSection() {
   const [isPaused, setIsPaused] = useState(false);
   const [zoomProgress, setZoomProgress] = useState(0);
   const videoTrackRef = useRef<HTMLDivElement>(null);
+  const videoIframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    const el = videoTrackRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          videoIframeRef.current?.contentWindow?.postMessage(
+            JSON.stringify({ event: "command", func: "pauseVideo", args: [] }),
+            "*"
+          );
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const active = testimonials[activeIndex];
 
@@ -483,7 +504,8 @@ export function BrandBookV1TestimonialsSection() {
               {/* 16:9 Embedded Video */}
               <div className="relative w-full aspect-video rounded-[16px] overflow-hidden bg-[#08121E] border border-[#0069B8]/35">
                 <iframe
-                  src="https://www.youtube.com/embed/ZQ8-RcE79HE?rel=0&modestbranding=1"
+                  ref={videoIframeRef}
+                  src="https://www.youtube.com/embed/ZQ8-RcE79HE?rel=0&modestbranding=1&enablejsapi=1"
                   title="World AI Show Testimonial Video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
