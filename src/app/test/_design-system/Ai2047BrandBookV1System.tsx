@@ -430,12 +430,67 @@ export function Ai2047BrandBookV1Styles() {
       }
 
       /* Sovereign Blue (#0069B8) Institutional Anchor Bands */
-      .ai2047-brandbook-v1 #speakers,
       .ai2047-brandbook-v1 #lineup,
       .ai2047-brandbook-v1 #organizer {
         background-image: none !important;
         background-color: #0069B8 !important;
         color: #FFFFFF !important;
+      }
+
+      /* Custom Dark Halftone Background for BrandBook V1 Speakers Section */
+      .ai2047-brandbook-v1 #speakers {
+        background-color: #08121E !important;
+        background-image: url("/mumbai/enterprise/images/brandbook/wais-speker-bg.png") !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        color: #FFFFFF !important;
+      }
+
+      /* Vortex-Extended.svg Decorative Accents for #attend & #agenda */
+      .ai2047-brandbook-v1 #attend,
+      .ai2047-brandbook-v1 #agenda {
+        position: relative !important;
+        overflow: hidden !important;
+      }
+
+      .ai2047-brandbook-v1 #attend > div,
+      .ai2047-brandbook-v1 #agenda > div {
+        position: relative;
+        z-index: 2;
+      }
+
+      .ai2047-brandbook-v1 #attend::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        right: -60px;
+        width: min(760px, 65vw);
+        height: 440px;
+        background-image: url("/mumbai/enterprise/images/brandbook/Vortex-Extended.svg");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: contain;
+        opacity: 0.32;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .ai2047-brandbook-v1 #agenda::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: -80px;
+        width: min(780px, 65vw);
+        height: 460px;
+        background-image: url("/mumbai/enterprise/images/brandbook/Vortex-Extended.svg");
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: contain;
+        transform: scaleX(-1);
+        opacity: 0.32;
+        pointer-events: none;
+        z-index: 1;
       }
 
       /* Hide decorative background grids, floating particles & ambient blur orbs */
