@@ -1301,16 +1301,72 @@ export function Ai2047BrandBookV1Styles() {
         color: #FFFFFF !important;
       }
 
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(.page-hero-top):not(#speakers):not(#lineup):not(#organizer):not(#footer) {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(.page-hero-top):not(#speakers):not(#lineup):not(#organizer):not(#footer) {
         background-color: #0B1829 !important;
         background-image: none !important;
         border-top: 1px solid rgba(0, 105, 184, 0.22) !important;
         border-bottom: 1px solid rgba(0, 105, 184, 0.22) !important;
       }
 
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(odd):not(.page-hero-top):not(#speakers):not(#lineup):not(#organizer):not(#footer) {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(odd):not(:first-of-type):not(.page-hero-top):not(#speakers):not(#lineup):not(#organizer):not(#footer) {
         background-color: #08121E !important;
         background-image: none !important;
+      }
+
+      /* Inner Page Hero Banners (Preserve hero image, apply Midnight Core + Sovereign Blue Brand Book V1.0 tint) */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type:not(#lineup) {
+        position: relative !important;
+        background-color: #08121E !important;
+        border-bottom: 2px solid #0069B8 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type:not(.page-hero-top):not(#lineup) {
+        padding-top: 175px !important;
+        padding-bottom: 84px !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type::before {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        background: linear-gradient(
+          135deg,
+          rgba(8, 18, 30, 0.88) 0%,
+          rgba(0, 105, 184, 0.56) 100%
+        ) !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type > div {
+        position: relative !important;
+        z-index: 5 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type h1 {
+        color: #FFFFFF !important;
+        font-family: 'Space Grotesk', sans-serif !important;
+        font-size: clamp(36px, 4.6vw, 60px) !important;
+        line-height: 1.12 !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.02em !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type p {
+        color: rgba(247, 249, 252, 0.88) !important;
+      }
+
+      /* Fix Card & Tile Headings on Inner Pages (prevent 40px section-h3 override inside cards) */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner article h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .grid h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="rounded-"] h3 {
+        font-size: clamp(19px, 1.8vw, 23px) !important;
+        line-height: 1.3 !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.01em !important;
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner article h4,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .grid h4,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="rounded-"] h4 {
+        font-size: clamp(17px, 1.5vw, 20px) !important;
+        line-height: 1.35 !important;
+        font-weight: 600 !important;
       }
 
       /* Inner Page Glass Form Cards (Enquiry & Onboarding Pages) */
@@ -1357,7 +1413,9 @@ export function Ai2047BrandBookV1Styles() {
         border-color: rgba(0, 158, 173, 0.45) !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="bg-[#C0F43C]"]:not(a):not(button) {
-        background-color: #009EAD !important;
+        background-color: rgba(0, 158, 173, 0.16) !important;
+        border: 1px solid rgba(0, 158, 173, 0.45) !important;
+        color: #009EAD !important;
       }
 
       @media (prefers-reduced-motion: reduce) {
