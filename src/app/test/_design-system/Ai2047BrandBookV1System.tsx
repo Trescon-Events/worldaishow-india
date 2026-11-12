@@ -430,20 +430,11 @@ export function Ai2047BrandBookV1Styles() {
       }
 
       /* Sovereign Blue (#0069B8) Institutional Anchor Bands */
+      .ai2047-brandbook-v1 #speakers,
       .ai2047-brandbook-v1 #lineup,
       .ai2047-brandbook-v1 #organizer {
         background-image: none !important;
         background-color: #0069B8 !important;
-        color: #FFFFFF !important;
-      }
-
-      /* Custom Dark Halftone Background for BrandBook V1 Speakers Section */
-      .ai2047-brandbook-v1 #speakers {
-        background-color: #08121E !important;
-        background-image: url("/mumbai/enterprise/images/brandbook/wais-speker-bg.png") !important;
-        background-size: cover !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
         color: #FFFFFF !important;
       }
 
@@ -1084,7 +1075,11 @@ export function Ai2047BrandBookV1Styles() {
          10. SPEAKER PORTRAIT CARDS (HOME PAGE SPEAKER PORTRAIT CARDS)
          ===================================================================== */
       .ai2047-brandbook-v1 .speaker-card-inner {
-        background: linear-gradient(180deg, #0c1d36 0%, #071224 55%, #040914 100%) !important;
+        background-color: #08121E !important;
+        background-image: url("/mumbai/enterprise/images/brandbook/wais-speker-bg.png") !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
         border: 1px solid rgba(255, 255, 255, 0.24) !important;
         box-shadow: 0 18px 38px rgba(8, 18, 30, 0.28) !important;
       }

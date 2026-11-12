@@ -24,7 +24,7 @@ export function BrandBookV1SpeakersSection({
 
   return (
     <section
-      className="relative py-[104px] max-sm:py-[72px]" style={{backgroundImage: "url('/mumbai/enterprise/images/brandbook/wais-speker-bg.png')", backgroundSize: "cover", backgroundPosition: "center"}}
+      className="relative py-[104px] bg-[#0069B8] max-sm:py-[72px]"
       id="speakers"
     >
       <div className="w-[min(1200px,calc(100%-48px))] mx-auto max-sm:w-[calc(100%-32px)]">
