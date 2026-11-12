@@ -1334,6 +1334,47 @@ export function Ai2047BrandBookV1Styles() {
         background-image: none !important;
       }
 
+      /* Prevent homepage light-section ID rules (#attend, #agenda, #networking, #partners, #faq, #cta) from turning inner dark sections/headings dark */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #attend,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #agenda,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #networking,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #partners,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #faq,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta {
+        background-color: #08121E !important;
+        background-image: none !important;
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #attend h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #attend h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #agenda h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #agenda h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #networking h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #networking h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #networking h4,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #partners h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #partners h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #faq h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #faq h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta article h3 {
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #attend p,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #agenda p,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #networking p,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #partners p,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #faq p,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta p,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta article p {
+        color: rgba(247, 249, 252, 0.82) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main #attend article {
+        background: #0D1B2E !important;
+        border: 1px solid rgba(0, 105, 184, 0.42) !important;
+      }
+
       /* Inner Page Hero Banners (Preserve absolute hero image & overlays, frame top-center, and add balanced contrast scrim) */
       .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type:not(#lineup) {
         position: relative !important;
