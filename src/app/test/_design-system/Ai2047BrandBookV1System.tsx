@@ -1334,11 +1334,30 @@ export function Ai2047BrandBookV1Styles() {
         background-image: none !important;
       }
 
-      /* Inner Page Hero Banners (Preserve absolute hero image & overlays, keep content left-aligned above them) */
+      /* Inner Page Hero Banners (Preserve absolute hero image & overlays, frame top-center, and add balanced contrast scrim) */
       .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type:not(#lineup) {
         position: relative !important;
         background-color: #08121E !important;
+        background-position: center top !important;
+        background-size: cover !important;
         border-bottom: 2px solid #0069B8 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type:not(#lineup) > div.absolute.bg-cover {
+        background-position: center top !important;
+        background-size: cover !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type:not(#lineup)::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(8, 18, 30, 0.90) 0%,
+          rgba(8, 18, 30, 0.72) 48%,
+          rgba(8, 18, 30, 0.42) 100%
+        );
+        pointer-events: none;
+        z-index: 2;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type:not(.page-hero-top):not(#lineup) {
         padding-top: 175px !important;
