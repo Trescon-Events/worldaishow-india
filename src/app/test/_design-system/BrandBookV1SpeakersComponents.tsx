@@ -11,6 +11,12 @@ import { speakers as baseSpeakers } from "../../speakers/data";
  * - Sovereign Blue (#0069B8) institutional showcase band (80% brand anchor)
  * - Clean live home page SpeakerCard portrait treatment + Pulse Orange (#F15928) focal CTAs
  */
+export function toBrandBookCutoutImage(image: string) {
+  return image
+    .replace("/images/speakers/processed/", "/images/speakers/brandbook-cutouts/")
+    .replace(/\.(webp|jpe?g)$/i, ".png");
+}
+
 export function BrandBookV1SpeakersSection({
   heading = (
     <>
@@ -43,7 +49,7 @@ export function BrandBookV1SpeakersSection({
               name={speaker.name}
               role={speaker.designation}
               company={speaker.company}
-              image={speaker.image}
+              image={toBrandBookCutoutImage(speaker.image)}
               bio={speaker.bio}
               index={index}
             />
@@ -139,7 +145,7 @@ export function BrandBookV1SpeakersList() {
                 name={speaker.name}
                 role={speaker.designation}
                 company={speaker.company}
-                image={speaker.image}
+                image={toBrandBookCutoutImage(speaker.image)}
                 bio={speaker.bio}
                 index={index}
               />
