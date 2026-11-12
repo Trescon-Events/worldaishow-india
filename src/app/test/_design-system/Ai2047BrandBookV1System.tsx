@@ -1313,7 +1313,7 @@ export function Ai2047BrandBookV1Styles() {
         background-image: none !important;
       }
 
-      /* Inner Page Hero Banners (Preserve hero image, apply Midnight Core + Sovereign Blue Brand Book V1.0 tint) */
+      /* Inner Page Hero Banners (Preserve absolute hero image & overlays, keep content left-aligned above them) */
       .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type:not(#lineup) {
         position: relative !important;
         background-color: #08121E !important;
@@ -1323,19 +1323,7 @@ export function Ai2047BrandBookV1Styles() {
         padding-top: 175px !important;
         padding-bottom: 84px !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type::before {
-        content: "" !important;
-        position: absolute !important;
-        inset: 0 !important;
-        background: linear-gradient(
-          135deg,
-          rgba(8, 18, 30, 0.88) 0%,
-          rgba(0, 105, 184, 0.56) 100%
-        ) !important;
-        pointer-events: none !important;
-        z-index: 1 !important;
-      }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type > div {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:first-of-type > div:not(.absolute) {
         position: relative !important;
         z-index: 5 !important;
       }
