@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "../../components/sections/Header";
-import { HeroSection } from "../../components/sections/HeroSection";
+import { BrandBookV1HeroSection as HeroSection } from "../_design-system/BrandBookV1HeroSection";
 import { StatsSection } from "../../components/sections/StatsSection";
 import { EcosystemSectionDemo as EcosystemSection } from "../../components/sections/EcosystemSectionDemo";
 import { AgendaSection } from "../../components/sections/AgendaSection";
