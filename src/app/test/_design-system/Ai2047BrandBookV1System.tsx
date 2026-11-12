@@ -1292,6 +1292,74 @@ export function Ai2047BrandBookV1Styles() {
         color: #FFFFFF !important;
       }
 
+      /* =====================================================================
+         15. INNER PAGES COHESION (.ai2047-brandbook-inner)
+         ===================================================================== */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main {
+        background: #08121E !important;
+        background-image: none !important;
+        color: #FFFFFF !important;
+      }
+
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(.page-hero-top):not(#speakers):not(#lineup):not(#organizer):not(#footer) {
+        background-color: #0B1829 !important;
+        background-image: none !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.22) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.22) !important;
+      }
+
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(odd):not(.page-hero-top):not(#speakers):not(#lineup):not(#organizer):not(#footer) {
+        background-color: #08121E !important;
+        background-image: none !important;
+      }
+
+      /* Inner Page Glass Form Cards (Enquiry & Onboarding Pages) */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner div.rounded-\\[32px\\].backdrop-blur-\\[24px\\] {
+        background: #0D1B2E !important;
+        border: 1px solid rgba(0, 105, 184, 0.52) !important;
+        box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 158, 173, 0.22) !important;
+      }
+
+      /* HubSpot Embedded Form Submit CTA -> Pulse Orange (#F15928) + Pure White Text */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .hs-button,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner input[type="submit"].hs-button {
+        background-color: #F15928 !important;
+        background-image: none !important;
+        border: 1px solid #F15928 !important;
+        border-radius: 9999px !important;
+        color: #FFFFFF !important;
+        font-family: 'Space Grotesk', sans-serif !important;
+        font-weight: 700 !important;
+        padding: 12px 28px !important;
+        cursor: pointer !important;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .hs-button:hover,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner input[type="submit"].hs-button:hover {
+        background-color: #D9481B !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 12px 28px rgba(241, 89, 40, 0.4) !important;
+      }
+
+      /* Map legacy #C0F43C / #18d4ff accents on dark inner sections -> Signal Teal & Pulse Orange */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .text-\\[\\#C0F43C\\],
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .text-\\[\\#c0f43c\\],
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .text-\\[\\#18d4ff\\] {
+        color: #009EAD !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .bg-clip-text.text-transparent {
+        background-image: none !important;
+        background-color: transparent !important;
+        -webkit-text-fill-color: #009EAD !important;
+        color: #009EAD !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="border-[#C0F43C]"] {
+        border-color: rgba(0, 158, 173, 0.45) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="bg-[#C0F43C]"]:not(a):not(button) {
+        background-color: #009EAD !important;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         .ai2047-brandbook-v1 #attend article div.rounded-full,
         .ai2047-brandbook-v1 #attend article div.rounded-full::after,
