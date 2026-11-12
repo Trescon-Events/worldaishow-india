@@ -539,6 +539,22 @@ export function Ai2047BrandBookV1Styles() {
         color: #08121E !important;
       }
 
+      /* Keep "The complete enterprise buying unit." on one line on desktop/tablet */
+      .ai2047-brandbook-v1 #networking > div > div > div.max-w-\\[780px\\] {
+        max-width: 100% !important;
+      }
+      .ai2047-brandbook-v1 #networking > div > div > div.max-w-\\[780px\\] > p {
+        max-width: 780px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      @media (min-width: 768px) {
+        .ai2047-brandbook-v1 #networking h2 {
+          white-space: nowrap !important;
+          font-size: clamp(28px, 3.5vw, 46px) !important;
+        }
+      }
+
       .ai2047-brandbook-v1 #attend p,
       .ai2047-brandbook-v1 #agenda p,
       .ai2047-brandbook-v1 #networking p,
