@@ -11,6 +11,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://worldaishow.com"),
   title: "World AI Show: The Enterprise Edition | Mumbai 2027",
   description:
     "The premier cross-functional executive conference addressing the architecture, systems integration, agentic governance, and verifiable ROI of enterprise AI. 20–21 April 2027 · Mumbai, India · 2 Days.",
@@ -22,6 +23,19 @@ export const metadata: Metadata = {
     description:
       "Where AI becomes the operating model. Mumbai | 20–21 April 2027 | 2 Days. Organised by Trescon.",
     type: "website",
+    images: [
+      {
+        url: "/mumbai/enterprise/images/wais-featured-image.gif",
+        alt: "World AI Show: The Enterprise Edition | Mumbai 2027",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "World AI Show: The Enterprise Edition | Mumbai 2027",
+    description:
+      "Where AI becomes the operating model. Mumbai | 20–21 April 2027 | 2 Days. Organised by Trescon.",
+    images: ["/mumbai/enterprise/images/wais-featured-image.gif"],
   },
 };
 
