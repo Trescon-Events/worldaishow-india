@@ -565,47 +565,47 @@ export function Ai2047BrandBookV1Styles() {
         color: #08121E !important;
       }
 
-      /* #attend "Our Reach & Series Highlights" — Midnight Core (#08121E) Architectural Bento */
+      /* #attend "Our Reach & Series Highlights" — Clean White Only */
       .ai2047-brandbook-v1 #attend > div > div.mt-16 {
-        background:
-          radial-gradient(ellipse 75% 48% at 50% 0%, rgba(0, 105, 184, 0.34) 0%, transparent 72%),
-          linear-gradient(165deg, #08121E 0%, #0B192C 55%, #07111D 100%) !important;
-        border: 1px solid rgba(0, 158, 173, 0.32) !important;
+        background: #FFFFFF !important;
+        background-image: none !important;
+        border: 1px solid rgba(0, 105, 184, 0.18) !important;
         border-radius: 24px !important;
-        box-shadow: 0 28px 64px rgba(8, 18, 30, 0.24) !important;
+        box-shadow: 0 12px 32px rgba(8, 18, 30, 0.05) !important;
       }
       .ai2047-brandbook-v1 #attend > div > div.mt-16 h3 {
-        color: #FFFFFF !important;
+        color: #08121E !important;
         letter-spacing: 0.04em !important;
       }
       .ai2047-brandbook-v1 #attend > div > div.mt-16 h3 .bg-clip-text {
         background-image: none !important;
-        -webkit-text-fill-color: #009EAD !important;
-        color: #009EAD !important;
+        -webkit-text-fill-color: #0069B8 !important;
+        color: #0069B8 !important;
       }
       .ai2047-brandbook-v1 #attend > div > div.mt-16 div.rounded-2xl {
-        background: rgba(255, 255, 255, 0.045) !important;
-        border: 1px solid rgba(255, 255, 255, 0.11) !important;
-        border-top: 2px solid rgba(0, 158, 173, 0.65) !important;
+        background: #FFFFFF !important;
+        background-image: none !important;
+        border: 1px solid rgba(0, 105, 184, 0.22) !important;
+        border-top: 2px solid #0069B8 !important;
         border-radius: 16px !important;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 24px rgba(0, 0, 0, 0.22) !important;
-        transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease !important;
+        box-shadow: 0 8px 22px rgba(8, 18, 30, 0.05) !important;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
       }
       .ai2047-brandbook-v1 #attend > div > div.mt-16 div.rounded-2xl:hover {
-        background: rgba(0, 105, 184, 0.18) !important;
-        border-color: rgba(241, 89, 40, 0.85) !important;
+        background: #FFFFFF !important;
+        border-color: #F15928 !important;
         border-top-color: #F15928 !important;
-        transform: translateY(-4px) !important;
-        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.34) !important;
+        transform: translateY(-3px) !important;
+        box-shadow: 0 14px 30px rgba(0, 105, 184, 0.12) !important;
       }
       .ai2047-brandbook-v1 #attend > div > div.mt-16 div.rounded-2xl strong {
-        color: #FFFFFF !important;
+        color: #0069B8 !important;
       }
       .ai2047-brandbook-v1 #attend > div > div.mt-16 div.rounded-2xl span {
-        color: rgba(247, 249, 252, 0.72) !important;
+        color: #334155 !important;
       }
       .ai2047-brandbook-v1 #attend > div > div.mt-16 div.h-\\[1px\\] {
-        background: linear-gradient(90deg, transparent 0%, rgba(0, 158, 173, 0.45) 50%, transparent 100%) !important;
+        background: rgba(0, 105, 184, 0.16) !important;
       }
 
       /* #agenda Cards */
@@ -697,8 +697,13 @@ export function Ai2047BrandBookV1Styles() {
 
       .ai2047-brandbook-v1 #ecosystem article {
         background: #0D1B2E !important;
+        background-image: none !important;
         border: 1px solid rgba(0, 105, 184, 0.52) !important;
         box-shadow: 0 20px 46px rgba(0, 0, 0, 0.34) !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article > div.h-\\[2px\\] {
+        background: #009EAD !important;
+        background-image: none !important;
       }
       .ai2047-brandbook-v1 #ecosystem article:hover {
         border-color: #009EAD !important;
@@ -739,8 +744,16 @@ export function Ai2047BrandBookV1Styles() {
         border-color: rgba(0, 105, 184, 0.42) !important;
       }
       .ai2047-brandbook-v1 #ecosystem article .h-2\\.5 > div:first-child {
-        background: #009EAD !important;
+        background-color: #009EAD !important;
+        background-image: none !important;
         box-shadow: none !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article .h-2\\.5 > div:first-child > div {
+        display: none !important;
+      }
+      .ai2047-brandbook-v1 #ecosystem article .h-2\\.5 > div:nth-child(2) {
+        box-shadow: none !important;
+        background-color: #FFFFFF !important;
       }
       .ai2047-brandbook-v1 #ecosystem article .mt-7 span.font-mono {
         color: rgba(247, 249, 252, 0.65) !important;
