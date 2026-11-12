@@ -890,16 +890,12 @@ export function Ai2047BrandBookV1Styles() {
       }
 
       .ai2047-brandbook-v1 #speakers h2 .bg-clip-text.text-transparent,
-      .ai2047-brandbook-v1 #lineup h2 .bg-clip-text.text-transparent,
-      .ai2047-brandbook-v1 #attend > div > div.mt-16 h3 .bg-clip-text.text-transparent {
+      .ai2047-brandbook-v1 #lineup h2 .bg-clip-text.text-transparent {
         background-image: none !important;
         background-color: transparent !important;
         -webkit-text-fill-color: #FFFFFF !important;
         color: #FFFFFF !important;
-        text-decoration: underline !important;
-        text-decoration-color: #F15928 !important;
-        text-decoration-thickness: 3px !important;
-        text-underline-offset: 6px !important;
+        text-decoration: none !important;
       }
 
       .ai2047-brandbook-v1 .text-\\[\\#C0F43C\\],
