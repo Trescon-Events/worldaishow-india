@@ -62,7 +62,7 @@ const INDIA_GOVERNMENT_ASSOCIATIONS: SponsorLogo[] = [
 
 function LogoCard({ item }: { item: SponsorLogo }) {
   return (
-    <div className="group relative overflow-hidden flex items-center justify-center bg-white rounded-[16px] p-5 border border-slate-200/90 shadow-[0_4px_16px_rgba(8,18,30,0.05)] hover:-translate-y-1.5 hover:border-[#0069B8] hover:shadow-[0_12px_28px_rgba(0,105,184,0.14)] transition-all duration-300 select-none w-full aspect-[1.75/1]">
+    <div className="group relative overflow-hidden flex items-center justify-center bg-white rounded-[16px] p-5 shadow-[0_4px_16px_rgba(8,18,30,0.05)] hover:-translate-y-1.5 hover:shadow-[0_12px_28px_rgba(0,105,184,0.14)] transition-all duration-300 select-none w-full aspect-[1.75/1]">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={item.logo}

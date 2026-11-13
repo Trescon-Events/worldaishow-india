@@ -427,6 +427,15 @@ export function Ai2047BrandBookV1Styles() {
         border-color: #F15928 !important;
         font-weight: 700 !important;
       }
+      .ai2047-brandbook-v1 header nav.sub-nav-bar a:first-child,
+      .ai2047-brandbook-v1 header nav:not([aria-label="Primary navigation"]) a:first-child {
+        width: auto !important;
+        min-width: unset !important;
+        height: auto !important;
+        position: static !important;
+        transform: none !important;
+        margin: 0 !important;
+      }
 
       /* =====================================================================
          5. HERO BANNER (#home & .page-hero-top) — ZERO BG ELEMENTS
@@ -520,11 +529,17 @@ export function Ai2047BrandBookV1Styles() {
 
       /* Sovereign Blue (#0069B8) Institutional Anchor Bands */
       .ai2047-brandbook-v1 #speakers,
-      .ai2047-brandbook-v1 #lineup,
       .ai2047-brandbook-v1 #organizer {
         background-image: none !important;
         background-color: #0069B8 !important;
         color: #FFFFFF !important;
+      }
+
+      /* Speakers Hub Lineup Canvas: Cloud White (#F7F9FC) */
+      .ai2047-brandbook-v1 #lineup {
+        background-color: #F7F9FC !important;
+        background-image: none !important;
+        color: #08121E !important;
       }
 
       /* Vortex-Extended.svg Decorative Accents for #attend & #agenda */
@@ -629,9 +644,7 @@ export function Ai2047BrandBookV1Styles() {
       .ai2047-brandbook-v1 #networking h4,
       .ai2047-brandbook-v1 #partners h2,
       .ai2047-brandbook-v1 #partners h3,
-      .ai2047-brandbook-v1 #faq h2,
-      .ai2047-brandbook-v1 #cta h2,
-      .ai2047-brandbook-v1 #cta article h3 {
+      .ai2047-brandbook-v1 #faq h2 {
         color: #08121E !important;
       }
 
@@ -655,8 +668,7 @@ export function Ai2047BrandBookV1Styles() {
       .ai2047-brandbook-v1 #agenda p,
       .ai2047-brandbook-v1 #networking p,
       .ai2047-brandbook-v1 #partners p,
-      .ai2047-brandbook-v1 #faq p,
-      .ai2047-brandbook-v1 #cta article p {
+      .ai2047-brandbook-v1 #faq p {
         color: #334155 !important;
       }
 
@@ -764,16 +776,16 @@ export function Ai2047BrandBookV1Styles() {
         color: #F7F9FC !important;
       }
 
-      /* #partners Sponsor Tiles & #sponsors Logo Grid Cards */
+      /* #partners Sponsor Tiles & #sponsors Logo Grid Cards (Zero Grey Borders) */
       .ai2047-brandbook-v1 #partners span.bg-white,
       .ai2047-brandbook-v1 #sponsors .grid > div {
         background: #FFFFFF !important;
-        border: 1px solid rgba(0, 105, 184, 0.18) !important;
+        border: none !important;
         box-shadow: 0 4px 16px rgba(8, 18, 30, 0.05) !important;
       }
       .ai2047-brandbook-v1 #sponsors .grid > div:hover {
-        border-color: #0069B8 !important;
-        box-shadow: 0 12px 28px rgba(0, 105, 184, 0.14) !important;
+        border: none !important;
+        box-shadow: 0 12px 28px rgba(0, 105, 184, 0.18) !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-partners #sponsors div.rounded-full:has(button) {
         background: #FFFFFF !important;
@@ -792,15 +804,30 @@ export function Ai2047BrandBookV1Styles() {
         box-shadow: 0 4px 14px rgba(0, 105, 184, 0.3) !important;
       }
 
-      /* #faq Accordion & #cta Cards */
-      .ai2047-brandbook-v1 #faq > div > div,
-      .ai2047-brandbook-v1 #cta article {
+      /* #faq Accordion */
+      .ai2047-brandbook-v1 #faq > div > div {
         background: #FFFFFF !important;
         border: 1px solid rgba(0, 105, 184, 0.22) !important;
         box-shadow: 0 16px 42px rgba(8, 18, 30, 0.06) !important;
       }
+
+      /* #cta Cards (Speakers CTA & Closing Sections) */
+      .ai2047-brandbook-v1 #cta article {
+        background: linear-gradient(135deg, rgba(10, 30, 46, 0.95) 0%, rgba(5, 17, 34, 0.98) 100%) !important;
+        border: 1px solid rgba(0, 158, 173, 0.35) !important;
+        box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5) !important;
+      }
       .ai2047-brandbook-v1 #cta article:hover {
-        border-color: #F15928 !important;
+        border-color: #00E5FF !important;
+      }
+      .ai2047-brandbook-v1 #cta article h2,
+      .ai2047-brandbook-v1 #cta article h3 {
+        color: #FFFFFF !important;
+        -webkit-text-fill-color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1 #cta article p {
+        color: rgba(255, 255, 255, 0.85) !important;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0.85) !important;
       }
       .ai2047-brandbook-v1 #cta article .border-t,
       .ai2047-brandbook-v1 #faq details {
@@ -1485,20 +1512,21 @@ export function Ai2047BrandBookV1Styles() {
         border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
         border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]) h2,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]) h3,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]) h4 {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) h4 {
         color: #08121E !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]) p,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]) strong {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) p,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) strong {
         color: #334155 !important;
       }
 
-      /* Dark Sections Preservation (Final CTA, Call for Speakers, Stage) */
+      /* Dark Sections Preservation (Final CTA, Call for Speakers, Stage, Networking CTA) */
       .ai2047-brandbook-v1.ai2047-brandbook-inner #call-for-speakers,
       .ai2047-brandbook-v1.ai2047-brandbook-inner #cta,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="finalCta"] {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="finalCta"],
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #networking-cta {
         background-color: #040D1A !important;
         background-image: none !important;
       }
@@ -1507,7 +1535,8 @@ export function Ai2047BrandBookV1Styles() {
       .ai2047-brandbook-v1.ai2047-brandbook-inner #call-for-speakers h3,
       .ai2047-brandbook-v1.ai2047-brandbook-inner #cta h2,
       .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="finalCta"] h2,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="ctaBox"] h2 {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="ctaBox"] h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #networking-cta h2 {
         color: #FFFFFF !important;
         -webkit-text-fill-color: #FFFFFF !important;
       }
@@ -1517,9 +1546,29 @@ export function Ai2047BrandBookV1Styles() {
       .ai2047-brandbook-v1.ai2047-brandbook-inner #call-for-speakers span,
       .ai2047-brandbook-v1.ai2047-brandbook-inner #cta p,
       .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="finalCta"] p,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="ctaBox"] p {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="ctaBox"] p,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #networking-cta p {
         color: rgba(255, 255, 255, 0.88) !important;
         -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;
+      }
+
+      /* Speaker Cards High Contrast */
+      .ai2047-brandbook-v1 .speaker-card-inner {
+        background-color: #08121E !important;
+      }
+      .ai2047-brandbook-v1 .speaker-card-inner h3,
+      .ai2047-brandbook-v1 .speaker-card-inner h4 {
+        color: #FFFFFF !important;
+        -webkit-text-fill-color: #FFFFFF !important;
+        font-weight: 700 !important;
+      }
+      .ai2047-brandbook-v1 .speaker-card-inner p {
+        color: rgba(255, 255, 255, 0.85) !important;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0.85) !important;
+      }
+      .ai2047-brandbook-v1 .speaker-card-inner span {
+        color: #00E5FF !important;
+        -webkit-text-fill-color: #00E5FF !important;
       }
 
       .ai2047-brandbook-v1.ai2047-brandbook-inner #call-for-speakers strong.block,
@@ -1547,14 +1596,34 @@ export function Ai2047BrandBookV1Styles() {
         font-weight: 700 !important;
       }
 
-      /* Agenda Schedule Timeline Section: Cloud White (#F7F9FC) Light Canvas */
+      /* Agenda Schedule Timeline Section: Institutional Midnight Dark Canvas */
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineSection"],
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda #agenda-timeline {
-        background-color: #F7F9FC !important;
+        background-color: #020b1c !important;
         background-image: none !important;
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda #agenda-timeline h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineIntro"] h2 {
+        color: #FFFFFF !important;
+        -webkit-text-fill-color: #FFFFFF !important;
+      }
+
+      /* Networking Ways to Connect Section Cards */
+      .ai2047-brandbook-v1 #networking-ways a {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(0, 105, 184, 0.22) !important;
+        box-shadow: 0 10px 30px rgba(8, 18, 30, 0.06) !important;
+      }
+      .ai2047-brandbook-v1 #networking-ways a h3 {
         color: #08121E !important;
-        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
-        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+      }
+      .ai2047-brandbook-v1 #networking-ways a p {
+        color: #475569 !important;
+      }
+      .ai2047-brandbook-v1 #networking-ways a:hover {
+        border-color: #0069B8 !important;
+        box-shadow: 0 16px 36px rgba(0, 105, 184, 0.16) !important;
       }
 
       /* Cards inside Even (Light) Sections -> Pure White #FFFFFF */

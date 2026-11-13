@@ -89,10 +89,9 @@ export default function NetworkingPage() {
         }}
       >
         <div className="w-[min(1114px,calc(100%-48px))] mx-auto relative z-10">
-          <div className="max-w-[640px] w-full">
-            <h1 className="m-0 text-white font-[850] leading-[1.03] tracking-[-2.5px] text-[clamp(44px,5.8vw,74px)]">
-              Every <br />
-              Conversation. <br />
+          <div className="max-w-[760px] w-full">
+            <h1 className="m-0 text-white font-[850] leading-[1.05] tracking-[-2px] text-[clamp(44px,5.5vw,70px)]">
+              Every Conversation. <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#C0F43C]">By Design.</span>
             </h1>
             <p className="m-0 mt-6 text-white/75 text-[18px] leading-relaxed max-sm:text-[15px]">
@@ -119,7 +118,7 @@ export default function NetworkingPage() {
       </section>
 
       {/* ── Section 2: Ways to Connect ── */}
-      <section className="relative py-24 bg-[#030b19]">
+      <section id="networking-ways" className="relative py-24 bg-[#030b19]">
         <div className="w-[min(1114px,calc(100%-48px))] mx-auto">
 
           {/* Header */}
@@ -244,7 +243,7 @@ export default function NetworkingPage() {
       </section>
 
       {/* ── Section 4: Closing CTA ── */}
-      <section className="relative py-24 bg-[#030b19] border-t border-white/5">
+      <section id="networking-cta" className="relative py-24 bg-[#030b19] border-t border-white/5">
         <div className="w-[min(820px,calc(100%-48px))] mx-auto relative overflow-hidden p-12 border border-[#C0F43C]/20 rounded-[28px] bg-gradient-to-br from-[#040d1f] to-[#020713] text-center shadow-[0_24px_62px_rgba(0,0,0,0.5)] max-sm:p-8">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C0F43C]/60 to-transparent"></div>
 

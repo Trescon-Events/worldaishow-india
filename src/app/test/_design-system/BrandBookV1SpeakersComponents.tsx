@@ -92,7 +92,7 @@ export function BrandBookV1SpeakersList() {
   }, [searchQuery]);
 
   return (
-    <section className="relative py-[96px] bg-[#0069B8] max-sm:py-[64px]" id="lineup">
+    <section className="relative py-[96px] bg-[#F7F9FC] max-sm:py-[64px]" id="lineup">
       <div className="w-[min(1200px,calc(100%-48px))] mx-auto max-sm:w-[calc(100%-32px)]">
         {/* Institutional Faculty Intake Banner */}
         <div className="mb-12 p-8 rounded-[20px] border border-[#009EAD]/60 bg-[#08121E] shadow-[0_20px_48px_rgba(8,18,30,0.28)] flex flex-wrap items-center justify-between gap-6">
@@ -118,9 +118,9 @@ export function BrandBookV1SpeakersList() {
 
         {/* Search & Filter Controls */}
         <div className="mb-10 flex flex-col gap-5">
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/22 pb-6">
-            <h2 className="text-white m-0">
-              Global Series <GradientText>Past Speakers</GradientText>
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#08121E]/14 pb-6">
+            <h2 className="text-[#08121E] font-[850] text-[clamp(28px,3.5vw,42px)] m-0">
+              Global Series <span className="text-[#0069B8]">Past Speakers</span>
             </h2>
 
             <div className="relative w-full max-w-[360px]">
@@ -129,7 +129,7 @@ export function BrandBookV1SpeakersList() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by name, designation, or company"
-                className="w-full h-[46px] px-4 rounded-full bg-[#F7F9FC] border border-white/80 text-[#08121E] text-[14px] placeholder:text-[#08121E]/50 focus:outline-none focus:border-[#F15928] transition-colors"
+                className="w-full h-[46px] px-5 rounded-full bg-white border border-[#0069B8]/30 text-[#08121E] text-[14px] placeholder:text-[#475569] shadow-[0_2px_12px_rgba(8,18,30,0.06)] focus:outline-none focus:border-[#F15928] transition-colors"
               />
             </div>
           </div>
