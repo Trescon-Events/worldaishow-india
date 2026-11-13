@@ -417,8 +417,24 @@ function IconCard({ title, text, icon, index }: { title: string; text: string; i
 
 function AgendaTabs() {
   const dayTabs = [
-    { key: "2027-04-20", label: "Day 1 · Tuesday, 20 April 2027: Enterprise Execution" },
-    { key: "2027-04-21", label: "Day 2 · Wednesday, 21 April 2027: Strategy to Scale" }
+    {
+      key: "2027-04-20",
+      dayNumber: "Day 1",
+      dateFormatted: "Tuesday, 20 April 2027",
+      shortDate: "20 April 2027",
+      theme: "Enterprise Execution",
+      subtheme: "Plenary Keynotes, Cross-Functional Panels & CXO Boardrooms",
+      headLabel: "DAY 1 — TUESDAY, 20 APRIL 2027: ENTERPRISE EXECUTION"
+    },
+    {
+      key: "2027-04-21",
+      dayNumber: "Day 2",
+      dateFormatted: "Wednesday, 21 April 2027",
+      shortDate: "21 April 2027",
+      theme: "Strategy to Scale",
+      subtheme: "Technical Case Studies, Architecture Debates & Working Groups",
+      headLabel: "DAY 2 — WEDNESDAY, 21 APRIL 2027: STRATEGY TO SCALE"
+    }
   ];
 
   const [activeDay, setActiveDay] = useState("2027-04-20");
@@ -459,13 +475,13 @@ function AgendaTabs() {
   }
 
   return (
-    <section className={styles.timelineSection} id="agenda">
+    <section className={styles.timelineSection} id="agenda-timeline">
       <div className={styles.container}>
         <div className={styles.timelineIntro}>
           <h2>Two days, <GradientText>five operational decisions.</GradientText></h2>
         </div>
         <div className={styles.dayTabs} role="tablist" aria-label="Agenda days">
-          {dayTabs.map((day, index) => (
+          {dayTabs.map((day) => (
             <button
               className={activeDay === day.key ? styles.activeDay : ""}
               key={day.key}
@@ -476,9 +492,9 @@ function AgendaTabs() {
               onPointerMove={setPointerGlow}
               type="button"
             >
-              <span>{day.label}</span>
-              <strong>{index === 0 ? "Day 1 · 20 Apr 2027" : "Day 2 · 21 Apr 2027"}</strong>
-              <small>{index === 0 ? "Enterprise Execution" : "Strategy to Scale"}</small>
+              <span>{day.dateFormatted}</span>
+              <strong>{day.dayNumber} · {day.theme}</strong>
+              <small>{day.subtheme}</small>
             </button>
           ))}
         </div>
@@ -535,7 +551,7 @@ function AgendaTabs() {
 
         <div className={styles.timeline}>
           <div className={styles.timelineHead}>
-            <span>{dayTabs.find((day) => day.key === activeDay)?.label || "2-Day Executive Programme"}</span>
+            <span>{dayTabs.find((day) => day.key === activeDay)?.headLabel || "2-DAY EXECUTIVE PROGRAMME"}</span>
             <span>Mumbai, India · 2 Days</span>
           </div>
 
@@ -551,10 +567,10 @@ function AgendaTabs() {
               style={{ "--row-index": index } as CSSProperties}
             >
               <time className="flex flex-col justify-center">
-                <span className="font-mono text-[16px] font-bold text-[#009EAD] tracking-tight whitespace-nowrap">
+                <span className="font-mono text-[16px] font-bold text-[#00E5FF] tracking-tight whitespace-nowrap">
                   {session.startTime} – {session.endTime}
                 </span>
-                <span className="text-[11px] font-mono uppercase tracking-wider text-white/50 mt-1 block">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-[#009EAD] mt-1 block font-semibold">
                   IST (UTC+5:30)
                 </span>
               </time>
