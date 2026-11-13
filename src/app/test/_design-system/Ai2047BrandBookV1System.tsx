@@ -730,11 +730,32 @@ export function Ai2047BrandBookV1Styles() {
         color: #F7F9FC !important;
       }
 
-      /* #partners Sponsor Tiles */
-      .ai2047-brandbook-v1 #partners span.bg-white {
+      /* #partners Sponsor Tiles & #sponsors Logo Grid Cards */
+      .ai2047-brandbook-v1 #partners span.bg-white,
+      .ai2047-brandbook-v1 #sponsors .grid > div {
         background: #FFFFFF !important;
         border: 1px solid rgba(0, 105, 184, 0.18) !important;
-        box-shadow: 0 8px 24px rgba(8, 18, 30, 0.05) !important;
+        box-shadow: 0 4px 16px rgba(8, 18, 30, 0.05) !important;
+      }
+      .ai2047-brandbook-v1 #sponsors .grid > div:hover {
+        border-color: #0069B8 !important;
+        box-shadow: 0 12px 28px rgba(0, 105, 184, 0.14) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-partners #sponsors div.rounded-full:has(button) {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(0, 105, 184, 0.22) !important;
+        box-shadow: 0 4px 16px rgba(8, 18, 30, 0.06) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-partners #sponsors div.rounded-full:has(button) button {
+        color: #475569 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-partners #sponsors div.rounded-full:has(button) button:hover {
+        color: #0069B8 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-partners #sponsors div.rounded-full:has(button) button[class*="bg-[#C0F43C]"] {
+        background: #0069B8 !important;
+        color: #FFFFFF !important;
+        box-shadow: 0 4px 14px rgba(0, 105, 184, 0.3) !important;
       }
 
       /* #faq Accordion & #cta Cards */
