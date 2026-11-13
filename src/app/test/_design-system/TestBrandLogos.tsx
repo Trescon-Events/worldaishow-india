@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 
-const WHITE_LOGO_SRC = "/mumbai/enterprise/images/test-brand/wais-26-enterprise-white-logo.png";
-const DARK_LOGO_SRC = "/mumbai/enterprise/images/test-brand/wais-26-enterprise-dark-logo.png";
+const WHITE_LOGO_SRC = "/mumbai/enterprise/images/test-brand/wais-26-enterprise-white.svg";
+const DARK_LOGO_SRC = "/mumbai/enterprise/images/test-brand/wais-26-enterprise-dark.svg";
 
 function applyFallbackOnError(img: HTMLImageElement, filename: string) {
   img.onerror = () => {
@@ -21,12 +21,12 @@ export function TestBrandLogos() {
 
       // 1. Sticky Header Logo -> Dark text lockup on Light Blue / Frosted White nav bar
       const headerImgs = root.querySelectorAll<HTMLImageElement>(
-        'header img[src*="wais-27-enterprise"], header img[data-test-logo="header"]'
+        'header img[src*="wais-27-enterprise"], header img[data-test-logo="header"], header nav > a:first-child img, .logo img'
       );
       headerImgs.forEach((img) => {
         img.dataset.testLogo = "header";
-        applyFallbackOnError(img, "wais-26-enterprise-dark-logo.png");
-        if (!img.src.includes("wais-26-enterprise-dark-logo.png")) {
+        applyFallbackOnError(img, "wais-26-enterprise-dark.svg");
+        if (!img.src.includes("wais-26-enterprise-dark.svg")) {
           img.src = DARK_LOGO_SRC;
         }
       });
@@ -37,20 +37,20 @@ export function TestBrandLogos() {
       );
       heroImgs.forEach((img) => {
         img.dataset.testLogo = "hero";
-        applyFallbackOnError(img, "wais-26-enterprise-white-logo.png");
-        if (!img.src.includes("wais-26-enterprise-white-logo.png")) {
+        applyFallbackOnError(img, "wais-26-enterprise-white.svg");
+        if (!img.src.includes("wais-26-enterprise-white.svg")) {
           img.src = WHITE_LOGO_SRC;
         }
       });
 
       // 3. Footer Brand Logo -> White text lockup on Brand Blue (#0069B8) Footer
       const footerImgs = root.querySelectorAll<HTMLImageElement>(
-        '#footer img[src*="wais-27-enterprise"], #footer img[data-test-logo="footer"]'
+        '#footer img[src*="wais-27-enterprise"], #footer img[data-test-logo="footer"], footer img[src*="wais-27-enterprise"], footer img[data-test-logo="footer"]'
       );
       footerImgs.forEach((img) => {
         img.dataset.testLogo = "footer";
-        applyFallbackOnError(img, "wais-26-enterprise-white-logo.png");
-        if (!img.src.includes("wais-26-enterprise-white-logo.png")) {
+        applyFallbackOnError(img, "wais-26-enterprise-white.svg");
+        if (!img.src.includes("wais-26-enterprise-white.svg")) {
           img.src = WHITE_LOGO_SRC;
         }
       });
