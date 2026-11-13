@@ -1,15 +1,17 @@
 # HANDOFF — World AI Show — Enterprise (Mumbai 2027 edition site)
 
-Last updated: 2026-10-29 (by Antigravity, for Lohith / Madhu's team).
+Last updated: 2026-11-13 (AI 2047 Brand Book V1.0 Design System promoted to LIVE production).
 
 ## Current state
 
 - **Live URL:** `https://worldaishow.com/mumbai/enterprise`
-- **Repository:** `https://github.com/Trescon-Events/worldaishow-india.git`
+- **Repository:** `https://github.com/Trescon-Events/worldaishow-india.git` (branch `master`)
 - **Cloudflare Pages Project:** `wais-enterprise` (`https://wais-enterprise.pages.dev`)
-- **Live Testing URL (GitHub Pages):** `https://trescon-events.github.io/worldaishow-india/`
-- **Base path:** `basePath: "/mumbai/enterprise"` configured in `next.config.ts`. All internal asset paths and links use `/mumbai/enterprise/...` (automatically rewritten to `/worldaishow-india/...` inside the GitHub Actions Pages deployment workflow `.github/workflows/deploy.yml`).
-- **Brand Assets:** Header and footer logos wired at `public/logos/wais-27-enterprise_header.svg`, `public/logos/wais-27-enterprise_footer.svg`, and `public/logos/Wais-series-W.svg` (Global Series lockup).
+- **Base path:** `basePath: "/mumbai/enterprise"` configured in `next.config.ts`.
+- **Live Brand System:** AI 2047 Brand Book V1.0 officially active across all production routes via `src/app/components/BrandBookLayoutWrapper.tsx` in `src/app/layout.tsx`.
+  - Palette: Sovereign Blue (`#0069B8`), Signal Teal (`#009EAD`), Pulse Orange (`#F15928`), Cloud White (`#F7F9FC`), Midnight Dark (`#08121E`).
+  - Logos: High-resolution sharp vector SVGs (`wais-26-enterprise-white.svg` and `wais-26-enterprise-dark.svg`).
+  - Inner pages: Fully coherent with Cloud White agenda schedule timelines, high-contrast session cards, elevated delegate pass tiles, and borderless partner logos.
 - **2026-10-21 Website Feedback Updates (`Website changes and feedback.docx`) Applied:**
   1. **Research & Statistics (`EcosystemSectionDemo.tsx`)**:
      - Updated "The Execution Gap" lead copy to: *"India’s enterprise adoption rate leads at nearly 40%, compared with 28% globally. 44% were redesigning selected processes; 17% reported fundamental reinvention."* (`Source: Deloitte, State of AI in the Enterprise: India Insights (2026)`).
