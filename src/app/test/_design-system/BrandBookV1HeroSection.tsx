@@ -80,7 +80,7 @@ export function BrandBookV1HeroSection() {
           </div>
 
           {/* Column 3: Duration */}
-          <div className="text-left max-[980px]:text-center max-sm:w-full">
+          <div className="text-center max-sm:w-full">
             <strong className="block text-[34px] font-[850] text-white leading-none max-sm:text-[26px]">
               2 <GradientText>Days</GradientText>
             </strong>

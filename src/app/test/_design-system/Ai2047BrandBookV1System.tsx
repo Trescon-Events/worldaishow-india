@@ -390,8 +390,16 @@ export function Ai2047BrandBookV1Styles() {
       }
 
       .ai2047-brandbook-v1 #home .grid > div {
-        background-color: rgba(8, 18, 30, 0.82) !important;
-        border-color: rgba(0, 105, 184, 0.48) !important;
+        background-color: transparent !important;
+        background: none !important;
+        box-shadow: none !important;
+        border-color: rgba(255, 255, 255, 0.22) !important;
+      }
+      .ai2047-brandbook-v1 #home .grid strong {
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75) !important;
+      }
+      .ai2047-brandbook-v1 #home .grid span {
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
       }
 
       .ai2047-brandbook-v1 .page-hero-top {
