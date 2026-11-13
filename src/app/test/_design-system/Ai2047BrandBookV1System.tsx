@@ -1677,6 +1677,126 @@ export function Ai2047BrandBookV1Styles() {
         color: #FFFFFF !important;
       }
 
+      /* =====================================================================
+         17. INNER PAGE INTERACTIVE TILES & CARDS (REVERSED HOVER HIGHLIGHT)
+         At rest: Clean, unlit, elegant dark surface (#0D1B2E), muted badge.
+         On hover: Tile lifts, lights up with electric cyan/teal glow,
+                   icon badge illuminates, and card stands out dramatically.
+         ===================================================================== */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main .grid > article,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="iconCard"],
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="formatCard"],
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="focusCard"] {
+        background: #0D1B2E !important;
+        background-image: none !important;
+        border: 1px solid rgba(0, 105, 184, 0.28) !important;
+        border-radius: 16px !important;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35) !important;
+        transform: translateY(0) scale(1) !important;
+        transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+                    background 0.3s ease,
+                    border-color 0.3s ease,
+                    box-shadow 0.35s ease !important;
+      }
+
+      /* At Rest: Muted icon badge (unlit) */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article span.w-11.h-11,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article span.w-10.h-10,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article [class*="iconBadge"] {
+        background: rgba(8, 18, 30, 0.82) !important;
+        background-image: none !important;
+        border: 1px solid rgba(0, 105, 184, 0.25) !important;
+        color: rgba(247, 249, 252, 0.6) !important;
+        box-shadow: none !important;
+        transform: translateY(0) scale(1) !important;
+        transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article span.w-11.h-11 img,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article span.w-10.h-10 img,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article [class*="iconBadge"] img {
+        opacity: 0.65 !important;
+        filter: brightness(0.9) !important;
+        transition: all 0.3s ease !important;
+      }
+
+      /* At Rest: Number pill (top right) */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article > span.absolute {
+        background: rgba(8, 18, 30, 0.55) !important;
+        background-image: none !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        color: rgba(247, 249, 252, 0.45) !important;
+        box-shadow: none !important;
+        transition: all 0.3s ease !important;
+      }
+
+      /* At Rest: Card Typography */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article h3 {
+        color: #FFFFFF !important;
+        text-shadow: none !important;
+        transition: color 0.25s ease, text-shadow 0.25s ease !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article p {
+        color: rgba(247, 249, 252, 0.72) !important;
+        transition: color 0.25s ease !important;
+      }
+
+      /* =====================================================================
+         ON HOVER: REVERSED HIGHLIGHT / LIT-UP GLOW EFFECT
+         The hovered tile lifts, lights up with electric cyan/teal glow,
+         icon badge illuminates, and card stands out dramatically.
+         ===================================================================== */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main .grid > article:hover,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="iconCard"]:hover,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="formatCard"]:hover,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="focusCard"]:hover {
+        transform: translateY(-8px) scale(1.02) !important;
+        background: linear-gradient(150deg, #102644 0%, #0D1C34 100%) !important;
+        border-color: #009EAD !important;
+        box-shadow: 0 24px 56px rgba(0, 105, 184, 0.38),
+                    0 0 28px rgba(0, 158, 173, 0.45),
+                    inset 0 0 20px rgba(0, 158, 173, 0.15) !important;
+        z-index: 10 !important;
+      }
+
+      /* On Hover: Icon badge lights up in Sovereign Blue / Signal Teal glow */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover span.w-11.h-11,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover span.w-10.h-10,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover [class*="iconBadge"] {
+        background-color: #0069B8 !important;
+        border-color: #009EAD !important;
+        color: #FFFFFF !important;
+        box-shadow: 0 0 24px rgba(0, 158, 173, 0.65), 0 4px 14px rgba(0, 105, 184, 0.45) !important;
+        transform: translateY(-2px) scale(1.08) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover span.w-11.h-11 img,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover span.w-10.h-10 img,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover [class*="iconBadge"] img {
+        opacity: 1 !important;
+        filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6)) !important;
+        transform: scale(1.06) !important;
+      }
+
+      /* On Hover: Number pill lights up with Signal Teal highlight */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover > span.absolute {
+        background-color: rgba(0, 158, 173, 0.22) !important;
+        border-color: #009EAD !important;
+        color: #009EAD !important;
+        box-shadow: 0 0 16px rgba(0, 158, 173, 0.4) !important;
+        opacity: 1 !important;
+        transform: scale(1.05) !important;
+      }
+
+      /* On Hover: Title & Paragraph illuminate */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover h3 {
+        color: #009EAD !important;
+        text-shadow: 0 0 20px rgba(0, 158, 173, 0.35) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover p {
+        color: #FFFFFF !important;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         .ai2047-brandbook-v1 #attend article div.rounded-full,
         .ai2047-brandbook-v1 #attend article div.rounded-full::after,
