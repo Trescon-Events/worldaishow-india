@@ -59,16 +59,36 @@ export function BrandBookV1Logos() {
           img.src = WHITE_LOGO_SRC;
         }
       });
+
+      // 4. Floating Scroll to Top Button -> Pulse Orange (#F15928) + Pure White Icon
+      const scrollBtn = document.querySelector<HTMLButtonElement>(
+        'button[aria-label*="Scroll to top"], button.fixed.rounded-full'
+      );
+      if (scrollBtn) {
+        scrollBtn.style.setProperty("background-color", "#F15928", "important");
+        scrollBtn.style.setProperty("color", "#FFFFFF", "important");
+        scrollBtn.style.setProperty("box-shadow", "0 8px 24px rgba(241, 89, 40, 0.45)", "important");
+        const svg = scrollBtn.querySelector("svg");
+        if (svg) {
+          svg.style.setProperty("color", "#FFFFFF", "important");
+          const paths = svg.querySelectorAll("path");
+          paths.forEach((p) => p.style.setProperty("stroke", "#FFFFFF", "important"));
+        }
+      }
     };
 
+    document.body.classList.add("brandbook-theme");
     applyLogos();
 
     const root = document.querySelector(".ai2047-brandbook-v1");
-    if (!root) return;
+    if (!root) return () => document.body.classList.remove("brandbook-theme");
 
     const observer = new MutationObserver(() => applyLogos());
     observer.observe(root, { childList: true, subtree: true });
-    return () => observer.disconnect();
+    return () => {
+      document.body.classList.remove("brandbook-theme");
+      observer.disconnect();
+    };
   }, []);
 
   return null;

@@ -63,6 +63,38 @@ export function Ai2047BrandBookV1Styles() {
           -webkit-text-fill-color: #FFFFFF !important;
         }
 
+        /* Floating Scroll to Top button -> Pulse Orange (#F15928) with pure white icon */
+        body:has(.ai2047-brandbook-v1) button[aria-label*="Scroll to top"],
+        body:has(.ai2047-brandbook-v1) button[class*="bg-[#C0F43C]"].fixed,
+        body.brandbook-theme button[aria-label*="Scroll to top"],
+        body.brandbook-theme button[class*="bg-[#C0F43C]"].fixed {
+          background-color: #F15928 !important;
+          border-color: #F15928 !important;
+          color: #FFFFFF !important;
+          -webkit-text-fill-color: #FFFFFF !important;
+          box-shadow: 0 8px 24px rgba(241, 89, 40, 0.45) !important;
+        }
+        body:has(.ai2047-brandbook-v1) button[aria-label*="Scroll to top"]:hover,
+        body:has(.ai2047-brandbook-v1) button[class*="bg-[#C0F43C]"].fixed:hover,
+        body.brandbook-theme button[aria-label*="Scroll to top"]:hover,
+        body.brandbook-theme button[class*="bg-[#C0F43C]"].fixed:hover {
+          background-color: #D9481A !important;
+          border-color: #D9481A !important;
+          box-shadow: 0 12px 32px rgba(241, 89, 40, 0.65) !important;
+          transform: scale(1.1) !important;
+        }
+        body:has(.ai2047-brandbook-v1) button[aria-label*="Scroll to top"] svg,
+        body:has(.ai2047-brandbook-v1) button[class*="bg-[#C0F43C]"].fixed svg,
+        body:has(.ai2047-brandbook-v1) button[aria-label*="Scroll to top"] path,
+        body:has(.ai2047-brandbook-v1) button[class*="bg-[#C0F43C]"].fixed path,
+        body.brandbook-theme button[aria-label*="Scroll to top"] svg,
+        body.brandbook-theme button[class*="bg-[#C0F43C]"].fixed svg,
+        body.brandbook-theme button[aria-label*="Scroll to top"] path,
+        body.brandbook-theme button[class*="bg-[#C0F43C]"].fixed path {
+          color: #FFFFFF !important;
+          stroke: #FFFFFF !important;
+        }
+
         .ai2047-brandbook-v1 a[class*="bg-[#C0F43C]"]:hover,
         .ai2047-brandbook-v1 a[class*="bg-[#c0f43c]"]:hover,
         .ai2047-brandbook-v1 button[class*="bg-[#C0F43C]"]:hover,
