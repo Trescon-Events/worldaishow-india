@@ -270,7 +270,8 @@ export function Header({ activeItem, subNavItems, activeSubNavItem }: HeaderProp
 
         {/* ── Dropdown Sub-Nav (Attend, Agenda, Networking) ── */}
         <nav
-          className={`absolute left-1/2 top-[82px] -translate-x-1/2 flex justify-around w-[calc(100%-48px)] max-w-[1008px] h-[41px] px-[34px] items-center rounded-b-[24px] text-[#101727] bg-white/92 shadow-[0_16px_38px_rgba(0,0,0,0.16)] text-[12px] font-semibold tracking-[1.6px] uppercase transition-all duration-300 ease-out max-[1200px]:hidden ${
+          aria-label="Secondary navigation"
+          className={`sub-nav-bar absolute left-1/2 top-[80px] -translate-x-1/2 flex justify-around w-[calc(100%-48px)] max-w-[1008px] h-[44px] px-[34px] items-center rounded-b-[24px] text-[#08121E] bg-[#F7F9FC]/98 shadow-[0_16px_38px_rgba(8,18,30,0.12)] border border-[rgba(0,105,184,0.22)] border-t-0 text-[12px] font-semibold tracking-[1.6px] uppercase transition-all duration-300 ease-out max-[1200px]:hidden ${
             currentActiveItem && subMenus[currentActiveItem]
               ? "opacity-100 translate-y-0 pointer-events-auto visible"
               : "opacity-0 -translate-y-2 pointer-events-none invisible"
@@ -283,10 +284,10 @@ export function Header({ activeItem, subNavItems, activeSubNavItem }: HeaderProp
               <a
                 href={getSubNavHref(currentActiveItem, item)}
                 key={item}
-                className={`transition-all duration-200 pb-1 border-b-2 ${
+                className={`transition-all duration-200 pb-1 border-b-2 font-medium ${
                   isSubActive
-                    ? "text-[#2dd3f4] font-bold border-[#2dd3f4]"
-                    : "border-transparent text-[#101727]/70 hover:border-[#2dd3f4]/50 hover:text-[#2dd3f4]"
+                    ? "text-[#0069B8] font-bold border-[#F15928]"
+                    : "border-transparent text-[#08121E]/70 hover:border-[#0069B8]/50 hover:text-[#0069B8]"
                 }`}
               >
                 {item}
@@ -353,8 +354,8 @@ export function Header({ activeItem, subNavItems, activeSubNavItem }: HeaderProp
                               onClick={() => setIsOpen(false)}
                               className={`text-[14px] py-1 border-l border-white/10 pl-3 transition-colors ${
                                 isSubActive
-                                  ? "text-[#2dd3f4] font-bold border-[#2dd3f4]"
-                                  : "text-white/50 hover:text-[#2dd3f4]"
+                                  ? "text-[#0069B8] font-bold border-[#F15928]"
+                                  : "text-[#08121E]/70 hover:text-[#0069B8]"
                               }`}
                             >
                               {subItem}
@@ -384,8 +385,8 @@ export function Header({ activeItem, subNavItems, activeSubNavItem }: HeaderProp
                       key={item}
                       href={getSubNavHref(currentActiveItem ?? "", item)}
                       onClick={() => setIsOpen(false)}
-                      className={`text-[13px] font-semibold transition-colors hover:text-[#2dd3f4] ${
-                        isSubActive ? "text-[#2dd3f4]" : "text-white/60"
+                      className={`text-[13px] font-semibold transition-colors hover:text-[#0069B8] ${
+                        isSubActive ? "text-[#0069B8] font-bold" : "text-[#08121E]/70"
                       }`}
                     >
                       {item}

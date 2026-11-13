@@ -222,8 +222,8 @@ export function ArrowButton({
   const baseClasses =
     "inline-flex items-center justify-center gap-3.5 min-w-[178px] h-[49px] px-[25px] rounded-full text-[15px] font-extrabold transition-all duration-180 hover:-translate-y-0.5 hover:shadow-[0_0_28px_rgba(185,248,45,0.24)] cursor-pointer";
   const styles = {
-    solid: "bg-[#C0F43C] !text-black [color:#06111f!important] shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)]",
-    outline: "text-white border border-[#4eb9ff]/80 bg-[#030a18]/30 shadow-[inset_0_0_24px_rgba(46,172,255,0.08)] hover:border-cyan/100 hover:bg-[#030a18]/50",
+    solid: "!text-white [color:#FFFFFF!important] bg-[#F15928] shadow-[0_6px_22px_rgba(241,89,40,0.34)] hover:bg-[#D9481A] hover:shadow-[0_10px_28px_rgba(241,89,40,0.5)]",
+    outline: "!text-white [color:#FFFFFF!important] border-2 border-[#009EAD] bg-[#08121E]/85 shadow-[0_4px_18px_rgba(0,158,173,0.18)] hover:!border-[#00E5FF] hover:!bg-[#0069B8] hover:shadow-[0_8px_24px_rgba(0,105,184,0.4)]",
   };
 
   return (
@@ -594,9 +594,10 @@ export function AttendSponsorSection() {
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
         <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
 
-        <div className="relative z-10 max-w-[820px]">
-          <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(44px,5.5vw,68px)] max-sm:text-[38px]">
-            Your buyers are redesigning workflows now, <GradientText>not after the pilot.</GradientText>
+        <div className="relative z-10 max-w-[960px]">
+          <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.08] tracking-[-1.8px] text-[clamp(44px,5.5vw,68px)] max-sm:text-[38px]">
+            Your buyers are redesigning workflows now, <br className="hidden sm:inline" />
+            <GradientText>not after the pilot.</GradientText>
           </h1>
           <p className="max-w-[710px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
             Enterprise AI decisions involve up to 39 cross-functional stakeholders (Foundry, 2026). Engage active buying units directly through plenary stage thought leadership, standardized exhibition spaces, and closed-door curated boardrooms.
