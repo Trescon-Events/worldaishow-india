@@ -359,18 +359,24 @@ export function Ai2047BrandBookV1Styles() {
          ===================================================================== */
       .ai2047-brandbook-v1 .hero-bg {
         background:
-          linear-gradient(180deg, rgba(8, 18, 30, 0.68) 0%, rgba(8, 18, 30, 0.88) 100%),
-          radial-gradient(ellipse at 50% 88%, rgba(0, 105, 184, 0.34), transparent 45%),
+          linear-gradient(180deg, rgba(8, 18, 30, 0.40) 0%, rgba(8, 18, 30, 0.75) 100%),
+          radial-gradient(ellipse at 50% 88%, rgba(0, 105, 184, 0.28), transparent 45%),
           #08121E !important;
       }
 
-      .ai2047-brandbook-v1 #home > div.bg-\\[\\#020917\\]\\/35 {
-        background-color: rgba(8, 18, 30, 0.56) !important;
+      .ai2047-brandbook-v1 #home video {
+        opacity: 0.82 !important;
+      }
+
+      .ai2047-brandbook-v1 #home > div.bg-\\[\\#020917\\]\\/35,
+      .ai2047-brandbook-v1 #home > div.bg-\\[\\#020917\\]\\/25 {
+        background-color: rgba(8, 18, 30, 0.28) !important;
       }
 
       .ai2047-brandbook-v1 .hero-overlay {
         background:
-          linear-gradient(180deg, rgba(8, 18, 30, 0.48) 0%, rgba(8, 18, 30, 0.78) 68%, #08121E 100%) !important;
+          linear-gradient(180deg, rgba(8, 18, 30, 0.25) 0%, rgba(8, 18, 30, 0.52) 65%, #08121E 100%) !important;
+        opacity: 0.70 !important;
       }
 
       .ai2047-brandbook-v1 .hero-grid-pattern {

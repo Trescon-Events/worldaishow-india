@@ -8,7 +8,7 @@ export function BrandBookV1HeroSection() {
     >
       {/* Background Video */}
       <video
-        className="absolute inset-0 w-full h-full object-cover opacity-55 z-0"
+        className="absolute inset-0 w-full h-full object-cover opacity-80 z-0"
         src="/mumbai/enterprise/videos/wais-mumbai-hero-banner.mp4"
         autoPlay
         muted
@@ -19,11 +19,11 @@ export function BrandBookV1HeroSection() {
 
       {/* Dark Video Tint & Cyber Grid overlays */}
       <div
-        className="absolute inset-0 z-1 bg-[#020917]/35 pointer-events-none"
+        className="absolute inset-0 z-1 bg-[#020917]/25 pointer-events-none"
         aria-hidden="true"
       />
       <div
-        className="hero-overlay absolute inset-0 z-1 opacity-75 pointer-events-none"
+        className="hero-overlay absolute inset-0 z-1 opacity-65 pointer-events-none"
         aria-hidden="true"
       />
       <div
