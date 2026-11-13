@@ -38,7 +38,7 @@ const footprints = [
 export default function ExhibitionPage() {
   return (
     <main className="page-exhibition relative min-h-screen bg-gradient-to-b from-[#020814] via-[#031022] to-[#020a18] text-white font-space-grotesk overflow-x-hidden">
-      <Header activeItem="Partner" />
+      <Header activeItem="Sponsor" />
 
       <PartnersHero />
 

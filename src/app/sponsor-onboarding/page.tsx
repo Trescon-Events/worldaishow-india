@@ -11,7 +11,7 @@ export default function SponsorOnboardingPage() {
       <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(circle,rgba(192,244,60,0.04),transparent_70%)] pointer-events-none" />
       <div className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(circle,rgba(24,212,255,0.03),transparent_70%)] pointer-events-none" />
 
-      <Header activeItem="Partner" />
+      <Header activeItem="Sponsor" />
 
       {/* Main Content Area */}
       <section className="relative z-10 py-[140px] pt-[150px] max-sm:py-[100px] max-sm:pt-[110px]">

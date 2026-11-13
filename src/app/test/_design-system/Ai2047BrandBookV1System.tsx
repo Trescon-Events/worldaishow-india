@@ -1654,6 +1654,9 @@ export function Ai2047BrandBookV1Styles() {
       .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) [class*="iconCard"] p {
         color: #475569 !important;
       }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) article:not([class*="timelineRow"]) span:not([class*="w-"]):not([class*="h-"]):not([class*="rounded-full"]):not([class*="iconBadge"]):not([class*="cardIndex"]) {
+        color: #334155 !important;
+      }
       .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) article:not([class*="timelineRow"]) span.w-11,
       .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) article:not([class*="timelineRow"]) span.w-10,
       .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) article:not([class*="timelineRow"]) span.w-\\[48px\\],

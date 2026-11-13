@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "../Shared";
 
-const navItems = ["Home", "Attend", "Agenda", "Speakers", "Partner", "Networking"];
+const navItems = ["Home", "Attend", "Agenda", "Speakers", "Sponsor", "Networking"];
 
 // Dropdown submenus — Speakers excluded
 const subMenus: Record<string, string[]> = {
@@ -18,7 +18,7 @@ function getNavHref(item: string) {
   if (item === "Attend") return "/mumbai/enterprise/attend";
   if (item === "Agenda") return "/mumbai/enterprise/agenda";
   if (item === "Speakers") return "/mumbai/enterprise/speakers";
-  if (item === "Partner") return "/mumbai/enterprise/partners";
+  if (item === "Sponsor" || item === "Partner") return "/mumbai/enterprise/partners";
   if (item === "Networking") return "/mumbai/enterprise/networking";
   return `/mumbai/enterprise/#${item.toLowerCase()}`;
 }
@@ -46,7 +46,7 @@ function getActiveFromPath(pathname: string): string {
     cleanPath.startsWith("/partners") ||
     cleanPath.startsWith("/sponsorship-enquiry") ||
     cleanPath.startsWith("/association-enquiry")
-  ) return "Partner";
+  ) return "Sponsor";
   if (cleanPath.startsWith("/networking")) return "Networking";
   return "Home";
 }
@@ -138,7 +138,7 @@ export function Header({ activeItem, subNavItems, activeSubNavItem }: HeaderProp
     const parentPath = parentItem === "Home" ? "/mumbai/enterprise/" : `/mumbai/enterprise/${parentItem.toLowerCase()}`;
     const hash = subItem.toLowerCase().replaceAll(" ", "-");
 
-    if (parentItem === "Partner") {
+    if (parentItem === "Sponsor" || parentItem === "Partner") {
       if (hash === "overview") return "/mumbai/enterprise/partners";
       if (hash === "sponsors") return "/mumbai/enterprise/partners#sponsors";
 
