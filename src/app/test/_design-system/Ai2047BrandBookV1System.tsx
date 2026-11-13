@@ -1442,14 +1442,14 @@ export function Ai2047BrandBookV1Styles() {
         color: #334155 !important;
       }
 
-      /* Agenda Schedule Timeline Section: Always Midnight Core Dark (#08121E) */
+      /* Agenda Schedule Timeline Section: Cloud White (#F7F9FC) Light Canvas */
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineSection"],
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda #agenda-timeline {
-        background-color: #08121E !important;
+        background-color: #F7F9FC !important;
         background-image: none !important;
-        color: #FFFFFF !important;
-        border-top: none !important;
-        border-bottom: none !important;
+        color: #08121E !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
       }
 
       /* Cards inside Even (Light) Sections -> Pure White #FFFFFF */
@@ -1775,14 +1775,15 @@ export function Ai2047BrandBookV1Styles() {
         color: #009EAD !important;
       }
 
-      /* Agenda Day Tabs, Track Tabs & Theme Selector Buttons */
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="trackTabs"] button,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="themeList"] button {
-        background: #0D1B2E !important;
+      /* Agenda Day Tabs, Track Tabs & Theme Selector Buttons (White Background) */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button {
+        background: #FFFFFF !important;
         background-image: none !important;
-        border: 1px solid rgba(0, 105, 184, 0.42) !important;
-        color: #FFFFFF !important;
+        border: 1.5px solid rgba(0, 105, 184, 0.2) !important;
+        border-radius: 16px !important;
+        box-shadow: 0 4px 16px rgba(8, 18, 30, 0.05) !important;
+        color: #08121E !important;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button::before,
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="trackTabs"] button::before,
@@ -1800,45 +1801,64 @@ export function Ai2047BrandBookV1Styles() {
         text-transform: uppercase !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button strong {
-        color: #FFFFFF !important;
+        color: #08121E !important;
         font-size: 22px !important;
         font-weight: 700 !important;
         margin: 12px 0 6px !important;
         display: block !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button small {
-        color: rgba(247, 249, 252, 0.72) !important;
+        color: #475569 !important;
         font-size: 13.5px !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button[class*="activeDay"] {
-        background: linear-gradient(135deg, #0D264A 0%, #08172C 100%) !important;
-        border: 2px solid #009EAD !important;
-        box-shadow: 0 10px 30px rgba(0, 105, 184, 0.45) !important;
+        background: #FFFFFF !important;
+        border: 2px solid #0069B8 !important;
+        box-shadow: 0 8px 26px rgba(0, 105, 184, 0.16) !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button[class*="activeDay"] span {
-        color: #00E5FF !important;
+        color: #0069B8 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button[class*="activeDay"] strong {
+        color: #0069B8 !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button[class*="activeDay"] small {
-        color: #E1F8FF !important;
+        color: #1E293B !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button[class*="activeDay"]::after,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="themeList"] button[class*="activeTheme"]::after {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button[class*="activeDay"]::after {
         background: #F15928 !important;
+        height: 3px !important;
+        opacity: 1 !important;
+        transform: translateX(0) !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button:hover,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="trackTabs"] button:hover,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="themeList"] button:hover {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button:hover {
         border-color: #009EAD !important;
+        transform: translateY(-3px) !important;
+        box-shadow: 0 8px 24px rgba(0, 105, 184, 0.12) !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="dayTabs"] button:hover span {
-        color: #00E5FF !important;
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="trackTabs"] button {
+        background: #FFFFFF !important;
+        background-image: none !important;
+        border: 1.5px solid rgba(0, 105, 184, 0.22) !important;
+        color: #334155 !important;
+        box-shadow: 0 2px 8px rgba(8, 18, 30, 0.04) !important;
+        border-radius: 9999px !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="trackTabs"] button:hover {
+        border-color: #0069B8 !important;
+        color: #0069B8 !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="trackTabs"] button[class*="activeTrack"],
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="themeList"] button[class*="activeTheme"] {
         background: #0069B8 !important;
-        border-color: #009EAD !important;
+        border-color: #0069B8 !important;
         color: #FFFFFF !important;
-        box-shadow: 0 10px 26px rgba(0, 105, 184, 0.35) !important;
+        box-shadow: 0 4px 14px rgba(0, 105, 184, 0.28) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="themeList"] button {
+        background: #0D1B2E !important;
+        border: 1px solid rgba(0, 105, 184, 0.42) !important;
+        color: #FFFFFF !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="themeList"] button[class*="activeTheme"] > span:first-child {
         background: #F15928 !important;
@@ -1846,39 +1866,50 @@ export function Ai2047BrandBookV1Styles() {
         color: #FFFFFF !important;
       }
 
-      /* Agenda Timeline Intro & Title (Clean heading without dark box) */
+      /* Agenda Timeline Intro & Title on White Background */
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineIntro"] {
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
-        padding: 0 0 32px 0 !important;
+        padding: 0 0 36px 0 !important;
         margin: 0 auto !important;
         text-align: center !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineIntro"] h2 {
-        color: #FFFFFF !important;
+        color: #08121E !important;
         font-size: clamp(28px, 3.2vw, 42px) !important;
         font-weight: 700 !important;
         line-height: 1.25 !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineIntro"] h2 span,
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineIntro"] [class*="gradientText"] {
-        color: #00E5FF !important;
-        background: linear-gradient(90deg, #00E5FF 0%, #009EAD 100%) !important;
+        color: #0069B8 !important;
+        background: linear-gradient(90deg, #0069B8 0%, #009EAD 100%) !important;
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
       }
 
-      /* Agenda Filters & Timeline Rows */
+      /* Agenda Filters on White Background */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="agendaFilters"] label span {
+        color: #475569 !important;
+        font-family: monospace !important;
+        font-size: 11px !important;
+        letter-spacing: 1.6px !important;
+      }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="agendaFilters"] input,
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="agendaFilters"] select {
-        background: #0D1B2E !important;
-        border: 1px solid rgba(0, 105, 184, 0.45) !important;
-        color: #FFFFFF !important;
+        background: #FFFFFF !important;
+        border: 1.5px solid rgba(0, 105, 184, 0.22) !important;
+        color: #08121E !important;
+        box-shadow: 0 2px 8px rgba(8, 18, 30, 0.04) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="agendaFilters"] input::placeholder {
+        color: #64748B !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="agendaFilters"] input:focus,
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="agendaFilters"] select:focus {
-        border-color: #009EAD !important;
+        border-color: #0069B8 !important;
+        box-shadow: 0 0 0 3px rgba(0, 105, 184, 0.15) !important;
         outline: none !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="agendaFilters"] button {
@@ -1886,19 +1917,21 @@ export function Ai2047BrandBookV1Styles() {
         border-color: #F15928 !important;
         color: #FFFFFF !important;
       }
+
+      /* Agenda Timeline Schedule Container on White Background */
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda div[class*="timeline"]:not([class*="timelineIntro"]):not([class*="timelineRow"]):not([class*="timelineSection"]):not([class*="timelineHead"]) {
-        background: #0D1B2E !important;
-        border: 1px solid rgba(0, 105, 184, 0.42) !important;
-        border-radius: 20px !important;
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35) !important;
+        background: #FFFFFF !important;
+        border: 1.5px solid rgba(0, 105, 184, 0.18) !important;
+        border-radius: 22px !important;
+        box-shadow: 0 12px 36px rgba(8, 18, 30, 0.06) !important;
         padding: 32px 28px !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda div[class*="timeline"]:not([class*="timelineIntro"]):not([class*="timelineRow"]):not([class*="timelineSection"]):not([class*="timelineHead"])::before {
-        background: linear-gradient(180deg, #0069B8, #009EAD) !important;
+        display: none !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineHead"] {
-        border-bottom: 1px solid rgba(0, 105, 184, 0.35) !important;
-        color: #009EAD !important;
+        border-bottom: 1.5px solid rgba(0, 105, 184, 0.16) !important;
+        color: #0069B8 !important;
         font-family: monospace !important;
         font-size: 13px !important;
         font-weight: 700 !important;
@@ -1906,26 +1939,36 @@ export function Ai2047BrandBookV1Styles() {
         padding-bottom: 16px !important;
         margin-bottom: 24px !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineHead"] span {
-        color: #009EAD !important;
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineHead"] span:first-child {
+        color: #0069B8 !important;
       }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineHead"] span:last-child {
+        color: #64748B !important;
+      }
+
+      /* Agenda Timeline Rows on White Background */
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] {
         opacity: 1 !important;
         visibility: visible !important;
         transform: none !important;
         animation: none !important;
-        background: rgba(13, 27, 46, 0.9) !important;
-        border: 1px solid rgba(0, 105, 184, 0.38) !important;
+        background: #FFFFFF !important;
+        border: 1px solid rgba(0, 105, 184, 0.18) !important;
+        border-left: 4px solid #0069B8 !important;
         border-radius: 14px !important;
         margin-bottom: 14px !important;
         padding: 22px 24px !important;
         grid-template-columns: 145px 165px 1fr !important;
         gap: 20px !important;
         align-items: center !important;
-        transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+        box-shadow: 0 4px 14px rgba(8, 18, 30, 0.04) !important;
+        transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"]::before {
+        display: none !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] h3 {
-        color: #FFFFFF !important;
+        color: #08121E !important;
         font-size: 18px !important;
         line-height: 1.35 !important;
         font-weight: 700 !important;
@@ -1934,32 +1977,47 @@ export function Ai2047BrandBookV1Styles() {
         transition: color 0.2s ease !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] p {
-        color: rgba(247, 249, 252, 0.85) !important;
+        color: #334155 !important;
         font-size: 14px !important;
         line-height: 1.5 !important;
         margin: 0 !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] time {
-        color: #00E5FF !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        transform: none !important;
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] [class*="locationText"] {
+        color: #64748B !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] time span:first-child {
+        color: #0069B8 !important;
+        font-family: monospace !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] time span:last-child {
+        color: #64748B !important;
+        font-family: monospace !important;
+        font-size: 11px !important;
+        font-weight: 600 !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] [class*="sessionType"] {
-        background: rgba(0, 105, 184, 0.25) !important;
-        border: 1px solid rgba(0, 158, 173, 0.45) !important;
-        color: #009EAD !important;
+        background: rgba(0, 105, 184, 0.08) !important;
+        border: 1px solid rgba(0, 105, 184, 0.25) !important;
+        color: #0069B8 !important;
         font-weight: 700 !important;
+        font-size: 12px !important;
+        border-radius: 9999px !important;
+        padding: 6px 14px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
         transform: none !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"]:hover {
-        background: rgba(0, 105, 184, 0.25) !important;
-        border-color: #00E5FF !important;
-        box-shadow: 0 10px 32px rgba(0, 105, 184, 0.35) !important;
+        background: #F8FAFC !important;
+        border-color: #009EAD !important;
+        border-left-color: #F15928 !important;
+        box-shadow: 0 10px 30px rgba(0, 105, 184, 0.12) !important;
         transform: translateY(-2px) !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"]:hover h3 {
-        color: #00E5FF !important;
+        color: #0069B8 !important;
         transform: none !important;
       }
 
