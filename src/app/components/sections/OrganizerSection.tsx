@@ -16,7 +16,7 @@ export function OrganizerSection() {
           {/* Logo column */}
           <div className="flex flex-col" data-aos="fade-right" data-aos-delay="100">
             <span className="text-white/74 font-mono text-[12px] uppercase tracking-[3px] select-none">
-              Organised by Trescon
+              Organised by
             </span>
             <img
               className="block mt-[12px] h-auto object-contain select-none"
