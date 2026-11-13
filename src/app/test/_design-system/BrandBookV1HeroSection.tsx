@@ -51,8 +51,8 @@ export function BrandBookV1HeroSection() {
         </h1>
 
         {/* Standfirst (20px, 33px line-height, 0 tracking, 400 weight, #CBD5E1) */}
-        <p className="max-w-[860px] mx-auto text-[#CBD5E1] text-[clamp(15px,1.6vw,20px)] xl:text-[20px] font-normal leading-relaxed xl:leading-[33px] tracking-normal text-center mb-8">
-          The premier cross-functional executive conference addressing the architecture, systems integration, agentic governance, and verifiable ROI of enterprise AI.
+        <p className="max-w-[1020px] mx-auto text-[#CBD5E1] text-[clamp(15px,1.6vw,20px)] xl:text-[20px] font-normal leading-relaxed xl:leading-[33px] tracking-normal text-center mb-8">
+          The premier cross-functional executive conference addressing the architecture, <br className="hidden md:inline" />systems integration, agentic governance, and verifiable ROI of enterprise AI.
         </p>
 
         <div className="w-full max-w-[780px] border-t border-white/20 opacity-60 mt-1" />

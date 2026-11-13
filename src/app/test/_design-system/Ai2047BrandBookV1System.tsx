@@ -380,6 +380,7 @@ export function Ai2047BrandBookV1Styles() {
 
       .ai2047-brandbook-v1 #home .container > p {
         color: #F7F9FC !important;
+        max-width: 1020px !important;
       }
 
       .ai2047-brandbook-v1 #home .grid > div {
