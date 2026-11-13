@@ -101,10 +101,10 @@ export function BrandBookV1SpeakersList() {
               <span className="w-1.5 h-1.5 rounded-full bg-white" />
               Mumbai 2027 Faculty Intake · Unannounced Slots Open
             </span>
-            <h3 className="text-white m-0 mb-2">
+            <h3 className="!text-white [color:#FFFFFF!important] font-bold text-[24px] max-sm:text-[20px] leading-tight m-0 mb-2">
               If you have scaled AI in production, we want you on the stage
             </h3>
-            <p className="text-[#F7F9FC]/82 m-0">
+            <p className="!text-white/88 [color:rgba(255,255,255,0.88)!important] text-[15px] leading-relaxed m-0">
               Mumbai 2027 speaker announcements release in waves following steering committee review. Apply to join the 45+ enterprise faculty members below, or browse past speakers from the global World AI Show series.
             </p>
           </div>

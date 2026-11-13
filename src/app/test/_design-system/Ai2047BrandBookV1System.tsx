@@ -1512,14 +1512,25 @@ export function Ai2047BrandBookV1Styles() {
         border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
         border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) h2,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) h3,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) h4 {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not(#lineup):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not(#lineup):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not(#lineup):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) h4 {
         color: #08121E !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) p,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) strong {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not(#lineup):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) p,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer):not(#lineup):not([class*="timelineSection"]):not(#agenda-timeline):not(#call-for-speakers):not(#cta):not([class*="finalCta"]):not([class*="ctaBox"]):not([class*="speakerBox"]):not([class*="accelerateSection"]):not(#networking-cta) strong {
         color: #334155 !important;
+      }
+
+      /* Faculty Intake Banner inside #lineup */
+      .ai2047-brandbook-v1 #lineup .rounded-\\[20px\\] h3 {
+        color: #FFFFFF !important;
+        -webkit-text-fill-color: #FFFFFF !important;
+        font-weight: 700 !important;
+      }
+      .ai2047-brandbook-v1 #lineup .rounded-\\[20px\\] p {
+        color: rgba(255, 255, 255, 0.88) !important;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;
       }
 
       /* Dark Sections Preservation (Final CTA, Call for Speakers, Stage, Networking CTA) */
