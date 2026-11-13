@@ -107,10 +107,10 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
     startTime: "11:00",
     endTime: "11:30",
-    title: "Partner Thought Leadership Session 1 (30 Minutes)",
+    title: "Partner session 1: Evaluating enterprise AI: accuracy, reliability and performance beyond the demo.",
     typeTitle: "Partner Session (30 Min)",
     location: "Main Plenary Stage",
-    description: "30-minute standalone commercial thought leadership session examining enterprise-grade AI architecture and verified production outcomes.",
+    description: "Partner thought leadership session.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
   },
@@ -146,10 +146,10 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
     startTime: "12:15",
     endTime: "12:45",
-    title: "Partner Thought Leadership Session 2 (30 Minutes)",
+    title: "Partner session 2: Making enterprise knowledge AI-ready: search, context and retrieval.",
     typeTitle: "Partner Session (30 Min)",
     location: "Main Plenary Stage",
-    description: "30-minute standalone session showcasing enterprise deployment blueprints and measurable operational impact.",
+    description: "Partner thought leadership session.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
   },
@@ -185,10 +185,10 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
     startTime: "14:15",
     endTime: "14:45",
-    title: "Partner Thought Leadership Session 3 (30 Minutes)",
+    title: "Partner session 3: The economics of AI inference: balancing performance, latency and cost.",
     typeTitle: "Partner Session (30 Min)",
     location: "Main Plenary Stage",
-    description: "30-minute standalone session focused on modernizing enterprise data context, cloud integration, and production scalability.",
+    description: "Partner thought leadership session.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
   },
@@ -224,10 +224,10 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     dayLabel: "Tuesday 20 April 2027: Enterprise Execution",
     startTime: "15:30",
     endTime: "16:00",
-    title: "Partner Thought Leadership Session 4 (30 Minutes)",
+    title: "Partner session 4: Securing enterprise AI: addressing risks across models, data and applications.",
     typeTitle: "Partner Session (30 Min)",
     location: "Main Plenary Stage",
-    description: "30-minute standalone session examining governed autonomy, security guardrails, and enterprise orchestration.",
+    description: "Partner thought leadership session.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
   },
@@ -304,10 +304,10 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     dayLabel: "Wednesday 21 April 2027: Strategy to Scale",
     startTime: "10:45",
     endTime: "11:15",
-    title: "Partner Thought Leadership Session 5 (30 Minutes)",
+    title: "Partner session 5: Multimodal AI at work: moving beyond text-based enterprise applications.",
     typeTitle: "Partner Session (30 Min)",
     location: "Main Plenary Stage",
-    description: "30-minute standalone session on enterprise AI security, proportionate trust, and regulatory readiness.",
+    description: "Partner thought leadership session.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
   },
@@ -330,10 +330,10 @@ const enterpriseSchedule: EnterpriseAgendaSession[] = [
     dayLabel: "Wednesday 21 April 2027: Strategy to Scale",
     startTime: "12:00",
     endTime: "12:30",
-    title: "Partner Thought Leadership Session 6 (30 Minutes)",
+    title: "Partner session 6: Keeping AI reliable after launch: monitoring quality, drift and performance.",
     typeTitle: "Partner Session (30 Min)",
     location: "Main Plenary Stage",
-    description: "30-minute standalone session examining enterprise operating-model transformation and measurable ROI at scale.",
+    description: "Partner thought leadership session.",
     trackId: "main",
     trackTitle: "Main Plenary Stage"
   },
@@ -417,8 +417,8 @@ function IconCard({ title, text, icon, index }: { title: string; text: string; i
 
 function AgendaTabs() {
   const dayTabs = [
-    { key: "2027-04-20", label: "Tuesday 20 April 2027: Enterprise Execution" },
-    { key: "2027-04-21", label: "Wednesday 21 April 2027: Strategy to Scale" }
+    { key: "2027-04-20", label: "Day 1 · Tuesday, 20 April 2027: Enterprise Execution" },
+    { key: "2027-04-21", label: "Day 2 · Wednesday, 21 April 2027: Strategy to Scale" }
   ];
 
   const [activeDay, setActiveDay] = useState("2027-04-20");
@@ -550,7 +550,14 @@ function AgendaTabs() {
               onPointerMove={setPointerGlow}
               style={{ "--row-index": index } as CSSProperties}
             >
-              <time>{session.startTime}<span>{session.endTime}</span></time>
+              <time className="flex flex-col justify-center">
+                <span className="font-mono text-[16px] font-bold text-[#009EAD] tracking-tight whitespace-nowrap">
+                  {session.startTime} – {session.endTime}
+                </span>
+                <span className="text-[11px] font-mono uppercase tracking-wider text-white/50 mt-1 block">
+                  IST (UTC+5:30)
+                </span>
+              </time>
               <span className={styles.sessionType}>{session.typeTitle}</span>
               <div>
                 <h3>{session.title}</h3>

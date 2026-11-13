@@ -1371,63 +1371,162 @@ export function Ai2047BrandBookV1Styles() {
         }
       }
 
+      /* =====================================================================
+         15. INNER PAGES ALTERNATING LIGHT (#F7F9FC) & DARK (#08121E) PANELS
+         ===================================================================== */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner,
       .ai2047-brandbook-v1.ai2047-brandbook-inner main {
+        overflow-x: clip !important;
+        overflow-y: visible !important;
         background: #08121E !important;
-        background-image: none !important;
-        color: #FFFFFF !important;
       }
 
+      @media (min-width: 981px) {
+        .ai2047-brandbook-v1.ai2047-brandbook-inner .grid.overflow-x-auto,
+        .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="overflow-x-auto"] {
+          overflow: visible !important;
+        }
+      }
+
+      @media (max-width: 980px) {
+        .ai2047-brandbook-v1.ai2047-brandbook-inner .grid.overflow-x-auto,
+        .ai2047-brandbook-v1.ai2047-brandbook-inner [class*="overflow-x-auto"] {
+          overflow-x: auto !important;
+          overflow-y: hidden !important;
+        }
+      }
+
+      /* Even Content Sections -> Cloud White (#F7F9FC) Neutral Light Panels */
       .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(.page-hero-top):not(#speakers):not(#lineup):not(#organizer):not(#footer) {
-        background-color: #0B1829 !important;
+        background-color: #F7F9FC !important;
         background-image: none !important;
-        border-top: 1px solid rgba(0, 105, 184, 0.22) !important;
-        border-bottom: 1px solid rgba(0, 105, 184, 0.22) !important;
+        color: #08121E !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) h4 {
+        color: #08121E !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) p,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) strong {
+        color: #334155 !important;
       }
 
+      /* Cards inside Even (Light) Sections -> Pure White #FFFFFF */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) article:not([class*="timelineRow"]),
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) [class*="iconCard"],
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) [class*="formatCard"] {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(0, 105, 184, 0.18) !important;
+        box-shadow: 0 10px 30px rgba(8, 18, 30, 0.06) !important;
+        color: #08121E !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) article:not([class*="timelineRow"]) h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) [class*="iconCard"] h3 {
+        color: #08121E !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) article:not([class*="timelineRow"]) p,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) [class*="iconCard"] p {
+        color: #475569 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) article:not([class*="timelineRow"]) span.w-11,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) article:not([class*="timelineRow"]) span.w-10,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) article:not([class*="timelineRow"]) span.w-\\[48px\\],
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(even):not(:first-of-type):not(#footer) [class*="iconBadge"] {
+        background: #F0F6FC !important;
+        border: 1px solid rgba(0, 105, 184, 0.22) !important;
+        color: #0069B8 !important;
+      }
+
+      /* Odd Content Sections -> Midnight Core (#08121E) Dark Panels */
       .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(odd):not(:first-of-type):not(.page-hero-top):not(#speakers):not(#lineup):not(#organizer):not(#footer) {
         background-color: #08121E !important;
         background-image: none !important;
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(odd):not(:first-of-type):not(#footer) h2,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(odd):not(:first-of-type):not(#footer) h3,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(odd):not(:first-of-type):not(#footer) h4 {
+        color: #FFFFFF !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main > section:nth-of-type(odd):not(:first-of-type):not(#footer) p {
+        color: rgba(247, 249, 252, 0.8) !important;
       }
 
-      /* Prevent homepage light-section ID rules (#attend, #agenda, #networking, #partners, #faq, #cta) from turning inner dark sections/headings dark */
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #attend,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #agenda,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #networking,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #partners,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #faq,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta {
-        background-color: #08121E !important;
-        background-image: none !important;
-        color: #FFFFFF !important;
+      /* Five Talking Points Marquee Slider (#agenda on Vision and Inner Pages) */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #agenda {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        background-color: #F7F9FC !important;
+        color: #08121E !important;
+        border-top: 1px solid rgba(0, 105, 184, 0.14) !important;
+        border-bottom: 1px solid rgba(0, 105, 184, 0.14) !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #attend h2,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #attend h3,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #agenda h2,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #agenda h3,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #networking h2,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #networking h3,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #networking h4,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #partners h2,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #partners h3,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #faq h2,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #faq h3,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta h2,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta h3,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta article h3 {
-        color: #FFFFFF !important;
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #agenda h2 {
+        color: #08121E !important;
+        font-weight: 800 !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #attend p,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #agenda p,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #networking p,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #partners p,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #faq p,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta p,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #cta article p {
-        color: rgba(247, 249, 252, 0.82) !important;
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #agenda p {
+        color: #334155 !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main #attend article {
-        background: #0D1B2E !important;
-        border: 1px solid rgba(0, 105, 184, 0.42) !important;
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #agenda .pillar-marquee-track {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #agenda article {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(0, 105, 184, 0.2) !important;
+        box-shadow: 0 10px 28px rgba(8, 18, 30, 0.06) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #agenda article h3 {
+        color: #08121E !important;
+        font-weight: 700 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #agenda article p {
+        color: #334155 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #agenda article:hover {
+        border-color: #0069B8 !important;
+        box-shadow: 0 16px 36px rgba(0, 105, 184, 0.18) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #agenda article:hover h3 {
+        color: #0069B8 !important;
+      }
+
+      /* 2030 Vision Page Vision Cards on Light Section */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #the-2030-vision {
+        background-color: #F7F9FC !important;
+        color: #08121E !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #the-2030-vision blockquote {
+        background: #FFFFFF !important;
+        border: 2px solid #0069B8 !important;
+        color: #08121E !important;
+        box-shadow: 0 14px 38px rgba(0, 105, 184, 0.12) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #the-2030-vision blockquote cite {
+        color: #0069B8 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #the-2030-vision .flex-col > div.rounded-\\[18px\\] {
+        background: #FFFFFF !important;
+        border: 1px solid rgba(0, 105, 184, 0.2) !important;
+        box-shadow: 0 8px 24px rgba(8, 18, 30, 0.05) !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #the-2030-vision .flex-col > div.rounded-\\[18px\\] h3 {
+        color: #08121E !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #the-2030-vision .flex-col > div.rounded-\\[18px\\] p {
+        color: #334155 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #the-2030-vision .flex-col > div.rounded-\\[18px\\]:hover {
+        border-color: #0069B8 !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner #the-2030-vision .flex-col > div.rounded-\\[18px\\]:hover h3 {
+        color: #0069B8 !important;
       }
 
       /* Inner Page Hero Banners (Preserve absolute hero image & overlays, frame top-center, and add balanced contrast scrim) */
@@ -1703,18 +1802,57 @@ export function Ai2047BrandBookV1Styles() {
         background: linear-gradient(180deg, #0069B8, #009EAD) !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] {
-        border-bottom-color: rgba(0, 105, 184, 0.22) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        animation: none !important;
+        background: rgba(13, 27, 46, 0.85) !important;
+        border: 1px solid rgba(0, 105, 184, 0.35) !important;
+        border-radius: 14px !important;
+        margin-bottom: 12px !important;
+        padding: 22px 24px !important;
+        grid-template-columns: 145px 165px 1fr !important;
+        gap: 20px !important;
+        align-items: center !important;
+        transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"]:hover {
-        background: rgba(0, 105, 184, 0.12) !important;
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] h3 {
+        color: #FFFFFF !important;
+        font-size: 18px !important;
+        line-height: 1.35 !important;
+        font-weight: 700 !important;
+        margin: 0 0 6px 0 !important;
+        transform: none !important;
+        transition: color 0.2s ease !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] p {
+        color: rgba(247, 249, 252, 0.85) !important;
+        font-size: 14.5px !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
       }
       .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] time {
         color: #009EAD !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="sessionType"] {
-        background: rgba(0, 105, 184, 0.2) !important;
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"] [class*="sessionType"] {
+        background: rgba(0, 105, 184, 0.25) !important;
         border: 1px solid rgba(0, 158, 173, 0.45) !important;
         color: #009EAD !important;
+        font-weight: 700 !important;
+        transform: none !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"]:hover {
+        background: rgba(0, 105, 184, 0.22) !important;
+        border-color: #009EAD !important;
+        box-shadow: 0 10px 32px rgba(0, 105, 184, 0.3) !important;
+        transform: none !important;
+      }
+      .ai2047-brandbook-v1.ai2047-brandbook-inner .page-agenda [class*="timelineRow"]:hover h3 {
+        color: #00E5FF !important;
+        transform: none !important;
       }
 
       /* 2030 Vision Blockquote & Call for Speakers List Bullets */
@@ -1733,13 +1871,13 @@ export function Ai2047BrandBookV1Styles() {
       }
 
       /* =====================================================================
-         17. INNER PAGE INTERACTIVE TILES & CARDS (REVERSED HOVER HIGHLIGHT)
+         17. INNER PAGE INTERACTIVE TILES & CARDS (SUPERCHARGED HOVER HIGHLIGHT)
          At rest: Clean, unlit, elegant dark surface (#0D1B2E), muted badge.
-         On hover: Tile lifts, lights up with electric cyan/teal glow,
+         On hover: Tile lifts 10px, lights up with electric cyan/teal glow,
                    icon badge illuminates, and card stands out dramatically.
          ===================================================================== */
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main .grid > article,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]),
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main .grid > article:not([class*="timelineRow"]),
       .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="iconCard"],
       .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="formatCard"],
       .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="focusCard"] {
@@ -1756,9 +1894,9 @@ export function Ai2047BrandBookV1Styles() {
       }
 
       /* At Rest: Muted icon badge (unlit) */
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article span.w-11.h-11,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article span.w-10.h-10,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article [class*="iconBadge"] {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]) span.w-11.h-11,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]) span.w-10.h-10,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]) [class*="iconBadge"] {
         background: rgba(8, 18, 30, 0.82) !important;
         background-image: none !important;
         border: 1px solid rgba(0, 105, 184, 0.25) !important;
@@ -1767,16 +1905,16 @@ export function Ai2047BrandBookV1Styles() {
         transform: translateY(0) scale(1) !important;
         transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article span.w-11.h-11 img,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article span.w-10.h-10 img,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article [class*="iconBadge"] img {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]) span.w-11.h-11 img,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]) span.w-10.h-10 img,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]) [class*="iconBadge"] img {
         opacity: 0.65 !important;
         filter: brightness(0.9) !important;
         transition: all 0.3s ease !important;
       }
 
       /* At Rest: Number pill (top right) */
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article > span.absolute {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]) > span.absolute {
         background: rgba(8, 18, 30, 0.55) !important;
         background-image: none !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -1786,69 +1924,70 @@ export function Ai2047BrandBookV1Styles() {
       }
 
       /* At Rest: Card Typography */
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article h3 {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]) h3 {
         color: #FFFFFF !important;
         text-shadow: none !important;
         transition: color 0.25s ease, text-shadow 0.25s ease !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article p {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]) p {
         color: rgba(247, 249, 252, 0.72) !important;
         transition: color 0.25s ease !important;
       }
 
       /* =====================================================================
-         ON HOVER: REVERSED HIGHLIGHT / LIT-UP GLOW EFFECT
-         The hovered tile lifts, lights up with electric cyan/teal glow,
+         ON HOVER: SUPERCHARGED HIGHLIGHT / LIT-UP GLOW EFFECT
+         The hovered tile lifts 10px, lights up with electric cyan/teal glow,
          icon badge illuminates, and card stands out dramatically.
          ===================================================================== */
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main .grid > article:hover,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]):hover,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main .grid > article:not([class*="timelineRow"]):hover,
       .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="iconCard"]:hover,
       .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="formatCard"]:hover,
       .ai2047-brandbook-v1.ai2047-brandbook-inner main [class*="focusCard"]:hover {
-        transform: translateY(-8px) scale(1.02) !important;
-        background: linear-gradient(150deg, #102644 0%, #0D1C34 100%) !important;
-        border-color: #009EAD !important;
-        box-shadow: 0 24px 56px rgba(0, 105, 184, 0.38),
-                    0 0 28px rgba(0, 158, 173, 0.45),
-                    inset 0 0 20px rgba(0, 158, 173, 0.15) !important;
+        transform: translateY(-10px) scale(1.02) !important;
+        background: linear-gradient(145deg, #122846 0%, #081628 100%) !important;
+        border-color: #00E5FF !important;
+        box-shadow: 0 24px 56px rgba(0, 105, 184, 0.45),
+                    0 0 35px rgba(0, 229, 255, 0.5),
+                    inset 0 0 22px rgba(0, 229, 255, 0.2) !important;
         z-index: 10 !important;
       }
 
-      /* On Hover: Icon badge lights up in Sovereign Blue / Signal Teal glow */
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover span.w-11.h-11,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover span.w-10.h-10,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover [class*="iconBadge"] {
+      /* On Hover: Icon badge lights up in Sovereign Blue / Electric Cyan glow */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]):hover span.w-11.h-11,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]):hover span.w-10.h-10,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]):hover [class*="iconBadge"] {
         background-color: #0069B8 !important;
-        border-color: #009EAD !important;
+        border-color: #00E5FF !important;
         color: #FFFFFF !important;
-        box-shadow: 0 0 24px rgba(0, 158, 173, 0.65), 0 4px 14px rgba(0, 105, 184, 0.45) !important;
-        transform: translateY(-2px) scale(1.08) !important;
+        box-shadow: 0 0 24px rgba(0, 229, 255, 0.8), 0 4px 14px rgba(0, 105, 184, 0.45) !important;
+        transform: translateY(-2px) scale(1.1) !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover span.w-11.h-11 img,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover span.w-10.h-10 img,
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover [class*="iconBadge"] img {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]):hover span.w-11.h-11 img,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]):hover span.w-10.h-10 img,
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]):hover [class*="iconBadge"] img {
         opacity: 1 !important;
-        filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6)) !important;
-        transform: scale(1.06) !important;
+        filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.8)) !important;
+        transform: scale(1.08) !important;
       }
 
-      /* On Hover: Number pill lights up with Signal Teal highlight */
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover > span.absolute {
-        background-color: rgba(0, 158, 173, 0.22) !important;
-        border-color: #009EAD !important;
-        color: #009EAD !important;
-        box-shadow: 0 0 16px rgba(0, 158, 173, 0.4) !important;
+      /* On Hover: Number pill lights up with Pulse Orange highlight */
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]):hover > span.absolute {
+        background-color: #F15928 !important;
+        border-color: #F15928 !important;
+        color: #FFFFFF !important;
+        box-shadow: 0 0 20px rgba(241, 89, 40, 0.75) !important;
         opacity: 1 !important;
-        transform: scale(1.05) !important;
+        font-weight: 800 !important;
+        transform: scale(1.08) !important;
       }
 
       /* On Hover: Title & Paragraph illuminate */
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover h3 {
-        color: #009EAD !important;
-        text-shadow: 0 0 20px rgba(0, 158, 173, 0.35) !important;
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]):hover h3 {
+        color: #00E5FF !important;
+        text-shadow: 0 0 20px rgba(0, 229, 255, 0.6) !important;
       }
-      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:hover p {
+      .ai2047-brandbook-v1.ai2047-brandbook-inner main article:not([class*="timelineRow"]):hover p {
         color: #FFFFFF !important;
       }
 

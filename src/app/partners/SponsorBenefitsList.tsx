@@ -33,7 +33,7 @@ const benefits: BenefitItem[] = [
     desc: "Align your enterprise with custom premium segments (VIP Lounges, Delegate Badges, Registration Zones, or Evening Cocktail hours).",
   },
   {
-    title: "Networking Lunch Branding",
+    title: "Other Engagement Opportunities",
     desc: "Leverage central branding and targeted executive host roles during curated lunches, building relationships over dining.",
   },
   {

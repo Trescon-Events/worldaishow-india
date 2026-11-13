@@ -40,7 +40,7 @@ export const sponsorBenefitsList: SponsorBenefitItem[] = [
     icon: "/mumbai/enterprise/images/Attend/sponsor/exclusive-sponsorship-branding.webp",
   },
   {
-    title: "Networking Lunch Branding",
+    title: "Other Engagement Opportunities",
     text: "Position your brand at the centre of high-value networking and engagement opportunities.",
     icon: "/mumbai/enterprise/images/Attend/sponsor/networking-lunch-branding.webp",
   },
