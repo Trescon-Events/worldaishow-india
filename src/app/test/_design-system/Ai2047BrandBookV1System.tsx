@@ -347,11 +347,11 @@ export function Ai2047BrandBookV1Styles() {
       }
 
       /* Right-align desktop navigation links (Home, Attend, Agenda, Speakers, Partner, Networking) */
-      .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] > div.max-\[1200px\]\:hidden,
-      .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] > div.flex.h-full {
+      .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] > div:nth-child(2),
+      .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] > div.h-full {
         justify-content: flex-end !important;
         margin-left: auto !important;
-        padding-right: 12px !important;
+        padding-right: 16px !important;
       }
 
       .ai2047-brandbook-v1 header nav[aria-label="Primary navigation"] .uppercase a:not([class*="bg-[#C0F43C]"]) {
